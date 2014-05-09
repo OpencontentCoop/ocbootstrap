@@ -1,0 +1,15 @@
+OpenContent OCBootstrap
+=======================
+
+1) Clonare l'estensione in ezpublish_legacy/extension/ocbootstrap con
+
+git clone ssh://developer@devapache.opencontent.it:222/home/git/ocbootstrap
+
+2) Attivare l'estensione *solo* nel siteaccess di frontend
+
+[ExtensionSettings]
+ActiveAccessExtensions[]=ocbootstrap
+
+3) Disattivare ezdemo
+
+4) Svuotare tutte le cache
