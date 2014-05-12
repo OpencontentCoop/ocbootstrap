@@ -5,11 +5,19 @@ OpenContent OCBootstrap
 
 git clone ssh://developer@devapache.opencontent.it:222/home/git/ocbootstrap
 
-2) Attivare l'estensione *solo* nel siteaccess di frontend
+2) Attivare l'estensione *solo* nel siteaccess/<sa>/site.ini.append.php di frontend
 
 [ExtensionSettings]
 ActiveAccessExtensions[]=ocbootstrap
 
-3) Disattivare ezdemo
+[DesignSettings]
+SiteDesign=ocbootstrap_<nome_design_dedicato_che_estende_ocbootstrap>
+AdditionalSiteDesignList[]
+AdditionalSiteDesignList[]=ocbootstrap
+AdditionalSiteDesignList[]=base
+AdditionalSiteDesignList[]=standard
+
+
+3) Disattivare ezdemo e/o ezwebin
 
 4) Svuotare tutte le cache
