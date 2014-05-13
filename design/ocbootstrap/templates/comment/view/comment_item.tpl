@@ -22,29 +22,24 @@
             
 
 <div class="row comment-item">
-    <div class="col-xs-2 comment-author">
-        
-        {if $comment.name}
-            <div class="ezcom-comment-author">
-                <p class="author">
-                    {if $comment.url|eq( '' )}
-                        {$comment.name|wash}
-                    {else}
-                        <a href="{$comment.url|wash}">
-                            {$comment.name|wash}
-                        </a>
-                    {/if}
-                </p>                
-            </div>
-        {elseif $comment.user_id}
-            {content_view_gui content_object=fetch( content, object, hash( object_id, $comment.user_id )) view="user_avatar"}
-        {/if}
-    </div>
-    <div class="col-xs-10 comment-text" style="margin-bottom: 20px">
+    <div class="col-xs-12 comment-text" style="margin-bottom: 20px">
         
         <div class="popover right" style="display: block; position: static; max-width: none">
-            <div class="arrow" style="left: 15px;top: 25px;"></div>            
-            {if $comment.title}<h3 class="popover-title">{$comment.title|wash}</h3> {/if}                       
+        
+        <h3 class="popover-title">    
+        {if $comment.title}{$comment.title|wash}{/if}            
+        {if $comment.name}
+          {if $comment.url|eq( '' )}
+              <small>{$comment.name|wash}</small>
+          {else}
+              <a href="{$comment.url|wash}"><small>{$comment.name|wash}</small></a>
+          {/if}
+        {elseif $comment.user_id}
+            <small>{fetch( content, object, hash( object_id, $comment.user_id ))name|wash()}</small>
+        {/if}
+        
+        </h3> 
+            
             <div class="popover-content">
                 
                 {if or( $can_edit, $can_self_edit, $can_delete, $can_self_delete )}
