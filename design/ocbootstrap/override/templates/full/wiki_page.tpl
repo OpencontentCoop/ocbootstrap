@@ -1,54 +1,58 @@
 {* Documentation page - Full view *}
-
-<div class="content-view-full">
-    <div class="class-documentation-page">
-
-        <div class="attribute-header">
-            <h1>{attribute_view_gui attribute=$node.object.data_map.title}</h1>
-        </div>
-
-        {if eztoc( $node.object.data_map.body )}
-        <div class="attribute-toc">
-            <h2>{'Table of contents'|i18n( 'design/ocbootstrap/full/wiki_page' )}</h2>
-            {eztoc( $node.object.data_map.body )}
-        </div>
-        {/if}
-
-        <div class="attribute-body">
-            {attribute_view_gui attribute=$node.object.data_map.body}
-        </div>
-        
-        <div class="attribute-byline">
-            <p class="published">{'Created:'|i18n( 'design/ocbootstrap/full/wiki_page' )} {$node.object.published|l10n(shortdatetime)}</p>
-            <p class="modified">{'Modified:'|i18n( 'design/ocbootstrap/full/wiki_page' )} {$node.object.modified|l10n(shortdatetime)}</p>
-        </div>
-
-        {if $node.object.data_map.show_children.data_int}
-            {def $page_limit=10
-                 $children_count=fetch_alias( 'children_count', hash( parent_node_id, $node.node_id,
-                                                             class_filter_type, exclude,
-                                                             class_filter_array, ezini( 'MenuContentSettings', 'ExtraIdentifierList', 'menu.ini' ) ) )}
-
-            <div class="content-view-children">
-                {if $children_count}
-                    {foreach fetch_alias( 'children', hash( 'parent_node_id', $node.node_id,
-                                                            'offset', $view_parameters.offset,
-                                                            'sort_by', $node.sort_array,
-                                                            'class_filter_type', exclude,
-                                                            'class_filter_array', ezini( 'MenuContentSettings', 'ExtraIdentifierList', 'menu.ini' ),
-                                                            'limit', $page_limit ) ) as $child }
-                        {node_view_gui view='line' content_node=$child}
-                    {/foreach}
-                {/if}
-            </div>
-
-            {include name=navigator
-                     uri='design:navigator/google.tpl'
-                     page_uri=$node.url_alias
-                     item_count=$children_count
-                     view_parameters=$view_parameters
-                     item_limit=$page_limit}
-
-        {/if}
+{* Article - Full view *}
+<div class="content-view-full class-{$node.class_identifier} row">
+  
+  {include uri='design:nav/nav-section.tpl'}
+    
+  <div class="content-main">
+    
+    <h1>{$node.name|wash()}</h1>
+    
+    <div class="info">
+      <span class="published">{'Created:'|i18n( 'design/ocbootstrap/full/wiki_page' )} {$node.object.published|l10n(shortdatetime)}</span>
+      <span class="modified">{'Modified:'|i18n( 'design/ocbootstrap/full/wiki_page' )} {$node.object.modified|l10n(shortdatetime)}</span>
     </div>
+    
+    {if $node|has_attribute( 'body' )}
+      {def $toc = eztoc( $node.object.data_map.body )}
+      {if $toc}        
+        <div class="col-md-4 pull-right well">
+          <h2>{'Table of contents'|i18n( 'design/ocbootstrap/full/wiki_page' )}</h2>
+            {$toc}
+        </div>
+      {/if}
+    
+    
+      <div class="description">
+        {attribute_view_gui attribute=$node|attribute( 'body' )}
+      </div>
+    {/if}
+    
+    {include uri='design:parts/children.tpl' view='line'}
+	
+    {if $node|has_attribute( 'tags' )}
+      <div class="tags">
+        {attribute_view_gui attribute=$node|attribute( 'tags' )}
+      </div>
+    {/if}
+    
+    {if $node|has_attribute( 'star_rating' )}
+      <div class="rating">
+        {attribute_view_gui attribute=$node|attribute( 'star_rating' )}
+      </div>
+    {/if}
+    
+    {include uri='design:parts/social_buttons.tpl'}
+    
+    {if $node|has_attribute( 'comments' )}
+      <div class="comments">
+        {attribute_view_gui attribute=$node|attribute( 'comments' )}
+      </div>
+    {/if}
+
+  </div>
+  
+  {* Per visualizzare l'extrainfo: aggiungi la classe "full-stack" al primo div e scommenta la seguenta inclusione *}
+  {*include uri='design:parts/content-related.tpl'*}
+
 </div>

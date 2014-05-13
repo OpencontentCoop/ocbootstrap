@@ -3,13 +3,15 @@
 {/if}
 
 {if $load_css_file_list}
-  {ezcss_load( array( 'bootstrap.css',
+  {ezcss_load( array( 'app.css',
+                      'font-awesome.css',
                       'debug.css',
                       'websitetoolbar.css',
                       ezini( 'StylesheetSettings', 'CSSFileList', 'design.ini' ),
                       ezini( 'StylesheetSettings', 'FrontendCSSFileList', 'design.ini' ) ) )}
 {else}
-  {ezcss_load( array( 'bootstrap.css',
+  {ezcss_load( array( 'app.css',
+                      'font-awesome.css',
                       'debug.css',
                       'websitetoolbar.css' ) )}
 {/if}

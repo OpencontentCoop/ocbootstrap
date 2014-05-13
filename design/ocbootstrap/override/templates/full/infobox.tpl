@@ -1,23 +1,41 @@
 {* Infobox - Full view *}
+<div class="content-view-full class-{$node.class_identifier} row">
+  
+  {include uri='design:nav/nav-section.tpl'}
+    
+  <div class="content-main">
+    
+    <h1>{$node.name|wash()}</h1>
+    
+    {if $node|has_attribute( 'intro' )}
+      <div class="abstract">
+        {attribute_view_gui attribute=$node|attribute( 'intro' )}
+      </div>
+    {/if}
+    
+    {include uri='design:atoms/image.tpl' image_class=appini( 'ContentViewFull', 'DefaultImageClass', 'wide' ) caption=$node|attribute( 'caption' )}
+	
+    {if $node|has_attribute( 'content' )}
+      <div class="description">
+        {attribute_view_gui attribute=$node|attribute( 'content' )}
+      </div>
+    {/if}	  
+	
+    {if $node|has_attribute( 'tags' )}
+      <div class="tags">
+        {attribute_view_gui attribute=$node|attribute( 'tags' )}
+      </div>
+    {/if}
+    
+    {if $node|has_attribute( 'url' )}
+      <div class="rating">
+        {attribute_view_gui attribute=$node|attribute( 'url' )}
+      </div>
+    {/if}
+    
+  </div>
+  
+  {* Per visualizzare l'extrainfo: aggiungi la classe "full-stack" al primo div e scommenta la seguenta inclusione *}
+  {*include uri='design:parts/content-related.tpl'*}
 
-<div class="content-view-full">
-    <div class="class-infobox">
-
-        <div class="attribute-header">
-            <h1>{attribute_view_gui attribute=$node.object.data_map.header}</h1>
-        </div>
-        
-        <div class="attribute-image">
-            {attribute_view_gui attribute=$node.object.data_map.image image_class='infoboximage'}
-        </div>
-        
-        <div class="attribute-content">
-            {attribute_view_gui attribute=$node.object.data_map.content}
-        </div>
-        
-        <div class="attribute-link">
-            {attribute_view_gui attribute=$node.object.data_map.url}
-        </div>
-
-    </div>
 </div>

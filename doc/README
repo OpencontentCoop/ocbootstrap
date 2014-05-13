@@ -1,0 +1,9 @@
+== ATOMI ==
+
+ * L'atomo è un template che renderizza un oggetto o una lista di oggetti.
+ * Non deve esserci logica di fetch degli oggetti
+ * Deve essere riutilizzabile in qualsiasi contenso
+ 
+== PARTS ==
+
+ * In parts ci sono template inclusi da altri template

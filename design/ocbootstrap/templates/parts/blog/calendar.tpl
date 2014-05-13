@@ -88,25 +88,24 @@
 
 <div class="calendar">
 
-<div class="month">
-<div class="previous">
-<p><a href={$url_back|ezurl} title="{'Previous month'|i18n('design/ocbootstrap/blog/calendar')}">&#8249;&#8249;<span class="hide"> {'Previous month'|i18n('design/ocbootstrap/blog/calendar')}</span></a></p>
-</div>
-<div class="next">
-<p><a href={$url_forward|ezurl} title="{'Next month'|i18n('design/ocbootstrap/blog/calendar')}"><span class="hide">{'Next month'|i18n('design/ocbootstrap/blog/calendar')} </span>&#8250;&#8250;</a></p>
-</div>
-<h2>{$temp_ts|datetime( custom, '%F' )|upfirst()}&nbsp;{$temp_year}</h2>
+<div class="text-center">
+<ul class="pagination">
+  <li><a href={$url_back|ezurl} title="{'Previous month'|i18n('design/ocbootstrap/blog/calendar')}">&#8249;&#8249;<span class="hide"> {'Previous month'|i18n('design/ocbootstrap/blog/calendar')}</span></a></li>
+  <li><a href="#">{$temp_ts|datetime( custom, '%F' )|upfirst()}&nbsp;{$temp_year}</a></li>
+  <li><a href={$url_forward|ezurl} title="{'Next month'|i18n('design/ocbootstrap/blog/calendar')}"><span class="hide">{'Next month'|i18n('design/ocbootstrap/blog/calendar')} </span>&#8250;&#8250;</a></li>
+</ul>
 </div>
 
-<table cellspacing="0" border="0" summary="{'Calendar'|i18n('design/ocbootstrap/blog/calendar')}" class="list table-colorized">
+
+<table cellspacing="0" border="0" summary="{'Calendar'|i18n('design/ocbootstrap/blog/calendar')}" class="table table-colorized">
 <tr class="top">
-    <th class="left">{"Mon"|i18n("design/ocbootstrap/blog/calendar")}</th>
-    <th>{"Tue"|i18n("design/ocbootstrap/blog/calendar")}</th>
-    <th>{"Wed"|i18n("design/ocbootstrap/blog/calendar")}</th>
-    <th>{"Thu"|i18n("design/ocbootstrap/blog/calendar")}</th>
-    <th>{"Fri"|i18n("design/ocbootstrap/blog/calendar")}</th>
-    <th>{"Sat"|i18n("design/ocbootstrap/blog/calendar")}</th>
-    <th class="right">{"Sun"|i18n("design/ocbootstrap/blog/calendar")}</th>
+    <th class="left">{"M"|i18n("design/ocbootstrap/blog/calendar")}</th>
+    <th>{"T"|i18n("design/ocbootstrap/blog/calendar")}</th>
+    <th>{"W"|i18n("design/ocbootstrap/blog/calendar")}</th>
+    <th>{"T"|i18n("design/ocbootstrap/blog/calendar")}</th>
+    <th>{"F"|i18n("design/ocbootstrap/blog/calendar")}</th>
+    <th>{"S"|i18n("design/ocbootstrap/blog/calendar")}</th>
+    <th class="right">{"S"|i18n("design/ocbootstrap/blog/calendar")}</th>
 </tr>
 {def $counter = 1 $col_counter=1 $css_col_class='' $col_end=0}
 {while le( $counter, $days )}
@@ -134,7 +133,7 @@
     {/if}
     <td class="{if eq($counter, $temp_today)}currentselected{/if} {if and(eq($counter, $curr_today), eq($curr_month, $temp_month))}today{/if}{$css_col_class}">
     {if $day_array|contains(concat(' ', $counter, ',')) }
-        <em><a href={concat( $blog_node.url_alias, "/(day)/", $counter, "/(month)/", $temp_month, "/(year)/", $temp_year)|ezurl}>{$counter}</a></em>
+        <strong><a href={concat( $blog_node.url_alias, "/(day)/", $counter, "/(month)/", $temp_month, "/(year)/", $temp_year)|ezurl}>{$counter}</a></strong>
     {else}
         {$counter}
     {/if}

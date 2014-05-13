@@ -1,0 +1,25 @@
+/* =nav-main
+-------------------------------------------------
+*/
+
+.nav-main{
+  .nav-sub{
+    @extend .hidden-sm;
+    @extend .hidden-md;
+    @extend .hidden-lg;
+  }
+}
+
+/* =nav-section
+-------------------------------------------------
+*/
+
+.nav-section{
+  @extend .hidden-xs;
+  .nav-sub{
+    @extend .nav;
+    > li > a{
+      padding-left: 2em;
+    }
+  }
+}

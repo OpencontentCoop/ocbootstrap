@@ -14,4 +14,5 @@ $eZTemplateOperatorArray[] = array( 'script' => 'extension/ocbootstrap/autoloads
 $eZTemplateOperatorArray[] = array( 'script' => 'extension/ocbootstrap/autoloads/ezpagedata.php',
                                     'class' => 'eZPageData',
                                     'operator_names' => array( 'ezpagedata', 'ezpagedata_set', 'ezpagedata_append' ) );
+
 ?>

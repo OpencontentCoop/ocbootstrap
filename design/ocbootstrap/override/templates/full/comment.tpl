@@ -1,20 +1,23 @@
 {* Comment - Full view *}
 
-<div class="content-view-full">
-    <div class="class-comment">
-
-    <div class="attribute-header">
-        <h1>{$node.name|wash()}</h1>
+<div class="content-view-full class-{$node.class_identifier} row">
+  
+  {include uri='design:nav/nav-section.tpl'}
+    
+  <div class="content-main">
+    
+    <h1>{$node.name|wash()}</h1>
+    
+    <div class="info">
+      {include uri='design:parts/date.tpl'}    
+      {include uri='design:parts/author.tpl'}
     </div>
-
-    <div class="attribute-byline">
-        <p class="author">{$node.data_map.author.content|wash}</p>
-        <p class="date">({$node.object.published|l10n(shortdatetime)})</p>
-    </div>
-
-    <div class="attribute-long">
+    
+    <div class="message">
         {$node.data_map.message.content|wash(xhtml)|break|wordtoimage|autolink}
     </div>
-
-    </div>
+    
+	
+  </div>
+  
 </div>

@@ -1,49 +1,28 @@
 {set-block scope=root variable=cache_ttl}600{/set-block}
 {* Event - Full view *}
 
-<div class="content-view-full">
-    <div class="class-event">
+<div class="content-view-full class-{$node.class_identifier} row">
+  
+  {include uri='design:nav/nav-section.tpl'}
     
-    <div class="attribute-header">
-    {if $node.data_map.title.has_content}
-        <h1>{$node.data_map.title.content|wash()}</h1>
-    {else}
-        <h1>{$node.name|wash()}</h1>
-    {/if}
+  <div class="content-main">
+    
+    <h1>{$node.name|wash()}</h1>
+    
+    <div class="info">
+      {include uri='design:parts/date.tpl'}    
+      {include uri='design:parts/author.tpl'}
     </div>
     
-    <div class="attribute-byline">
-    <p>
-    {if $node.object.data_map.category.has_content}
-    <span class="ezagenda_keyword">
-    {"Category"|i18n("design/ocbootstrap/full/event")}:
-    {attribute_view_gui attribute=$node.object.data_map.category}
-    </span>
-    {/if}
+    {if $node|has_attribute( 'text' )}
+      <div class="description">
+        {attribute_view_gui attribute=$node|attribute( 'text' )}
+      </div>
+    {/if}	 
     
-    <span class="ezagenda_date">{$node.object.data_map.from_time.content.timestamp|datetime(custom,"%j %M %H:%i")}
-    {if $node.object.data_map.to_time.has_content}
-          - {$node.object.data_map.to_time.content.timestamp|datetime(custom,"%j %M %H:%i")}
-    {/if}
-    </span>
-    </p>
-    </div>
-
-    {* if $node.object.data_map.image.content}
-         <div class="attribute-image">
-             {attribute_view_gui attribute=$node.object.data_map.image align=center image_class=imagelarge}
-        </div>
-    {/if *}
-
-    {if $node.object.data_map.text.has_content}
-        <div class="attribute-short">{attribute_view_gui attribute=$node.object.data_map.text}</div>
-    {/if}
-
-
-    {* if $node.object.data_map.url.has_content}
-        <p style="text-align:center;">
-        <a href={$node.object.data_map.url.content|ezurl}>{$node.object.data_map.url.data_text|wash()}</a>
-        </p>
-    {/if *}
   </div>
+  
+  {* Per visualizzare l'extrainfo: aggiungi la classe "full-stack" al primo div e scommenta la seguenta inclusione *}
+  {*include uri='design:parts/content-related.tpl'*}
+  
 </div>

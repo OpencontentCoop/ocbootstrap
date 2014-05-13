@@ -1,47 +1,29 @@
 <?php /*
 
-# Image aliases used by eZ Flow blocks
+
+[ImageMagick]
+Filters[]=thumb=-resize 'x%1' -resize '%1x<' -resize 50%
+Filters[]=centerimg=-gravity center -crop %1x%2+0+0 +repage
+Filters[]=strip=-strip
+Filters[]=sharpen=-sharpen 0.5
+Filters[]=play_watermark=extension/opencontent/design/standard/images/i-play-2.png -composite -gravity Center
+Filters[]=play_watermark_big=extension/opencontent/design/ftcoop_base/images/icons/play-btn.png -composite -gravity Center
+Filters[]=geometry/scalemin=-geometry %1x%2^
+Filters[]=geometry/galleryscale=-gravity center -background %1 -extent %2x%3
 
 [AliasSettings]
-AliasList[]=campaign
-AliasList[]=backgroundimage
-AliasList[]=highlighted
-AliasList[]=contentgrid
-AliasList[]=gallery
-AliasList[]=galleryfull
-AliasList[]=imagefull
+AliasList[]=squarethumb
+AliasList[]=imagefullwide
 
-[campaign]
+[squarethumb]
 Reference=original
-Filters[]=geometry/scalewidthdownonly=770
-Filters[]=geometry/crop=770;390;0;0
+Filters[]
+Filters[]=geometry/scalewidthdownonly=200
+Filters[]=centerimg=100;100
 
-[backgroundimage]
+[imagefullwide]
 Reference=original
-Filters[]=geometry/scalewidthdownonly=770
-Filters[]=geometry/crop=770;390;0;0
-
-[highlighted]
-Reference=original
-Filters[]=geometry/scalewidthdownonly=300
-Filters[]=geometry/crop=300;300;0;0
-
-[galleryfull]
-Reference=original
-Filters[]=geometry/scalewidthdownonly=770
-
-[contentgrid]
-Reference=original
-Filters[]=geometry/scalewidthdownonly=370
-Filters[]=geometry/crop=370;160;0;0
-
-[gallery]
-Reference=original
-Filters[]=geometry/scalewidthdownonly=770
-Filters[]=geometry/crop=770;390;0;0
-
-[imagefull]
-Reference=original
-Filters[]=geometry/scalewidthdownonly=770
+Filters[]
+Filters[]=geometry/scalewidth=1170
 
 */ ?>

@@ -55,7 +55,7 @@ Input:
                 {set $alt_text = $image.text}
             {else}
                 {*set $alt_text = $attribute.object.name*}
-				{set $alt_text = "Immagine decorativa"}
+                {set $alt_text = "Immagine decorativa"}
             {/if}
         {/if}
         {if $title|not}

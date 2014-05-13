@@ -1,43 +1,44 @@
 {* Blog post - Full view *}
-{set scope=global persistent_variable=hash('left_menu', false(),
-                                           'extra_menu', false())}
-
-
-<section class="content-view-full">
-    <div class="class-blog-post">
-        <div class="row">
-            <div class="span8">
-                <div class="attribute-header">
-                    <h1>{$node.data_map.title.content|wash}</h1>
-                </div>
-
-                <div class="attribute-byline">
-                    <span class="date">{$node.data_map.publication_date.content.timestamp|l10n(shortdatetime)}</span>
-                    <span class="author">{$node.object.owner.name}</span>
-                </div>
-
-                <div class="attribute-body float-break">
-                {attribute_view_gui attribute=$node.data_map.body}
-                </div>
-
-                <div class="attribute-tags">
-                    {attribute_view_gui attribute=$node.data_map.tags}
-                </div>
-
-                <div class="attribute-comments">
-                    {attribute_view_gui attribute=$node.data_map.comments}
-                </div>
-
-                {include uri='design:parts/related_content.tpl'}
-
-            </div>
-            <div class="span4">
-                <aside>
-                    <section class="content-view-aside">
-                        {include uri='design:parts/blog/extra_info.tpl' used_node=$node.parent}
-                    </section>
-                </aside>
-            </div>
-        </div>
+<div class="content-view-full class-{$node.class_identifier} row full-stack"> 
+  
+  {include uri='design:nav/nav-section.tpl'}
+    
+  <div class="content-main">
+    
+    <h1>      
+      {$node.name|wash()}
+      <small>{$node.parent.name|wash()}</small>
+    </h1>
+    
+    <div class="info">
+      {include uri='design:parts/date.tpl'}    
+      {include uri='design:parts/author.tpl'}
     </div>
-</section>
+    
+    {include uri='design:atoms/image.tpl' image_class=appini( 'ContentViewFull', 'DefaultImageClass', 'wide' ) caption=$node|attribute( 'caption' )}
+	
+    {if $node|has_attribute( 'body' )}
+      <div class="description">
+        {attribute_view_gui attribute=$node|attribute( 'body' )}
+      </div>
+    {/if}	  
+	
+    {if $node|has_attribute( 'tags' )}
+      <div class="tags">
+        {attribute_view_gui attribute=$node|attribute( 'tags' )}
+      </div>
+    {/if}
+    
+    {include uri='design:parts/social_buttons.tpl'}
+    
+    {if $node|has_attribute( 'comments' )}
+      <div class="comments">
+        {attribute_view_gui attribute=$node|attribute( 'comments' )}
+      </div>
+    {/if}
+
+  </div>
+    
+  {include uri='design:parts/blog/content-related.tpl' used_node=$node.parent}
+
+</div>

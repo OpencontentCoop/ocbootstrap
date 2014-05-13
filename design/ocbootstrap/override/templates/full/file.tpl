@@ -1,32 +1,43 @@
 {* File - Full view *}
+<div class="content-view-full class-{$node.class_identifier} row">
+  
+  {include uri='design:nav/nav-section.tpl'}
+    
+  <div class="content-main">
+    
+    <h1>{$node.name|wash()}</h1>    
+	
+    {if $node|has_attribute( 'description' )}
+      <div class="description">
+        {attribute_view_gui attribute=$node|attribute( 'description' )}
+      </div>
+    {/if}
+    
+    {include uri='design:atoms/file.tpl' image_class=appini( 'ContentViewFull', 'DefaultImageClass', 'wide' ) file=$node|attribute( 'file' )}
+	
+    {if $node|has_attribute( 'tags' )}
+      <div class="tags">
+        {attribute_view_gui attribute=$node|attribute( 'tags' )}
+      </div>
+    {/if}
+    
+    {if $node|has_attribute( 'star_rating' )}
+      <div class="rating">
+        {attribute_view_gui attribute=$node|attribute( 'star_rating' )}
+      </div>
+    {/if}
+    
+    {include uri='design:parts/social_buttons.tpl'}
+    
+    {if $node|has_attribute( 'comments' )}
+      <div class="comments">
+        {attribute_view_gui attribute=$node|attribute( 'comments' )}
+      </div>
+    {/if}
 
-<section class="content-view-full">
-    <article class="class-file">
+  </div>
+  
+  {* Per visualizzare l'extrainfo: aggiungi la classe "full-stack" al primo div e scommenta la seguenta inclusione *}
+  {*include uri='design:parts/content-related.tpl'*}
 
-        <div class="attribute-header">
-            <h1>{$node.name|wash()}</h1>
-        </div>
-
-        {if $node.data_map.description.has_content}
-            <div class="attribute-long">
-                {attribute_view_gui attribute=$node.data_map.description}
-            </div>
-        {/if}
-
-        <div class="attribute-file">
-            <p><a href="{concat( 'content/download/', $node.data_map.file.contentobject_id, '/', $node.data_map.file.id,'/version/', $node.data_map.file.version , '/file/', $node.data_map.file.content.original_filename|urlencode )|ezurl( 'no' )}" class="btn btn-warning">{$node.data_map.file.content.original_filename|wash( xhtml )} {$node.data_map.file.content.filesize|si( byte )}</a></p>
-        </div>
-
-        <div class="attribute-tags">
-            {attribute_view_gui attribute=$node.data_map.tags}
-        </div>
-
-        <div class="attribute-star-rating">
-            {attribute_view_gui attribute=$node.data_map.star_rating}
-        </div>
-
-         <div class="attribute-comments">
-            {attribute_view_gui attribute=$node.data_map.comments}
-        </div>
-    </article>
-</section>
+</div>

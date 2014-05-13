@@ -1,64 +1,59 @@
 {* Article (main-page) - Full view *}
 
-<div class="content-view-full">
-    <div class="class-article-mainpage">
-
-        <div class="attribute-header">
-            <h1>{$node.data_map.title.content|wash()}</h1>
-        </div>
-
-        <div class="attribute-byline">
-        {if $node.data_map.author.content.is_empty|not()}
-            <p class="author">
-                {attribute_view_gui attribute=$node.data_map.author}
-            </p>
-        {/if}
-            <p class="date">
-            {$node.object.published|l10n(shortdatetime)}
-            </p>
-        </div>
-
-    {if eq( ezini( 'article', 'ImageInFullView', 'content.ini' ), 'enabled' )}
-        {if $node.data_map.image.has_content}
-            <div class="attribute-image">
-                {attribute_view_gui attribute=$node.data_map.image image_class=medium}
-                {if $node.data_map.caption.has_content}
-                    <div class="caption">
-                        {attribute_view_gui attribute=$node.data_map.caption}
-                    </div>
-                {/if}
-            </div>
-        {/if}
+<div class="content-view-full class-folder row">
+  
+  {include uri='design:nav/nav-section.tpl'}
+    
+  <div class="content-main">
+    
+    <h1>{$node.name|wash()}</h1>
+    
+    {include uri='design:parts/date.tpl'}
+    
+    {include uri='design:parts/author.tpl'}
+    
+    {if $node|has_attribute( 'intro' )}
+      <div class="abstract">
+        {attribute_view_gui attribute=$node|attribute( 'intro' )}
+      </div>
     {/if}
-
+    
+    {include uri='design:atoms/image.tpl' image_class=appini( 'ContentViewFull', 'DefaultImageClass', 'wide' ) caption=$node|attribute( 'caption' )}
+	
     {include uri='design:parts/article/article_index.tpl' used_node=$node}
-
-    {if eq( ezini( 'article', 'SummaryInFullView', 'content.ini' ), 'enabled' )}
-        {if $node.data_map.intro.content.is_empty|not}
-            <div class="attribute-short">
-                {attribute_view_gui attribute=$node.data_map.intro}
-            </div>
-        {/if}
+    
+    {if $node|has_attribute( 'body' )}
+      <div class="description">
+        {attribute_view_gui attribute=$node|attribute( 'body' )}
+      </div>
     {/if}
-
-    {if $node.data_map.body.content.is_empty|not}
-        <div class="attribute-long">
-            {attribute_view_gui attribute=$node.data_map.body}
-        </div>
-    {/if}
-
+    
     {include uri='design:parts/article/page_navigator.tpl' used_node=$node subpage=false()}
-
-    {include uri='design:parts/article/comments.tpl' used_node=$node}
-
-    {def $tipafriend_access=fetch( 'user', 'has_access_to', hash( 'module', 'content',
-    'function', 'tipafriend' ) )}
-    {if and( ezmodule( 'content/tipafriend' ), $tipafriend_access )}
-        <div class="attribute-tipafriend">
-            <p><a href={concat( "/content/tipafriend/", $node.node_id )|ezurl} title="{'Tip a friend'|i18n( 'design/ocbootstrap/full/article_mainpage' )}">{'Tip a friend'|i18n( 'design/ocbootstrap/full/article_mainpage' )}</a></p>
-        </div>
+	
+    {if $node|has_attribute( 'tags' )}
+      <div class="tags">
+        {attribute_view_gui attribute=$node|attribute( 'tags' )}
+      </div>
+    {/if}
+    
+    {if $node|has_attribute( 'star_rating' )}
+      <div class="rating">
+        {attribute_view_gui attribute=$node|attribute( 'star_rating' )}
+      </div>
+    {/if}
+    
+    {include uri='design:parts/social_buttons.tpl'}
+    
+    {if $node|has_attribute( 'comments' )}
+      <div class="comments">
+        {attribute_view_gui attribute=$node|attribute( 'comments' )}
+      </div>
     {/if}
 
-    </div>
+  </div>
+  
+  {* Per visualizzare l'extrainfo: aggiungi la classe "full-stack" al primo div e scommenta la seguenta inclusione *}
+  {*include uri='design:parts/content-related.tpl'*}
+
 </div>
 

@@ -1,14 +1,22 @@
 {def $page_limit = 20
      $topic_count = fetch( 'content', 'list_count', hash( 'parent_node_id', $node.node_id ) )}
 
+<div class="content-view-full class-{$node.class_identifier} row">
+  
+  {include uri='design:nav/nav-section.tpl'}
+    
+  <div class="content-main">
 
     <h1>{$node.name|wash}</h1>
-
-    {attribute_view_gui attribute=$node.data_map.description}
-
+  
+    {if $node|has_attribute( 'description' )}
+        <div class="description">
+          {attribute_view_gui attribute=$node|attribute( 'description' )}
+        </div>
+    {/if}	 
 
     {if is_unset( $versionview_mode )}
-    {if $node.object.can_create}
+      {if $node.object.can_create}
         {def $notification_access=fetch( 'user', 'has_access_to', hash( 'module', 'notification', 'function', 'addtonotification' ) )}
         <form method="post" action={"content/action/"|ezurl}>
             <input class="btn btn-md btn-success forum-new-topic" type="submit" name="NewButton" value="{'New topic'|i18n( 'design/ocbootstrap/full/forum' )}" />
@@ -16,24 +24,22 @@
             <input type="hidden" name="ContentObjectID" value="{$node.contentobject_id}" />
             <input type="hidden" name="ContentLanguageCode" value="{ezini( 'RegionalSettings', 'ContentObjectLocale', 'site.ini')}" />
             {if $notification_access }
-                <input class="btn btn-md btn-info forum-keep-me-updated" type="submit" name="ActionAddToNotification" value="{'Keep me updated'|i18n( 'design/ocbootstrap/full/forum' )}" />
+              <input class="btn btn-md btn-info forum-keep-me-updated" type="submit" name="ActionAddToNotification" value="{'Keep me updated'|i18n( 'design/ocbootstrap/full/forum' )}" />
             {/if}
             <input type="hidden" name="NodeID" value="{$node.node_id}" />
             <input type="hidden" name="ClassIdentifier" value="forum_topic" />
         </form>
-    {else}
+      {else}
         <div class="alert alert-warning>
-            <p>
-            {"You need to be logged in to get access to the forums. You can do so %login_link_start%here%login_link_end%"|i18n( "design/ocbootstrap/full/forum",, hash( '%login_link_start%', concat( '<a href=', '/user/login/'|ezurl, '>' ), '%login_link_end%', '</a>' ) )}
-            </p>
+            <p>{"You need to be logged in to get access to the forums. You can do so %login_link_start%here%login_link_end%"|i18n( "design/ocbootstrap/full/forum",, hash( '%login_link_start%', concat( '<a href=', '/user/login/'|ezurl, '>' ), '%login_link_end%', '</a>' ) )}</p>
         </div>
-    {/if}
+      {/if}
     {/if}
 
-
+    <hr />
+    
     <div class="table-responsive">
-
-        <table class="table table-striped forum" cellspacing="0">
+      <table class="table table-striped forum" cellspacing="0">
         <tr>
             <th class="topic">
                 {"Topic"|i18n( "design/ocbootstrap/full/forum" )}
@@ -111,15 +117,19 @@
             {/let}
             {/section}
         {/if}
-        </table>
+      </table>
 
     </div>
 
-    </div>
+    {include name=navigator
+             uri='design:navigator/google.tpl'
+             page_uri=concat('/content/view','/full/',$node.node_id)
+             item_count=$topic_count
+             view_parameters=$view_parameters
+             item_limit=$page_limit}
+
+
+  {* Per visualizzare l'extrainfo: aggiungi la classe "full-stack" al primo div e scommenta la seguenta inclusione *}
+  {*include uri='design:parts/content-related.tpl'*}
+
 </div>
-{include name=navigator
-         uri='design:navigator/google.tpl'
-         page_uri=concat('/content/view','/full/',$node.node_id)
-         item_count=$topic_count
-         view_parameters=$view_parameters
-         item_limit=$page_limit}

@@ -1,15 +1,18 @@
 {set scope=global persistent_variable=hash('top_menu', false(),
-                                           'show_path', false(),
-                                           'left_menu', false(),
-                                           'extra_menu', false())}
-<section class="content-view-full">
-    <article class="class-call-to-action">
-        <div class="attribute-header">
-            <h1>{$node.name|wash()}</h1>
-        </div>
+                                           'show_path', false() )}
 
-        <div class="attribute-description">
-            {attribute_view_gui attribute=$node.data_map.description}
-        </div>
-    </article>
-</section>
+<div class="content-view-full class-{$node.class_identifier} row wide">
+  
+  <div class="content-main">
+    
+    <h1>{$node.name|wash()}</h1>
+    
+    {if $node|has_attribute( 'description' )}
+      <div class="description">
+        {attribute_view_gui attribute=$node|attribute( 'description' )}
+      </div>
+    {/if}	  
+	
+  </div>
+  
+</div>

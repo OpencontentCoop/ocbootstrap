@@ -1,104 +1,52 @@
 {* Geo Article - Full view *}
-
-<div class="content-view-full">
-    <div class="class-geo-article">
-
-        <div class="attribute-header">
-            <h1>{$node.data_map.title.content|wash()}</h1>
-        </div>
-
-        <div class="attribute-byline">
-        {if $node.data_map.author.content.is_empty|not()}
-            <p class="author">
-                {attribute_view_gui attribute=$node.data_map.author}
-            </p>
-        {/if}
-            <p class="date">
-            {$node.object.published|l10n(shortdatetime)}
-            </p>
-        </div>
-
-    {if eq( ezini( 'article', 'ImageInFullView', 'content.ini' ), 'enabled' )}
-        {if $node.data_map.image.has_content}
-            <div class="attribute-image">
-                {attribute_view_gui attribute=$node.data_map.image image_class=medium}
-
-                {if $node.data_map.caption.has_content}
-                    <div class="caption">
-                        {attribute_view_gui attribute=$node.data_map.caption}
-                    </div>
-                {/if}
-            </div>
-        {/if}
+<div class="content-view-full class-{$node.class_identifier} row">
+  
+  {include uri='design:nav/nav-section.tpl'}
+    
+  <div class="content-main">
+    
+    <h1>{$node.name|wash()}</h1>
+    
+    {if $node|has_attribute( 'intro' )}
+      <div class="abstract">
+        {attribute_view_gui attribute=$node|attribute( 'intro' )}
+      </div>
+    {/if}
+    
+    {if $node|has_attribute( 'location' )}
+      <div class="description">
+        {attribute_view_gui attribute=$node|attribute( 'location' )}
+      </div>
+    {/if}		
+    {if $node|has_attribute( 'body' )}
+      <div class="description">
+        {attribute_view_gui attribute=$node|attribute( 'body' )}
+      </div>
+    {/if}	  
+	
+    {if $node|has_attribute( 'tags' )}
+      <div class="tags">
+        {attribute_view_gui attribute=$node|attribute( 'tags' )}
+      </div>
+    {/if}
+    
+    {if $node|has_attribute( 'star_rating' )}
+      <div class="rating">
+        {attribute_view_gui attribute=$node|attribute( 'star_rating' )}
+      </div>
+    {/if}
+    
+    {include uri='design:parts/social_buttons.tpl'}
+    
+    {if $node|has_attribute( 'comments' )}
+      <div class="comments">
+        {attribute_view_gui attribute=$node|attribute( 'comments' )}
+      </div>
     {/if}
 
-    {if eq( ezini( 'article', 'SummaryInFullView', 'content.ini' ), 'enabled' )}
-        {if $node.data_map.intro.content.is_empty|not}
-            <div class="attribute-short">
-                {attribute_view_gui attribute=$node.data_map.intro}
-            </div>
-        {/if}
-    {/if}
+  </div>
+  
+  {* Per visualizzare l'extrainfo: aggiungi la classe "full-stack" al primo div e scommenta la seguenta inclusione *}
+  {*include uri='design:parts/content-related.tpl'*}
 
-    {if $node.data_map.body.content.is_empty|not}
-        <div class="attribute-long">
-            {attribute_view_gui attribute=$node.data_map.body}
-        </div>
-    {/if}
-
-        <div class="attribute-location">
-        {attribute_view_gui attribute=$node.data_map.location}
-        </div>
-
-        <div class="attribute-star-rating">
-        {attribute_view_gui attribute=$node.data_map.star_rating}
-        </div>
-
-    {if $node.data_map.tags.content.related_objects}
-        <div class="attribute-relatedcontent">
-            <h1>{"Related content"|i18n("design/ocbootstrap/full/article")}</h1>
-            <ul>
-                {foreach $node.data_map.tags.content.related_objects|reverse() as $related_object max 7}
-                    <li><a href="{$related_object.url_alias|ezurl( 'no' )}" title="{$related_object.name|wash()}">{$related_object.name|wash()}</a></li>
-                {/foreach}
-            </ul>
-        </div>
-    {/if}
-
-    {if is_unset( $versionview_mode )}
-        {if $node.data_map.enable_comments.data_int}
-            <h1>{"Comments"|i18n("design/ocbootstrap/full/article")}</h1>
-            <div class="content-view-children">
-                {foreach fetch_alias( comments, hash( parent_node_id, $node.node_id ) ) as $comment}
-                        {node_view_gui view='line' content_node=$comment}
-                    {/foreach}
-            </div>
-
-            {if fetch( 'content', 'access', hash( 'access', 'create',
-            'contentobject', $node,
-            'contentclass_id', 'comment' ) )}
-                <form method="post" action={"content/action"|ezurl}>
-                    <input type="hidden" name="ClassIdentifier" value="comment" />
-                    <input type="hidden" name="NodeID" value="{$node.object.main_node.node_id}" />
-                    <input type="hidden" name="ContentLanguageCode" value="{ezini( 'RegionalSettings', 'ContentObjectLocale', 'site.ini')}" />
-                    <input class="button new_comment" type="submit" name="NewButton" value="{'New comment'|i18n( 'design/ocbootstrap/full/article' )}" />
-                </form>
-                {else}
-                {if ezmodule( 'user/register' )}
-                    <p>{'%login_link_startLog in%login_link_end or %create_link_startcreate a user account%create_link_end to comment.'|i18n( 'design/ocbootstrap/full/article', , hash( '%login_link_start', concat( '<a href="', '/user/login'|ezurl(no), '">' ), '%login_link_end', '</a>', '%create_link_start', concat( '<a href="', "/user/register"|ezurl(no), '">' ), '%create_link_end', '</a>' ) )}</p>
-                    {else}
-                    <p>{'%login_link_startLog in%login_link_end to comment.'|i18n( 'design/ocbootstrap/article/comments', , hash( '%login_link_start', concat( '<a href="', '/user/login'|ezurl(no), '">' ), '%login_link_end', '</a>' ) )}</p>
-                {/if}
-            {/if}
-        {/if}
-    {/if}
-
-    {def $tipafriend_access=fetch( 'user', 'has_access_to', hash( 'module', 'content', 'function', 'tipafriend' ) )}
-    {if and( ezmodule( 'content/tipafriend' ), $tipafriend_access )}
-        <div class="attribute-tipafriend">
-            <p><a href={concat( "/content/tipafriend/", $node.node_id )|ezurl} title="{'Tip a friend'|i18n( 'design/ocbootstrap/full/article' )}">{'Tip a friend'|i18n( 'design/ocbootstrap/full/article' )}</a></p>
-        </div>
-    {/if}
-
-    </div>
 </div>
