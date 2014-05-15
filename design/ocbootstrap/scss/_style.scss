@@ -2,11 +2,27 @@
 -------------------------------------------------
 */
 
+
 .nav-main{
-  .nav-sub{
+  .navbar-collapse.in{
+    overflow-y: visible !important;
+  }
+  /*.dropdown-toggle{
     @extend .hidden-sm;
     @extend .hidden-md;
     @extend .hidden-lg;
+  }*/
+  .nav-parent{
+    display: none;
+    //@extend .hidden-xs;
+  }
+
+  .dropdown-toggle i{
+    float: right;
+  }
+
+  .open{
+    .dropdown-toggle i.fa-chevron-down{@extend .fa-chevron-up;}
   }
 }
 
@@ -23,3 +39,20 @@
     }
   }
 }
+
+
+/* =nav-facets
+-------------------------------------------------
+*/
+
+.nav-facets{
+  .nav-sub{
+    @extend .nav;
+  }
+}
+
+/* =image-gallery
+-------------------------------------------------
+*/
+
+.blueimp-gallery{display:none}

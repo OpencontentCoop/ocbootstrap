@@ -1,0 +1,41 @@
+/* website toolbar
+-----------------------------------------
+*/
+
+#ezwt{
+  select{width: auto;}
+  a img{vertical-align: top;}
+  *, *:before, *:after{
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+  }
+}
+/*
+#editform{
+  .button{
+    @extend .btn-sm;
+    &:not(.defaultbutton){
+      @extend .secondary;
+    }
+  }
+  .button-disabled{
+    @extend .button;
+    @extend .secondary;
+    opacity: 0.65;
+  }
+  .block{
+    .date,
+    .time{
+      float: left;
+      input{width: auto;}
+    }
+  }
+}
+*/
+.block .element, .block .halfelement {
+  float: left;
+  padding-right: 10px;
+}
+
+.block .element input{display: inline-block;}

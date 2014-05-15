@@ -11,11 +11,9 @@
     {def $extra_cache_key = ''}
 {/if}
 
-{def $pagedata        = ezpagedata()}
-{*$inner_column_size = $pagedata.inner_column_size
-$outer_column_size = $pagedata.outer_column_size*}
-
 {cache-block keys=array( $module_result.uri, $basket_is_empty, $current_user.contentobject_id, $extra_cache_key )}
+{def $pagedata        = ezpagedata()}
+
 {def $pagestyle        = $pagedata.css_classes
      $locales          = fetch( 'content', 'translation_list' )
      $current_node_id  = $pagedata.node_id}
@@ -28,46 +26,34 @@ $outer_column_size = $pagedata.outer_column_size*}
 
 </head>
 <body>
-<!-- Complete page area: START -->
 
 <div id="page">
 
-    <!-- Header area: START -->
     {include uri='design:page_header.tpl'}
-    <!-- Header area: END -->
+{/cache-block}
+{cache-block keys=array( $module_result.uri, $user_hash, $extra_cache_key )}
 
-    {cache-block keys=array( $module_result.uri, $user_hash, $extra_cache_key )}
-
-     <!-- nav-main: START -->
     {include uri='design:nav/nav-main.tpl'}
-    <!-- nav-main: END -->
 
-    <!-- Toolbar area: START -->
     {if and( $pagedata.website_toolbar, $pagedata.is_edit|not)}
-        {include uri='design:page_toolbar.tpl'}
+      {include uri='design:page_toolbar.tpl'}
     {/if}
-    <!-- Toolbar area: END -->
 
     <div class="container">
-    {/cache-block}
-    {/cache-block}
-      {*include uri='design:page_mainarea.tpl'*}
+
+{/cache-block}
+
       {$module_result.content}
 
 {cache-block keys=array( $module_result.uri, $user_hash, $access_type.name, $extra_cache_key )}
 
     </div>
 
-    <!-- Footer area: START -->
     {include uri='design:page_footer.tpl'}
-    <!-- Footer area: END -->
 
 </div>
-<!-- Complete page area: END -->
 
-<!-- Footer script area: START -->
 {include uri='design:page_footer_script.tpl'}
-<!-- Footer script area: END -->
 
 {* Codice extra usato da plugin javascript *}
 {include uri='design:page_extra.tpl'}

@@ -2,6 +2,13 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="it_IT">
 <context>
+  <name>ocbootstrap</name>
+  <message>
+    <source>Overview</source>
+    <translation>Panoramica</translation>
+  </message>
+</context>
+<context>
     <name>design/admin/content/datatype</name>
     <message>
         <source>Year</source>

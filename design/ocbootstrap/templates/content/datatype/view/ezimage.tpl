@@ -55,7 +55,7 @@ Input:
                 {set $alt_text = $image.text}
             {else}
                 {*set $alt_text = $attribute.object.name*}
-                {set $alt_text = "Immagine decorativa"}
+                {set $alt_text = ""}
             {/if}
         {/if}
         {if $title|not}
@@ -68,7 +68,7 @@ Input:
             {set $inline_style = concat( $inline_style, 'margin: ', $margin_size, 'px;' )}
         {/if}
         {if $href}<a title="{$title|wash(xhtml)}" href={$href}{if and( is_set( $link_class ), $link_class )} class="{$link_class}"{/if}{if and( is_set( $link_id ), $link_id )} id="{$link_id}"{/if}{if $target} target="{$target}"{/if}>{/if}
-        <img src={$image.url|ezroot} {if $fluid}class="img-responsive"{/if} {if $hspace}hspace="{$hspace}"{/if} alt="{$alt_text|wash(xhtml)}" title="{$title|wash(xhtml)}" />
+        <img src={$image.url|ezroot} {if $fluid}class="img-responsive{if $alignment|eq('center')} center-block{/if}"{/if} {if $hspace}hspace="{$hspace}"{/if} alt="{$alt_text|wash(xhtml)}" title="{$title|wash(xhtml)}" />
         {if $href}</a>{/if}
     {/if}
 

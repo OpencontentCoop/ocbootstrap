@@ -1,5 +1,5 @@
 <div class="nav-main container">
-  <div class="navbar navbar-default {*navbar-inverse navbar-fixed-top*}" role="navigation">
+  <div class="navbar navbar-default navbar-static-top {*navbar-inverse navbar-fixed-top*}" role="navigation">
     <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
     <div class="container-fluid">
       <div class="navbar-header">
@@ -47,7 +47,7 @@
               {set $item_class = $item_class|append("active")}
             {/if}
             {if gt($sub_menu_items|count(),0)}
-              {set $item_class = $item_class|append("has_children")}
+              {set $item_class = $item_class|append("dropdown")}
             {/if}
 
 
@@ -56,11 +56,18 @@
                 <a class="menu-item-link" {if eq( $ui_context, 'browse' )}href={concat("content/browse/", $item.node_id)|ezurl}{else}href={$item.data_map.location.content|ezurl}{if and( is_set( $item.data_map.open_in_new_window ), $item.data_map.open_in_new_window.data_int )} target="_blank"{/if}{/if}{if $pagedata.is_edit} onclick="return false;"{/if} title="{$item.data_map.location.data_text|wash}" rel={$item.url_alias|ezurl}>{if $item.data_map.location.data_text}{$item.data_map.location.data_text|wash()}{else}{$item.name|wash()}{/if}</a>
             {else}
               <li id="node_id_{$item.node_id}"{if $item_class} class="{$item_class|implode(" ")}"{/if}>
+              {if gt($sub_menu_items|count(),0)}
+                {* dropdown *}
+                <a class="nav-parent" href={if eq( $ui_context, 'browse' )}{concat("content/browse/", $item.node_id)|ezurl}{else}{$item.url_alias|ezurl}{/if}{if $pagedata.is_edit} onclick="return false;"{/if}>{$item.name|wash()}</a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{$item.name|wash()} <i class="fa fa-chevron-down"></i></a>
+              {else}
                 <a href={if eq( $ui_context, 'browse' )}{concat("content/browse/", $item.node_id)|ezurl}{else}{$item.url_alias|ezurl}{/if}{if $pagedata.is_edit} onclick="return false;"{/if}>{$item.name|wash()}</a>
+              {/if}
             {/if}
 
             {if gt($sub_menu_items|count(),0)}
-              <ul class="nav nav-sub">
+              <ul class="nav dropdown-menu">
+                <li><a href={if eq( $ui_context, 'browse' )}{concat("content/browse/", $item.node_id)|ezurl}{else}{$item.url_alias|ezurl}{/if}{if $pagedata.is_edit} onclick="return false;"{/if}>{'Overview'|ez18n('ocbootstrap')}</a></li>
                 {foreach $sub_menu_items as $subitem}
                   {if eq( $subitem.class_identifier, 'link')}
                     <li id="node_id_{$subitem.node_id}"><a {if eq( $ui_context, 'browse' )}href={concat("content/browse/", $subitem.node_id)|ezurl}{else}href={$subitem.data_map.location.content|ezurl}{if and( is_set( $subitem.data_map.open_in_new_window ), $subitem.data_map.open_in_new_window.data_int )} target="_blank"{/if}{/if}{if $pagedata.is_edit} onclick="return false;"{/if} title="{$subitem.data_map.location.data_text|wash}" class="menu-item-link" rel={$subitem.url_alias|ezurl}>{if $subitem.data_map.location.data_text}{$subitem.data_map.location.data_text|wash()}{else}{$subitem.name|wash()}{/if}</a></li>

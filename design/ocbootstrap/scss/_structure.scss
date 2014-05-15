@@ -1,18 +1,19 @@
 
-.nav-section{
-  @extend .col-md-3;
+.nav-section,
+.nav-facets{
+  @extend .col-sm-3;
 }
 
 .content-main{
-  @extend .col-md-9;
+  @extend .col-sm-9;
   &.wide{
-    @extend .col-md-12;
+    @extend .col-sm-12;
   }
   .full-stack &{
-    @extend .col-md-6;
+    @extend .col-sm-6;
   }
 }
 
 .content-related{
-  @extend .col-md-3;
+  @extend .col-sm-3;
 }

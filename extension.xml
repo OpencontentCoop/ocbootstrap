@@ -13,6 +13,7 @@
             <extension name="ezfind" />
             <extension name="ezjscore" />
             <extension name="ocoperatorscollection" />
+            <extension name="ocsearchtools" />
         </requires>
         <extends>            
             <extension name="ezflow" />

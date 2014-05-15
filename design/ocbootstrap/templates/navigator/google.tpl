@@ -30,7 +30,7 @@
 
 {section show=$:page_count|gt(1)}
 
-<div class="pagination-container">
+<div class="pagination-container text-center">
 <ul class="pagination">
 
 
@@ -61,7 +61,7 @@
 
     {section loop=$:right_length}
         {let page_offset=sum($ViewParameter:current_page,1,$:index)}
-          <li><a href={concat($page_uri,$:page_offset|gt(0)|choose('',concat($:offset_text,mul($:page_offset,$item_limit))),$ViewParameter:view_parameter_text,$page_uri_suffix)|ezurl}>{$:page_offset|inc}</a></li>
+          <li><a class="next" href={concat($page_uri,$:page_offset|gt(0)|choose('',concat($:offset_text,mul($:page_offset,$item_limit))),$ViewParameter:view_parameter_text,$page_uri_suffix)|ezurl}>{$:page_offset|inc}</a></li>
         {/let}
     {/section}
 
