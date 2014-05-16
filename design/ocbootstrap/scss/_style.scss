@@ -1,20 +1,28 @@
-/* =nav-main
+/* =typography
 -------------------------------------------------
 */
 
+.abstract{
+  @extend .lead;
+}
+
+
+/* =nav-main
+-------------------------------------------------
+*/
 
 .nav-main{
   .navbar-collapse.in{
     overflow-y: visible !important;
   }
-  /*.dropdown-toggle{
-    @extend .hidden-sm;
-    @extend .hidden-md;
-    @extend .hidden-lg;
-  }*/
+  .dropdown-toggle{        /* disable these rules      */
+    @extend .hidden-sm;    /* to have a full           */
+    @extend .hidden-md;    /* dropdown menu            */
+    @extend .hidden-lg;    /* also on sm,md,lg screens */
+  }
   .nav-parent{
-    display: none;
-    //@extend .hidden-xs;
+    //display: none;      /* display this to have full dropdown     */
+    @extend .hidden-xs;   /* hide this to have full-dropdown        */
   }
 
   .dropdown-toggle i{
@@ -26,6 +34,24 @@
   }
 }
 
+/* =nav-tools
+-------------------------------------------------
+*/
+
+.nav-tools{
+  &.navbar-default{
+    background-color: transparent;
+    border: none;
+  }
+  #login .panel{
+    background-color: $navbar-default-link-active-bg !important;
+    padding: 10px;
+    z-index: 1200;
+    @media (min-width: $screen-sm-min){
+      width: 280px !important;
+    }
+  }
+}
 /* =nav-section
 -------------------------------------------------
 */

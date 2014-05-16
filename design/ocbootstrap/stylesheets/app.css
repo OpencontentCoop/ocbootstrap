@@ -238,9 +238,9 @@ h6, .h6 { font-size: 12px; }
 p { margin: 0 0 10px; }
 
 /* line 62, ../scss/bootstrap/_type.scss */
-.lead { margin-bottom: 20px; font-size: 16px; font-weight: 200; line-height: 1.4; }
+.lead, .abstract { margin-bottom: 20px; font-size: 16px; font-weight: 200; line-height: 1.4; }
 @media (min-width: 768px) { /* line 62, ../scss/bootstrap/_type.scss */
-  .lead { font-size: 21px; } }
+  .lead, .abstract { font-size: 21px; } }
 
 /* line 79, ../scss/bootstrap/_type.scss */
 small, .small { font-size: 85%; }
@@ -4423,22 +4423,35 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 /* line 41, ../scss/_ezpublish.scss */
 .block .element input { display: inline-block; }
 
+/* =typography
+-------------------------------------------------
+*/
 /* =nav-main
 -------------------------------------------------
 */
-/* line 7, ../scss/_style.scss */
-.nav-main .navbar-collapse.in { overflow-y: visible !important; }
-/* line 10, ../scss/_style.scss */
-.nav-main .dropdown-toggle { /* disable these rules      */ /* to have a full           */ /* dropdown menu            */ /* also on sm,md,lg screens */ }
 /* line 15, ../scss/_style.scss */
+.nav-main .navbar-collapse.in { overflow-y: visible !important; }
+/* line 18, ../scss/_style.scss */
+.nav-main .dropdown-toggle { /* disable these rules      */ /* to have a full           */ /* dropdown menu            */ /* also on sm,md,lg screens */ }
+/* line 23, ../scss/_style.scss */
 .nav-main .nav-parent { /* hide this to have full-dropdown        */ }
-/* line 20, ../scss/_style.scss */
+/* line 28, ../scss/_style.scss */
 .nav-main .dropdown-toggle i { float: right; }
+
+/* =nav-tools
+-------------------------------------------------
+*/
+/* line 42, ../scss/_style.scss */
+.nav-tools.navbar-default { background-color: transparent; border: none; }
+/* line 46, ../scss/_style.scss */
+.nav-tools #login .panel { background-color: #e7e7e7 !important; padding: 10px; z-index: 1200; }
+@media (min-width: 768px) { /* line 46, ../scss/_style.scss */
+  .nav-tools #login .panel { width: 280px !important; } }
 
 /* =nav-section
 -------------------------------------------------
 */
-/* line 37, ../scss/_style.scss */
+/* line 63, ../scss/_style.scss */
 .nav-section .nav-sub > li > a { padding-left: 2em; }
 
 /* =nav-facets
@@ -4447,5 +4460,5 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 /* =image-gallery
 -------------------------------------------------
 */
-/* line 58, ../scss/_style.scss */
+/* line 84, ../scss/_style.scss */
 .blueimp-gallery { display: none; }

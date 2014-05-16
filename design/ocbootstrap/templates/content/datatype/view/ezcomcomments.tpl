@@ -17,7 +17,23 @@
                                                                        'node', $attribute_node ) )}
         
     
-    {* Displaying comments START *}
+    <div class="col-md-5 {if $comments|count|eq( 0 )}col-md-offset-7{/if}">
+    {* Adding comment form START *}
+    {if $attribute.content.enable_comment}
+        {def $can_add = fetch( 'comment', 'has_access_to_function', hash( 'function', 'add',
+                                                                       'contentobject', $contentobject,
+                                                                       'language_code', $language_code,
+                                                                       'node', $attribute_node
+                                                                        ) )}
+        {if $can_add}
+            {include uri="design:comment/add_comment.tpl" redirect_uri=$attribute_node.url_alias contentobject_id=$contentobject.id language_id=$language_id}    
+        {/if}
+        {undef $can_add}
+    {/if}
+    {* Adding comment form END *}
+    </div>
+	
+	{* Displaying comments START *}
     {if $can_read}
     
         {def $sort_field=ezini( 'GlobalSettings', 'DefaultEmbededSortField', 'ezcomments.ini' )}
@@ -84,22 +100,6 @@
     {/if}    
     {* Displaying comments END *}
     
-
-    <div class="col-md-5 {if $comments|count|eq( 0 )}col-md-offset-7{/if}">
-    {* Adding comment form START *}
-    {if $attribute.content.enable_comment}
-        {def $can_add = fetch( 'comment', 'has_access_to_function', hash( 'function', 'add',
-                                                                       'contentobject', $contentobject,
-                                                                       'language_code', $language_code,
-                                                                       'node', $attribute_node
-                                                                        ) )}
-        {if $can_add}
-            {include uri="design:comment/add_comment.tpl" redirect_uri=$attribute_node.url_alias contentobject_id=$contentobject.id language_id=$language_id}    
-        {/if}
-        {undef $can_add}
-    {/if}
-    {* Adding comment form END *}
-    </div>
     {undef $can_read}
     {undef $contentobject $language_id $language_code}
     {undef $comments $total_count $default_shown_length $sort_order $sort_field }
