@@ -2,10 +2,22 @@
 -------------------------------------------------
 */
 
+a.logo{
+  display: block;
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
+/* =typography
+-------------------------------------------------
+*/
+
 .abstract{
   @extend .lead;
 }
-
 
 /* =nav-main
 -------------------------------------------------
@@ -38,7 +50,7 @@
 -------------------------------------------------
 */
 
-.nav-tools{
+.nav-extra{
   &.navbar-default{
     background-color: transparent;
     border: none;
@@ -57,6 +69,9 @@
 */
 
 .nav-section{
+  li a{
+    border-bottom: 1px solid $gray-lighter;
+  }
   @extend .hidden-xs;
   .nav-sub{
     @extend .nav;
@@ -72,10 +87,26 @@
 */
 
 .nav-facets{
+  h2{font-size: $font-size-base;}
+  .facet-list{
+    @extend .col-xs-3;
+    @extend .col-sm-12;
+    @media only screen and (max-width: 480px){
+      .facet-list{
+        width: 100%;
+      }
+    }
+  }
   .nav-sub{
-    @extend .nav;
+    //@extend .nav;
+    list-style: none;
+    height: 100px;
+    overflow: auto;
+    padding: 0 !important;
   }
 }
+
+
 
 /* =image-gallery
 -------------------------------------------------

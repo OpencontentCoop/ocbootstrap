@@ -1,3 +1,5 @@
+{developer_warning( 'definire visualizzazione language_switcher' )}
+
 {def $lang_selector = array()
      $avail_translation = array()}
 <div id="lang-selector" class="transition-showed">
@@ -6,6 +8,7 @@
 {else}
     {set $avail_translation = language_switcher( $site.uri.original_uri )}
 {/if}
+
 
 {if $avail_translation|count|gt( 1 )}
     {foreach $avail_translation as $siteaccess => $lang}

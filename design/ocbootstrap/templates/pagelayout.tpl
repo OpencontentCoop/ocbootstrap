@@ -18,7 +18,12 @@
      $locales          = fetch( 'content', 'translation_list' )
      $current_node_id  = $pagedata.node_id}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Site: {ezsys( 'hostname' )} -->
+  {if ezsys( 'hostname' )|contains( 'opencontent' )}
+    <META name="robots" content="NOINDEX,NOFOLLOW" />
+  {/if}
 
 {include uri='design:page_head.tpl'}
 {include uri='design:page_head_style.tpl'}

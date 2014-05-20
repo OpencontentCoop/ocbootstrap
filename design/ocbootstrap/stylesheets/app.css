@@ -435,10 +435,10 @@ pre code { padding: 0; font-size: inherit; color: inherit; white-space: pre-wrap
 .row:after { clear: both; }
 
 /* line 798, ../scss/bootstrap/_mixins.scss */
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .nav-section, .nav-facets, .content-related, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .full-stack .content-main, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .content-main, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .content-main.wide, .col-md-12, .col-lg-12 { position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; }
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .nav-facets .facet-list, .col-sm-3, .nav-section, .nav-facets, .content-related, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .full-stack .content-main, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .content-main, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .content-main.wide, .nav-facets .facet-list, .col-md-12, .col-lg-12 { position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; }
 
 /* line 817, ../scss/bootstrap/_mixins.scss */
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 { float: left; }
+.col-xs-1, .col-xs-2, .col-xs-3, .nav-facets .facet-list, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 { float: left; }
 
 /* line 825, ../scss/bootstrap/_mixins.scss */
 .col-xs-1 { width: 8.33333%; }
@@ -447,7 +447,7 @@ pre code { padding: 0; font-size: inherit; color: inherit; white-space: pre-wrap
 .col-xs-2 { width: 16.66667%; }
 
 /* line 825, ../scss/bootstrap/_mixins.scss */
-.col-xs-3 { width: 25%; }
+.col-xs-3, .nav-facets .facet-list { width: 25%; }
 
 /* line 825, ../scss/bootstrap/_mixins.scss */
 .col-xs-4 { width: 33.33333%; }
@@ -594,7 +594,7 @@ pre code { padding: 0; font-size: inherit; color: inherit; white-space: pre-wrap
 .col-xs-offset-12 { margin-left: 100%; }
 
 @media (min-width: 768px) { /* line 817, ../scss/bootstrap/_mixins.scss */
-  .col-sm-1, .col-sm-2, .col-sm-3, .nav-section, .nav-facets, .content-related, .col-sm-4, .col-sm-5, .col-sm-6, .full-stack .content-main, .col-sm-7, .col-sm-8, .col-sm-9, .content-main, .col-sm-10, .col-sm-11, .col-sm-12, .content-main.wide { float: left; }
+  .col-sm-1, .col-sm-2, .col-sm-3, .nav-section, .nav-facets, .content-related, .col-sm-4, .col-sm-5, .col-sm-6, .full-stack .content-main, .col-sm-7, .col-sm-8, .col-sm-9, .content-main, .col-sm-10, .col-sm-11, .col-sm-12, .content-main.wide, .nav-facets .facet-list { float: left; }
   /* line 825, ../scss/bootstrap/_mixins.scss */
   .col-sm-1 { width: 8.33333%; }
   /* line 825, ../scss/bootstrap/_mixins.scss */
@@ -618,7 +618,7 @@ pre code { padding: 0; font-size: inherit; color: inherit; white-space: pre-wrap
   /* line 825, ../scss/bootstrap/_mixins.scss */
   .col-sm-11 { width: 91.66667%; }
   /* line 825, ../scss/bootstrap/_mixins.scss */
-  .col-sm-12, .content-main.wide { width: 100%; }
+  .col-sm-12, .content-main.wide, .nav-facets .facet-list { width: 100%; }
   /* line 835, ../scss/bootstrap/_mixins.scss */
   .col-sm-pull-0 { right: 0%; }
   /* line 835, ../scss/bootstrap/_mixins.scss */
@@ -1292,7 +1292,11 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
 input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="button"].btn-block { width: 100%; }
 
 /* FONT PATH -------------------------- */
-@font-face { font-family: 'FontAwesome'; src: url("../fonts/fontawesome-webfont.eot?v=4.0.3"); src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=4.0.3") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.0.3") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format("svg"); font-weight: normal; font-style: normal; }
+/*
+@font-face { font-family: 'FontAwesome'; src: url('../fonts/fontawesome-webfont.eot?v=4.0.3'); src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg'); //src: url('../fonts/FontAwesome.otf') format('opentype'); // used when developing fonts font-weight: normal; font-style: normal;
+}
+*/
+@font-face { font-family: 'FontAwesome'; src: url("../fonts/fontawesome-webfont.eot"); src: url("../fonts/fontawesome-webfont.eot") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome-webfont.svg") format("svg"); font-weight: normal; font-style: normal; }
 
 /* line 4, ../scss/font-awesome/_core.scss */
 .fa { display: inline-block; font-family: FontAwesome; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
@@ -3339,27 +3343,27 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group { margin-left: -1px; }
 
 /* line 9, ../scss/bootstrap/_navs.scss */
-.nav, .nav-section .nav-sub, .nav-facets .nav-sub { margin-bottom: 0; padding-left: 0; list-style: none; }
+.nav, .nav-section .nav-sub { margin-bottom: 0; padding-left: 0; list-style: none; }
 /* line 21, ../scss/bootstrap/_mixins.scss */
-.nav:before, .nav-section .nav-sub:before, .nav-facets .nav-sub:before, .nav:after, .nav-section .nav-sub:after, .nav-facets .nav-sub:after { content: " "; display: table; }
+.nav:before, .nav-section .nav-sub:before, .nav:after, .nav-section .nav-sub:after { content: " "; display: table; }
 /* line 25, ../scss/bootstrap/_mixins.scss */
-.nav:after, .nav-section .nav-sub:after, .nav-facets .nav-sub:after { clear: both; }
+.nav:after, .nav-section .nav-sub:after { clear: both; }
 /* line 15, ../scss/bootstrap/_navs.scss */
-.nav > li, .nav-section .nav-sub > li, .nav-facets .nav-sub > li { position: relative; display: block; }
+.nav > li, .nav-section .nav-sub > li { position: relative; display: block; }
 /* line 19, ../scss/bootstrap/_navs.scss */
-.nav > li > a, .nav-section .nav-sub > li > a, .nav-facets .nav-sub > li > a { position: relative; display: block; padding: 10px 15px; }
+.nav > li > a, .nav-section .nav-sub > li > a { position: relative; display: block; padding: 10px 15px; }
 /* line 24, ../scss/bootstrap/_navs.scss */
-.nav > li > a:hover, .nav-section .nav-sub > li > a:hover, .nav-facets .nav-sub > li > a:hover, .nav > li > a:focus, .nav-section .nav-sub > li > a:focus, .nav-facets .nav-sub > li > a:focus { text-decoration: none; background-color: #eeeeee; }
+.nav > li > a:hover, .nav-section .nav-sub > li > a:hover, .nav > li > a:focus, .nav-section .nav-sub > li > a:focus { text-decoration: none; background-color: #eeeeee; }
 /* line 31, ../scss/bootstrap/_navs.scss */
-.nav > li.disabled > a, .nav-section .nav-sub > li.disabled > a, .nav-facets .nav-sub > li.disabled > a { color: #999999; }
+.nav > li.disabled > a, .nav-section .nav-sub > li.disabled > a { color: #999999; }
 /* line 35, ../scss/bootstrap/_navs.scss */
-.nav > li.disabled > a:hover, .nav-section .nav-sub > li.disabled > a:hover, .nav-facets .nav-sub > li.disabled > a:hover, .nav > li.disabled > a:focus, .nav-section .nav-sub > li.disabled > a:focus, .nav-facets .nav-sub > li.disabled > a:focus { color: #999999; text-decoration: none; background-color: transparent; cursor: not-allowed; }
+.nav > li.disabled > a:hover, .nav-section .nav-sub > li.disabled > a:hover, .nav > li.disabled > a:focus, .nav-section .nav-sub > li.disabled > a:focus { color: #999999; text-decoration: none; background-color: transparent; cursor: not-allowed; }
 /* line 48, ../scss/bootstrap/_navs.scss */
-.nav .open > a, .nav-section .nav-sub .open > a, .nav-facets .nav-sub .open > a, .nav .open > a:hover, .nav-section .nav-sub .open > a:hover, .nav-facets .nav-sub .open > a:hover, .nav .open > a:focus, .nav-section .nav-sub .open > a:focus, .nav-facets .nav-sub .open > a:focus { background-color: #eeeeee; border-color: #428bca; }
+.nav .open > a, .nav-section .nav-sub .open > a, .nav .open > a:hover, .nav-section .nav-sub .open > a:hover, .nav .open > a:focus, .nav-section .nav-sub .open > a:focus { background-color: #eeeeee; border-color: #428bca; }
 /* line 59, ../scss/bootstrap/_navs.scss */
-.nav .nav-divider, .nav-section .nav-sub .nav-divider, .nav-facets .nav-sub .nav-divider { height: 1px; margin: 9px 0; overflow: hidden; background-color: #e5e5e5; }
+.nav .nav-divider, .nav-section .nav-sub .nav-divider { height: 1px; margin: 9px 0; overflow: hidden; background-color: #e5e5e5; }
 /* line 66, ../scss/bootstrap/_navs.scss */
-.nav > li > a > img, .nav-section .nav-sub > li > a > img, .nav-facets .nav-sub > li > a > img { max-width: none; }
+.nav > li > a > img, .nav-section .nav-sub > li > a > img { max-width: none; }
 
 /* line 76, ../scss/bootstrap/_navs.scss */
 .nav-tabs { border-bottom: 1px solid #dddddd; }
@@ -4426,39 +4430,56 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 /* =typography
 -------------------------------------------------
 */
+/* line 5, ../scss/_style.scss */
+a.logo { display: block; }
+/* line 7, ../scss/_style.scss */
+a.logo img { max-width: 100%; height: auto; }
+
+/* =typography
+-------------------------------------------------
+*/
 /* =nav-main
 -------------------------------------------------
 */
-/* line 15, ../scss/_style.scss */
+/* line 27, ../scss/_style.scss */
 .nav-main .navbar-collapse.in { overflow-y: visible !important; }
-/* line 18, ../scss/_style.scss */
+/* line 30, ../scss/_style.scss */
 .nav-main .dropdown-toggle { /* disable these rules      */ /* to have a full           */ /* dropdown menu            */ /* also on sm,md,lg screens */ }
-/* line 23, ../scss/_style.scss */
+/* line 35, ../scss/_style.scss */
 .nav-main .nav-parent { /* hide this to have full-dropdown        */ }
-/* line 28, ../scss/_style.scss */
+/* line 40, ../scss/_style.scss */
 .nav-main .dropdown-toggle i { float: right; }
 
 /* =nav-tools
 -------------------------------------------------
 */
-/* line 42, ../scss/_style.scss */
-.nav-tools.navbar-default { background-color: transparent; border: none; }
-/* line 46, ../scss/_style.scss */
-.nav-tools #login .panel { background-color: #e7e7e7 !important; padding: 10px; z-index: 1200; }
-@media (min-width: 768px) { /* line 46, ../scss/_style.scss */
-  .nav-tools #login .panel { width: 280px !important; } }
+/* line 54, ../scss/_style.scss */
+.nav-extra.navbar-default { background-color: transparent; border: none; }
+/* line 58, ../scss/_style.scss */
+.nav-extra #login .panel { background-color: #e7e7e7 !important; padding: 10px; z-index: 1200; }
+@media (min-width: 768px) { /* line 58, ../scss/_style.scss */
+  .nav-extra #login .panel { width: 280px !important; } }
 
 /* =nav-section
 -------------------------------------------------
 */
-/* line 63, ../scss/_style.scss */
+/* line 72, ../scss/_style.scss */
+.nav-section li a { border-bottom: 1px solid #eeeeee; }
+/* line 78, ../scss/_style.scss */
 .nav-section .nav-sub > li > a { padding-left: 2em; }
 
 /* =nav-facets
 -------------------------------------------------
 */
+/* line 90, ../scss/_style.scss */
+.nav-facets h2 { font-size: 14px; }
+@media only screen and (max-width: 480px) { /* line 95, ../scss/_style.scss */
+  .nav-facets .facet-list .facet-list { width: 100%; } }
+/* line 100, ../scss/_style.scss */
+.nav-facets .nav-sub { list-style: none; height: 100px; overflow: auto; padding: 0 !important; }
+
 /* =image-gallery
 -------------------------------------------------
 */
-/* line 84, ../scss/_style.scss */
+/* line 115, ../scss/_style.scss */
 .blueimp-gallery { display: none; }

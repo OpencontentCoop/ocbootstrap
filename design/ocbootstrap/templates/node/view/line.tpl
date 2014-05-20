@@ -12,6 +12,8 @@
 		{$node.name|wash()}
 	  {/if}
 	</h4>	
-    {$node|abstract()}
+    {if $node|has_abstract()}
+	  {$node|abstract()}
+	{/if}
   </div>
 </div>

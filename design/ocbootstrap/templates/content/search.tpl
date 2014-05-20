@@ -1,3 +1,4 @@
+{developer_warning( 'Correggere faccette' )}
 {def $search=false()}
 {if $use_template_search}
     {set $page_limit=20}
@@ -31,10 +32,7 @@
 
     {def $filterParameters = fetch( 'ezfind', 'filterParameters' )
          $defaultSearchFacets = array(
-                                       hash( 'field', 'extra_project_name_s', 'name', 'Progetto', 'limit', 50 ),
-                                       hash( 'field', 'subattr_milestone___name____s', 'name', 'Attività', 'limit', 20 ),
-                                       hash( 'field', 'class', 'name', 'Content type'|i18n("extension/ezfind/facets"), 'limit', 20 ),
-                                       hash( 'field', 'author', 'name', 'Author'|i18n("extension/ezfind/facets"), 'limit', 20 ),                                       
+                                       hash( 'field', 'class', 'name', 'Content type'|i18n("extension/ezfind/facets"), 'limit', 20 )
                                      )}
         
     {set $search=fetch( ezfind,search,
@@ -126,19 +124,18 @@
 {/literal}
 </script>
 
-<div class="col-xs-12">
+<div class="col-md-12">
 
 <form action={"/content/search/"|ezurl} method="get">
 
 <div class="page-header">
-    <h1>
-        <i class="icon-search"></i>
+    <h1>        
         <span>{"Search"|i18n("design/ezwebin/content/search")}</span>
         <small>{$search_text|wash}</small>
     </h1>
     
     <div class="row">
-    <div class="col-lg-6 col-lg-offset-2">
+    <div class="col-lg-6 col-lg-offset-3">
         <div class="input-group">
           <input type="text" name="SearchText" class="form-control" value="{$search_text|wash}" />
           <span class="input-group-btn">
@@ -150,7 +147,7 @@
     
     <hr />
     
-    <div class="col-lg-12">
+    <div class="col-md-12">
         {*if $search_extras.spellcheck_collation}
              {def $spell_url=concat('/content/search/',$search_text|count_chars()|gt(0)|choose('',concat('?SearchText=',$search_extras.spellcheck_collation|urlencode)))|ezurl}
              <p>{'Spell check suggestion: did you mean'|i18n('design/ezfind/search')} <b>{concat("<a href=",$spell_url,">")}{$search_extras.spellcheck_collation}</a></b> ?</p>
@@ -193,7 +190,7 @@
 
     </div>
 
-  <div id="search_controls" class="col-sm-2">
+  <div id="search_controls" class="col-md-2">
       <fieldset>
           {def $activeFacetsCount=0}
           <ul class="list-unstyled" id="active-facets-list">
@@ -203,17 +200,16 @@
 
                   {foreach $facetData.nameList as $key2 => $facetName}
                       {if eq( $activeFacetParameters[concat( $defaultFacet['field'], ':', $defaultFacet['name'] )], $facetName )}
-                          {def $activeFacetsCount=sum( $key, 1 )}
-                          {def $suffix=$uriSuffix|explode( concat( '&filter[]=', $facetData.fieldList[$key2], ':"', $key2|solr_quotes_escape, '"' ) )|implode( '' )|explode( concat( '&activeFacets[', $defaultFacet['field'], ':', $defaultFacet['name'], ']=', $facetName ) )|implode( '' )}
+                          {set $activeFacetsCount=sum( $key, 1 )}
+                          {def $suffix=$uriSuffix|explode( concat( '&filter[]=', $facetData.queryLimit[$key2])|implode( '' )|explode( concat( '&activeFacets[', $defaultFacet['field'], ':', $defaultFacet['name'], ']=', $facetName ) )|implode( '' )}
                           <li>
 	                          <a class="btn btn-success btn-xs" href={concat( $baseURI, $suffix )|ezurl} title="{'Remove filter on '|i18n( 'design/ezwebin/content/search' )}'{$facetName|trim('"')|wash}'">
 	                            <span class="remover">&times</span> 
 	                            <span><strong>{$defaultFacet['name']}</strong>&nbsp;{$facetName|trim('"')|shorten(20)|wash}</span>
 	                          </a>
-                          </li>
+                          </li>						  
                       {/if}
-                  {/foreach}
-                  {undef $facetData}
+                  {/foreach}                  
               {/if}
           {/foreach}
 
@@ -251,7 +247,7 @@
                           <li>
                               <span class="label label-primary facet-count">{$facetData.countList[$key2]}</span>
                               <a href={concat(
-                                  $baseURI, '&filter[]=', $facetData.fieldList[$key2], ':"', $key2|solr_quotes_escape|rawurlencode, '"',
+                                  $baseURI, '&filter[]=', $facetData.queryLimit[$key2],
                                   '&activeFacets[', $defaultFacet['field'], ':', $defaultFacet['name'], ']=',
                                   $facetName|rawurlencode,
                                   $uriSuffix )|ezurl}>
@@ -295,7 +291,7 @@
   {/case}
 {/switch}
 
-  <div id="search_results" class="col-sm-10">
+  <div id="search_results" class="col-md-10">
     {include name=Navigator
              uri='design:navigator/google.tpl'
              page_uri='/content/search'
