@@ -2,10 +2,10 @@
 {def  $root_node_id = cond( $type|eq( 'relative' ), $node.path_array[$node.depth], $node.path_array[2] )
 $root_node = fetch( 'content', 'node', hash( 'node_id', $root_node_id ) )
 $menu_items = fetch( 'content', 'list', hash( 'parent_node_id', $root_node.node_id,
-'sort_by', $root_node.sort_array,
-'load_data_map', false(),
-'class_filter_type', 'include',
-'class_filter_array', appini( 'MenuContentSettings', 'LeftIdentifierList', array() ) ) )
+                     'sort_by', $root_node.sort_array,
+                     'load_data_map', false(),
+                     'class_filter_type', 'include',
+                     'class_filter_array', appini( 'MenuContentSettings', 'LeftIdentifierList', array() ) ) )
 $menu_items_count = $menu_items|count()
 $current_node_in_path = first_set($node.path_array[3], 0  )
 }
