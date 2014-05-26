@@ -1,6 +1,5 @@
 <?php /*
 
-
 [ImageMagick]
 Filters[]=thumb=-resize 'x%1' -resize '%1x<' -resize 50%
 Filters[]=centerimg=-gravity center -crop %1x%2+0+0 +repage
@@ -16,6 +15,12 @@ AliasList[]=squaremini
 AliasList[]=squarethumb
 AliasList[]=squaremedium
 AliasList[]=imagefullwide
+AliasList[]=carousel
+
+[carousel]
+Filters[]
+Filters[]=geometry/scalemin=770;390
+Filters[]=centerimg=770;390;0;0
 
 [squaremini]
 Reference=original

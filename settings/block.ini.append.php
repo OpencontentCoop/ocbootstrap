@@ -2,6 +2,12 @@
 
 [General]
 AllowedTypes[]
+AllowedTypes[]=Carousel
+AllowedTypes[]=UpcomingEvents
+
+#---------------------------------------------#
+#   eZ Demo
+#---------------------------------------------#
 AllowedTypes[]=Campaign
 AllowedTypes[]=MainStory
 AllowedTypes[]=ContentGrid
@@ -14,6 +20,39 @@ AllowedTypes[]=ItemList
 AllowedTypes[]=FeedReader
 AllowedTypes[]=FeedbackForm
 AllowedTypes[]=HighlightedItem
+
+#---------------------------------------------#
+
+
+[UpcomingEvents]
+Name=Prossimi eventi
+NumberOfValidItems=1
+NumberOfArchivedItems=0
+ManualAddingOfItems=enabled
+CustomAttributes[]=number
+CustomAttributeNames[number]=Numero di eventi
+CustomAttributeTypes[number]=select
+CustomAttributeSelection_number[]
+CustomAttributeSelection_number[3]=3
+CustomAttributeSelection_number[5]=5
+CustomAttributeSelection_number[8]=8
+CustomAttributeSelection_number[10]=10
+ViewList[]
+ViewList[]=upcoming_events
+ViewName[upcoming_events]=Lista
+
+[Carousel]
+Name=Carousel
+NumberOfValidItems=10
+NumberOfArchivedItems=0
+ManualAddingOfItems=enabled
+ViewList[]
+ViewList[]=default
+ViewName[default]=Default
+
+#---------------------------------------------#
+#   eZ Demo
+#---------------------------------------------#
 
 [Campaign]
 Name=Campaign

@@ -1,18 +1,23 @@
-<div class="nav-facets">		
+<div class="nav-facets">
 	{if $data.navigation|count}
-	<ul class="nav">
+	<div class="row">
 	  {foreach $data.navigation as $name => $items}
-		<li class="disabled"><a href="]">{$name|wash()}</a>
-		  <div class="list-group">
-			  {foreach $items as $item}
-				  <a class="{if $item.active}active {/if}list-group-item" href="{$item.url|ezurl( 'no' )}" data-key={$name} data-value="{$item.name}">
-					<span class="badge">{$item.count}</span>
-					{$item.name|wash()} 
-				  </a>
+		<div class="facet-list">
+      <h2>{$name|wash()}</h2>
+		  {*<div class="list-group">*}
+      <ul class="nav-sub">
+        {foreach $items as $item}
+          {*<a class="{if $item.active}active {/if}list-group-item" href="{$item.url|ezurl( 'no' )}" data-key={$name} data-value="{$item.name}">*}
+          <li>
+            <a class="{if $item.active}active{/if}" href="{$item.url|ezurl( 'no' )}" data-key={$name} data-value="{$item.name}">
+              {$item.name|wash()}
+              <span class="badge">{$item.count}</span>
+            </a>
+          </li>
 			  {/foreach}
-		  </div>
-		</li>
+		  </ul>
+		</div>
 		{/foreach}
-	</ul>
+	</div>
 	{/if}	
 </div>
