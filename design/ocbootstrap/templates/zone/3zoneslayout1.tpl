@@ -1,5 +1,5 @@
 <div class="zone-layout-{$zone_layout|downcase()} row">
-    <div class="span8">
+    <div class="col-md-8">
         <section class="content-view-block">
             {if and( is_set( $zones[0].blocks ), $zones[0].blocks|count() )}
             {foreach $zones[0].blocks as $block}
@@ -8,7 +8,7 @@
             {/if}
         </section>
     </div>
-    <div class="span4">
+    <div class="col-md-4">
         <aside>
             <section class="content-view-block content-view-aside">
                 {if and( is_set( $zones[1].blocks ), $zones[1].blocks|count() )}
@@ -19,7 +19,7 @@
             </section>
         </aside>
     </div>
-    <div class="span12">
+    <div class="col-md-12">
         <section class="content-view-block">
             {if and( is_set( $zones[2].blocks ), $zones[2].blocks|count() )}
             {foreach $zones[2].blocks as $block}
