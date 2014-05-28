@@ -44,6 +44,10 @@
       {include uri='design:page_toolbar.tpl'}
     {/if}
 
+    {if $pagedata.show_path}
+      {include uri='design:breadcrumb.tpl'}
+    {/if}
+
     <div class="container">
 
 {/cache-block}
