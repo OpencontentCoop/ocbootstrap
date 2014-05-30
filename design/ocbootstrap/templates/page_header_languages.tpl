@@ -1,8 +1,5 @@
-{developer_warning( 'definire visualizzazione language_switcher' )}
-
 {def $lang_selector = array()
      $avail_translation = array()}
-<div id="lang-selector" class="transition-showed">
 {if and( is_set( $DesignKeys:used.url_alias ), $DesignKeys:used.url_alias|count|ge( 1 ) )}
     {set $avail_translation = language_switcher( $DesignKeys:used.url_alias )}
 {else}
@@ -25,10 +22,9 @@
         {/if}
     {/if}
     {/foreach}
-
-    <ul class="lang-select">
+    
+	<ul class="nav navbar-nav navbar-left lang-select">
     {$lang_selector|implode( '' )}
     </ul>
 {/if}
 {undef $lang_selector}
-</div>

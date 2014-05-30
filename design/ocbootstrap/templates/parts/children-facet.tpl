@@ -14,7 +14,6 @@
 		   view_parameters=$view_parameters
 		   item_limit=$page_limit}
 
-  
   <div class="content-view-children">  
 	{foreach $data.contents as $child }
 	  {node_view_gui view=$view content_node=$child}

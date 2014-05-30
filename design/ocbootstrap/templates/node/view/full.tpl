@@ -1,12 +1,13 @@
 <div class="content-view-full class-{$node.class_identifier} row">
   
-  {include uri='design:nav/nav-section.tpl'}
+  {* Per il menu di sinistra scommenta e togli "wide" dal content-main *}
+  {*include uri='design:nav/nav-section.tpl'*}
     
-  <div class="content-main">
+  <div class="content-main wide">
     
     <h1>{$node.name|wash()}</h1>
     
-    <div class="info">
+    <div class="info text-right">
       {include uri='design:parts/date.tpl'}    
       {include uri='design:parts/author.tpl'}
     </div>
