@@ -3,7 +3,7 @@
     <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
     <div class="container-fluid">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-main-collapse">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -12,7 +12,7 @@
         {*<a class="navbar-brand" href="#">Brand</a>*}
       </div>
 
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+      <div class="collapse navbar-collapse" id="nav-main-collapse">
         {def $root_node = fetch( 'content', 'node', hash( 'node_id', $pagedata.root_node ) )
              $top_menu_class_filter = ezini( 'MenuContentSettings', 'TopIdentifierList', 'app.ini' )
              $top_menu_items = fetch( 'content', 'list', hash( 'parent_node_id', $root_node.node_id,
@@ -23,7 +23,8 @@
              $item_class = array()
              $sub_menu_class_filter = ezini('MenuContentSettings','LeftIdentifierList','app.ini')
              $sub_menu_items = 0
-
+             $anchor_class = array()
+             $anchor_data_toggle = ''
         }
 
         {if $top_menu_items_count}
@@ -67,7 +68,7 @@
 
             {if gt($sub_menu_items|count(),0)}
               <ul class="nav dropdown-menu">
-                <li><a href={if eq( $ui_context, 'browse' )}{concat("content/browse/", $item.node_id)|ezurl}{else}{$item.url_alias|ezurl}{/if}{if $pagedata.is_edit} onclick="return false;"{/if}>{'Overview'|ez18n('ocbootstrap')}</a></li>
+                <li><a href={if eq( $ui_context, 'browse' )}{concat("content/browse/", $item.node_id)|ezurl}{else}{$item.url_alias|ezurl}{/if}{if $pagedata.is_edit} onclick="return false;"{/if}>{'Overview'|i18n('ocbootstrap')}</a></li>
                 {foreach $sub_menu_items as $subitem}
                   {if eq( $subitem.class_identifier, 'link')}
                     <li id="node_id_{$subitem.node_id}"><a {if eq( $ui_context, 'browse' )}href={concat("content/browse/", $subitem.node_id)|ezurl}{else}href={$subitem.data_map.location.content|ezurl}{if and( is_set( $subitem.data_map.open_in_new_window ), $subitem.data_map.open_in_new_window.data_int )} target="_blank"{/if}{/if}{if $pagedata.is_edit} onclick="return false;"{/if} title="{$subitem.data_map.location.data_text|wash}" class="menu-item-link" rel={$subitem.url_alias|ezurl}>{if $subitem.data_map.location.data_text}{$subitem.data_map.location.data_text|wash()}{else}{$subitem.name|wash()}{/if}</a></li>

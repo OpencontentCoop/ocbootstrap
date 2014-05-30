@@ -1,7 +1,7 @@
 <header>
   <div class="container">
     <div class="row">
-      <div class="navbar nav-extra">
+      <div class="navbar nav-tools">
         <div class="container-fluid">
           <div class="nav-collapse row">
             {include uri='design:page_header_languages.tpl'}
