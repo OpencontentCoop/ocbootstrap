@@ -4,8 +4,9 @@
   'delimiter', ''
 ))}
 
+<div class="facet-content">  
 {if $data.count}
-  
+
   {include name=navigator
 		   uri='design:navigator/google.tpl'
 		   page_uri=$data.base_uri
@@ -28,4 +29,7 @@
 		   view_parameters=$view_parameters
 		   item_limit=$page_limit}
 
+{else}
+  <em>Nessun risultato</em>
 {/if}
+</div>
