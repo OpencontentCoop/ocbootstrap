@@ -1,15 +1,13 @@
 {def $currentInterval = 'P1M'
 	 $calendarData = calendar( $node, hash( 'interval', $currentInterval, 'view', 'program' )|merge( $view_parameters ) ) }
 
-<h2>{$calendarData.parameters.timestamp|datetime( custom, '%F' )|upfirst()}&nbsp;{$temp_year}</h2>
-
 <form class="calendar-tools" method='GET' action={concat('calendar/view/', $node.node_id)|ezurl}>
 <input type='hidden' name="UrlAlias" value="{$node.url_alias}" />
 <input type='hidden' name="View" value="program" />
 <input type='hidden' name="CurrentInterval" value="{$calendarData.parameters.interval}" />
 <input type="hidden" name="SearchDate" value="{$calendarData.parameters.picker_date}" />
 
-<div class="navigation-calendar hidden-xs">
+<div class="navigation-calendar hidden-xs pull-right">
 <div class="btn-group">
   <input type="submit" name="PrevMonthCalendarButton" class="btn btn-default" value="&laquo;" />    
   <input type="submit" name="ViewCalendarButton" class="btn btn-default" value="Calendario" />
@@ -18,6 +16,7 @@
 </div>
 </div>
 
+<h2>{$calendarData.parameters.timestamp|datetime( custom, '%F' )|upfirst()}&nbsp;{$temp_year}</h2>
 
 {foreach $calendarData.day_by_day as $calendarDay}    
     {if $calendarDay.count|gt(0)}

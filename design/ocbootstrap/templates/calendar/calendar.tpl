@@ -32,9 +32,7 @@
 <input type='hidden' name="View" value="calendar" />
 <input type="hidden" name="SearchDate" value="{$calendarData.parameters.picker_date}" />
 
-<h2>{$calendarData.parameters.timestamp|datetime( custom, '%F' )|upfirst()}&nbsp;{$temp_year}</h2>
-
-<div class="navigation-calendar hidden-xs">
+<div class="navigation-calendar hidden-xs pull-right">
 <div class="btn-group">
   <input type="submit" name="PrevMonthCalendarButton" class="btn btn-default" value="&laquo;" />    
   <input type="submit" name="ViewCalendarButton" class="btn btn-primary" value="Calendario" />
@@ -43,7 +41,7 @@
 </div>
 </div>
 
-
+<h2>{$calendarData.parameters.timestamp|datetime( custom, '%F' )|upfirst()}&nbsp;{$temp_year}</h2>
 
 <table summary="Calendario degli eventi" class="table-calendar">
 <thead>
@@ -81,6 +79,7 @@
             <td class="not-in-current-month {$css_col_class}">&nbsp;</td>
             {set $col_counter=inc( $col_counter )}
         {/while}
+		{set $css_col_class=' last_col'}
     {/if}    
     
 	{def $day_id = concat( $temp_year, '-', $temp_month, '-', $counter )}

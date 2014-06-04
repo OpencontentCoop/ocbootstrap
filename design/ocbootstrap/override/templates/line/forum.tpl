@@ -1,18 +1,13 @@
-<div class="content-view-line">
-    <div class="class-forum">
-        <table class="list forum" cellspacing="0">
-            <tr>
-                <th class="topic"> Forum </th>
+<div class="content-view-line class-{$node.class_identifier} media">    
+  <div class="media-body">
+        <h4><a href={$node.url_alias|ezurl}>{$node.name|wash}</a></h4>
+		<table class="list forum" cellspacing="0">
+            <tr>                
                 <th class="topic"> {"Number of topics"|i18n("design/ocbootstrap/line/forum")} </th>
                 <th class="replies"> {"Number of posts"|i18n("design/ocbootstrap/line/forum")} </th>
                 <th class="lastreply"> {"Last reply"|i18n( "design/ocbootstrap/line/forum" )} </th>
             </tr>
             <tr>
-                <td><h2><a href={$node.url_alias|ezurl}>{$node.name|wash}</a></h2>
-                    <div class="attribute-short"> {attribute_view_gui attribute=$node.data_map.description} </div>
-                    <div class="attribute-link">
-                        <p><a href={$node.url_alias|ezurl}>{"Enter forum"|i18n("design/ocbootstrap/line/forum")}</a></p>
-                    </div></td>
                 <td>{fetch('content','list_count',hash(parent_node_id,$node.node_id))}</td>
                 <td>{fetch('content','tree_count',hash(parent_node_id,$node.node_id))}</td>
                 <td> {let forum_list = fetch_alias( 'children', hash( 'parent_node_id', $node.node_id,

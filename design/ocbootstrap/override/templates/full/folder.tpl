@@ -4,21 +4,23 @@
     
   <div class="content-main">
     
-    <h1>{$node.name|wash()}</h1>
-    
-    {if $node|has_attribute( 'tags' )}
-    <div class="tags">
-      {attribute_view_gui attribute=$node|attribute( 'tags' )}
-    </div>
-    {/if}
+    <h1>{$node.name|wash()}</h1>      
 
     {if $node|has_attribute( 'short_description' )}
       <div class="abstract">
       {attribute_view_gui attribute=$node|attribute( 'short_description' )}
       </div>
     {/if}
+	
+	{if $node|has_attribute( 'tags' )}
+    <div class="tags">
+      {foreach $node.data_map.tags.content.keywords as $keyword}	  
+		<span class="label label-primary">{$keyword}</span>	 
+	  {/foreach}
+    </div>
+    {/if}
     
-    {include uri='design:atoms/image.tpl' image_class=appini( 'ContentViewFull', 'DefaultImageClass', 'wide' )}    
+    {include uri='design:atoms/image.tpl' item=$node image_class=appini( 'ContentViewFull', 'DefaultImageClass', 'wide' )}    
 	
     {if $node|has_attribute( 'description' )}
       <div class="description">

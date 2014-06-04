@@ -231,12 +231,12 @@ em.trigger
 
 em.expand
 {
-  background-image: url(../../images/ezpage/expand.gif);
+  background-image: url(../images/ezpage/expand.gif);
 }
 
 em.collapse
 {
-  background-image: url(../../images/ezpage/collapse.gif);
+  background-image: url(../images/ezpage/collapse.gif);
 }
 
 div.collapsed
@@ -634,11 +634,13 @@ table.list{
 }
 
 .object-left{
-    @extend .pull-left
+    @extend .pull-left;
+    margin: 0 .5em 0 0;
 }
 
 .object-right{
     @extend .pull-right;
+    margin: 0 0 0 0.5em
 }
 
 .object-center{
@@ -702,3 +704,5 @@ div.split div.three-center
 {
    @extend .col-md-3;
 }
+
+.spamfilter{display: none}

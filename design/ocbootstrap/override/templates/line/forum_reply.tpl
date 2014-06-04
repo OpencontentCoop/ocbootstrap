@@ -1,4 +1,2 @@
-<h2><a href={$node.parent.url_alias|ezurl}>{$node.name|wash}</a></h2>
-<p>
-{'Reply to:'|i18n('design/ocbootstrap/line/forum_reply')} {$node.parent.name}
-</p>
+	  <a href={$node.url_alias|ezurl}>{$node.name|wash}</a>
+	  <small>{'Reply to:'|i18n('design/ocbootstrap/line/forum_reply')} {$node.parent.name}</small>

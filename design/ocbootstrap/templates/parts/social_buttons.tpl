@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row social-buttons">
   <div class="col-xs-3 social-button">
       <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="ezpublish">Tweet</a>
       {literal}<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>{/literal}
@@ -35,7 +35,7 @@
   {if and( ezmodule( 'content/tipafriend' ), $tipafriend_access )}
       <div class="col-xs-3 social-button">
         <a class="btn btn-default btn-xs" href={concat( "/content/tipafriend/", $node.node_id )|ezurl} title="{'Tip a friend'|i18n( 'design/ocbootstrap/full/article' )}">
-          <span class="glyphicon glyphicon-fast-forward"></span> {'Tip a friend'|i18n( 'design/ocbootstrap/full/article' )}
+          <i class="fa fa-mail-forward"></i> {'Tip a friend'|i18n( 'design/ocbootstrap/full/article' )}
         </a>
       </div>
   {/if}

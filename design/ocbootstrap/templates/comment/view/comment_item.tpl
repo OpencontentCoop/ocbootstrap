@@ -35,7 +35,7 @@
               <a href="{$comment.url|wash}"><small>{$comment.name|wash}</small></a>
           {/if}
         {elseif $comment.user_id}
-            <small>{fetch( content, object, hash( object_id, $comment.user_id ))name|wash()}</small>
+            <small>{fetch( content, object, hash( object_id, $comment.user_id )).name|wash()}</small>
         {/if}
         
         </h3> 

@@ -1,29 +1,18 @@
-{* Gallery - Line view *}
-{def $content_size = '8'}
 
-<div class="content-view-line">
-    <article class="class-gallery row">
-    {if $node.data_map.image.has_content}
-    <div class="span2">
-        <div class="attribute-image">
-            {attribute_view_gui image_class=medium href=$node.url_alias|ezurl attribute=$node.data_map.image.content.data_map.image}
-        </div>
-    </div>
-        {set $content_size = '6'}
-    {/if}
-    <div class="span{$content_size}">
-        <div class="attribute-header">
-            <h2>
-                <a href="{$node.url_alias|ezurl( 'no' )}" class="teaser-link">{$node.name|wash()}</a>
-            </h2>
-        </div>
+<div class="content-view-line class-{$node.class_identifier} media">    
+  {if $node|has_attribute( 'image' )}
+  <a class="pull-left" href="{if is_set( $node.url_alias )}{$node.url_alias|ezurl('no')}{else}#{/if}">    
+	{attribute_view_gui attribute=$node|attribute( 'image' ) href=false() image_class='squarethumb' css_class="media-object"}
+  </a>
+  {/if}
+  <div class="media-body">
+    <h4><a href={$node.url_alias|ezurl}>{$node.name|wash}</a></h4>    
+    
         {if $node.data_map.short_description.has_content}
         <div class="attribute-short">
             {attribute_view_gui attribute=$node.data_map.short_description}
         </div>
         {/if}
-    </div>
-    </article>
+  </div>
 </div>
 
-{undef $content_size}

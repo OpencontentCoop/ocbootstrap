@@ -11,7 +11,7 @@
     <th class="wide">
     {'Name'|i18n( 'design/ocbootstrap/content/browse_mode_list' )}
     </th>
-    <th class="tight">
+    <th>
     {'Type'|i18n( 'design/ocbootstrap/content/browse_mode_list' )}
     </th>
 </tr>

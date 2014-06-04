@@ -14,20 +14,13 @@
 
 <form class="edit" enctype="multipart/form-data" method="post" action={concat("/content/edit/",$object.id,"/",$edit_version,"/",$edit_language|not|choose(concat($edit_language,"/"),''))|ezurl}>
     
+	{include uri='design:parts/website_toolbar_edit.tpl'}
 
     {include uri="design:content/edit_validation.tpl"}
     
-    <div class='page-header page-header-with-buttons row'>
-        <div class="col-md-7">
-            <h1>
-                <i class='icon-edit'></i>
-                <span>Modifica {$object.name|wash}</span>
-                <small>{$class.name|wash}</small>
-            </h1>
-        </div>
+    <div class='page-header page-header-with-buttons'>
     
-        <div class="col-md-5">
-            <span class="btn btn-sm btn-link">
+            <span class="btn btn-sm btn-link pull-right">
                 {def $language_index = 0
                      $from_language_index = 0
                      $translation_list = $content_version.translation_list}
@@ -52,13 +45,12 @@
             
                 {/if}
             </span>
-        
-        
-            <input type="submit" class="btn btn-sm btn-danger" name="DiscardButton" value="Annulla">
-            <input type="submit" class="btn btn-sm btn-warning" name="StoreButton" value="Salva bozza">
-            <input type="submit" class="btn btn-sm btn-success" name="PublishButton" value="Salva">
-        </div>
-
+			
+			<h1>
+                <i class='icon-edit'></i>
+                <span>Modifica {$object.name|wash}</span>
+                <small>{$class.name|wash}</small>
+            </h1>
     </div>
     
     <div class="row">

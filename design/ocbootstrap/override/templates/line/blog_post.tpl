@@ -1,32 +1,35 @@
-{* Blog post - Line view *}
+<div class="content-view-line class-{$node.class_identifier} media">  
+  {if $node|has_attribute( 'image' )}
+  <a class="pull-left" href="{if is_set( $node.url_alias )}{$node.url_alias|ezurl('no')}{else}#{/if}">    
+	{attribute_view_gui attribute=$node|attribute( 'image' ) href=false() image_class='squarethumb' css_class="media-object"}
+  </a>
+  {/if}
+  <div class="media-body">
+	<h4>
+	  <a href={$node.url_alias|ezurl}>{$node.name|wash()}</a>	  
+	  <span class="label label-primary">
+		<span class="glyphicon glyphicon-comment"></span>
+		{fetch( 'comment', 'comment_count', hash( 'contentobject_id', $node.contentobject_id,
+												  'language_id', $node.data_map.comments.language_id,
+												  'status', '1' ) )}		  
+	  </span>      
+	  <small class="date">{$node.object.published|l10n( 'date' )}
+	  {if $node.data_map.author.content.is_empty|not()}
+         {attribute_view_gui attribute=$node.data_map.author}
+	  {/if}
+	  </small>
+	</h4>
 
-<div class="content-view-line">
-    <article class="class-blog-post">
+	{if $node.data_map.body.content.is_empty|not}
+	 {attribute_view_gui attribute=$node.data_map.body}
+	{/if}
+	
+		
+	{foreach $node.data_map.tags.content.keywords as $keyword}
+	  <a href={concat( $node.parent.url_alias, "/(tag)/", $keyword|rawurlencode )|ezurl} title="{$keyword}">
+		<span class="label label-primary">{$keyword}</span>
+	  </a>	
+	{/foreach}
 
-    <div class="attribute-header">
-        <h2><a href={$node.url_alias|ezurl} title="{$node.data_map.title.content|wash}">{$node.data_map.title.content|wash}</a></h2>
-     </div>
-
-    <div class="attribute-byline with-comments">
-        <span class="date">{$node.data_map.publication_date.content.timestamp|l10n(shortdatetime)}</span>
-        <span class="author">{$node.object.owner.name}</span>
-        <span class="tags"> {"Tags:"|i18n("design/ocbootstrap/line/blog_post")} {foreach $node.data_map.tags.content.keywords as $keyword}
-                                           <a href={concat( $node.parent.url_alias, "/(tag)/", $keyword|rawurlencode )|ezurl} title="{$keyword}">{$keyword}</a>
-                                           {delimiter}
-                                               ,
-                                           {/delimiter}
-                                     {/foreach}
-        </span>
-        <a href="{$node.url_alias|ezurl( 'no' )}" class="comments">
-            {fetch( 'comment', 'comment_count', hash( 'contentobject_id', $node.contentobject_id,
-                                                      'language_id', $node.data_map.comments.language_id,
-                                                      'status', '1' ) )}
-        </a>
-    </div>
-
-        <div class="attribute-body">
-            {attribute_view_gui attribute=$node.data_map.body}
-        </div>
-
-    </article>
+  </div>
 </div>

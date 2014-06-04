@@ -2,7 +2,7 @@
 	{if $data.navigation|count}
     <form class="form-facets navbar-form navbar-left" role="search" action={concat('facet/proxy/', $node.node_id)|ezurl()}>
 	  <div class="btn-group">
-      <input id="searchfacet" type="text" class="form-control" placeholder="Cerca" value="{$data.query}">
+      <input id="searchfacet" data-content="Premi invio per cercare" type="text" class="form-control" placeholder="Cerca" name="query" value="{$data.query}">
       <span id="searchfacetclear" class="glyphicon glyphicon-remove-circle" style="position: absolute;right: 5px;top: 0;bottom: 0;height: 14px;margin: auto;font-size: 14px;cursor: pointer;color: #ccc;"></span>
     </div>
     {foreach $data.navigation as $name => $items}

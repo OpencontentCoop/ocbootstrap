@@ -125,6 +125,15 @@
   }
 }
 
+@media (max-width: 768px){
+    .chosen-container,
+    select.facet-select{
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 10px 0;
+    }
+}
+
 .chosen-container-single {
   .chosen-single {
     background-color: $chosen-background;

@@ -16,8 +16,33 @@
                                                                        'language_code', $language_code,
                                                                        'node', $attribute_node ) )}
         
+    {def $sort_field=ezini( 'GlobalSettings', 'DefaultEmbededSortField', 'ezcomments.ini' )}
+	{def $sort_order=ezini( 'GlobalSettings', 'DefaultEmbededSortOrder', 'ezcomments.ini' )}
+	{def $default_shown_length=ezini( 'GlobalSettings', 'DefaultEmbededCount', 'ezcomments.ini' )}
+
+	{* Fetch comment count *}
+	{def $total_count=fetch( 'comment',
+							 'comment_count',
+							 hash( 'contentobject_id', $contentobject.id,
+								   'language_id', $language_id,
+								   'status' ,1 ) )}
+	
+	{* Fetch comments *}
+	{def $comments=fetch( 'comment',
+						  'comment_list',
+						  hash( 'contentobject_id', $contentobject.id, 
+								'language_id', $language_id, 
+								'sort_field', $sort_field, 
+								'sort_order', $sort_order, 
+								'offset', 0, 
+								'length' ,$default_shown_length,
+								'status', 1 ) )}
+	
+	{* Find out if the currently used role has a user based edit/delete policy *}
+	{def $self_policy=fetch( 'comment', 'self_policies', hash( 'contentobject', $contentobject, 'node', $attribute_node ) )}
     
-    <div class="col-md-5 {if $comments|count|eq( 0 )}col-md-offset-7{/if}">
+	
+	<div class="col-md-5 {if $comments|count|eq( 0 )}col-md-offset-7{/if}">
     {* Adding comment form START *}
     {if $attribute.content.enable_comment}
         {def $can_add = fetch( 'comment', 'has_access_to_function', hash( 'function', 'add',
@@ -36,32 +61,6 @@
 	{* Displaying comments START *}
     {if $can_read}
     
-        {def $sort_field=ezini( 'GlobalSettings', 'DefaultEmbededSortField', 'ezcomments.ini' )}
-        {def $sort_order=ezini( 'GlobalSettings', 'DefaultEmbededSortOrder', 'ezcomments.ini' )}
-        {def $default_shown_length=ezini( 'GlobalSettings', 'DefaultEmbededCount', 'ezcomments.ini' )}
-
-        {* Fetch comment count *}
-        {def $total_count=fetch( 'comment',
-                                 'comment_count',
-                                 hash( 'contentobject_id', $contentobject.id,
-                                       'language_id', $language_id,
-                                       'status' ,1 ) )}
-        
-        {* Fetch comments *}
-        {def $comments=fetch( 'comment',
-                              'comment_list',
-                              hash( 'contentobject_id', $contentobject.id, 
-                                    'language_id', $language_id, 
-                                    'sort_field', $sort_field, 
-                                    'sort_order', $sort_order, 
-                                    'offset', 0, 
-                                    'length' ,$default_shown_length,
-                                    'status', 1 ) )}
-        
-        {* Find out if the currently used role has a user based edit/delete policy *}
-        {def $self_policy=fetch( 'comment', 'self_policies', hash( 'contentobject', $contentobject, 'node', $attribute_node ) )}
-
-                
         {* Comment item START *}
         {if $comments|count|gt( 0 )}
         <div class="col-md-7">

@@ -10,13 +10,19 @@ a.logo{
   }
 }
 
-
 /* =typography
 -------------------------------------------------
 */
 
 .abstract{
-  @extend .lead;
+  margin-bottom: $line-height-computed;
+  font-size: floor(($font-size-base * 1.15));
+  font-weight: 200;
+  line-height: 1.4;
+}
+
+small.date{
+    display: block;
 }
 
 /* =nav-main
@@ -27,14 +33,14 @@ a.logo{
   .navbar-collapse.in{
     overflow-y: visible !important;
   }
-  .dropdown-toggle{        /* disable these rules      */
-    @extend .hidden-sm;    /* to have a full           */
-    @extend .hidden-md;    /* dropdown menu            */
-    @extend .hidden-lg;    /* also on sm,md,lg screens */
-  }
+  //.dropdown-toggle{        /* disable these rules      */
+  //  @extend .hidden-sm;    /* to have a full           */
+  //  @extend .hidden-md;    /* dropdown menu            */
+  //  @extend .hidden-lg;    /* also on sm,md,lg screens */
+  //}
   .nav-parent{
-    //display: none;      /* display this to have full dropdown     */
-    @extend .hidden-xs;   /* hide this to have full-dropdown        */
+    display: none;      /* enable this to have full dropdown     */
+    //@extend .hidden-xs;   /* disable this to have full-dropdown        */
   }
 
   .dropdown-toggle i{
@@ -80,7 +86,6 @@ a.logo{
     }
   }
 }
-
 
 /* =nav-facets
 -------------------------------------------------

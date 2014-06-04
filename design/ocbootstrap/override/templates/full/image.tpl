@@ -8,7 +8,7 @@
     
     <h1>{$node.name|wash()}</h1>
         
-    {include uri='design:atoms/image.tpl' image_class=appini( 'ContentViewFull', 'DefaultImageClass', 'wide' ) caption=$node|attribute( 'caption' )}
+    {include uri='design:atoms/image.tpl' item=$node image_class=appini( 'ContentViewFull', 'DefaultImageClass', 'wide' ) caption=$node|attribute( 'caption' )}
 	
     {if $node|has_attribute( 'caption' )}
       <div class="description">

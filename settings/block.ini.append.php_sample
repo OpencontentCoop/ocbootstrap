@@ -68,7 +68,6 @@ Name=Main story
 NumberOfValidItems=1
 NumberOfArchivedItems=5
 ManualAddingOfItems=enabled
-ViewList[]
 ViewList[]=default
 ViewList[]=highligted
 ViewName[default]=Background Image

@@ -29,13 +29,13 @@
                               array( 'event/to_time', '>=', $today_ts ) ) ) ) }
 
 {if $upcoming_events}
-  <h3>{if $title}{$title}{else}{$events_node.name|wash()}{/if}</h3>
+  <h3 class="block-title">{if $title}{$title}{else}{$events_node.name|wash()}{/if}</h3>
   <div class="event-list">
     {foreach $upcoming_events as $event}
-      {node_view_gui content_node=$event view='line'}
+      {node_view_gui content_node=$event view='event'}
     {/foreach}
   </div>
-  <p class="more">
+  <p class="goto">
     <a href={$events_node.url_alias|ezurl()}>vedi tutti gli eventi</a>
   </p>
 {/if}

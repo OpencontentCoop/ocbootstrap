@@ -15,7 +15,7 @@
       {include uri='design:parts/author.tpl'}
     </div>
     
-    {include uri='design:atoms/image.tpl' image_class=appini( 'ContentViewFull', 'DefaultImageClass', 'wide' ) caption=$node|attribute( 'caption' )}
+    {include uri='design:atoms/image.tpl' item=$node image_class=appini( 'ContentViewFull', 'DefaultImageClass', 'wide' ) caption=$node|attribute( 'caption' )}
 	
     {if $node|has_attribute( 'body' )}
       <div class="description">
@@ -25,7 +25,11 @@
 	
     {if $node|has_attribute( 'tags' )}
       <div class="tags">
-        {attribute_view_gui attribute=$node|attribute( 'tags' )}
+        {foreach $node.data_map.tags.content.keywords as $keyword}
+		  <a href={concat( $node.parent.url_alias, "/(tag)/", $keyword|rawurlencode )|ezurl} title="{$keyword}">
+			<span class="label label-primary">{$keyword}</span>
+		  </a>	
+		{/foreach}
       </div>
     {/if}
     

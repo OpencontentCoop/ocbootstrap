@@ -5,8 +5,8 @@
     {set $alternative_text=$node.object.data_map.image.content[$size].alternative_text}
 {/if}
 
-<div class="content-view-line">
-<div class="class-banner">
+<div class="content-view-line class-{$node.class_identifier} media">  
+<div class="media-body">
 {if eq( $node.object.data_map.image_map.content, true() )}
     <img usemap="#banner_map" src={$node.object.data_map.image.content[$size].full_path|ezroot} alt="{$alternative_text}" width="{$node.object.data_map.image.content[$size].width}" height="{$node.object.data_map.image.content[$size].height}" />
     {$node.object.data_map.image_map.content}

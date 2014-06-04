@@ -66,7 +66,7 @@
           <input type="hidden" name="ContentLanguageCode" value="{ezini( 'RegionalSettings', 'ContentObjectLocale', 'site.ini')}" />
       </form>
       {section-else}
-         <div class="aert alert-danger"><p>
+         <div class="alert alert-danger"><p>
           {"You need to be logged in to get access to the forums. You can do so %login_link_start%here%login_link_end%"|i18n( "design/ocbootstrap/full/forum_topic",,
        hash( '%login_link_start%', concat( '<a href=', '/user/login/'|ezurl, '>' ), '%login_link_end%', '</a>' ) )}
          </p></div>

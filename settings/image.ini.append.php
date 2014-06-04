@@ -25,13 +25,13 @@ Filters[]=centerimg=770;390;0;0
 [squaremini]
 Reference=original
 Filters[]
-Filters[]=geometry/scalewidthdownonly=150
+Filters[]=geometry/scalewidthdownonly=100
 Filters[]=centerimg=64;64
 
 [squarethumb]
 Reference=original
 Filters[]
-Filters[]=geometry/scalewidthdownonly=200
+Filters[]=geometry/scalewidth=150
 Filters[]=centerimg=100;100
 
 [squaremedium]

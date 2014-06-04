@@ -30,7 +30,7 @@
             <input type="hidden" name="ClassIdentifier" value="forum_topic" />
         </form>
       {else}
-        <div class="alert alert-warning>
+        <div class="alert alert-danger">
             <p>{"You need to be logged in to get access to the forums. You can do so %login_link_start%here%login_link_end%"|i18n( "design/ocbootstrap/full/forum",, hash( '%login_link_start%', concat( '<a href=', '/user/login/'|ezurl, '>' ), '%login_link_end%', '</a>' ) )}</p>
         </div>
       {/if}

@@ -17,3 +17,17 @@
 .content-related{
   @extend .col-sm-3;
 }
+
+
+
+.figure{
+    @extend .text-center;
+    img{
+        @extend .center-block;    
+    }
+    margin: 1em 0;
+}
+
+.social-buttons{
+    margin: 1em 0;
+}

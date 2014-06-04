@@ -34,7 +34,7 @@
           <input id='remember_me' type="checkbox" tabindex="1" name="Cookie" id="id4" />{"Remember me"|i18n("design/ocbootstrap/user/login")}          
         </label>
       </div>
-      <button class='btn btn-block' name="LoginButton">{'Login'|i18n('design/ocbootstrap/user/login','Button')}</button>
+      <button class='btn btn-lg btn-primary center-block' name="LoginButton">{'Login'|i18n('design/ocbootstrap/user/login','Button')}</button>
       
       {if and( is_set( $User:post_data ), is_array( $User:post_data ) )}
         {foreach $User:post_data as $key => $postData}
