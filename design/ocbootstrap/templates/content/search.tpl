@@ -1,4 +1,6 @@
 {ezpagedata_set( show_path, false() )}
+{ezpagedata_set( hide_header_searchbox, false() )}
+
 {def $search=false()
 	 $use_url_translation=false()}
 {if $use_template_search}
