@@ -60,16 +60,20 @@ $(document).ready(function(){
 		container.css( 'opacity', '.4' );
 		var id = $(this).prop("id");
         var argArray = id.split("_");
-		var data = $("#editform").serialize();    	
+		var data = self.closest( 'form' ).serialize();    	
         var _token = '', _tokenNode = document.getElementById('ezxform_token_js');
         if ( _tokenNode ) _token = '&ezxform_token=' + _tokenNode.getAttribute('title');
         data = data + "&StoreButton=Store draft" + _token;
-    	$.post($("#editform").prop('action'), data, function(data) {
+    	$.post(self.closest( 'form' ).prop('action'), data, function(data) {
     		$.ez("opensemantic::refreshFromEngine", {object_id:argArray[1], object_version:argArray[2], language:argArray[3], objectattribute_id:argArray[4]}, function(data){
     			if (data.error_text != ''){
                     console.log(data.error_text);
                 }else{             		
-                	container.html( $( '.visible-entities', $(data.content.attributes[1].content) ).html() );                	
+                	$.each( data.content.attributes, function(i,v){
+                        if ($( '.visible-entities', $(v.content)).length > 0) {
+                            container.html( $( '.visible-entities', $(v.content) ).html() );
+                        }
+                    });
                 }                
                 container.css( 'opacity', '1' );
                 self.val(value);

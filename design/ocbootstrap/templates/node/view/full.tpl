@@ -24,7 +24,7 @@
     <div class="table-responsive">
       <table class="table table-striped">
       {foreach $node.object.contentobject_attributes as $attribute}
-        {if $name_pattern_array|contains($attribute.contentclass_attribute_identifier)|not()}
+        {if and( $name_pattern_array|contains($attribute.contentclass_attribute_identifier)|not(), $node|has_attribute( $attribute.contentclass_attribute_identifier ) )}
         <tr class="attribute-{$attribute.contentclass_attribute_identifier}">
           <th>{$attribute.contentclass_attribute_name}</th>
           <td>
