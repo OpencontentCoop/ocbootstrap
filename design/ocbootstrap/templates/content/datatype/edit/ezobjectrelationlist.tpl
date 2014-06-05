@@ -204,7 +204,7 @@
         {/default}
 {* Standard mode is browsing *}
 {else}    
-    <div class="block searchbox" id="ezobjectrelationlist_browse_{$attribute.id}">
+    <div class="block relations-searchbox" id="ezobjectrelationlist_browse_{$attribute.id}">
     {if is_set( $attribute.class_content.default_placement.node_id )}
          {set browse_object_start_node = $attribute.class_content.default_placement.node_id}
     {/if}

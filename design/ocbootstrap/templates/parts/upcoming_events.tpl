@@ -4,11 +4,11 @@
   title = the title to assign (if no title is provided, events_node.name is going to be used
 *}
 
+{set_defaults(hash(
+  'show_title', true(),
+  'number', 5
+))}
 
-{def $limit = 5}
-{if is_set($number)}
-  {set $limit = $number}
-{/if}
 
 {def
     $curr_ts = currentdate()
@@ -18,7 +18,7 @@
     $today_ts = makedate( $curr_month, $curr_today, $curr_year )
     $upcoming_events = fetch( 'content', 'list',
                         hash( 'parent_node_id', $events_node.node_id,
-                              'limit', $limit,
+                              'limit', $number,
                               'sort_by', array( 'attribute', true(), 'event/from_time'),
                               'main_node_only', true(),
                               'class_filter_type', 'include',
@@ -29,7 +29,7 @@
                               array( 'event/to_time', '>=', $today_ts ) ) ) ) }
 
 {if $upcoming_events}
-  <h3 class="block-title">{if $title}{$title}{else}{$events_node.name|wash()}{/if}</h3>
+  {if $show_title}<h3 class="block-title">{if $title}{$title}{else}{$events_node.name|wash()}{/if}</h3>{/if}
   <div class="event-list">
     {foreach $upcoming_events as $event}
       {node_view_gui content_node=$event view='event'}
