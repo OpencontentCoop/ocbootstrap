@@ -1,5 +1,6 @@
-{developer_warning( 'Correggere faccette' )}
-{def $search=false()}
+{ezpagedata_set( show_path, false() )}
+{def $search=false()
+	 $use_url_translation=false()}
 {if $use_template_search}
     {set $page_limit=20}
 
@@ -68,130 +69,74 @@
     {set $uriSuffix = concat( $uriSuffix, '&dateFilter=', $dateFilter )}
 {/if}
 
-<script type="text/javascript">
-{literal}
-    // toggle block
-    function ezfToggleBlock( id )
-    {
-        var value = (document.getElementById(id).style.display == 'none') ? 'block' : 'none';
-        ezfSetBlock( id, value );
-        ezfSetCookie( id, value );
-    }
-
-    function ezfSetBlock( id, value )
-    {
-        var el = document.getElementById(id);
-        if ( el != null )
-        {
-            el.style.display = value;
-        }
-    }
-
-    function ezfTrim( str )
-    {
-        return str.replace(/^\s+|\s+$/g, '') ;
-    }
-
-    function ezfGetCookie( name )
-    {
-        var cookieName = 'eZFind_' + name;
-        var cookie = document.cookie;
-
-        var cookieList = cookie.split( ";" );
-
-        for( var idx in cookieList )
-        {
-            cookie = cookieList[idx].split( "=" );
-
-            if ( ezfTrim( cookie[0] ) == cookieName )
-            {
-                return( cookie[1] );
-            }
-        }
-
-        return 'none';
-    }
-
-    function ezfSetCookie( name, value )
-    {
-        var cookieName = 'eZFind_' + name;
-        var expires = new Date();
-
-        expires.setTime( expires.getTime() + (365 * 24 * 60 * 60 * 1000));
-
-        document.cookie = cookieName + "=" + value + "; expires=" + expires + ";";
-    }
-{/literal}
-</script>
-
-<div class="col-md-12">
-
-<form action={"/content/search/"|ezurl} method="get">
-
-<div class="page-header">
-    <h1>        
-        <span>{"Search"|i18n("design/ezwebin/content/search")}</span>
-        <small>{$search_text|wash}</small>
-    </h1>
+<form action="{"/content/search/"|ezurl(no)}" method="get">
+  
+  <div class="row">
     
-    <div class="row">
-    <div class="col-lg-6 col-lg-offset-3">
-        <div class="input-group">
-          <input type="text" name="SearchText" class="form-control" value="{$search_text|wash}" />
-          <span class="input-group-btn">
-            <button type="button" name="SearchButton" class="btn btn-primary">{'Search'|i18n('design/ezwebin/content/search')}</button>
-          </span>
-        </div>
+	<div class="col-lg-8 col-lg-offset-2">
+	  
+	  {if $search_text|ne('')}
+	  <h2>        
+		  <span>{"Search"|i18n("design/ezwebin/content/search")}</span>
+		  <small>{$search_text|wash}</small>
+	  </h2>
+	  {/if}
+	
+	  <div class="input-group">
+		<input type="text" name="SearchText" class="form-control input-lg" value="{$search_text|wash}" />
+		<span class="input-group-btn">
+		  <button type="submit" name="SearchButton" class="btn btn-primary btn-lg" title="{'Search'|i18n('design/ezwebin/content/search')}">
+			<span class="fa fa-search"></span>
+		  </button>
+		</span>
+	  </div>
+
+	  {if $search_extras.spellcheck_collation}
+		   {def $spell_url=concat('/content/search/',$search_text|count_chars()
+					|gt(0)
+					|choose('',concat('?SearchText=',$search_extras.spellcheck_collation|urlencode)))
+					|ezurl}
+		<p class="help-block">
+		  {'Spell check suggestion: did you mean'|i18n('design/ezfind/search')}
+		  <strong>{concat("<a href=",$spell_url,">")}{$search_extras.spellcheck_collation}</a></strong>?
+		</p>
+	  {/if}
+  
+	  {if $stop_word_array}
+		  <p class="help-block">
+		  {"The following words were excluded from the search"|i18n("design/base")}:
+		  {foreach $stop_word_array as $stopWord}
+			  {$stopWord.word|wash}
+			  {delimiter}, {/delimiter}
+		  {/foreach}
+		  </p>
+	  {/if}
+	  
+	  {switch name=Sw match=$search_count}
+		{case match=0}
+		<h4 class="text-danger">
+		  {'No results were found when searching for "%1".'|i18n("design/ezwebin/content/search",,array($search_text|wash))}
+		  {if $search_extras.hasError}
+			  {$search_extras.error|wash}
+		  {/if}		  
+		</h4>
+		{/case}
+		{case}
+		<p class="text-success">
+		  {if $search_text|ne('')}
+			{'Search for "%1" returned %2 matches'|i18n("design/ezwebin/content/search",,array($search_text|wash,$search_count))}
+		  {else}
+			{$search_count} {"Results"|i18n("design/base")|downcase()}
+		  {/if}
+		</p>
+	    {/case}
+	  {/switch}	
     </div>
-    </div>
-    
-    <hr />
-    
-    <div class="col-md-12">
-        {*if $search_extras.spellcheck_collation}
-             {def $spell_url=concat('/content/search/',$search_text|count_chars()|gt(0)|choose('',concat('?SearchText=',$search_extras.spellcheck_collation|urlencode)))|ezurl}
-             <p>{'Spell check suggestion: did you mean'|i18n('design/ezfind/search')} <b>{concat("<a href=",$spell_url,">")}{$search_extras.spellcheck_collation}</a></b> ?</p>
-        {/if*}
-    
-    {if $stop_word_array}
-        <p>
-        {"The following words were excluded from the search"|i18n("design/base")}:
-        {foreach $stop_word_array as $stopWord}
-            {$stopWord.word|wash}
-            {delimiter}, {/delimiter}
-        {/foreach}
-        </p>
-    {/if}
-    
-    {switch name=Sw match=$search_count}
-      {case match=0}
-      <div class="alert alert-danger">
-      <h3>{'No results were found when searching for "%1".'|i18n("design/ezwebin/content/search",,array($search_text|wash))}</h3>
-      {if $search_extras.hasError}
-          {$search_extras.error|wash}
-      {/if}
-      {*if $search_extras.spellcheck_collation}
-         <b>Did you mean {$search_extras.spellcheck_collation} ?</b>
-      {/if*}
-        <p>{'Search tips'|i18n('design/ezwebin/content/search')}</p>
-        <ul class="list-unstyled">
-            <li>{'Check spelling of keywords.'|i18n('design/ezwebin/content/search')}</li>
-            <li>{'Try changing some keywords (eg, "car" instead of "cars").'|i18n('design/ezwebin/content/search')}</li>
-            <li>{'Try searching with less specific keywords.'|i18n('design/ezwebin/content/search')}</li>
-            <li>{'Reduce number of keywords to get more results.'|i18n('design/ezwebin/content/search')}</li>
-        </ul>
-      </div>
-      {/case}
-      {case}
-      <div class="alert alert-success">
-          <p>{'Search for "%1" returned %2 matches'|i18n("design/ezwebin/content/search",,array($search_text|wash,$search_count))}</p>
-      </div>
-    </div>
-
-    </div>
-
-  <div id="search_controls" class="col-md-2">
-      <fieldset>
+  </div>
+  
+  {if $search_count|gt(0)}
+  <div class="row">
+	<div class="col-md-3 col-md-offset-1">
           {def $activeFacetsCount=0}
           <ul class="list-unstyled" id="active-facets-list">
           {foreach $defaultSearchFacets as $key => $defaultFacet}
@@ -201,7 +146,11 @@
                   {foreach $facetData.nameList as $key2 => $facetName}
                       {if eq( $activeFacetParameters[concat( $defaultFacet['field'], ':', $defaultFacet['name'] )], $facetName )}
                           {set $activeFacetsCount=sum( $key, 1 )}
-                          {def $suffix=$uriSuffix|explode( concat( '&filter[]=', $facetData.queryLimit[$key2])|implode( '' )|explode( concat( '&activeFacets[', $defaultFacet['field'], ':', $defaultFacet['name'], ']=', $facetName ) )|implode( '' )}
+                          {def $suffix=$uriSuffix
+										  |explode( concat( '&filter[]=', $facetData.queryLimit[$key2] ) )
+										  |implode( '' )
+										  |explode( concat( '&activeFacets[', $defaultFacet['field'], ':', $defaultFacet['name'], ']=', $facetName ) )
+										  |implode( '' )}
                           <li>
 	                          <a class="btn btn-success btn-xs" href={concat( $baseURI, $suffix )|ezurl} title="{'Remove filter on '|i18n( 'design/ezwebin/content/search' )}'{$facetName|trim('"')|wash}'">
 	                            <span class="remover">&times</span> 
@@ -245,7 +194,7 @@
                       {foreach $facetData.nameList as $key2 => $facetName}
                           {if ne( $key2, '' )}
                           <li>
-                              <span class="label label-primary facet-count">{$facetData.countList[$key2]}</span>
+                              <span class="label label-primary facet-count">{$facetData.countList[$key2]}</span>							  
                               <a href={concat(
                                   $baseURI, '&filter[]=', $facetData.queryLimit[$key2],
                                   '&activeFacets[', $defaultFacet['field'], ':', $defaultFacet['name'], ']=',
@@ -286,20 +235,10 @@
            {/if}
           </ul>
 
-      </fieldset>
-  </div>
-  {/case}
-{/switch}
+	</div>
 
-  <div id="search_results" class="col-md-10">
-    {include name=Navigator
-             uri='design:navigator/google.tpl'
-             page_uri='/content/search'
-             page_uri_suffix=concat('?SearchText=',$search_text|urlencode,$search_timestamp|gt(0)|choose('',concat('&SearchTimestamp=',$search_timestamp)), $uriSuffix )
-             item_count=$search_count
-             view_parameters=$view_parameters
-             item_limit=$page_limit}
 
+	<div class="col-md-7">
     {foreach $search_result as $result
              sequence array(bglight,bgdark) as $bgColor}
        {node_view_gui view='search_line' sequence=$bgColor use_url_translation=$use_url_translation content_node=$result}
@@ -312,13 +251,14 @@
              item_count=$search_count
              view_parameters=$view_parameters
              item_limit=$page_limit}
+	</div>
   </div>
+  {/if}
 </form>
 
-</div>
 
 
-
+{*
 {ezscript_require( array('ezjsc::jquery', 'ezjsc::yui2', 'ezajax_autocomplete.js') )}
 <script language="JavaScript" type="text/javascript">
 jQuery('#mainarea-autocomplete-rs').css('width', jQuery('input#Search').width());
@@ -335,3 +275,4 @@ ezfSetBlock( 'ezfFacets', ezfGetCookie( 'ezfFacets' ) );
 ezfSetBlock( 'ezfHelp', ezfGetCookie( 'ezfHelp' ) );
 {/literal}
 </script>
+*}

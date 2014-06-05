@@ -1,6 +1,6 @@
 {default attribute_base=ContentObjectAttribute html_class='full' placeholder=false()}
 
-<label>{$attribute.contentclass_attribute_name}</label>
+{*<label>{$attribute.contentclass_attribute_name}</label>*}
 <div class="entities-container block float-break">
 
 	{ezscript_require( array( 'ezjsc::jquery', 'ezjsc::jqueryio', 'ezjsc::jqueryUI', 'opensemantic_edit.js' ) )}
@@ -26,34 +26,35 @@
         {/if}
         
         <ul class="nav nav-pills pill-entities">
-            {if count($keywords)|gt(0)}
+            <li><button id="refreshButton" class="btn btn-info">Refresh</button></li>
+			{if count($keywords)|gt(0)}
             <li>
                 <a data-toggle="tab" href="#keywords-{$attribute.contentclassattribute_id}">
-                    <span class="badge"><span class="glyphicon glyphicon-tags"></span> {count($keywords)}</span>
+                    <span class="badge"><span class="glyphicon glyphicon-tags"></span> Keywords {count($keywords)}</span>
                 </a>
             </li>
             {/if}
             {if count($geolocations)|gt(0)}
             <li>
                 <a data-toggle="tab" href="#geolocations-{$attribute.contentclassattribute_id}">
-                    <span class="badge"><span class="glyphicon glyphicon-map-marker"></span> {count($geolocations)}</span>
+                    <span class="badge"><span class="glyphicon glyphicon-map-marker"></span> Geolocations {count($geolocations)}</span>
                 </a>
             </li>    
             {/if}
             {if count($people)|gt(0)}
             <li>
                 <a data-toggle="tab" href="#people-{$attribute.contentclassattribute_id}">
-                    <span class="badge"><span class="glyphicon glyphicon-user"></span> {count($people)}</span>
+                    <span class="badge"><span class="glyphicon glyphicon-user"></span> People {count($people)}</span>
                 </a>
             </li>
             {/if}
             {if count($organizations)|gt(0)}
             <li>
                 <a data-toggle="tab" href="#organizations-{$attribute.contentclassattribute_id}">
-                    <span class="badge"><span class="glyphicon glyphicon-registration-mark"></span> {count($organizations)}</span>
+                    <span class="badge"><span class="glyphicon glyphicon-registration-mark"></span> Organizations {count($organizations)}</span>
                 </a>
             </li>
-            {/if}
+            {/if}			
         </ul>
             
         <div class="tab-content">     
@@ -94,6 +95,10 @@
 
 <script type="text/javascript">
 {literal}
+$(document).on( 'click', "#refreshButton", function(e){
+  triggerOpenSemanticRefresh();
+  e.preventDefault();
+});
 $(document).keypress(function(e) {
   if(e.which == 13) {
     triggerOpenSemanticRefresh();

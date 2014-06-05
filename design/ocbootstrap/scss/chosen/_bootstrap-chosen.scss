@@ -16,6 +16,7 @@
   position: relative;
   vertical-align: middle;
   min-width: $chosen-container-min-width;
+  text-align: left;
 
   .chosen-drop {
     background: $chosen-background;
@@ -216,6 +217,7 @@
       margin: 1px 0;
       padding: 4px 20px 4px 4px;
       width: 100%;
+      box-sizing: border-box !important;
     }
   }
 
