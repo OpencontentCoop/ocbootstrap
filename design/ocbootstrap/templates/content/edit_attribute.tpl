@@ -12,7 +12,7 @@
 {if $count|gt(1)}
 {set $count = 0}
 <ul class="nav nav-tabs">
-{def $count = 0}
+{set $count = 0}
 {foreach $content_attributes_grouped_data_map as $attribute_group => $content_attributes_grouped}
 {if $attribute_group|ne('hidden')}
 <li class="{if $count|eq(0)} active{/if}">
