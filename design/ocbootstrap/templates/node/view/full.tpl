@@ -38,6 +38,8 @@
     
     {include uri='design:parts/children.tpl' view='line'}
 	
+	{include uri=concat('design:parts/relations.tpl') node=$node}   
+	
   </div>
   
   {* Per visualizzare l'extrainfo: aggiungi la classe "full-stack" al primo div e scommenta la seguenta inclusione *}
