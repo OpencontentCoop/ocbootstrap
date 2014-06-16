@@ -16,7 +16,7 @@
 	<div class="item text-center">
 	  
 	  <a href={if $show_gallery}{$item|attribute('image').content[$wide_class].url|ezroot}{else}{$item.url_alias|ezurl()}{/if} title="{$item.name}" {if $show_gallery}data-gallery{/if}>
-		{attribute_view_gui attribute=$item|attribute( 'image' ) image_class=$image_class}
+		{attribute_view_gui attribute=$item|attribute( 'image' ) image_class=$image_class alignment=center}
 	  </a>
 			  
 	</div>
@@ -26,7 +26,11 @@
 <script>
 $(document).ready(function() {ldelim}
   $("#{$items[0].name|slugize()}").owlCarousel({ldelim}
-	items : {$show_number}
+	items : {$show_number},
+	itemsDesktop : [1000,{$show_number}], // items between 1000px and 901px
+  itemsDesktopSmall : [900,2], // betweem 900px and 601px
+  itemsTablet: [600,2], // items between 600 and 0
+	itemsMobile : [400,1]
   {rdelim});
 {rdelim});
 </script>

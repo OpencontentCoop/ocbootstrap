@@ -2,6 +2,13 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="it_IT">
 <context>
+  <name>ocbootstrap</name>
+  <message>
+    <source>Overview</source>
+    <translation>In breve</translation>
+  </message>
+</context>
+<context>
     <name>design/admin/content/datatype</name>
     <message>
         <source>Year</source>
@@ -1738,12 +1745,8 @@
 <context>
     <name>design/ocbootstrap/pagelayout</name>
     <message>
-      <source>Search</source>
-      <translation>Cerca</translation>
-    </message>
-    <message>
-      <source>Search text</source>
-      <translation>Testo da cercare</translation>
+        <source>Search</source>
+        <translation>Cerca</translation>
     </message>
     <message>
         <source>Tag cloud</source>

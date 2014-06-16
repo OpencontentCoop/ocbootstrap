@@ -5,8 +5,7 @@ jQuery(function( $ )
 
     // Attache key press event to catch enter and show input fields
     $('input.ezobject-relation-search-text').keypress( function( e ){
-        if ( e.which == 13 )
-        {
+        if ( e.which == 13 ){
             return _search.call( this, e );
         }
     }).removeClass('hide');
@@ -74,7 +73,10 @@ jQuery(function( $ )
         var tds = $('td',tr).slice( 0 );
         tds.eq( 0 ).find('input').val( id );
         tds.eq( 1 ).find('small').html( name );
-        tds.eq( 2 ).find('small').val( $('tbody tr').length - 1 );        
+        tds.eq( 2 ).find('small').html( className );
+        tds.eq( 3 ).find('small').html( sectionName );
+        tds.eq( 4 ).find('small').html( publishedTxt );
+        tds.eq( 5 ).find('small').val( $('tbody tr').length - 1 );        
         tr.removeClass('hide');      
         $table.removeClass('hide');
         $table.parents().find('.ezobject-relation-remove-button').removeClass('hide');

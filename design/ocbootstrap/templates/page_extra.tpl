@@ -8,3 +8,7 @@
   <a class="play-pause"></a>
   <ol class="indicator"></ol>
 </div>
+
+{* modal window and AJAX stuff *}
+<div id="overlay-mask" style="display:none;"></div>
+<img src={'loader.gif'|ezimage()} id="ajaxuploader-loader" style="display:none;" alt="{'Loading...'|i18n( 'design/admin/pagelayout' )}" />

@@ -42,7 +42,7 @@
 	{def $self_policy=fetch( 'comment', 'self_policies', hash( 'contentobject', $contentobject, 'node', $attribute_node ) )}
     
 	
-	<div class="col-md-5 {if $comments|count|eq( 0 )}col-md-offset-7{/if}">
+	<div class="col-md-5">
     {* Adding comment form START *}
     {if $attribute.content.enable_comment}
         {def $can_add = fetch( 'comment', 'has_access_to_function', hash( 'function', 'add',

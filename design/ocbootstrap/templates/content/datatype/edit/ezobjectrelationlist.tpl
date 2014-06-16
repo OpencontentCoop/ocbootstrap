@@ -218,9 +218,9 @@
             <th class="tight">                  
             </th>
             <th><small>{'Name'|i18n( 'design/standard/content/datatype' )}</small></th>
-            {*<th>{'Type'|i18n( 'design/standard/content/datatype' )}</th>
+            <th>{'Type'|i18n( 'design/standard/content/datatype' )}</th>
             <th>{'Section'|i18n( 'design/standard/content/datatype' )}</th>
-            <th>{'Published'|i18n( 'design/standard/content/datatype' )}</th>*}
+            <th>{'Published'|i18n( 'design/standard/content/datatype' )}</th>
             <th class="tight">{'Order'|i18n( 'design/standard/content/datatype' )}</th>
         </tr>
         </thead>
@@ -236,20 +236,20 @@
                 {* Name *}
                 <td><small>{$object.name|wash()}</small></td>
 
-                {* Type 
-                <td>{$object.class_name|wash()}</td>
-                           *}
-                {* Section 
-                <td>{fetch( section, object, hash( section_id, $object.section_id ) ).name|wash()}</td>
-                              *}
-                {* Published. 
-                <td>{if $item.in_trash}
+                {* Type *}
+                <td><small>{$object.class_name|wash()}</small></td>
+                           
+                {* Section *}
+                <td><small>{fetch( section, object, hash( section_id, $object.section_id ) ).name|wash()}</small></td>
+                              
+                {* Published. *}
+                <td><small>{if $item.in_trash}
                         {'No'|i18n( 'design/standard/content/datatype' )}
                     {else}
                         {'Yes'|i18n( 'design/standard/content/datatype' )}
-                    {/if}
+                    {/if}</small>
                 </td>
-                            *}
+                            
                 {* Order. *}
                 <td><input size="2" type="text" name="{$attribute_base}_priority[{$attribute.id}][]" value="{$item.priority}" /></td>
 
@@ -263,17 +263,22 @@
               <input type="hidden" name="{$attribute_base}_data_object_relation_list_{$attribute.id}[]" value="no_relation" />
           </td>
           <td><small></small></td>
-          {*<td>--class-name--</td>
-          <td>--section-name--</td>
-          <td>--published--</td>*}
+          <td><small></small></td>
+          <td><small></small></td>
+          <td><small></small></td>
           <td><input size="2" type="text" name="{$attribute_base}_priority[{$attribute.id}][]" value="0" /></td>
         </tr>                    
-        <tr>
-            <td><button class="btn btn-sm ezobject-relation-remove-button {if $attribute.content.relation_list|not()}hide{/if}" type="submit" name="CustomActionButton[{$attribute.id}_remove_objects]">
-                <span class="glyphicon glyphicon-trash"></span>
-            </button></td>
-            <td></td>
-            <td></td>
+        <tr class="buttons">
+          <td>
+            <button class="btn btn-sm ezobject-relation-remove-button {if $attribute.content.relation_list|not()}hide{/if}" type="submit" name="CustomActionButton[{$attribute.id}_remove_objects]">
+              <span class="glyphicon glyphicon-trash"></span>
+            </button>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
         </tbody>
         </table>
