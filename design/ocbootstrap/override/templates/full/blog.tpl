@@ -7,7 +7,7 @@
     
     <h1>
       {$node.name|wash()}
-      {if $view_parameters.tag}
+      {if is_set( $view_parameters.tag )}
       <small>{rawurldecode( $view_parameters.tag )}</small>
       {/if}
       {if and( $view_parameters.month, $view_parameters.year )}
@@ -32,7 +32,7 @@
          $uniq_id = 0
          $uniq_post = array()}
 
-    {if $view_parameters.tag}
+    {if is_set( $view_parameters.tag )}
         {set $blogs_count = fetch( 'content', 'keyword_count', hash( 'alphabet', rawurldecode( $view_parameters.tag ),
                                                          'classid', 'blog_post',
                                                          'parent_node_id', $node.node_id ) )}

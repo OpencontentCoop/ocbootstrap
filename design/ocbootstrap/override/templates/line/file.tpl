@@ -8,7 +8,7 @@
 	<h4>
 	  <a href={$node.url_alias|ezurl}>{$node.name|wash}</a>
 	</h4>
-	{include uri='design:atoms/file.tpl' image_class=appini( 'ContentViewFull', 'DefaultImageClass', 'wide' ) file=$node|attribute( 'file' )}
+	<small{include uri='design:atoms/file.tpl' size=btn-xs file=$node|attribute( 'file' )}
 	{if $node|has_abstract()}
 	 {$node|abstract()}
 	{/if}

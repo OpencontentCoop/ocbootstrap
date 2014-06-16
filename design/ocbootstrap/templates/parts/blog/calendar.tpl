@@ -70,18 +70,14 @@
         {set $loop_dayone = 1}
     {/if}
     {if eq($temp_month|int(), $blog.data_map.publication_date.content.month|int())}
-        {if $blog.data_map.to_time.content.is_valid}
-            {set $loop_daylast = $blog.data_map.publication_date.content.day}
-        {else}
-            {set $loop_daylast = $loop_dayone}
-        {/if}
+        {set $loop_daylast = $loop_dayone}
     {else}
         {set $loop_daylast = $days}
     {/if}
     {for $loop_dayone|int() to $loop_daylast|int() as $counter}
         {set $day_array = concat($day_array, $counter, ', ')}
         {if eq($counter,$temp_today)}
-            {set $day_blogs = $day_blogs|append($event)}
+            {set $day_blogs = $day_blogs|append($blog)}
         {/if}
     {/for}
 {/foreach}

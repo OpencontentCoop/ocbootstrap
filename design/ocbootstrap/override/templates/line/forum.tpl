@@ -1,7 +1,12 @@
 <div class="content-view-line class-{$node.class_identifier} media">    
   <div class="media-body">
         <h4><a href={$node.url_alias|ezurl}>{$node.name|wash}</a></h4>
-		<table class="list forum" cellspacing="0">
+		
+		{if $node|has_attribute( 'description' )}
+		  {attribute_view_gui attribute=$node|attribute( 'description' )}
+		{/if}
+		
+		{*<table class="list forum" cellspacing="0">
             <tr>                
                 <th class="topic"> {"Number of topics"|i18n("design/ocbootstrap/line/forum")} </th>
                 <th class="replies"> {"Number of posts"|i18n("design/ocbootstrap/line/forum")} </th>
@@ -20,6 +25,6 @@
                     </ul>
                     {/let}</td>
             </tr>
-        </table>
+        </table>*}
     </div>
 </div>

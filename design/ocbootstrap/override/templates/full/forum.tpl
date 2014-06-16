@@ -98,17 +98,13 @@
                                                             sort_by, array( array( 'published', false() ) ),
                                                             limit, 1 ) )}
                     {section var=reply loop=$last_reply show=$last_reply}
-                    <div class="attribute-byline">
-                    <p class="date">{$reply.object.published|l10n(shortdatetime)}</p>
-                    <p class="author">
+                    {$reply.object.published|l10n(shortdate)}
+                    
                     {section show=$topic_reply_count|gt( 19 )}
-                        <a href={concat( $reply.parent.url_alias, '/(offset)/', sub( $topic_reply_count, mod( $topic_reply_count, 20 ) ) , '#msg', $reply.node_id )|ezurl}>Last reply by:</a>
+                        <a href={concat( $reply.parent.url_alias, '/(offset)/', sub( $topic_reply_count, mod( $topic_reply_count, 20 ) ) , '#msg', $reply.node_id )|ezurl}>{$reply.object.owner.name|wash}</a>
                     {section-else}
-                        <a href={concat( $reply.parent.url_alias, '#msg', $reply.node_id )|ezurl}>Last reply by:</a>
+                        <a href={concat( $reply.parent.url_alias, '#msg', $reply.node_id )|ezurl}>{$reply.object.owner.name|wash}</a>
                     {/section}
-                    {$reply.object.owner.name|wash}
-                    </p>
-                    </div>
 
                     {/section}
             {/let}

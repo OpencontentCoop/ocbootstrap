@@ -24,7 +24,7 @@
 <div class="row comment-item">
     <div class="col-xs-12 comment-text" style="margin-bottom: 20px">
         
-        <div class="popover right" style="display: block; position: static; max-width: none">
+        <div class="popover" style="display: block; position: static; max-width: none">
         
         <h3 class="popover-title">    
         {if $comment.title}{$comment.title|wash}{/if}            
