@@ -13,7 +13,7 @@
       </div>
     {/if}
     
-    {include uri='design:atoms/file.tpl' image_class=appini( 'ContentViewFull', 'DefaultImageClass', 'wide' ) file=$node|attribute( 'file' )}
+    {include uri='design:atoms/file.tpl' image_class=appini( 'ContentViewFull', 'DefaultImageClass', 'wide' ) file=$node|attribute( 'file' ) view='flip'}
 	
     {if $node|has_attribute( 'tags' )}
       <div class="tags">

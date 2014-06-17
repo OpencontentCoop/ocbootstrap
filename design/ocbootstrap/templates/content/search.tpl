@@ -75,7 +75,7 @@
   
   <div class="row">
     
-	<div class="col-lg-8 col-lg-offset-2">
+	<div class="col-lg-8">
 	  
 	  {if $search_text|ne('')}
 	  <h2>        
@@ -138,7 +138,7 @@
   
   {if $search_count|gt(0)}
   <div class="row">
-	<div class="col-md-3 col-md-offset-1 col-xs-4 hidden-xs">
+	<div class="col-sm-3 hidden-xs">
           {def $activeFacetsCount=0}
           <ul class="list-unstyled" id="active-facets-list">
           {foreach $defaultSearchFacets as $key => $defaultFacet}
@@ -240,7 +240,7 @@
 	</div>
 
 
-	<div class="col-md-7 col-sm-8">
+	<div class="col-sm-9">
     {foreach $search_result as $result
              sequence array(bglight,bgdark) as $bgColor}
        {node_view_gui view='search_line' sequence=$bgColor use_url_translation=$use_url_translation content_node=$result}

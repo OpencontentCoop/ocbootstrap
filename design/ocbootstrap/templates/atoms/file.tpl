@@ -3,7 +3,12 @@
   'size', 'btn-lg'
 ))}
 
+{if and( $view|eq( 'flip' ), flip_exists( $file.contentobject_id )|not() )}
+  {set $view = 'download_button'}
+{/if}
+
 {if is_set( $file.contentclassattribute_id )}
+
   {if or( $view|eq( 'download_button' ), flip_exists( $file.contentobject_id )|not() )}
     <div class="download-file">
         <p>
@@ -13,10 +18,8 @@
           </a>
         </p>
     </div>
-  {elseif $view|eq( 'flip' )}
+  {elseif and( $view|eq( 'flip' ), flip_exists( $file.contentobject_id ) )}
 
-	{if flip_exists( $file.contentobject_id )}
-	
 	  {def $pageDim = get_page_dimensions( $file.contentobject_id, 'large' )
 		   $heigth = $pageDim[1]}
 	
@@ -48,7 +51,15 @@
 	  {/literal}
 	  </script>
 	  <div id="megazine"></div>
+    
+    <div class="download-file">
+        <p class="text-center">
+          <a href="{concat( 'content/download/', $file.contentobject_id, '/', $file.id,'/version/', $file.version , '/file/', $file.content.original_filename|urlencode )|ezurl( 'no' )}" class="btn btn-primary btn-sm">
+            <span class="glyphicon glyphicon-download-alt"></span>
+            {$file.content.original_filename|wash( xhtml )} {$file.content.filesize|si( byte )}
+          </a>
+        </p>
+    </div>
 		
-	{/if}
   {/if}
 {/if}

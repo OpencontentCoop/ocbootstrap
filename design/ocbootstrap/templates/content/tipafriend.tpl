@@ -29,33 +29,42 @@
 </div>
 {/section}
 
-<form action={"/content/tipafriend/"|ezurl} method="post">
+<form class="form-horizontal" role="form" action={"/content/tipafriend/"|ezurl} method="post">
 
-<div class="block">
-<label>{"Your name"|i18n("design/ocbootstrap/content/tipafriend")}</label><div class="labelbreak"></div>
-<input class="box" type="text" size="40" name="YourName" value="{$your_name|wash}" />
+<div class="form-group">
+  <label class="col-sm-2 control-label">{"Your name"|i18n("design/ocbootstrap/content/tipafriend")}</label>
+  <div class="col-sm-10">
+    <input class="form-control" type="text" size="40" name="YourName" value="{$your_name|wash}" />
+  </div>
 </div>
 
-<div class="block">
-<label>{"Your email address"|i18n("design/ocbootstrap/content/tipafriend")}</label><div class="labelbreak"></div>
-<input class="box" type="text" size="40" name="YourEmail" value="{$your_email|wash}" />
+<div class="form-group">
+  <label class="col-sm-2 control-label">{"Your email address"|i18n("design/ocbootstrap/content/tipafriend")}</label>
+  <div class="col-sm-10">
+    <input class="form-control" type="text" size="40" name="YourEmail" value="{$your_email|wash}" />
+  </div>
 </div>
 
-<div class="block">
-<label>{"Recipient's email address"|i18n("design/ocbootstrap/content/tipafriend")}</label><div class="labelbreak"></div>
-<input class="box" type="text" size="40" name="ReceiversEmail" value="{$receivers_email|wash}" />
+<div class="form-group">
+  <label class="col-sm-2 control-label">{"Recipient's email address"|i18n("design/ocbootstrap/content/tipafriend")}</label>
+  <div class="col-sm-10">
+    <input class="form-control" type="text" size="40" name="ReceiversEmail" value="{$receivers_email|wash}" />
+  </div>
 </div>
 
-<div class="block">
-<label>{"Comment"|i18n("design/ocbootstrap/content/tipafriend")}</label><div class="labelbreak"></div>
-<textarea class="box" cols="40" rows="10" name="Comment">{$comment|wash}</textarea>
+<div class="form-group">
+  <label class="col-sm-2 control-label">{"Comment"|i18n("design/ocbootstrap/content/tipafriend")}</label>
+  <div class="col-sm-10">
+    <textarea class="form-control" cols="40" rows="10" name="Comment">{$comment|wash}</textarea>
+  </div>
 </div>
 
-<div class="buttonblock">
-<input class="button" type="submit" name="SendButton" value="{'Send'|i18n('design/ocbootstrap/content/tipafriend')}" />
-<input class="button" type="submit" name="CancelButton" value="{'Cancel'|i18n('design/ocbootstrap/content/tipafriend')}" />
+<div class="form-group">
+  <div class="col-sm-offset-2 col-sm-10">
+    <input class="btn btn-danger" type="submit" name="CancelButton" value="{'Cancel'|i18n('design/ocbootstrap/content/tipafriend')}" />
+    <input class="btn btn-primary pull-right" type="submit" name="SendButton" value="{'Send'|i18n('design/ocbootstrap/content/tipafriend')}" />
+  </div>
 </div>
-
 <input type="hidden" name="NodeID" value="{$node_id}" />
 
 </form>

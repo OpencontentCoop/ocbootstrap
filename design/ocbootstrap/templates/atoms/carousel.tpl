@@ -68,7 +68,7 @@
         <div class="carousel-inner">
         {foreach $items as $i => $item}
           <div class="item{if eq($i,0)} active{/if}">
-            {node_view_gui content_node=$item view=$i_view content_size=$c_size image_class=carousel}
+            {node_view_gui content_node=$item view=$i_view content_size=$c_size image_class=carousel_tall}
           </div>
         {/foreach}
         </div>

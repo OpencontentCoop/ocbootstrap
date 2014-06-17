@@ -6,20 +6,15 @@
   {/if}
   <div class="media-body">
 	<h4>
-	  {$node.name|wash}
+    <a href="{$node.data_map.location.content}" target="_blank">
+      {$node.name|wash} <i class="fa fa-external-link"></i>
+    </a>
 	  <div class="pull-right">
 		{include uri='design:parts/toolbar/node_toolbar.tpl' current_node=$node}
 	  </div>
 	</h4>
 	{if $node.data_map.description.content.is_empty|not}
 	 {attribute_view_gui attribute=$node.data_map.description}
-	{/if}
-	 {if $node.data_map.location.has_content}
-        <div class="attribute-link">
-            <p><a href="{$node.data_map.location.content}" target="_blank">
-			<strong>{if $node.data_map.location.data_text|count|gt( 0 )}{$node.data_map.location.data_text|wash}{else}{$node.data_map.location.content|wash}{/if}</strong>
-			</a></p>
-        </div>
-    {/if}
+	{/if}	 
   </div>
 </div>

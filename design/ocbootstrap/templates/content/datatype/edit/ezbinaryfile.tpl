@@ -10,7 +10,7 @@
 </tr>
 <tr>
     <td>        
-        <button class="btn btn-danger btn-sm" type="submit" name="CustomActionButton[{$attribute.id}_delete_binary]"  title="{'Remove the file from this draft.'|i18n( 'design/standard/content/datatype' )}"><i class="fa fa-trash"></i></button>
+        <button class="btn btn-danger btn-sm" type="submit" name="CustomActionButton[{$attribute.id}_delete_binary]"  title="{'Remove the file from this draft.'|i18n( 'design/standard/content/datatype' )}"><span class="glyphicon glyphicon-trash"></span></button>
         {$attribute.content.original_filename|wash( xhtml )} {$attribute.content.mime_type|wash( xhtml )} {$attribute.content.filesize|si( byte )}    
     </td>
 </tr>
