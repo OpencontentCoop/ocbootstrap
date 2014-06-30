@@ -16,7 +16,7 @@
     <div class="panel panel-default">
         
         <div class="panel-heading">
-        <h5>{'Post a comment'|i18n( 'ezcomments/comment/add/form' )}</h5>
+        <h5>{'Post comment'|i18n( 'ezcomments/comment/add/form' )}</h5>
         </div>
         
         <div class="panel-body">

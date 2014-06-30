@@ -3,8 +3,6 @@
 
 <form enctype="multipart/form-data"  action={"/user/register/"|ezurl} method="post" name="Register" class="form-signin">
 
-<img class="img-responsive" src="{'logo.png'|ezimage(no)}" alt="{ezini('SiteSettings','SiteName')}" />
-
 <h1 class="container-title">{"Register user"|i18n("design/ocbootstrap/user/register")}</h1>
 
 

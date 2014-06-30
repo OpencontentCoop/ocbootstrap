@@ -1,8 +1,6 @@
 <div class="row">
 <div class="col-md-8 col-md-offset-2">
 
-<img class="img-responsive" src="{'logo-big.png'|ezimage(no)}" alt="{ezini('SiteSettings','SiteName')}" />
-
 {if $account_activated}
 <h1 class="container-title">{"Activate account"|i18n("design/ocbootstrap/user/activate")}</h1>
 <div class="alert alert-success">    

@@ -1,8 +1,6 @@
 <div class="row">
 <div class="col-md-6 col-md-offset-3">
 
-<img class="img-responsive" src="{'logo.png'|ezimage(no)}" alt="{ezini('SiteSettings','SiteName')}" />
-
 {if $link}
 <div class="alert alert-success">
 {"An email has been sent to the following address: %1. It contains a link you need to click so that we can confirm that the correct user has received the new password."|i18n('design/ocbootstrap/user/forgotpassword',,array($email))}

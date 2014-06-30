@@ -2,8 +2,6 @@
 <div class="row">
 <div class="col-md-8 col-md-offset-2">
 
-<img class="img-responsive" src="{'logo.png'|ezimage(no)}" alt="{ezini('SiteSettings','SiteName')}" />
-
 <h1 class="container-title">{"User registered"|i18n("design/ocbootstrap/user/success")}</h1>
 
 <div class="alert alert-success clearfix">

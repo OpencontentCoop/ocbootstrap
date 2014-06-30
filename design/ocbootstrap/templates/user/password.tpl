@@ -1,7 +1,6 @@
 <div class="row">
 <div class="col-md-8 col-md-offset-2">
 
-<img class="img-responsive" src="{'logo.png'|ezimage(no)}" alt="{ezini('SiteSettings','SiteName')}" />
     <form action={concat($module.functions.password.uri,"/",$userID)|ezurl} method="post" name="Password">
 
     <div class="attribute-header">
