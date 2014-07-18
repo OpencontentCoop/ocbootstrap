@@ -1,2 +1,3 @@
-<a href="{'/'|ezurl( 'no' )}" title="{ezini('SiteSettings','SiteName')|wash}" class="logo"><img src="{'logo.png'|ezimage( 'no' )}" alt="{ezini('SiteSettings','SiteName')|wash}" /></a>
+{*<a href="{'/'|ezurl( 'no' )}" title="{ezini('SiteSettings','SiteName')|wash}" class="logo"><img src="{'logo.png'|ezimage( 'no' )}" alt="{ezini('SiteSettings','SiteName')|wash}" /></a>*}
+<h1><a href="{'/'|ezurl( 'no' )}" title="{ezini('SiteSettings','SiteName')|wash}" class="logo">{ezini('SiteSettings','SiteName')|wash}</a></h1>
 

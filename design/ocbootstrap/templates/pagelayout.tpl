@@ -44,7 +44,7 @@
       {include uri='design:page_toolbar.tpl'}
     {/if}
 
-    {if $pagedata.show_path}
+    {if and( $pagedata.node_id|ne( ezini( 'NodeSettings', 'RootNode', 'content.ini' ) ), $pagedata.show_path, array( 'edit', 'browse' )|contains( $ui_context )|not() )}
       {include uri='design:breadcrumb.tpl'}
     {/if}
 

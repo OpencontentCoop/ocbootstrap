@@ -8,7 +8,7 @@
     {/if}
     <li id="login" class="dropdown">
       <a href="#" title="hide login form" class="dropdown-toggle" data-toggle="dropdown">{'Login'|i18n('design/ocbootstrap/pagelayout')}</a>
-      <div class="panel dropdown-menu">
+      <div class="panel dropdown-menu login-menu">
         <form class="login-form" action="{'/user/login'|ezurl( 'no' )}" method="post">
           <fieldset>
             <div class="form-group">

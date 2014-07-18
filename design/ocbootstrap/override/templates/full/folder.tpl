@@ -1,10 +1,14 @@
 <div class="content-view-full class-folder row">
   
+  {if $node.parent_node_id|ne(1)}
   {include uri='design:nav/nav-section.tpl'}
+  {/if}
     
-  <div class="content-main">
+  <div class="content-main{if $node.parent_node_id|eq(1)} wide{/if}">
     
-    <h1>{$node.name|wash()}</h1>      
+    {if $node.node_id|ne( ezini( 'NodeSettings', 'RootNode', 'content.ini' ) )}
+    <h1>{$node.name|wash()}</h1>
+    {/if}
 
     {if $node|has_attribute( 'short_description' )}
       <div class="abstract">
