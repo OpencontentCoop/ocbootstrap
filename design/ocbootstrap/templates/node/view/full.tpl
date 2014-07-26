@@ -12,19 +12,10 @@
       {include uri='design:parts/author.tpl'}
     </div>
     
-    {def $name_pattern = $node.object.content_class.contentobject_name|explode('>')|implode(',')
-           $name_pattern_array = array('enable_comments', 'enable_tipafriend', 'show_children', 'show_children_exclude', 'show_children_pr_page')}
-      {set $name_pattern  = $name_pattern|explode('|')|implode(',')}
-      {set $name_pattern  = $name_pattern|explode('<')|implode(',')}
-      {set $name_pattern  = $name_pattern|explode(',')}
-      {foreach $name_pattern  as $name_pattern_string}
-          {set $name_pattern_array = $name_pattern_array|append( $name_pattern_string|trim() )}
-      {/foreach}
-  
     <div class="table-responsive">
       <table class="table table-striped">
       {foreach $node.object.contentobject_attributes as $attribute}
-        {if and( $name_pattern_array|contains($attribute.contentclass_attribute_identifier)|not(), $node|has_attribute( $attribute.contentclass_attribute_identifier ) )}
+        {if $node|has_attribute( $attribute.contentclass_attribute_identifier )}
         <tr class="attribute-{$attribute.contentclass_attribute_identifier}">
           <th>{$attribute.contentclass_attribute_name}</th>
           <td>
