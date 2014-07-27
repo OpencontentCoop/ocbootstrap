@@ -227,34 +227,7 @@
         <tbody>
         {if $attribute.content.relation_list}
             {foreach $attribute.content.relation_list as $item sequence array( 'bglight', 'bgdark' ) as $style}
-              {def $object = fetch( content, object, hash( object_id, $item.contentobject_id ) )}
-              <tr class="{$style}">
-                {* Remove. *}
-                <td><input type="checkbox" name="{$attribute_base}_selection[{$attribute.id}][]" value="{$item.contentobject_id}" />
-                <input type="hidden" name="{$attribute_base}_data_object_relation_list_{$attribute.id}[]" value="{$item.contentobject_id}" /></td>
-
-                {* Name *}
-                <td><small>{$object.name|wash()}</small></td>
-
-                {* Type *}
-                <td><small>{$object.class_name|wash()}</small></td>
-                           
-                {* Section *}
-                <td><small>{fetch( section, object, hash( section_id, $object.section_id ) ).name|wash()}</small></td>
-                              
-                {* Published. *}
-                <td><small>{if $item.in_trash}
-                        {'No'|i18n( 'design/standard/content/datatype' )}
-                    {else}
-                        {'Yes'|i18n( 'design/standard/content/datatype' )}
-                    {/if}</small>
-                </td>
-                            
-                {* Order. *}
-                <td><input size="2" type="text" name="{$attribute_base}_priority[{$attribute.id}][]" value="{$item.priority}" /></td>
-
-              </tr>
-              {undef $object}
+			  {include name=relation_item uri='design:ezjsctemplate/relation_list_row.tpl' arguments=array( $item.contentobject_id, $attribute.id, $item.priority )}
             {/foreach}
         {/if}
         <tr class="hide">

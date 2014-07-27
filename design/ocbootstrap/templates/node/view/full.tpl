@@ -12,20 +12,17 @@
       {include uri='design:parts/author.tpl'}
     </div>
     
-    <div class="table-responsive">
-      <table class="table table-striped">
-      {foreach $node.object.contentobject_attributes as $attribute}
-        {if $node|has_attribute( $attribute.contentclass_attribute_identifier )}
-        <tr class="attribute-{$attribute.contentclass_attribute_identifier}">
-          <th>{$attribute.contentclass_attribute_name}</th>
-          <td>
-            {attribute_view_gui attribute=$attribute}
-          </td>
-        </tr>
-        {/if}
-      {/foreach}
-      </table>
-    </div>
+	
+	{foreach $node.object.contentobject_attributes as $attribute}
+	  {if $node|has_attribute( $attribute.contentclass_attribute_identifier )}
+	  <dl class="dl-horizontal attribute-{$attribute.contentclass_attribute_identifier}">
+		<dt>{$attribute.contentclass_attribute_name}</dt>
+		<dd>
+		  {attribute_view_gui attribute=$attribute}
+		</dd>
+	  </dl>
+	  {/if}
+	{/foreach}
     
     {include uri='design:parts/children.tpl' view='line'}
 	

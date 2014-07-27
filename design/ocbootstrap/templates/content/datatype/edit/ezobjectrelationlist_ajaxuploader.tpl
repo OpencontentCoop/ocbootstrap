@@ -1,119 +1,86 @@
-{ezcss_require( array( 'modalwindow.css', 'yui_container.css' ) )}
-{def $uploadable_classes = ezini( 'CreateSettings', 'MimeClassMap', 'upload.ini' )|append( ezini( 'CreateSettings', 'DefaultClass', 'upload.ini' ) )|unique()
-     $allowed_class_list = $attribute.class_content.class_constraint_list
-     $merge_count = $uploadable_classes|merge( $allowed_class_list )|count()
-     $merge_unique_count = $uploadable_classes|merge( $allowed_class_list )|unique()|count()}
-{if and( ezmodule( 'ezjscore' ),
-        or( $allowed_class_list|count()|eq( 0 ), $merge_count|gt( $merge_unique_count ) ) )}
-    <input type="submit" value="{'Upload a file'|i18n( 'design/admin2/content/datatype' )}"
-            name="RelationUploadNew{$attribute.id}-{$attribute.version}"
-            class="button btn btn-success relation-upload-new hide"
-            title="{'Upload a file to create a new object and add it to the relation'|i18n( 'design/admin2/content/datatype' )}" />
-    {run-once}
-    {ezscript_require( array( 'ezjsc::yui3', 'ezjsc::yui3io', 'ezmodalwindow.js', 'ezajaxuploader.js' ) )}
-    <div id="relationlist-modal-window" class="modal-window" style="display:none;">
-        <h2><a href="#" class="window-close">{'Close'|i18n( 'design/admin/pagelayout' )}</a><span></span></h2>
-        <div class="window-content"></div>
-    </div>
-    <script type="text/javascript">
-    {literal}
-    (function () {
-        var uploaderConf = {
-            target: {},
-            open: {
-                action: 'ezajaxuploader::uploadform::ezobjectrelationlist'
-            },
-            upload: {
-                action: 'ezajaxuploader::upload::ezobjectrelationlist',
-                form: 'form.ajaxuploader-upload'
-            },
-            location: {
-                action: 'ezajaxuploader::preview::ezobjectrelationlist',
-                form: 'form.ajaxuploader-location',
-                browse: 'div.ajaxuploader-browse',
-    {/literal}
-                required: "{'Please choose a location'|i18n( 'design/admin2/content/datatype' )|wash( 'javascript' )}"
-    {literal}
-            },
+{if and( is_set( $class_content.class_constraint_list ),
+		 $class_content.class_constraint_list|count|ne( 0 ),
+		 $class_content.class_constraint_list|contains( 'image', 'file', 'file_pdf' )
+	   )}
 
-            preview: {
-                form: 'form.ajaxuploader-preview',
+<div id="{concat('multiupload-', $attribute.id)}" class="pull-left">
+  <div id="{concat('multiupload-', $attribute.id)}uploadButtonOverlay" style="position: absolute; z-index: 2"></div>
+  <button id="{concat('multiupload-', $attribute.id)}uploadButton" class="btn btn-success" type="button" style="z-index: 1">Aggiungi file</button>
+  <button id="{concat('multiupload-', $attribute.id)}cancelUploadButton" class="btn btn-danger" type="button" style="visibility: hidden">{'Cancel'|i18n('extension/ezmultiupload')}</button>
+  <noscript>{'Javascript has been disabled, this is needed for multiupload!'|i18n('extension/ezmultiupload')}</noscript>
+</div>  
+<div id="{concat('multiupload-', $attribute.id)}multiuploadProgress" class="multiuploadProgress">	
+	<p id="{concat('multiupload-', $attribute.id)}multiuploadProgressMessage" class="multiuploadProgressMessage">&nbsp;</p>
+	<div id="{concat('multiupload-', $attribute.id)}multiuploadProgressBarOutline"  class="multiuploadProgressBarOutline">
+		<div id="{concat('multiupload-', $attribute.id)}multiuploadProgressBar" class="multiuploadProgressBar"></div>
+	</div>
+</div>
 
-                // this is the eZAjaxUploader instance
-                callback: function () {
-                    var box = this.Y.one('#ezobjectrelationlist_browse_' + this.conf.target.ObjectRelationsAttributeId),
-                        table = box.one('table.table');
-                        tbody = box.one('table.table tbody'),
-                        last = tbody.one('tr.hide'),
-                        tr = false, priority = false, children = [],
-                        result = this.lastMetaData;
-                    
-                    table.removeClass('hide');
-                    tbody.one('tr.buttons').one('.ezobject-relation-remove-button').removeClass('hide');
-                    
-                    tr = last.cloneNode(true);
-                    tbody.insert(tr, last);
-                    tr.removeClass('hide');
-                    
-                    children = tr.get('children');                   
-                    children.item(0).all('input').set('value', result.object_info.id);
-                    children.item(1).setContent(result.object_info.name);
-                    children.item(2).setContent(result.object_info.class_name);
-                    children.item(3).setContent(result.object_info.section_name);
-                    children.item(4).setContent(result.object_info.published);
-                    priority = children.item(5).one('input');
-                    priority.set('value', parseInt(priority.get('value')) + 1);
-                    
-                    //box.one('input[name*=_data_object_relation_list_ajax_filled_]').set('value', 1);                    
-                    //box.all('.ezobject-relation-no-relation').addClass('hide');
+{def $start_node = cond( and( is_set( $class_content.default_placement.node_id ), $class_content.default_placement.node_id|ne( 0 ) ),
+                                $class_content.default_placement.node_id,
+								'auto' )}
 
-                    this.modalWindow.close();
-                }
-            },
-    {/literal}
-            validationErrorText: "{'Some required fields are empty.'|i18n( 'design/admin2/content/datatype' )|wash( 'javascript' )}",
-            parseJSONErrorText: "{'Unable to parse the JSON response.'|i18n( 'design/admin2/content/datatype' )|wash( 'javascript' )}",
-            title: "{'Upload a file and add the resulting object in the relation'|i18n( 'design/admin2/content/datatype' )|wash( 'javascript' )}"
-    {literal}
-        };
+{ezscript_require( array( 'ezjsc::yui2', 'ezjsc::jquery', 'ezjsc::jqueryio', 'jcookie.js' ) )}
+<script type="text/javascript">
+    var previewIcon = {'websitetoolbar/ezwt-icon-preview.png'|ezimage()};
+    (function(){ldelim}
+	  YUILoader.addModule({ldelim}
+		name: 'ezmultiupload_relations',
+		type: 'js',
+		fullpath: '{"javascript/ezmultiupload_relations.js"|ezdesign( 'no' )}',
+		requires: ["utilities", "json", "uploader"],
+		after: ["uploader"],
+		skinnable: false
+	  {rdelim});
 
-        var windowConf = {
-            window: '#relationlist-modal-window',
-            centered: false,
-            xy: ['centered', 50],
-            width: 650
-        };
+	  // Load the files using the insert() method and set it up and init it on success.
+	  YUILoader.insert({ldelim}
+		require: ["ezmultiupload_relations"],
+		onSuccess: function(){ldelim}
+			YAHOO.ez.MultiUploadRelations.cfg = {ldelim}
+				attributeId: {$attribute.id},
+				container:"{concat('multiupload-', $attribute.id)}",
+				swfURL:"{concat( ezini('eZJSCore', 'LocalScriptBasePath', 'ezjscore.ini').yui2, 'uploader/assets/uploader.swf' )|ezdesign( 'no' )}",
+				uploadURL: "{concat( 'ocbtools/multiupload/', $start_node )|ezurl( 'no' )}",
+				uploadVars: {ldelim}'{session_name()}': '{session_id()}','ezxform_token': '@$ezxFormToken@','UploadButton': 'Upload'{rdelim},                    
+				fileType: [{ldelim} description:"{'Allowed Files'|i18n('extension/ezmultiupload')|wash('javascript')}", extensions:'{$attribute|multiupload_file_types_string_from_attribute()}' {rdelim}],
+				progressBarWidth: "145",
+				allFilesRecived:  "{'All files received.'|i18n('extension/ezmultiupload')|wash(javascript)}",
+				uploadCanceled:   "{'Upload canceled.'|i18n('extension/ezmultiupload')|wash(javascript)}",
+				thumbnailCreated: "{'Thumbnail created.'|i18n('extension/ezmultiupload')|wash(javascript)}",
+				flashError: "{'Could not load flash(or not loaded yet), this is needed for multiupload!'|i18n('extension/ezmultiupload')}"
+			  {rdelim};
+			YAHOO.ez.MultiUploadRelations.init();
+		{rdelim},
+		timeout: 10000,
+  		combine: true
+	  {rdelim}, "js");
+	{rdelim})();   
+</script>
+<style>
+{literal}
+.multiuploadProgress {
+    display: none;
+    margin:0;
+	position: absolute;
+	bottom: -7px;
+}
 
-        YUI(YUI3_config).use('node', 'overlay', 'dom-base', 'io-ez', 'io-form', 'io-upload-iframe', 'json-parse', 'anim', function (Y) {
-            Y.on('domready', function() {
-                var win = new eZModalWindow(windowConf, Y),
-                    tokenNode = Y.one('#ezxform_token_js');
+.multiuploadProgressBarOutline {
+    width: 300px;
+    padding: 1px;
+    border: 1px solid #ccc;
+}
 
-                Y.all('.relation-upload-new').each(function () {
-                    var data = this.get('name').replace("RelationUploadNew", '').split("-"),
-                        conf = Y.clone(uploaderConf, true),
-                        uploader;
+.multiuploadProgressBar {
+    width: 0px;
+    height: 3px;
+    background-color: #f00;
+}
 
-                    conf.target = {
-                       ObjectRelationsAttributeId: data[0],
-                       Version: data[1]
-                    };
-                    if ( tokenNode ) {
-                        conf.token = tokenNode.get('title');
-                    }
-                    uploader = new eZAjaxUploader(win, conf, Y);
-                    this.on('click', function (e) {
-                        uploader.open();
-                        e.halt();
-                    });
-                    this.removeClass('hide');
-                });
-            });
-        });
-
-    })();
-    {/literal}
-    </script>
-    {/run-once}
+.cancelUploadButton {
+    visibility: hidden;
+}
+{/literal}
+</style>
 {/if}
-{undef $merge_count $merge_unique_count $allowed_class_list $uploadable_classes}
