@@ -26,6 +26,8 @@
     
     {include uri='design:parts/children.tpl' view='line'}
 	
+	{if $node.children_count}<hr />{/if}
+	
 	{include uri=concat('design:parts/relations.tpl') node=$node}   
 	
   </div>
