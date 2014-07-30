@@ -1,10 +1,10 @@
 <div class="content-view-full class-folder row">
   
-  {if $node.parent_node_id|ne(1)}
+  {if and( $node.parent_node_id|ne(1), $node.node_id|ne( ezini( 'NodeSettings', 'RootNode', 'content.ini' ) ) )}
   {include uri='design:nav/nav-section.tpl'}
   {/if}
     
-  <div class="content-main{if $node.parent_node_id|eq(1)} wide{/if}">
+  <div class="content-main{if or( $node.parent_node_id|eq(1), $node.node_id|eq( ezini( 'NodeSettings', 'RootNode', 'content.ini' ) ) )} wide{/if}">
     
     {if $node.node_id|ne( ezini( 'NodeSettings', 'RootNode', 'content.ini' ) )}
     <h1>{$node.name|wash()}</h1>
