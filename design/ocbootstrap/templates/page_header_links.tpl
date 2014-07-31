@@ -1,5 +1,8 @@
 <ul class="nav navbar-nav navbar-right">
   {if $current_user.is_logged_in}
+    {if fetch( 'user', 'has_access_to', hash( 'module', 'content', 'function', 'dashboard' ))}
+      <li id="dashboard"><a href={"/content/dashboard/"|ezurl} title="{'Dashboard'|i18n('design/admin/content/dashboard')}">{'Dashboard'|i18n('design/admin/content/dashboard')}</a></li>
+    {/if}
     <li id="myprofile"><a href={"/user/edit/"|ezurl} title="{'My profile'|i18n('design/ocbootstrap/pagelayout')}">{'My profile'|i18n('design/ocbootstrap/pagelayout')}</a></li>
     <li id="logout"><a href={"/user/logout"|ezurl} title="{'Logout'|i18n('design/ocbootstrap/pagelayout')}">{'Logout'|i18n('design/ocbootstrap/pagelayout')} ( {$current_user.contentobject.name|wash} )</a></li>
   {else}
