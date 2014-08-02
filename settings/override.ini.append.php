@@ -24,4 +24,10 @@ MatchFile=datatype/view/ezobjectrelationlist_image.tpl
 Subdir=templates
 Match[attribute_identifier]=image
 
+[ezobjectrelationlist_view_image]
+Source=content/datatype/view/ezobjectrelationlist.tpl
+MatchFile=datatype/view/ezobjectrelationlist_image.tpl
+Subdir=templates
+Match[attribute_identifier]=immagini
+
 */ ?>
