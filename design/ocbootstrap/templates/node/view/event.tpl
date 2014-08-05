@@ -17,18 +17,14 @@
 <div class="content-view-line class-{$node.class_identifier} media">  
   <div class="class-event {if gt(currentdate() , $node.object.data_map.to_time.content.timestamp)}ezagenda_event_old{/if}">
     <div class="inner">
-      <div class="ezagenda_cal">
-        <div class="ezagenda_cal_month">{$node.object.data_map.from_time.content.timestamp|datetime(custom,"%M")}</div>
-        <div class="ezagenda_cal_day">{$node.object.data_map.from_time.content.timestamp|datetime(custom,"%j")}</div>
-      </div>
-      <div class="ezagenda_data">
+       <div class="ezagenda_data">
         <h5><a href={$node.url_alias|ezurl}>{attribute_view_gui attribute=$node.data_map.short_title}</a></h5>
 
         <span class="ezagenda_data_meta">
             {if $same_day}
               {$node.data_map.from_time.content.timestamp|l10n( 'date' )} &middot; Dalle {$node.data_map.from_time.content.timestamp|l10n( 'shorttime' )} alle {$node.data_map.to_time.content.timestamp|l10n( 'shorttime' )}
             {elseif $node.data_map.to_time.has_content}
-              Da {$node.data_map.from_time.content.timestamp|l10n( 'shortdatetime' )} a {$node.data_map.to_time.content.timestamp|l10n( 'shortdatetime' )}
+              Dal {$node.data_map.from_time.content.timestamp|l10n( 'shortdate' )} al {$node.data_map.to_time.content.timestamp|l10n( 'shortdate' )}
             {else}
               {$node.data_map.from_time.content.timestamp|l10n( 'shortdatetime' )}
             {/if}

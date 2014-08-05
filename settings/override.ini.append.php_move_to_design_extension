@@ -1,0 +1,35 @@
+<?php /* #?ini charset="utf-8"?
+
+################################
+#           BLOCKS             #
+################################
+
+[block_carousel]
+Source=block/view/view.tpl
+MatchFile=block/carousel.tpl
+Subdir=templates
+Match[type]=Carousel
+Match[view]=default
+
+[block_latest_content]
+Source=block/view/view.tpl
+MatchFile=block/latest_content.tpl
+Subdir=templates
+Match[type]=LatestContent
+Match[view]=default
+
+[block_grid]
+Source=block/view/view.tpl
+MatchFile=block/grid_1_row_2_columns.tpl
+Subdir=templates
+Match[type]=Grid
+Match[view]=1_row_2_columns
+
+[block_main_story_default]
+Source=block/view/view.tpl
+MatchFile=block/main_story_default.tpl
+Subdir=templates
+Match[type]=MainStory
+Match[view]=default
+
+*/ ?>

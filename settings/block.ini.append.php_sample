@@ -4,13 +4,17 @@
 AllowedTypes[]
 AllowedTypes[]=Carousel
 AllowedTypes[]=UpcomingEvents
+AllowedTypes[]=LatestContent
+AllowedTypes[]=Grid
+
+AllowedTypes[]=MainStory
+
 
 #---------------------------------------------#
 #   eZ Demo
 #---------------------------------------------#
 AllowedTypes[]=Campaign
-AllowedTypes[]=MainStory
-AllowedTypes[]=ContentGrid
+#AllowedTypes[]=ContentGrid
 AllowedTypes[]=Gallery
 AllowedTypes[]=Banner
 AllowedTypes[]=Video
@@ -23,12 +27,20 @@ AllowedTypes[]=HighlightedItem
 
 #---------------------------------------------#
 
+[Carousel]
+Name=Carousel
+NumberOfValidItems=10
+NumberOfArchivedItems=0
+ManualAddingOfItems=enabled
+ViewList[]
+ViewList[]=default
+ViewName[default]=Default
 
 [UpcomingEvents]
 Name=Prossimi eventi
-NumberOfValidItems=1
-NumberOfArchivedItems=0
-ManualAddingOfItems=enabled
+ManualAddingOfItems=disabled
+CustomAttributes[]=node_id
+UseBrowseMode[node_id]=true
 CustomAttributes[]=number
 CustomAttributeNames[number]=Numero di eventi
 CustomAttributeTypes[number]=select
@@ -38,17 +50,44 @@ CustomAttributeSelection_number[5]=5
 CustomAttributeSelection_number[8]=8
 CustomAttributeSelection_number[10]=10
 ViewList[]
-ViewList[]=upcoming_events
-ViewName[upcoming_events]=Lista
+ViewList[]=default
+ViewName[default]=Lista
 
-[Carousel]
-Name=Carousel
-NumberOfValidItems=10
+
+[LatestContent]
+Name=Ultimi contenuti
+NumberOfValidItems=30
 NumberOfArchivedItems=0
-ManualAddingOfItems=enabled
+ManualAddingOfItems=disabled
+FetchClass=OCLatestContent
+FetchParameters[Source]=NodeID
+FetchParametersSelectionType[Source]=single
+FetchParametersIsRequired[Source]=true
+FetchParameters[Classes]=string
+FetchParameters[Limit]=string
+FetchParameters[Offset]=string
+FetchParameters[Depth]=string
+FetchParameters[SortBy]=string
+FetchParameters[SortOrder]=string
 ViewList[]
 ViewList[]=default
+ViewName[]
 ViewName[default]=Default
+
+[Grid]
+Name=Griglia
+NumberOfValidItems=6
+NumberOfArchivedItems=6
+ManualAddingOfItems=enabled
+ViewList[]
+ViewList[]=1_row_2_columns
+ViewList[]=1_row_3_columns
+ViewList[]=2_rows_2_column
+ViewList[]=2_rows_3_columns
+ViewName[1_row_2_columns]=1 riga 2 colonne
+ViewName[1_row_3_columns]=1 riga 3 colonne
+ViewName[2_rows_2_column]=2 righe 2 colonne
+ViewName[2_rows_3_columns]=2 righe 3 colonne
 
 #---------------------------------------------#
 #   eZ Demo
@@ -73,26 +112,26 @@ ViewList[]=highligted
 ViewName[default]=Background Image
 ViewName[highligted]=Highligted
 
-[ContentGrid]
-Name=Content Grid
-NumberOfValidItems=8
-NumberOfArchivedItems=8
-ManualAddingOfItems=enabled
-ViewList[]
-ViewList[]=default
-ViewList[]=1_column_4_rows
-ViewList[]=2_columns_2_rows
-ViewList[]=3_columns_1_row
-ViewList[]=3_columns_2_rows
-ViewList[]=4_columns_1_row
-ViewList[]=4_columns_2_rows
-ViewName[default]=1 column 2 rows
-ViewName[1_column_4_rows]=1 column 4 rows
-ViewName[2_columns_2_rows]=2 columns 2 rows
-ViewName[3_columns_1_row]=3 columns 1 row
-ViewName[3_columns_2_rows]=3 columns 2 rows
-ViewName[4_columns_1_row]=4 columns 1 row
-ViewName[4_columns_2_rows]=4 columns 2 rows
+#[ContentGrid]
+#Name=Content Grid
+#NumberOfValidItems=8
+#NumberOfArchivedItems=8
+#ManualAddingOfItems=enabled
+#ViewList[]
+#ViewList[]=default
+#ViewList[]=1_column_4_rows
+#ViewList[]=2_columns_2_rows
+#ViewList[]=3_columns_1_row
+#ViewList[]=3_columns_2_rows
+#ViewList[]=4_columns_1_row
+#ViewList[]=4_columns_2_rows
+#ViewName[default]=1 column 2 rows
+#ViewName[1_column_4_rows]=1 column 4 rows
+#ViewName[2_columns_2_rows]=2 columns 2 rows
+#ViewName[3_columns_1_row]=3 columns 1 row
+#ViewName[3_columns_2_rows]=3 columns 2 rows
+#ViewName[4_columns_1_row]=4 columns 1 row
+#ViewName[4_columns_2_rows]=4 columns 2 rows
 
 [Gallery]
 Name=Gallery
