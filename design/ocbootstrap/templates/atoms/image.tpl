@@ -17,7 +17,7 @@
   'title', ''  
 ))}
 
-{if $node|has_attribute( 'image' )}
+{if $item|has_attribute( 'image' )}
 
   {switch match=$alignment}
     {case match='left'}        
@@ -46,7 +46,7 @@
   
   {$openFigure}
   
-  {attribute_view_gui attribute=$node|attribute( 'image' ) image_class=$image_class link_to_image=$link_to_image href=$href target=$target hspace=$hspace border_size=$border_size border_color=$border_color border_style=$border_style margin_size=$margin_size alt_text=$alt_text fluid=$fluid alignment=cond($alignment|eq('center'),$alignment,false())}
+  {attribute_view_gui attribute=$item|attribute( 'image' ) image_class=$image_class link_to_image=$link_to_image href=$href target=$target hspace=$hspace border_size=$border_size border_color=$border_color border_style=$border_style margin_size=$margin_size alt_text=$alt_text fluid=$fluid alignment=cond($alignment|eq('center'),$alignment,false())}
   
   {* caption deve essere un attributo *}
   {if is_set( $caption.contentclassattribute_id )}

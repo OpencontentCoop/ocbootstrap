@@ -10,5 +10,5 @@
 {/if}    
     {foreach $attribute.content.tags as $tag}
         <a href={concat( '/tags/view/', $tag.url )|ezurl}>{$tag.keyword|wash}</a>{delimiter}, {/delimiter}
-    {/foreach}</p>
+    {/foreach}
 {/if}

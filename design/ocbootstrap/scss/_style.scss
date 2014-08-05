@@ -44,7 +44,10 @@ small.date{
   }
 
   .dropdown-toggle i{
-    float: right;
+    @media (max-width: $screen-sm-min){
+      float: right;
+    }
+    margin: 3px 0 0 4px;
   }
 
   .open{
