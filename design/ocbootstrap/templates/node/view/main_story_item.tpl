@@ -13,9 +13,9 @@
 
   <h3 class="mainstory-title"><a href={$node.url_alias|ezurl()}>{$node.object.name|wash()}</a></h3>
 
-  {if $node.data_map.intro.has_content}
+  {if $node|has_abstract}
     <div class="mainstory-abstract abstract">
-      {attribute_view_gui attribute=$node.data_map.intro}
+      {attribute_view_gui attribute=$node|abstract}
     </div>
   {/if}
 </div>
