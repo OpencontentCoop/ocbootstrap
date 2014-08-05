@@ -1,8 +1,21 @@
-<h2 class="block-title"><a href="{$node.url_alias|ezurl(no)}">{$node.name|wash()}</a></h2>
-{*if $node.data_map.image.has_content }
-  {attribute_view_gui attribute=$node.data_map.image image_class=appini( 'ContentViewBlock', 'DefaultImageClass', 'wide' ) fluid=true() href=$node.url_alias}
-{/if*}
-{if $node|has_abstract()}
-  {$node|abstract()|oc_shorten(100)}
-  <p class="goto"><a href="{$node.url_alias|ezurl(no)}">Leggi tutto</a></p>
-{/if}
+<div class="mainstory">
+  {attribute_view_gui attribute=$node.data_map.image image_class='imagefull_cutwide' href=$node.url_alias|ezurl(no) css_class="mainstory-image"}
+
+  {if $node.data_map.tags.has_content}
+    <span class="mainstory-tags tags">
+      {attribute_view_gui attribute=$node.data_map.tags}
+    </span>
+  {/if}
+
+  <span class="mainstory-meta meta">
+    {$node.object.published|l10n('shortdate')}
+  </span>
+
+  <h3 class="mainstory-title"><a href={$node.url_alias|ezurl()}>{$node.object.name|wash()}</a></h3>
+
+  {if $node.data_map.intro.has_content}
+    <div class="mainstory-abstract abstract">
+      {attribute_view_gui attribute=$node.data_map.intro}
+    </div>
+  {/if}
+</div>
