@@ -15,6 +15,12 @@ $current_node_in_path = first_set($node.path_array[3], 0  )
     <ul class="nav">
       {foreach $menu_items as $key => $item}
 
+        {node_view_gui content_node=$item
+                       view='nav-section_item'
+                       current_node_in_path=$current_node_in_path}
+
+
+        {*
         {if eq( $item.class_identifier, 'link')}
           <li><a href={$item.data_map.location.content|ezurl}{if and( is_set( $item.data_map.open_in_new_window ), $item.data_map.open_in_new_window.data_int )} target="_blank"{/if} title="{$item.data_map.location.data_text|wash}" class="menu-item-link" rel={$item.url_alias|ezurl}>{if $item.data_map.location.data_text}{$item.data_map.location.data_text|wash()}{else}{$item.name|wash()}{/if}</a>
             {else}
@@ -41,6 +47,10 @@ $current_node_in_path = first_set($node.path_array[3], 0  )
           {undef $sub_menu_items $sub_menu_items_count}
         {/if}
         </li>
+        *}
+
+
+
       {/foreach}
     </ul>
   {/if}

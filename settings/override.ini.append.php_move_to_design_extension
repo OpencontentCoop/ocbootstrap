@@ -27,9 +27,23 @@ Match[view]=1_row_2_columns
 
 [block_main_story_default]
 Source=block/view/view.tpl
-MatchFile=block/main_story_default.tpl
+MatchFile=block/main_story.tpl
 Subdir=templates
 Match[type]=MainStory
+Match[view]=default
+
+[block_main_story_highlight]
+Source=block/view/view.tpl
+MatchFile=block/main_story.tpl
+Subdir=templates
+Match[type]=MainStory
+Match[view]=jumbotron
+
+[block_banner]
+Source=block/view/view.tpl
+MatchFile=block/banner.tpl
+Subdir=templates
+Match[type]=Banner
 Match[view]=default
 
 */ ?>

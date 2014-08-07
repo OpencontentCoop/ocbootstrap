@@ -1,20 +1,16 @@
 {def $valid_node = $block.valid_nodes[0]}
-{*def $image = false()}
-{if valid_node|has_attribute( 'image' ) }
-  {set $image =  valid_node|attribute( 'image' )}
-{else}
-  {def $related = fetch( 'content', 'related_objects', hash( 'object_id', valid_node.contentobject_id ))}
-  {foreach $related as $rel}
-    {if $rel.class_identifier|eq( 'image' )}
-      {set $image = $rel|attribute( 'image' )}
-    {/if}
-  {/foreach}
-{/if*}
 
-<div class="content-view-block block-view-{$block.view}">
+<div class="content-view-block block-type-mainstory box">
+  {if ne( $block.name, '' )}
+    <h2 class="box-title">{$block.name|wash()}</h2>
+  {/if}
+  <div class="box-content">
 
-  {node_view_gui content_node=$valid_node view="main_story_item"}
+    {node_view_gui view='main_story_item'
+                   content_node=$valid_node
+                   block_view=$block.view
+                   hide_title=$block.custom_attributes.hide_title}
 
+  </div>
 </div>
-
-{undef}
+{undef $valid_node}

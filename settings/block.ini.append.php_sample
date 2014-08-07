@@ -53,22 +53,14 @@ ViewList[]
 ViewList[]=default
 ViewName[default]=Lista
 
-
 [LatestContent]
 Name=Ultimi contenuti
-NumberOfValidItems=30
-NumberOfArchivedItems=0
 ManualAddingOfItems=disabled
-FetchClass=OCLatestContent
-FetchParameters[Source]=NodeID
-FetchParametersSelectionType[Source]=single
-FetchParametersIsRequired[Source]=true
-FetchParameters[Classes]=string
-FetchParameters[Limit]=string
-FetchParameters[Offset]=string
-FetchParameters[Depth]=string
-FetchParameters[SortBy]=string
-FetchParameters[SortOrder]=string
+CustomAttributes[]=parent_node_id
+UseBrowseMode[parent_node_id]=true
+CustomAttributes[]=class
+CustomAttributes[]=limit
+CustomAttributes[]=offset
 ViewList[]
 ViewList[]=default
 ViewName[]
@@ -89,6 +81,15 @@ ViewName[1_row_3_columns]=1 riga 3 colonne
 ViewName[2_rows_2_column]=2 righe 2 colonne
 ViewName[2_rows_3_columns]=2 righe 3 colonne
 
+[Banner]
+Name=Banner
+NumberOfValidItems=4
+NumberOfArchivedItems=0
+ManualAddingOfItems=enabled
+ViewList[]
+ViewList[]=default
+ViewName[default]=Default
+
 #---------------------------------------------#
 #   eZ Demo
 #---------------------------------------------#
@@ -107,10 +108,13 @@ Name=Main story
 NumberOfValidItems=1
 NumberOfArchivedItems=5
 ManualAddingOfItems=enabled
+CustomAttributes[]=hide_title
+CustomAttributeNames[hide_title]=Nascondi il titolo del contenuto
+CustomAttributeTypes[hide_title]=checkbox
 ViewList[]=default
-ViewList[]=highligted
-ViewName[default]=Background Image
-ViewName[highligted]=Highligted
+ViewList[]=jumbotron
+ViewName[default]=Default
+ViewName[jumbotron]=Highlight
 
 #[ContentGrid]
 #Name=Content Grid
