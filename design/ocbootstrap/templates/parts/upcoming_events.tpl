@@ -7,7 +7,7 @@
 {set_defaults(hash(
   'show_title', true(),
   'number', 5,
-  'view', 'event'
+  'view', 'line'
 ))}
 
 
@@ -37,4 +37,4 @@
   </p>
 {/if}
 
-{set_defaults(array('show_title','number', 'view'))}
+{unset_defaults(array('show_title','number', 'view'))}
