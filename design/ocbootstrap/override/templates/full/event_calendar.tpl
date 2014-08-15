@@ -4,6 +4,7 @@
 {if is_set( $view_parameters.view )}
     {set $view = $view_parameters.view}
 {/if}
+
 <div class="content-view-full class-{$node.class_identifier} row">
   
   {include uri='design:nav/nav-section.tpl'}

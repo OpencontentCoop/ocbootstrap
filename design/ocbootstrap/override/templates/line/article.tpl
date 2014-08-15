@@ -8,7 +8,7 @@
 	<h4>
 	  <a href={$node.url_alias|ezurl}>{$node.name|wash()}</a>	  
 	  <span class="label label-primary">
-		<span class="glyphicon glyphicon-comment"></span>
+		<span class="fa fa-comment"></span>
 		{fetch( 'comment', 'comment_count', hash( 'contentobject_id', $node.contentobject_id,
 												  'language_id', $node.data_map.comments.language_id,
 												  'status', '1' ) )}		  

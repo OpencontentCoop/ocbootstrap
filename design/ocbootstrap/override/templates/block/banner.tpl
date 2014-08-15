@@ -7,7 +7,6 @@
 
     {include uri='design:atoms/banner.tpl'
              item=$valid_node
-             title=$block.name
     }
 
 

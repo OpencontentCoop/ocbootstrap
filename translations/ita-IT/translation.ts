@@ -7,10 +7,6 @@
     <source>Overview</source>
     <translation>In breve</translation>
   </message>
-  <message>
-    <source>Read more</source>
-    <translation>Continua a leggere</translation>
-  </message>
 </context>
 <context>
     <name>design/admin/content/datatype</name>
@@ -1226,6 +1222,34 @@
         <translation>Dom</translation>
     </message>
     <message>
+      <source>Monday</source>
+      <translation>Lunedì</translation>
+    </message>
+    <message>
+      <source>Tuesday</source>
+      <translation>Martedì</translation>
+    </message>
+    <message>
+      <source>Wednesday</source>
+      <translation>Mercoledì</translation>
+    </message>
+    <message>
+      <source>Thursday</source>
+      <translation>Giovedì</translation>
+    </message>
+    <message>
+      <source>Friday</source>
+      <translation>Venerdì</translation>
+    </message>
+    <message>
+      <source>Saturday</source>
+      <translation>Sabato</translation>
+    </message>
+    <message>
+      <source>Sunday</source>
+      <translation>Domenica</translation>
+    </message>
+    <message>
         <source>Today</source>
         <translation>Oggi</translation>
     </message>
@@ -1749,8 +1773,12 @@
 <context>
     <name>design/ocbootstrap/pagelayout</name>
     <message>
-        <source>Search</source>
-        <translation>Cerca</translation>
+      <source>Search</source>
+      <translation>Cerca</translation>
+    </message>
+    <message>
+      <source>Search text</source>
+      <translation>Testo da cercare</translation>
     </message>
     <message>
         <source>Tag cloud</source>
@@ -1766,11 +1794,11 @@
     </message>
     <message>
         <source>My profile</source>
-        <translation type="unfinished">Profilo utente</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Logout</source>
-        <translation type="unfinished">Esci</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Register</source>
@@ -1778,7 +1806,7 @@
     </message>
     <message>
         <source>Login</source>
-        <translation type="unfinished">Accedi</translation>
+        <translation type="unfinished">Login</translation>
     </message>
     <message>
         <source>Username</source>

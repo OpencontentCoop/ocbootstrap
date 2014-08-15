@@ -6,7 +6,8 @@
 
 {set_defaults(hash(
   'show_title', true(),
-  'number', 5
+  'number', 5,
+  'view', 'event'
 ))}
 
 
@@ -22,17 +23,13 @@
                               'sort_by', array( 'attribute', true(), 'event/from_time'),
                               'main_node_only', true(),
                               'class_filter_type', 'include',
-                              'class_filter_array', array( 'event' ),
-                              'attribute_filter', array(
-                              'or',
-                              array( 'event/from_time', '>=', $today_ts ),
-                              array( 'event/to_time', '>=', $today_ts ) ) ) ) }
+                              'class_filter_array', array( 'event' ) ) ) }
 
 {if $upcoming_events}
   {if $show_title}<h3 class="block-title">{if $title}{$title}{else}{$events_node.name|wash()}{/if}</h3>{/if}
   <div class="event-list">
     {foreach $upcoming_events as $event}
-      {node_view_gui content_node=$event view='event'}
+      {node_view_gui content_node=$event view=$view}
     {/foreach}
   </div>
   <p class="goto">
@@ -40,4 +37,4 @@
   </p>
 {/if}
 
-{undef}
+{set_defaults(array('show_title','number', 'view'))}

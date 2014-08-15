@@ -1,21 +1,28 @@
-{def $icon_size='normal'
+{set_defaults( hash(
+                'icon_size', 'small',
+                'icon_title', $attribute.content.mime_type,
+                'icon','no',
+                'show_flip', false()
+))}
+
+{*def $icon_size='normal'
      $icon_title=$attribute.content.mime_type
      $icon='no'}
 {if is_set( $show_flip )|not()}
 {def $show_flip = false()}
-{/if}
+{/if*}
 
 {if $attribute.has_content}
 	{if $attribute.content}
 	{switch match=$icon}
 		{case match='no'}
 			<a href={concat("content/download/",$attribute.contentobject_id,"/",$attribute.id,"/file/",$attribute.content.original_filename)|ezurl} title="Scarica il file {$attribute.content.original_filename|wash( xhtml )}">
-                {$attribute.content.original_filename} ({$attribute.content.filesize|si( byte )})
+                °°{$attribute.content.original_filename} ({$attribute.content.filesize|si( byte )})
             </a>
 		{/case}
 		{case}
 			<a href={concat("content/download/",$attribute.contentobject_id,"/",$attribute.id,"/file/",$attribute.content.original_filename)|ezurl} title="Scarica il file {$attribute.content.original_filename|wash( xhtml )}">
-                {$attribute.content.mime_type|mimetype_icon( $icon_size, $icon_title )}
+                **{$attribute.content.mime_type|mimetype_icon( $icon_size, $icon_title )}
                 {$attribute.content.original_filename} ({$attribute.content.filesize|si( byte )})               
             </a>
 		{/case}

@@ -14,11 +14,11 @@
 {/if}
 
 
-<div class="content-view-line class-{$node.class_identifier} media">  
+<div class="content-view-event class-{$node.class_identifier} media">
   <div class="class-event {if gt(currentdate() , $node.object.data_map.to_time.content.timestamp)}ezagenda_event_old{/if}">
     <div class="inner">
        <div class="ezagenda_data">
-        <h5><a href={$node.url_alias|ezurl}>{attribute_view_gui attribute=$node.data_map.short_title}</a></h5>
+         <h5><a href={$node.url_alias|ezurl}>{attribute_view_gui attribute=$node.data_map.short_title}</a></h5>
 
         <span class="ezagenda_data_meta">
             {if $same_day}

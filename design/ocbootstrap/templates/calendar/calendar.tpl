@@ -46,13 +46,13 @@
 <table summary="Calendario degli eventi" class="table-calendar">
 <thead>
 <tr>
-    <th>{"Mon"|i18n("ocbootstrap/calendar")}</th>
-    <th>{"Tue"|i18n("ocbootstrap/calendar")}</th>
-    <th>{"Wed"|i18n("ocbootstrap/calendar")}</th>
-    <th>{"Thu"|i18n("ocbootstrap/calendar")}</th>
-    <th>{"Fri"|i18n("ocbootstrap/calendar")}</th>
-    <th>{"Sat"|i18n("ocbootstrap/calendar")}</th>
-    <th>{"Sun"|i18n("ocbootstrap/calendar")}</th>
+    <th>{"Mon"|i18n("design/ocbootstrap/full/event_view_calendar")}</th>
+    <th>{"Tue"|i18n("design/ocbootstrap/full/event_view_calendar")}</th>
+    <th>{"Wed"|i18n("design/ocbootstrap/full/event_view_calendar")}</th>
+    <th>{"Thu"|i18n("design/ocbootstrap/full/event_view_calendar")}</th>
+    <th>{"Fri"|i18n("design/ocbootstrap/full/event_view_calendar")}</th>
+    <th>{"Sat"|i18n("design/ocbootstrap/full/event_view_calendar")}</th>
+    <th>{"Sun"|i18n("design/ocbootstrap/full/event_view_calendar")}</th>
 </tr>
 </thead>
 <tbody>
@@ -84,7 +84,7 @@
     
 	{def $day_id = concat( $temp_year, '-', $temp_month, '-', $counter )}
     <td class="{if and( is_set( $calendarData.day_by_day[$day_id] ), $calendarData.day_by_day[$day_id].count|gt(0) )}events {/if}{if eq($counter, $temp_today)}ezagenda_selected {/if}{if and(eq($counter, $curr_today), eq($curr_month, $temp_month))}ezagenda_current {/if}{$css_col_class}">        
-		<h3 class="day"><span class="day-of-week">{$dayofweeks[$dayofweek]}</span> <span class="num {if and(eq($counter, $curr_today), eq($curr_month, $temp_month))}label label-primary{/if}">{$counter}</span></h3>        
+		<h3 class="day"><span class="day-of-week">{$dayofweeks[$dayofweek]|i18n("design/ocbootstrap/full/event_view_calendar")}</span> <span class="num {if and(eq($counter, $curr_today), eq($curr_month, $temp_month))}label label-primary{/if}">{$counter}</span></h3>
         {if is_set( $calendarData.day_by_day[$day_id] )}
             {if $calendarData.day_by_day[$day_id].count|gt(0)}            
                 <ul>
