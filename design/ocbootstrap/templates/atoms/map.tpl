@@ -48,7 +48,6 @@ function createMarkerAndInfoWindow( i ) {ldelim}
   var marker = new google.maps.Marker({ldelim}
     map: map,
     position: markers[i].center,
-    shadow: pinShadow,
     content: markers[i].info
   {rdelim});
   infowindow = new google.maps.InfoWindow({ldelim}

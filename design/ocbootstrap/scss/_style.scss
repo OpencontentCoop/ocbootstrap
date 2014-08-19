@@ -138,3 +138,14 @@ small.date{
 .banner{
   margin-bottom: 20px;
 }
+
+/* =maps
+-------------------------------------------------
+*/
+
+//fix per google maps 3.0
+.balloon{
+  line-height:1.35;
+  overflow:hidden;
+  white-space:nowrap;
+}
