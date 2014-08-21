@@ -11,7 +11,7 @@
 {if is_set( $arguments[2] )}
     {set $priority = $arguments[2]}
 {/if}
-{if and( $object.can_read, fetch( 'user', 'has_access_to', hash( 'module', 'openpa', 'function', 'editor_tools' ) ) )}
+{if $object.can_read}
 <tr>
   {* Remove. *}
   <td><input type="checkbox" name="{$attribute_base}_selection[{$attribute_id}][]" value="{$object.id}" />
