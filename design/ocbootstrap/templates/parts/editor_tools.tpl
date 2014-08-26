@@ -1,5 +1,5 @@
 {def $logged_user = fetch( 'user', 'current_user' )}     
-{if and( $logged_user.is_logged_in, fetch( 'user', 'has_access_to', hash( 'module', 'openpa', 'function', 'editor_tools' ) ) )}    
+{if and( $logged_user.is_logged_in, $node.can_read ) )}    
   <div class="panel panel-info">
     <div class="panel-heading">Informazioni per l'editor</div>
 	<div class="panel-body">

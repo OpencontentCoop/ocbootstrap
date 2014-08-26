@@ -5,8 +5,6 @@
   'height', '400px'
 ))}
 
-{$geo_item|attribute(show)}
-
 {run-once}
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 {run-once}

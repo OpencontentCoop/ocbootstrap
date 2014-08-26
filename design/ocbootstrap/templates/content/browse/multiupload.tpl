@@ -188,7 +188,7 @@
 					</td>
 					<td>
 						{if and( is_set($item.data_map.image), $item.data_map.image.has_content )}
-							<img data-object="{$item.contentobject_id}" class="load-preview" src={$item.data_map.image.content['small'].url|ezroot} style="height: 60px; width: auto" />
+							<img data-object="{$item.contentobject_id}" class="load-preview" src={$item.data_map.image.content['small'].url|ezroot} style="height: 60px; width: auto; max-width: 100px" />
 						{/if}
 					</td>
 					<td>
@@ -248,7 +248,7 @@
             {ldelim}
                 YAHOO.ez.MultiUploadBrowse.cfg = {ldelim}
                     swfURL:"{concat( ezini('eZJSCore', 'LocalScriptBasePath', 'ezjscore.ini').yui2, 'uploader/assets/uploader.swf' )|ezdesign( 'no' )}",
-                    uploadURL: "{concat( 'openpa/multiupload/', $browse.start_node )|ezurl( 'no' )}",
+                    uploadURL: "{concat( 'ocbtools/multiupload/', $browse.start_node )|ezurl( 'no' )}",
                     uploadVars: {ldelim}
                         '{session_name()}': '{session_id()}',
                         'UserSessionHash': '{user_session_hash()}',
