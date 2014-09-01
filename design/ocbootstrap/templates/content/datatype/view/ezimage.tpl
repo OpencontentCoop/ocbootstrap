@@ -12,6 +12,7 @@ Input:
 *}
 {default image_class=large
          css_class=false()
+         image_css_class=false()
          alignment=false()
          link_to_image=false()
          href=false()
@@ -30,9 +31,18 @@ Input:
 {if $image_content.is_valid}
 
     {let image        = $image_content[$image_class]
-         inline_style = ''}
+         inline_style = ''
+		 image_css_classes = array()}
 
-    {if $link_to_image}
+	{if $fluid}
+	  {set $image_css_classes = $image_css_classes|append("img-responsive")}
+	{/if}
+	
+	{if $image_css_class}
+	  {set $image_css_classes = $image_css_classes|merge($image_css_class|explode(" "))}
+	{/if}
+    
+	{if $link_to_image}
         {set href = $image_content['original'].url|ezroot}
     {/if}
     {switch match=$alignment}
@@ -41,6 +51,9 @@ Input:
     {/case}
     {case match='right'}
         <div class="pull-right">
+    {/case}
+	{case match='center'}
+        {set $image_css_classes = $image_css_classes|append("center-block")}
     {/case}
     {case/}
     {/switch}
@@ -68,7 +81,7 @@ Input:
             {set $inline_style = concat( $inline_style, 'margin: ', $margin_size, 'px;' )}
         {/if}
         {if $href}<a title="{$title|wash(xhtml)}" href={$href}{if and( is_set( $link_class ), $link_class )} class="{$link_class}"{/if}{if and( is_set( $link_id ), $link_id )} id="{$link_id}"{/if}{if $target} target="{$target}"{/if}>{/if}
-        <img src={$image.url|ezroot} {if $fluid}class="img-responsive{if $alignment|eq('center')} center-block{/if}"{/if} {if $hspace}hspace="{$hspace}"{/if} alt="{$alt_text|wash(xhtml)}" title="{$title|wash(xhtml)}" />
+        <img src={$image.url|ezroot} {if $image_css_classes|count()|gt(0)}class="{$image_css_classes|implode(" ")}"{/if} {if $hspace}hspace="{$hspace}"{/if} alt="{$alt_text|wash(xhtml)}" title="{$title|wash(xhtml)}" />
         {if $href}</a>{/if}
     {/if}
 

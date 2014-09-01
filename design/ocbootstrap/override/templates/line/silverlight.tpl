@@ -5,9 +5,9 @@
   </a>
   {/if}
   <div class="media-body">
-	<h4>
+	<h3 class="media-heading">
 	  <a href={$node.url_alias|ezurl}>{$node.name|wash}</a>
-	</h4>
+	</h3>
 	
 	<p><a class="btn btn-sm center-block" href={$node.url_alias|ezurl}>{"View movie"|i18n("design/ocbootstrap/line/silverlight")}</a></p>
 

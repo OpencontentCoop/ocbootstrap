@@ -18,6 +18,7 @@ AliasList[]=squaremedium
 AliasList[]=imagefull
 AliasList[]=imagefullwide
 AliasList[]=imagefull_cutwide
+AliasList[]=carousel
 
 [squaremini]
 Reference=original
@@ -45,6 +46,11 @@ Filters[]=geometry/scalewidthdownonly=770
 Reference=original
 Filters[]
 Filters[]=geometry/scalewidth=1170
+
+[carousel]
+Reference=original
+Filters[]=geometry/scalewidthdownonly=770
+Filters[]=centerimg=770;380
 
 [imagefull_cutwide]
 Reference=original

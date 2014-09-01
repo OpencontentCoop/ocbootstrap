@@ -1,5 +1,7 @@
 <div class="mainstory {$block_view}">
-  {attribute_view_gui attribute=$node.data_map.image image_class='imagefull_cutwide' href=$node.url_alias|ezurl(no) css_class="mainstory-image"}
+  {if $node|has_attribute( 'image' )}
+  {attribute_view_gui attribute=$node|has_attribute( 'image' ) image_class='imagefull_cutwide' href=$node.url_alias|ezurl(no) css_class="mainstory-image"}
+  {/if}
 
   {*if $node.data_map.tags.has_content}
     <span class="mainstory-tags tags">

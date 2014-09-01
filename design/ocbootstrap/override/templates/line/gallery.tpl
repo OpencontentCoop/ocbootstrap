@@ -6,7 +6,9 @@
   </a>
   {/if}
   <div class="media-body">
-    <h4><a href={$node.url_alias|ezurl}>{$node.name|wash}</a></h4>    
+    <h3 class="media-heading">
+	  <a href={$node.url_alias|ezurl}>{$node.name|wash}</a>
+	</h3>
     
         {if $node.data_map.short_description.has_content}
         <div class="attribute-short">

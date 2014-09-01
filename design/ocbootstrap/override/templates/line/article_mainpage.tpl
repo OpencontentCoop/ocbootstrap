@@ -5,9 +5,9 @@
   </a>
   {/if}
   <div class="media-body">
-	<h4>
+	<h3 class="media-heading">
 	  <a href={$node.url_alias|ezurl}>{$node.name|wash}</a>
-	</h4>
+	</h3>
 
     {section show=$node.data_map.intro.content.is_empty|not}
         {attribute_view_gui attribute=$node.data_map.intro}

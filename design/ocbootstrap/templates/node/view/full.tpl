@@ -30,6 +30,7 @@
 	
 	{include uri=concat('design:parts/relations.tpl') node=$node}   
 	
+	{include name=editor_tools node=$node uri='design:parts/editor_tools.tpl'}
   </div>
   
   {* Per visualizzare l'extrainfo: aggiungi la classe "full-stack" al primo div e scommenta la seguenta inclusione *}

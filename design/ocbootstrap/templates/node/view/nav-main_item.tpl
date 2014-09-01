@@ -27,8 +27,8 @@
 {if gt($sub_menu_items|count(),0)}
   {set $node_class = $node_class|append("dropdown")}
 {/if}
-{if $node.data_map.short_name.has_content}
-  {set $node_name = $node.data_map.short_name.content|wash()}
+{if $node|has_attribute( 'short_name' )}
+  {set $node_name = $node|attribute( 'short_name' ).content|wash()}
 {/if}
 
 {if eq( $node.class_identifier, 'link')}

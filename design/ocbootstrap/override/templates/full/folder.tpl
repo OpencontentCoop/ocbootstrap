@@ -24,15 +24,17 @@
     </div>
     {/if}
     
-    {include uri='design:atoms/image.tpl' item=$node image_class=appini( 'ContentViewFull', 'DefaultImageClass', 'wide' )}    
-	
     {if $node|has_attribute( 'description' )}
       <div class="description">
         {attribute_view_gui attribute=$node|attribute( 'description' )}
       </div>
     {/if}	  
 	
-    {include uri='design:parts/children.tpl' view='line'}
+    {if $node|has_attribute( 'children_view' )}
+	  {include uri=concat('design:parts/children/', $node.data_map.children_view.class_content.options[$node.data_map.children_view.value[0]].name|downcase(), '.tpl')}
+	{else}
+	  {include uri='design:parts/children.tpl' view='line'}
+	{/if}
 
   </div>
   

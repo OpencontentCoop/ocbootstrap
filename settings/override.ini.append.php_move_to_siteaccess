@@ -194,6 +194,12 @@ MatchFile=embed/file.tpl
 Subdir=templates
 Match[class_identifier]=file
 
+[embed_audio]
+Source=content/view/embed.tpl
+MatchFile=embed/file.tpl
+Subdir=templates
+Match[class_identifier]=audio
+
 [embed_image]
 Source=content/view/embed.tpl
 MatchFile=embed/image.tpl

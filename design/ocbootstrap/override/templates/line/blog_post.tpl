@@ -5,7 +5,7 @@
   </a>
   {/if}
   <div class="media-body">
-	<h4>
+	<h3 class="media-heading">
 	  <a href={$node.url_alias|ezurl}>{$node.name|wash()}</a>	  
 	  <span class="label label-primary">
 		<span class="glyphicon glyphicon-comment"></span>
@@ -18,7 +18,7 @@
          {attribute_view_gui attribute=$node.data_map.author}
 	  {/if}
 	  </small>
-	</h4>
+	</h3>
 
 	{if $node.data_map.body.content.is_empty|not}
 	 {attribute_view_gui attribute=$node.data_map.body}

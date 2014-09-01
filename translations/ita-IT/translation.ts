@@ -7,6 +7,10 @@
     <source>Overview</source>
     <translation>In breve</translation>
   </message>
+  <message>
+    <source>Read more</source>
+    <translation>Leggi tutto</translation>
+  </message>
 </context>
 <context>
     <name>design/admin/content/datatype</name>

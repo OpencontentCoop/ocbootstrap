@@ -5,12 +5,12 @@
   </a>
   {/if}
   <div class="media-body">
-	<h4>
+	<h3 class="media-heading">
 	  <a href={$node.url_alias|ezurl}>{$node.name|wash()}</a>	  	  
 	  <small class="date">
 		{$node.object.data_map.from_time.content.timestamp|l10n( 'shortdatetime' )} - {$node.object.data_map.to_time.content.timestamp|l10n( 'shortdatetime' )}
 	  </small>
-	</h4>
+	</h3>
 
 	{if $node|has_abstract()}
 	  <p>{$node|abstract()|oc_shorten(100)}</p>

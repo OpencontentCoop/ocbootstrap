@@ -1,7 +1,9 @@
 <div class="griditem">
   <h3 class="griditem-title"><a href={$node.url_alias|ezurl()}>{$node.object.name|wash()}</a></h3>
 
-  {attribute_view_gui attribute=$node.data_map.image image_class='imagefull_cutwide' href=$node.url_alias|ezurl(no) css_class="griditem-image"}
+  {if $node|has_attribute( 'image' )}
+	{attribute_view_gui attribute=$node|attribute( 'image' ) image_class='imagefull_cutwide' href=$node.url_alias|ezurl(no) css_class="griditem-image"}
+  {/if}
 
   {*if $node.data_map.tags.has_content}
     <span class="griditem-tags tags">
@@ -15,8 +17,8 @@
   </span>
   *}
 
-  {if $node|has_abstract}
-    <div class="griditem-abstract abstract">
+  {if $node|has_abstract}  
+    <div class="griditem-abstract">
       {$node|abstract}
     </div>
   {/if}

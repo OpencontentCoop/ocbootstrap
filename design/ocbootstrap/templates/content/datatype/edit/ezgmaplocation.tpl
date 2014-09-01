@@ -127,8 +127,7 @@ function eZGmapLocation_MapControl( attributeId, latLongAttributeBase )
         document.getElementById( 'ezgml-mylocation-button-' + attributeId ).onclick = getUserPosition;
         document.getElementById( 'ezgml-mylocation-button-' + attributeId ).className = 'button';
         document.getElementById( 'ezgml-mylocation-button-' + attributeId ).disabled = false;
-    }
- 
+    }	
 }
 {/literal}
 </script>
@@ -139,6 +138,12 @@ if ( window.addEventListener )
     window.addEventListener('load', function(){ldelim} eZGmapLocation_MapControl( {$attribute.id}, "{if ne( $attribute_base, 'ContentObjectAttribute' )}{$attribute_base}-{/if}{$attribute.contentclassattribute_id}_{$attribute.contentclass_attribute_identifier}" ) {rdelim}, false);
 else if ( window.attachEvent )
     window.attachEvent('onload', function(){ldelim} eZGmapLocation_MapControl( {$attribute.id}, "{if ne( $attribute_base, 'ContentObjectAttribute' )}{$attribute_base}-{/if}{$attribute.contentclassattribute_id}_{$attribute.contentclass_attribute_identifier}" ) {rdelim} );
+	$(function() {ldelim}
+		"use strict";
+		$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {ldelim}
+			eZGmapLocation_MapControl( {$attribute.id}, "{if ne( $attribute_base, 'ContentObjectAttribute' )}{$attribute_base}-{/if}{$attribute.contentclassattribute_id}_{$attribute.contentclass_attribute_identifier}" )
+		{rdelim})
+	{rdelim});
 </script>
 
 <div class="row">

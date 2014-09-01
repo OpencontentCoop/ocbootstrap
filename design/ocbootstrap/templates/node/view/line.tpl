@@ -6,13 +6,13 @@
   </a>
   {/if}
   <div class="media-body">
-    <h4 class="media-heading">
+    <h3 class="media-heading">
 	  {if is_set( $node.url_alias )}
 		<a href="{$node.url_alias|ezurl('no')}" title="{$node.name|wash()}">{$node.name|wash()}</a>
 	  {else}
 		{$node.name|wash()}
 	  {/if}
-	</h4>	
+	</h3>	
     {if $node|has_abstract()}
 	  {$node|abstract()}
 	{/if}

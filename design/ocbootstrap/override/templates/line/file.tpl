@@ -5,9 +5,9 @@
   </a>
   {/if}
   <div class="media-body">
-	<h4>
+	<h3 class="media-heading">
 	  <a href={$node.url_alias|ezurl}>{$node.name|wash}</a>
-	</h4>
+	</h3>
 	{include uri='design:atoms/file.tpl' size=btn-xs file=$node|attribute( 'file' )}
 	{if $node|has_abstract()}
 	 {$node|abstract()}

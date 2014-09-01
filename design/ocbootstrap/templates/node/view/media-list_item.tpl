@@ -9,12 +9,13 @@
   </a>
   {/if}
   <div class="media-body">
-
+  
+	<h4>
+	  <a href={$node.url_alias|ezurl()}>{$node.name|wash()}</a>
 	  {if $show_date}
-      <span class="date">{$node.object.published|l10n('shortdate')}</span>
-    {/if}
-	  
-		<a href={$node.url_alias|ezurl()}>{$node.name|wash()}</a>
+		<small>{$node.object.published|l10n('shortdate')}</small>
+	  {/if}
+	</h4>
 
     {if $node|has_abstract()}
       <p>{$node|abstract()|oc_shorten( 150 )}</p>

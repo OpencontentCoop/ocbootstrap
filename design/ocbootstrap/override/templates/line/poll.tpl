@@ -7,10 +7,10 @@
   </a>
   {/if}
   <div class="media-body">
-	<h4>
+	<h3 class="media-heading">
 	  <a href={$node.url_alias|ezurl}>{$node.name|wash}</a>
 	  <small>{"%count votes"|i18n( 'design/ocbootstrap/line/poll',, hash( '%count', fetch( content, collected_info_count, hash( object_id, $node.object.id ) ) ) )}</small>
-	</h4>
+	</h3>
 
     {if $node|has_abstract()}
       {$node|abstract()}
