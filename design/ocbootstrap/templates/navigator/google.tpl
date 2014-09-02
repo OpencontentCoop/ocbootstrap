@@ -47,7 +47,7 @@
 {if $:current_page|gt($:left_max)}
 <li><a href={concat($page_uri,$:view_parameter_text,$page_uri_suffix)|ezurl}>1</a></li>
 {if sub($:current_page,$:left_length)|gt(1)}
-...
+<li class="other"><a>...</a></li>
 {/if}
 {/if}
 
