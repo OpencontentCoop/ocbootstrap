@@ -6,12 +6,12 @@
 
 <div id="{concat('multiupload-', $attribute.id, '-container')}" class="pull-left">
     <span class="btn btn-success fileinput-button">
-        <i class="glyphicon glyphicon-plus"></i>
+        <i class="add glyphicon glyphicon-plus"></i>
+        <i class="spinner fa a fa-circle-o-notch fa-spin" style="display: none"></i>
         <span>Inserisci file</span>
         <!-- The file input field used as target for the file upload widget -->
         <input id="{concat('multiupload-', $attribute.id)}" type="file" name="files[]" multiple>
     </span>
-    <i class="spinner fa a fa-circle-o-notch fa-spin" style="display: none"></i>
 </div>
 
 {def $start_node = cond( and( is_set( $class_content.default_placement.node_id ), $class_content.default_placement.node_id|ne( 0 ) ),
@@ -29,12 +29,14 @@ $(function () {
         acceptFileTypes: "{/literal}{$attribute|multiupload_file_types_string_from_attribute()}{literal}",
         dataType: 'json',
         submit: function (e, data) {
-            var container = $("{/literal}#{concat('multiupload-', $attribute.id, '-container')}{literal} .spinner").show();
+            $("{/literal}#{concat('multiupload-', $attribute.id, '-container')}{literal} .spinner").show();
+            $("{/literal}#{concat('multiupload-', $attribute.id, '-container')}{literal} .add").hide();
         },
         done: function (e, data) {
             if ( data.result.errors.length > 0 ){
                 alert('Error');
-                $({/literal}'#{concat('multiupload-', $attribute.id)}'{literal})
+                $("{/literal}#{concat('multiupload-', $attribute.id, '-container')}{literal} .spinner").hide();
+                $("{/literal}#{concat('multiupload-', $attribute.id, '-container')}{literal} .add").show();
             }else{
                 var container = $("{/literal}#{concat('multiupload-', $attribute.id, '-container')}{literal} .spinner").hide();
                 var id = data.result.contentobject_id;
@@ -47,7 +49,8 @@ $(function () {
                         var table = container.parents( ".ezcca-edit-datatype-ezobjectrelationlist" ).find('table').show().removeClass('hide');
                         table.find('tr.hide').before(content.content);
                     }
-                    var container = $("{/literal}#{concat('multiupload-', $attribute.id, '-container')}{literal} .spinner").hide();
+                    $("{/literal}#{concat('multiupload-', $attribute.id, '-container')}{literal} .spinner").hide();
+                    $("{/literal}#{concat('multiupload-', $attribute.id, '-container')}{literal} .add").show();
                 });
             }
         }
