@@ -11,6 +11,11 @@ $ViewList['multiupload'] = array(
     'single_post_actions' => array('UploadButton' => 'Upload'),
     'params' => array('ParentNodeID'));
 
+$ViewList['upload'] = array(
+    'functions' => array('editor_tools'),
+    'script' => 'upload.php',
+    'params' => array('ContentObjectAttributeID', 'ContentObjectVersion', 'ParentNodeID'));
+
 $FunctionList['editor_tools'] = array();
 
 
