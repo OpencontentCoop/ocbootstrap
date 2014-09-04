@@ -11,9 +11,7 @@
         <!-- The file input field used as target for the file upload widget -->
         <input id="{concat('multiupload-', $attribute.id)}" type="file" name="files[]" multiple>
     </span>
-    <div class="progress-bar-container">
-        <div class="progress-bar progress-bar-success"></div>
-    </div>
+    <i class="spinner fa a fa-circle-o-notch fa-spin" style="display: none"></i>
 </div>
 
 {def $start_node = cond( and( is_set( $class_content.default_placement.node_id ), $class_content.default_placement.node_id|ne( 0 ) ),
@@ -30,11 +28,15 @@ $(function () {
         url: {/literal}{concat('ocbtools/upload/',$attribute.id, '/', $attribute.version, '/', $start_node)|ezurl()}{literal},
         acceptFileTypes: "{/literal}{$attribute|multiupload_file_types_string_from_attribute()}{literal}",
         dataType: 'json',
+        submit: function (e, data) {
+            var container = $("{/literal}#{concat('multiupload-', $attribute.id, '-container')}{literal} .spinner").show();
+        },
         done: function (e, data) {
             if ( data.result.errors.length > 0 ){
-                console.log(data.result.errors);
+                alert('Error');
+                $({/literal}'#{concat('multiupload-', $attribute.id)}'{literal})
             }else{
-                var container = $({/literal}'#{concat('multiupload-', $attribute.id)}'{literal});
+                var container = $("{/literal}#{concat('multiupload-', $attribute.id, '-container')}{literal} .spinner").hide();
                 var id = data.result.contentobject_id;
                 var priority = parseInt(container.parent().prev().find('input[name^="ContentObjectAttribute_priority"]:last-child').val()) || 0;
                 priority++;
@@ -45,16 +47,9 @@ $(function () {
                         var table = container.parents( ".ezcca-edit-datatype-ezobjectrelationlist" ).find('table').show().removeClass('hide');
                         table.find('tr.hide').before(content.content);
                     }
+                    var container = $("{/literal}#{concat('multiupload-', $attribute.id, '-container')}{literal} .spinner").hide();
                 });
-
             }
-        },
-        progressall: function (e, data) {
-           var progress = parseInt(data.loaded / data.total * 100, 10);
-            $('{/literal}#{concat('multiupload-', $attribute.id)}{literal} .progress-bar').css(
-                    'width',
-                    progress + '%'
-            );
         }
     }).prop('disabled', !$.support.fileInput)
             .parent().addClass($.support.fileInput ? undefined : 'disabled');
