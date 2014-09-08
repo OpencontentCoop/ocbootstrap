@@ -1794,11 +1794,11 @@
     </message>
     <message>
         <source>My profile</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Il mio profilo</translation>
     </message>
     <message>
         <source>Logout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Esci</translation>
     </message>
     <message>
         <source>Register</source>
@@ -1806,7 +1806,7 @@
     </message>
     <message>
         <source>Login</source>
-        <translation type="unfinished">Login</translation>
+        <translation type="unfinished">Accedi</translation>
     </message>
     <message>
         <source>Username</source>
@@ -1822,7 +1822,7 @@
     </message>
     <message>
         <source>Search text</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Parole da cercare</translation>
     </message>
 </context>
 <context>
