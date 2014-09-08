@@ -6,6 +6,7 @@
 
 {set_defaults(hash(
   'show_title', true(),
+  'show_link', true(),
   'number', 5,
   'view', 'line'
 ))}
@@ -32,9 +33,11 @@
       {node_view_gui content_node=$event view=$view}
     {/foreach}
   </div>
+  {if $show_link}
   <p class="goto">
     <a href={$events_node.url_alias|ezurl()}>vedi tutti gli eventi</a>
   </p>
+  {/if}
 {/if}
 
 {unset_defaults(array('show_title','number', 'view'))}
