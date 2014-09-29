@@ -11,7 +11,6 @@
   'view', 'line'
 ))}
 
-
 {def
     $curr_ts = currentdate()
     $curr_today = $curr_ts|datetime( custom, '%j')
@@ -24,7 +23,12 @@
                               'sort_by', array( 'attribute', true(), 'event/from_time'),
                               'main_node_only', true(),
                               'class_filter_type', 'include',
-                              'class_filter_array', array( 'event' ) ) ) }
+                              'class_filter_array', array( 'event' ),
+                              'attribute_filter', array(
+                              'or',
+                              array( 'event/from_time', '>=', $today_ts ),
+                              array( 'event/to_time', '>=', $today_ts ) ) ) ) }
+
 
 {if $upcoming_events}
   {if $show_title}<h3 class="block-title">{if $title}{$title}{else}{$events_node.name|wash()}{/if}</h3>{/if}

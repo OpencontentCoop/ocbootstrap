@@ -74,11 +74,11 @@ ManualAddingOfItems=enabled
 ViewList[]
 ViewList[]=1_row_2_columns
 ViewList[]=1_row_3_columns
-ViewList[]=2_rows_2_column
+ViewList[]=2_rows_2_columns
 ViewList[]=2_rows_3_columns
 ViewName[1_row_2_columns]=1 riga 2 colonne
 ViewName[1_row_3_columns]=1 riga 3 colonne
-ViewName[2_rows_2_column]=2 righe 2 colonne
+ViewName[2_rows_2_columns]=2 righe 2 colonne
 ViewName[2_rows_3_columns]=2 righe 3 colonne
 
 [Banner]

@@ -77,13 +77,14 @@
     
 	<div class="col-lg-8">
 	  
-	  {if $search_text|ne('')}
-	  <h2>        
+	  <h2>
 		  <span>{"Search"|i18n("design/ezwebin/content/search")}</span>
+      {if $search_text|ne('')}
 		  <small>{$search_text|wash}</small>
+      {/if}
 	  </h2>
-	  {/if}
-	
+
+
 	  <div class="input-group">
 		<input type="text" name="SearchText" class="form-control input-lg" value="{$search_text|wash}" />
 		<span class="input-group-btn">

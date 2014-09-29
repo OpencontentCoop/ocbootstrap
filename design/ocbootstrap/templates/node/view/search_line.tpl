@@ -1,5 +1,5 @@
 <div class="row">
-<div class="col-sm-12">
+<div class="col-sm-12 content-view-search_line">
   <div class="box">
     <div class="box-content">
       <h4>
