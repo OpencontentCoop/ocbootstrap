@@ -17,12 +17,12 @@
 	{switch match=$icon}
 		{case match='no'}
 			<a href={concat("content/download/",$attribute.contentobject_id,"/",$attribute.id,"/file/",$attribute.content.original_filename)|ezurl} title="Scarica il file {$attribute.content.original_filename|wash( xhtml )}">
-                °°{$attribute.content.original_filename} ({$attribute.content.filesize|si( byte )})
+                {$attribute.content.original_filename} ({$attribute.content.filesize|si( byte )})
             </a>
 		{/case}
 		{case}
 			<a href={concat("content/download/",$attribute.contentobject_id,"/",$attribute.id,"/file/",$attribute.content.original_filename)|ezurl} title="Scarica il file {$attribute.content.original_filename|wash( xhtml )}">
-                **{$attribute.content.mime_type|mimetype_icon( $icon_size, $icon_title )}
+                {$attribute.content.mime_type|mimetype_icon( $icon_size, $icon_title )}
                 {$attribute.content.original_filename} ({$attribute.content.filesize|si( byte )})               
             </a>
 		{/case}
