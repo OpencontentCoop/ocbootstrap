@@ -114,7 +114,10 @@ class OcbToolsFunctionCollection
                                     $result[] = array(
                                         'lat' => floatval( $latitude ),
                                         'lon' => floatval( $longitude ),
+                                        'lng' => floatval( $longitude ),
                                         'popupMsg' => $popup,
+                                        'title' => $item['name'],
+                                        'description' => "<h3><a href='{$href}'>{$popup}</a></h3>", //@todo
                                         'urlAlias' => $href
                                     );
                                 }
