@@ -145,7 +145,7 @@
 		  <table id="browse_table" class="table" cellspacing="0">
 			<tbody>
 			{foreach $node_array as $item}
-				<tr>
+				<tr id="object-{$item.contentobject_id}">
 					<td>
 						{def $ignore_nodes_merge=merge( $browse.ignore_nodes_select_subtree, $item.path_array )
 						$browse_permission = true()}
@@ -191,7 +191,7 @@
 							<img data-object="{$item.contentobject_id}" class="load-preview" src={$item.data_map.image.content['small'].url|ezroot} style="height: 60px; width: auto; max-width: 100px" />
 						{/if}
 					</td>
-					<td>
+					<td class="object-name">
 						{set $ignore_nodes_merge=merge( $browse.ignore_nodes_click, $item.path_array )}
 						{if eq( $ignore_nodes_merge|count, $ignore_nodes_merge|unique|count )}
 							{if and( or( ne( $browse.action_name, 'MoveNode' ), ne( $browse.action_name, 'CopyNode' ) ), $item.object.content_class.is_container )}
@@ -277,8 +277,8 @@
         $("#selection").hide();
 
         var displayImageDetail = function(e){
-            $(this).closest('table').find('tr').removeClass('bgdark');
-            $(this).closest('tr').addClass('bgdark');
+            $(this).closest('table').find('tr').removeClass('success');
+            $(this).closest('tr').addClass('success');
             var objectId = $(this).data('object');
             var spinner = $("#spinner").clone();
             $('#preview-container').empty().append(spinner.show().css({margin:'20px auto', display:'block'}));
@@ -347,13 +347,46 @@
                 });
             }
         }
+        
+        var inlineEdit = function(){
+          $('span.inline-form').each(function(){ $(this).hide(); $(this).prev().show() });
+          var editButton = $(this);
+          var attributeData = editButton.data();    
+          var text = editButton.parent();
+          var form = text.next();
+          text.hide();
+          form.show().find( 'button' ).bind( 'click', function(){
+            var value = form.find(attributeData.input).val();            
+            form.hide();text.show();
+            if (value.length > 0){
+              var spinner = $("#spinner").clone();
+              $('#preview-container').empty().append(spinner.show().css({margin:'20px auto', display:'block'}));
+              $.ez('ocb::attribute_edit', {objectId:attributeData.objectid,attributeId:attributeData.attributeid,version:attributeData.version,content:value}, function(result){
+                if (result.error_text.length) {
+                  alert(result.error_text);
+                }else{                  
+                  $('#object-'+attributeData.objectid+' td.object-name').html(result.content);
+                }
+                $.ez('ezjsctemplate::preview::'+attributeData.objectid, false, function(data){
+                    if (data.error_text.length) {
+                        alert(data.error_text);
+                    }else{
+                        $('#preview-container').html(data.content);
+                    }
+                });
+              });
+            }
+          });
+        }
 
         if ($.isFunction($(document).on)){
             $(document).on( 'click', '.load-preview', displayImageDetail );
             $(document).on( 'change', 'td > input:checkbox', selectUnselect );
             $(document).on( 'submit', 'form[name="browse"]', function(){eraseCookie('ocb_browse');} );
+            $(document).on( 'click', '.inline-edit', inlineEdit );
         }else{
             $('.load-preview').live( 'click', displayImageDetail );
+            $('.inline-edit').live( 'click', inlineEdit );
             $('td > input:checkbox').live( 'change', selectUnselect );
             $('form[name="browse"]').bind( 'submit', function(){eraseCookie('ocb_browse');} );
         }

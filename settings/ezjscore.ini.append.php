@@ -19,4 +19,7 @@ LocalScripts[jqueryUI]=jquery-ui-1.8.16.custom.min.js
 LocalScriptBasePath[yui3]=lib/yui/3.4.1/build/
 LocalScriptBasePath[yui2]=lib/yui/2.8.2/build/
 
+[ezjscServer_ocb]
+Class=ocbServerFunctions
+
 */ ?>
