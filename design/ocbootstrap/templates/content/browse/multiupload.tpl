@@ -13,7 +13,7 @@
          $main_node = fetch( content, node, hash(node_id, $browse.start_node ) )}
     {set $browse_list_count = $node_list_count
          $node_array        = $node_list
-         $page_uri_suffix   = concat( '?', $requested_uri_suffix)
+         $page_uri_suffix   = concat( '?', $requested_uri_suffix, '&SubTreeArray[]=', $browse.start_node )
          $is_search = true()}
 {else}
     {def $page_uri=concat( '/content/browse/', $main_node.node_id )}
