@@ -41,6 +41,7 @@
 {/if}
 
 {if $items}
+
   {if $root_node}
     {ezscript_require( array( 'ezjsc::jquery', 'bootstrap-transition.js' , 'bootstrap-carousel.js' ) )}
 

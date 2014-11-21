@@ -227,10 +227,14 @@
 
 
 
-{ezscript_require( array( 'ezjsc::yui2', 'ezjsc::jquery', 'ezjsc::jqueryio', 'jcookie.js' ) )}
-{ezcss_require( 'ezmultiupload.css' )}
+{ezscript_require( array( 'ezjsc::jquery' ) )}
+{ezscript( array( 'ezjsc::jqueryio', 'jcookie.js' ) )}
+
 <script type="text/javascript">
     var previewIcon = {'websitetoolbar/ezwt-icon-preview.png'|ezimage()};
+    {*
+    {ezcss_require( 'ezmultiupload.css' )}
+    {ezscript_require( array( 'ezjsc::yui2' ) )}
     (function(){ldelim}
         YUILoader.addModule({ldelim}
             name: 'ezmultiupload_browse',
@@ -271,7 +275,8 @@
             combine: true
             {rdelim}, "js");
         {rdelim})();
-    {literal}
+    *}
+    {literal}    
     $(document).ready(function(){
 
         $("#selection").hide();
@@ -379,12 +384,12 @@
           });
         }
 
-        if ($.isFunction($(document).on)){
+        if ($.isFunction($(document).on)){            
             $(document).on( 'click', '.load-preview', displayImageDetail );
             $(document).on( 'change', 'td > input:checkbox', selectUnselect );
             $(document).on( 'submit', 'form[name="browse"]', function(){eraseCookie('ocb_browse');} );
             $(document).on( 'click', '.inline-edit', inlineEdit );
-        }else{
+        }else{            
             $('.load-preview').live( 'click', displayImageDetail );
             $('.inline-edit').live( 'click', inlineEdit );
             $('td > input:checkbox').live( 'change', selectUnselect );
