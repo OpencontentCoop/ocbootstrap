@@ -103,7 +103,7 @@ class OcbToolsFunctionCollection
                         {                        
                             foreach( $geoFieldsNames as $geoFieldsName )
                             {                            
-                                list( $longitude, $latitude ) = explode( ',', $item['fields'][$geoFieldsName][0] );
+                                @list( $longitude, $latitude ) = explode( ',', $item['fields'][$geoFieldsName][0] );
                                 if ( intval( $latitude ) > 0 && intval( $longitude ) > 0 )
                                 {
                                     $href = $item['main_url_alias'];

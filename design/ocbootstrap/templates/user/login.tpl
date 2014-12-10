@@ -19,13 +19,13 @@
     <form class="validate-form" method="post" action={"/user/login/"|ezurl} name="loginform">
       <div class='form-group'>
         <div class='controls with-icon-over-input'>          
-          <input type="text" autofocus="" name="Login" placeholder="{"Username"|i18n("design/ocbootstrap/user/login",'User name')}" class="form-control" data-rule-required="true" value="{$User:login|wash}">
+          <input type="text" autofocus="" autocomplete="off" name="Login" placeholder="{"Username"|i18n("design/ocbootstrap/user/login",'User name')}" class="form-control" data-rule-required="true" value="{$User:login|wash}">
           <i class='icon-user text-muted'></i>
         </div>
       </div>
       <div class='form-group'>
         <div class='controls with-icon-over-input'>          
-          <input type="password" name="Password" placeholder="{"Password"|i18n("design/ocbootstrap/user/login")}" class="form-control" data-rule-required="true" >
+          <input type="password" autocomplete="off" name="Password" placeholder="{"Password"|i18n("design/ocbootstrap/user/login")}" class="form-control" data-rule-required="true" >
           <i class='icon-lock text-muted'></i>
         </div>
       </div>

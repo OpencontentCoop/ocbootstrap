@@ -32,7 +32,7 @@
       <div class="row">
 
       <div class="col-md-8">        
-        <input placeholde="{"Email"|i18n('design/ocbootstrap/user/forgotpassword')}" class="form-control" type="text" name="UserEmail" size="40" value="{$wrong_email|wash}" />
+        <input autocomplete="off" placeholde="{"Email"|i18n('design/ocbootstrap/user/forgotpassword')}" class="form-control" type="text" name="UserEmail" size="40" value="{$wrong_email|wash}" />
       </div>
 
       <div class="col-md-4">

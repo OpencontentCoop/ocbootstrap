@@ -39,10 +39,10 @@
 
             {if $newPasswordNotMatch}*{/if}
             <label>{"New password"|i18n("design/ocbootstrap/user/password")}</label><div class="labelbreak"></div>
-            <input class="form-control" type="password" name="newPassword" size="11" value="{$newPassword|wash}" />
+            <input class="form-control" autocomplete="off" type="password" name="newPassword" size="11" value="{$newPassword|wash}" />
             {if $newPasswordNotMatch}*{/if}
             <label>{"Retype password"|i18n("design/ocbootstrap/user/password")}</label><div class="labelbreak"></div>
-            <input class="form-control" type="password" name="confirmPassword" size="11" value="{$confirmPassword|wash}" />
+            <input class="form-control" autocomplete="off" type="password" name="confirmPassword" size="11" value="{$confirmPassword|wash}" />
 
         <input class="defaultbutton" type="submit" name="OKButton" value="{'OK'|i18n('design/ocbootstrap/user/password')}" />
         <input class="button" type="submit" name="CancelButton" value="{'Cancel'|i18n('design/ocbootstrap/user/password')}" />
