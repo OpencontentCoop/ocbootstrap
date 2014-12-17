@@ -1,7 +1,7 @@
 {def $nav_tools_root_node = fetch( 'content', 'node', hash( 'node_id', $pagedata.root_node ) )
      $nav_tools_class_filter = appini( 'MenuContentSettings', 'TopIdentifierList', array() )
      $nav_tools_items = fetch( 'content', 'list', hash( 'parent_node_id', $nav_tools_root_node.node_id,
-                    'sort_by', $root_node.sort_array,
+                    'sort_by', $nav_tools_root_node.sort_array,
                     'class_filter_type', 'include',
                     'attribute_filter', array('and',
                                         array('priority','<','4000'),

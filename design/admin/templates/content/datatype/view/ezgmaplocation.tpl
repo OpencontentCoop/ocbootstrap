@@ -36,7 +36,7 @@ google.maps.event.addDomListener(window, 'load', function(){ldelim} eZGmapLocati
 </script>
 
 
-<!--
+
 <div class="block">
 <label>{'Latitude'|i18n('extension/ezgmaplocation/datatype')}:</label> {$attribute.content.latitude}
 <label>{'Longitude'|i18n('extension/ezgmaplocation/datatype')}:</label> {$attribute.content.longitude}
@@ -46,6 +46,6 @@ google.maps.event.addDomListener(window, 'load', function(){ldelim} eZGmapLocati
 </div>
 
 <label>{'Map'|i18n('extension/ezgmaplocation/datatype')}:</label>
--->
+
 <div id="ezgml-map-{$attribute.id}" style="width: 100%; height: 280px;"></div>
 {/if}
