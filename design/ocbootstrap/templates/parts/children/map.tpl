@@ -1,5 +1,5 @@
-{ezscript_require( array( 'ezjsc::jquery', 'plugins/leaflet/leaflet.js') )}
-{ezcss_require( array( 'plugins/leaflet/leaflet.css', 'plugins/leaflet/map.css' ) )}
+{ezscript_require( array( 'ezjsc::jquery', 'plugins/leaflet/leaflet.js', 'plugins/leaflet/Leaflet.MakiMarkers.js', 'plugins/leaflet/leaflet.markercluster.js') )}
+{ezcss_require( array( 'plugins/leaflet/leaflet.css', 'plugins/leaflet/map.css', 'plugins/leaflet/MarkerCluster.css', 'plugins/leaflet/MarkerCluster.Default.css' ) )}
 
 {set_defaults(hash(
   'height', 600
@@ -13,30 +13,34 @@
   <div class="col-md-9">
 	<div id="map-{$node.node_id}" style="height: {$height}px; width: 100%"></div>
 	
-	<script>
-	L.Icon.Default.imagePath = {'javascript/plugins/leaflet/images'|ezdesign()};
-	var map = L.map( 'map-{$node.node_id}' );
-	var markers = [];
-	var markersObjects = {$markers|json_encode()};
-	$.each( markersObjects, function(i,m){ldelim}           
-		marker = L.marker([m.lat,m.lon]).addTo(map);	
-		marker.bindPopup( "<h3><a href='"+m.urlAlias+"'>"+m.popupMsg+"</a><h3>");
-		markers[i] = marker;
-	{rdelim});            
-	var group = new L.featureGroup( markers );
-	map.fitBounds(group.getBounds());    
-	L.tileLayer({literal}'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'{/literal}, {ldelim}
-		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-		maxZoom: 18
-	{rdelim}).addTo(map);
-	$(document).ready( function(){ldelim}
-	  $('.list-markers-text a').bind( 'click', function(e){ldelim}
-		var id = $(this).data('id');
-		markers[id].openPopup();
-		e.preventDefault();
-	  {rdelim});
-	{rdelim});
-	</script>
+  <script>            
+  var tiles = L.tileLayer('http://{ldelim}s{rdelim}.tile.osm.org/{ldelim}z{rdelim}/{ldelim}x{rdelim}/{ldelim}y{rdelim}.png', {ldelim}maxZoom: 18,attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'{rdelim});
+  var map = L.map('map-{$node.node_id}').addLayer(tiles);
+  map.scrollWheelZoom.disable();
+  var markersList = [];
+  var markers = L.markerClusterGroup();
+  var markersObjects = {$markers|json_encode()};
+  
+  $.each( markersObjects, function(i,m){ldelim}
+    var customIcon = L.MakiMarkers.icon({ldelim}icon: "library", color: "#e5b200", size: "l"{rdelim}); //https://www.mapbox.com/maki/
+    markersList[i] = L.marker([m.lat,m.lon],{ldelim}icon:customIcon{rdelim})
+    markersList[i].bindPopup( "<h3><a href='"+m.urlAlias+"'>"+m.popupMsg+"</a><h3>");
+    markers.addLayer(markersList[i]);                 
+    map.addLayer(markers);
+    map.fitBounds(markers.getBounds());
+  {rdelim});                
+  $(document).ready( function(){ldelim}        
+    $('.list-markers-text a').bind( 'click', function(e){ldelim}
+    var id = $(this).data('id');
+    var m = markersList[id];
+    markers.zoomToShowLayer(m, function() {ldelim}
+        m.openPopup();
+    {rdelim});        
+    e.preventDefault();
+    {rdelim});
+  {rdelim});
+  </script>
+  
   </div>
   <div class="col-md-3">
 	<ul class="list-markers-text list-unstyled" style="height: {$height}px;overflow-y: auto">
