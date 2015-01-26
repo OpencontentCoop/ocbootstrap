@@ -71,7 +71,7 @@
 {* Reverse related objects list. *}
 
 <div class="panel panel-default">
-  <table class="list" cellspacing="0" summary="{'Reverse object relation list to current object.'|i18n( 'design/admin/node/view/full' )}">
+  <table class="table" cellspacing="0" summary="{'Reverse object relation list to current object.'|i18n( 'design/admin/node/view/full' )}">
   <tr>
 	  <th>{'Reverse related objects (%related_objects_count)'|i18n( 'design/admin/node/view/full',, hash( '%related_objects_count', $reverse_related_objects_count ) )}</th>
 	  {if $reverse_related_objects_count}
