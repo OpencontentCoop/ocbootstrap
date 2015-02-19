@@ -59,7 +59,12 @@
   {set $content_object_language_code = ''}
 {/if}
 <input type="hidden" name="ContentObjectLanguageCode" value="{$content_object_language_code}" />
-
+{if is_set( $redirect_if_discarded )}
+<input type="hidden" name="RedirectIfDiscarded" value="{$redirect_if_discarded}" />		
+{/if}
+{if is_set( $redirect_after_publish )}
+<input type="hidden" name="RedirectURIAfterPublish" value="{$redirect_after_publish}" />
+{/if}
 
 </form>
 

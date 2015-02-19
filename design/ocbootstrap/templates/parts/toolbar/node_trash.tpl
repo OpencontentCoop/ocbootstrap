@@ -49,6 +49,13 @@
 <input type="hidden" name="NodeID" value="{$current_node.node_id}" />
 <input type="hidden" name="ContentNodeID" value="{$current_node.node_id}" />
 
+{if is_set( $redirect_if_cancel )}
+<input type="hidden" name="RedirectIfCancel" value="{$redirect_if_cancel}" />		
+{/if}
+{if is_set( $redirect_after_remove )}
+<input type="hidden" name="RedirectURIAfterRemove" value="{$redirect_after_remove}" />
+{/if}
+
 </form>
 
 {/if}
