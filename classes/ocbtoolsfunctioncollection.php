@@ -48,86 +48,92 @@ class OcbToolsFunctionCollection
         return $childrenClassTypes;
     }
     
-    public static function fetchMapMarkers( $parentNodeId )
+    public static function fetchMapMarkers( $parentNodeId, $childrenClassIdentifiers )
     {
+        foreach( $childrenClassIdentifiers as $key => $value )
+        {
+            if ( empty( $value ) ) unset( $childrenClassIdentifiers[$key] );
+        }
         $sortBy = array( 'name' => 'asc' );
         
         $result = array();
         
         if ( $parentNode = self::getNode( $parentNodeId ) )
         {
-            $childrenCount = $parentNode->attribute( 'children_count' );
-            if ( $childrenCount > 0 )
+            if ( !empty( $childrenClassIdentifiers ) )
+            {
+                $childrenClassTypes = (array) eZContentClass::fetchList( 0, true, false, null, null, $childrenClassIdentifiers );
+            }
+            else
             {
                 $childrenClassTypes = self::getChildrenClasses( $parentNodeId );
-                
-                // ricavo gli attributi delle classi
-                $geoAttributes = array();
-                foreach ( $childrenClassTypes as $classType )
+            }
+            
+            // ricavo gli attributi delle classi
+            $geoAttributes = array();
+            foreach ( $childrenClassTypes as $classType )
+            {
+                if ( $classType instanceof eZContentClass )
                 {
-                    if ( $classType instanceof eZContentClass )
-                    {
-                        $geoAttributes = $geoAttributes + eZContentClassAttribute::fetchFilteredList( array( 'contentclass_id' => $classType->attribute( 'id' ),
-                                                                                                             'version' => $classType->attribute( 'version' ),
-                                                                                                             'data_type_string' => 'ezgmaplocation' ) );   
-                    }                
-                }
-                
-                if ( count( $geoAttributes ) )
+                    $geoAttributes = $geoAttributes + eZContentClassAttribute::fetchFilteredList( array( 'contentclass_id' => $classType->attribute( 'id' ),
+                                                                                                         'version' => $classType->attribute( 'version' ),
+                                                                                                         'data_type_string' => 'ezgmaplocation' ) );   
+                }                
+            }
+            
+            if ( count( $geoAttributes ) )
+            {
+                // imposto i filtri di ricerca
+                $geoFields = $geoFieldsNames = array();
+                foreach( $geoAttributes as $geoAttribute )
                 {
-                    // imposto i filtri di ricerca
-                    $geoFields = $geoFieldsNames = array();
-                    foreach( $geoAttributes as $geoAttribute )
+                    if ( $geoAttribute instanceof eZContentClassAttribute )
                     {
-                        if ( $geoAttribute instanceof eZContentClassAttribute )
-                        {
-                            $geoFields[$geoAttribute->attribute( 'identifier' )] = $geoAttribute->attribute( 'name' );
-                            $geoFieldsNames[] = "subattr_{$geoAttribute->attribute( 'identifier' )}___coordinates____gpt";
-                        }
+                        $geoFields[$geoAttribute->attribute( 'identifier' )] = $geoAttribute->attribute( 'name' );
+                        $geoFieldsNames[] = "subattr_{$geoAttribute->attribute( 'identifier' )}___coordinates____gpt";
                     }
-                    $childrenParameters = array(
-                        'SearchSubTreeArray'=> array( $parentNode->attribute( 'node_id' ) ),                
-                        'Filter' => array( '-meta_id_si:' . $parentNode->attribute( 'contentobject_id' ) ),
-                        'SearchLimit' => $childrenCount > 1000 ? 1000 : $childrenCount,
-                        'AsObjects' => false,
-                        'SortBy' => $sortBy,
-                        'FieldsToReturn' => $geoFieldsNames
-                    );
-                    
-                    // cerco i figli
-                    $solr = new eZSolr();
-                    $children = $solr->search( '', $childrenParameters );
-                    if ( $children['SearchCount'] > 0 )
-                    {                    
-                        foreach( $children['SearchResult'] as $item )
-                        {                        
-                            foreach( $geoFieldsNames as $geoFieldsName )
-                            {                            
-                                @list( $longitude, $latitude ) = explode( ',', $item['fields'][$geoFieldsName][0] );
-                                if ( intval( $latitude ) > 0 && intval( $longitude ) > 0 )
-                                {
-                                    $href = $item['main_url_alias'];
-                                    eZURI::transformURI( $href, false, 'full' );
-                                    
-                                    $popup = $item['name'];
-                                    
-                                    $result[] = array(
-                                        'lat' => floatval( $latitude ),
-                                        'lon' => floatval( $longitude ),
-                                        'lng' => floatval( $longitude ),
-                                        'popupMsg' => $popup,
-                                        'title' => $item['name'],
-                                        'description' => "<h3><a href='{$href}'>{$popup}</a></h3>", //@todo
-                                        'urlAlias' => $href
-                                    );
-                                }
+                }
+                $childrenParameters = array(
+                    'SearchSubTreeArray'=> array( $parentNode->attribute( 'node_id' ) ),                
+                    'Filter' => array( '-meta_id_si:' . $parentNode->attribute( 'contentobject_id' ) ),
+                    'SearchLimit' => 1000,
+                    'AsObjects' => false,
+                    'SortBy' => $sortBy,
+                    'FieldsToReturn' => $geoFieldsNames
+                );
+                
+                // cerco i figli
+                $solr = new eZSolr();
+                $children = $solr->search( '', $childrenParameters );
+                if ( $children['SearchCount'] > 0 )
+                {                    
+                    foreach( $children['SearchResult'] as $item )
+                    {                                                
+                        foreach( $geoFieldsNames as $geoFieldsName )
+                        {                            
+                            @list( $longitude, $latitude ) = explode( ',', $item['fields'][$geoFieldsName][0] );
+                            if ( intval( $latitude ) > 0 && intval( $longitude ) > 0 )
+                            {
+                                $href = isset( $item['main_url_alias'] ) ? $item['main_url_alias'] : $item['main_url_alias_ms'];
+                                eZURI::transformURI( $href, false, 'full' );
+                                
+                                $popup = isset( $item['name'] ) ? $item['name'] : $item['name_t'];
+                                
+                                $result[] = array(
+                                    'lat' => floatval( $latitude ),
+                                    'lon' => floatval( $longitude ),
+                                    'lng' => floatval( $longitude ),
+                                    'popupMsg' => $popup,
+                                    'title' => $popup,
+                                    'description' => "<h3><a href='{$href}'>{$popup}</a></h3>", //@todo
+                                    'urlAlias' => $href
+                                );
                             }
                         }
                     }
                 }
             }
-        }
-        
+        }        
         return array( 'result' => $result );
     }
 }
