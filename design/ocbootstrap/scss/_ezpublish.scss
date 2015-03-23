@@ -33,6 +33,15 @@
   }
 }
 */
+
+/* embed
+-------------------------------------------------
+*/
+
+div.embed{
+  margin: 20px 0;
+}
+
 .block .element, .block .halfelement {
   float: left;
   padding-right: 10px;
@@ -169,7 +178,7 @@ table.semantic td span{
 }
 
 .edit-row:nth-of-type(odd){
-    background: $gray-lighter;
+    background: $well-bg;
     padding-top:10px;
     padding-bottom:10px;
 }
@@ -712,15 +721,3 @@ div.split div.three-center
     height: 28px;
     margin-top: -10px;
 }
-
-i.icon-edit{@extend .fa; @extend .fa-edit;}
-
-i.mime-file{@extend .fa-file-o;}
-i.mime-msword, i.mime-vnd-oasis-opendocument-text{@extend .fa-file-word-o !optional;}
-i.mime-vnd-oasis-opendocument-spreadsheet, i.mime-vnd-ms-excel{@extend .fa-file-excel-o;}
-i.mime-pdf{@extend .fa-file-pdf-o;}
-i.mime-mpeg{@extend .fa-file-audio-o;}
-i.mime-mp4{@extend .fa-file-video-o;}
-i.mime-zip, i.mime-x-zip, i.mime-x-tar{@extend .fa-file-archive-o;}
-i.mime-plain{@extend .fa-file-text-o;}
-i.mime-vnd-ms-powerpoint, i.mime-vnd-oasis-opendocument-presentation-template{@extend .fa-file-powerpoint-o;}
