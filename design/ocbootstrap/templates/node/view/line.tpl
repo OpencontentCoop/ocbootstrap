@@ -14,7 +14,12 @@
 	  {/if}
 	</h3>	
     {if $node|has_abstract()}
-	  {$node|abstract()}
+	    <div class="media-abstract">
+	      {$node|abstract()}
+	    </div>
 	{/if}
+	{if $node|has_attribute( 'tematica' )}
+        {attribute_view_gui attribute=$node|attribute( 'tematica' )}
+    {/if}
   </div>
 </div>

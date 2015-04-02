@@ -15,6 +15,12 @@ $FunctionList['map_markers'] = array(
             'type' =>'mixed',
             'required' => true,
             'default' => false
+        ),
+        array(
+            'name' => 'class_identifiers',
+            'type' =>'array',
+            'required' => false,
+            'default' => array()
         )
     )
 );

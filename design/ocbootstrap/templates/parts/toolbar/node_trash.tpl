@@ -41,29 +41,19 @@
 
 <form method="post" action={"content/action"|ezurl} style="display: inline;">
 
-{if $content_object.can_edit}
-    <input type="hidden" name="ContentObjectLanguageCode" value="{ezini( 'RegionalSettings', 'ContentObjectLocale', 'site.ini')}" />
-    <button class="btn btn-link btn-xs" type="submit" name="EditButton"><i class="fa fa-edit" style="font-size: 12px;"></i></button>
+{if $content_object.can_remove}
+    <button class="btn btn-link btn-xs" type="submit" name="ActionRemove"><i class="fa fa-trash" style="font-size: 12px;"></i></button>
 {/if}
 
-<input type="hidden" name="HasMainAssignment" value="1" />
 <input type="hidden" name="ContentObjectID" value="{$content_object.id}" />
 <input type="hidden" name="NodeID" value="{$current_node.node_id}" />
 <input type="hidden" name="ContentNodeID" value="{$current_node.node_id}" />
-{* If a translation exists in the siteaccess' sitelanguagelist use default_language, otherwise let user select language to base translation on. *}
-{def $avail_languages = $content_object.available_languages
-     $default_language = $content_object.default_language}
-{if and( $avail_languages|count|ge( 1 ), $avail_languages|contains( $default_language ) )}
-  {set $content_object_language_code = $default_language}
-{else}
-  {set $content_object_language_code = ''}
+
+{if is_set( $redirect_if_cancel )}
+<input type="hidden" name="RedirectIfCancel" value="{$redirect_if_cancel}" />		
 {/if}
-<input type="hidden" name="ContentObjectLanguageCode" value="{$content_object_language_code}" />
-{if is_set( $redirect_if_discarded )}
-<input type="hidden" name="RedirectIfDiscarded" value="{$redirect_if_discarded}" />		
-{/if}
-{if is_set( $redirect_after_publish )}
-<input type="hidden" name="RedirectURIAfterPublish" value="{$redirect_after_publish}" />
+{if is_set( $redirect_after_remove )}
+<input type="hidden" name="RedirectURIAfterRemove" value="{$redirect_after_remove}" />
 {/if}
 
 </form>

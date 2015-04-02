@@ -195,7 +195,7 @@
 				{
 					var item = $('<div />');
 
-					$(item).append('<p class="text">' + (resultObjects[i].tag_parent_name ? '<span class="count">(' + resultObjects[i].tag_parent_name + ')</span>' : '') + resultObjects[i].tag_name + '</p>');
+					$(item).append('<p class="text">' + (resultObjects[i].tag_parent_name ? '<span class="pull-right">(' + resultObjects[i].tag_parent_name + ')</span>' : '') + resultObjects[i].tag_name + '</p>');
 
 					$(item).addClass('resultItem').
 						addClass((bOddRow) ? 'odd' : 'even').
@@ -325,46 +325,44 @@
 				setParentSelectorButtonState();
 			}
 
-			if (obj.length > 0) {
-                $(results).addClass('jsonSuggestResults').
-                    css({
-                        //'top': (obj.position().top + obj.height() + 5) + 'px',
-                        'left': obj.position().left + 'px'//,
-                        //'width': (obj.width() + 12) + 'px'
-                    }).hide();
-    
-                obj.after(results);
-                //obj.after(parentSelector);
-    
-                obj.keydown(keyListener).keyup(keyListener).blur(function(e) {
-                    // We need to make sure we don't hide the result set
-                    // if the input blur event is called because of clicking on
-                    // a result item.
-                    var resPos = $(results).offset();
-                    resPos.bottom = resPos.top + $(results).height();
-                    resPos.right = resPos.left + $(results).width();
-                    if (pageY < resPos.top || pageY > resPos.bottom || pageX < resPos.left || pageX > resPos.right)
-                    {
-                        hideResults();
-                    }
-                }).focus(function(e) {
-                    if ($('div', results).length > 0) {
-                        $(results).show();
-                    }
-                }).attr('autocomplete', 'off');
-    
-                $('body').mousemove(function(e) {pageX = e.pageX; pageY = e.pageY;});
-    
-                // Opera doesn't seem to assign a keyCode for the down
-                // key on the keyup event. why?
-                if (navigator.userAgent.match(/opera/)) {
-                    obj.keydown(function(e) {
-                        if (e.keyCode === 40) { // up key
-                            return keyListener(e);
-                        }
-                    });
-                }
-            }
+			$(results).addClass('jsonSuggestResults').
+				css({
+					//'top': (obj.position().top + obj.height() + 5) + 'px',
+					'left': typeof obj.position() != 'undefined' ? obj.position().left + 'px' : ''//,
+					//'width': (obj.width() + 12) + 'px'
+				}).hide();
+
+			obj.after(results);
+			//obj.after(parentSelector);
+
+			obj.keydown(keyListener).keyup(keyListener).blur(function(e) {
+				// We need to make sure we don't hide the result set
+				// if the input blur event is called because of clicking on
+				// a result item.
+				var resPos = $(results).offset();
+				resPos.bottom = resPos.top + $(results).height();
+				resPos.right = resPos.left + $(results).width();
+				if (pageY < resPos.top || pageY > resPos.bottom || pageX < resPos.left || pageX > resPos.right)
+				{
+					hideResults();
+				}
+			}).focus(function(e) {
+				if ($('div', results).length > 0) {
+					$(results).show();
+				}
+			}).attr('autocomplete', 'off');
+
+			$('body').mousemove(function(e) {pageX = e.pageX; pageY = e.pageY;});
+
+			// Opera doesn't seem to assign a keyCode for the down
+			// key on the keyup event. why?
+			if (navigator.userAgent.match(/opera/)) {
+				obj.keydown(function(e) {
+					if (e.keyCode === 40) { // up key
+						return keyListener(e);
+					}
+				});
+			}
 		});
 	};
 })(jQuery);
