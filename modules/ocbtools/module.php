@@ -16,6 +16,12 @@ $ViewList['upload'] = array(
     'script' => 'upload.php',
     'params' => array('ContentObjectAttributeID', 'ContentObjectVersion', 'ParentNodeID'));
 
+$ViewList['translate'] = array(
+    'functions' => array('editor_tools'),
+    'script' => 'translate.php',
+    'single_post_actions' => array('TranslateButton' => 'Translate'),
+    'params' => array('ObjectID'));
+
 $FunctionList['editor_tools'] = array();
 
 

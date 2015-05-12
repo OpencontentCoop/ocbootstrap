@@ -118,7 +118,7 @@
 			{/if}
 			<div class="panel-body">
 				<div class="block">
-					<input class="defaultbutton" type="submit" name="SelectButton" value="{'Select'|i18n( 'design/admin/content/browse' )}" />
+					<input class="defaultbutton" type="submit" name="SelectButton" value="{'Upload'|i18n( 'design/admin/content/upload' )}" />
 					<input class="button" type="submit" name="BrowseCancelButton" value="{'Cancel'|i18n( 'design/admin/content/browse' )}" />
 				</div>
 			</div>

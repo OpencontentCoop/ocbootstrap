@@ -136,6 +136,8 @@ $(document).ready(function(){
 </div>
 </form>
 
+{include uri='design:parts/websitetoolbar/smart_translate.tpl'}
+
 {def $disable_oo=true()}
 {if $odf_display_classes|contains( $content_object.content_class.identifier )}
     {set $disable_oo=false()}

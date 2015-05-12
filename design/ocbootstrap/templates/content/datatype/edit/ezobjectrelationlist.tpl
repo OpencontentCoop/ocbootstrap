@@ -218,9 +218,9 @@
             <th class="tight">                  
             </th>
             <th><small>{'Name'|i18n( 'design/standard/content/datatype' )}</small></th>
-            <th>{'Type'|i18n( 'design/standard/content/datatype' )}</th>
+            {*<th>{'Type'|i18n( 'design/standard/content/datatype' )}</th>*}
             <th>{'Section'|i18n( 'design/standard/content/datatype' )}</th>
-            <th>{'Published'|i18n( 'design/standard/content/datatype' )}</th>
+            {*<th>{'Published'|i18n( 'design/standard/content/datatype' )}</th>*}
             <th class="tight">{'Order'|i18n( 'design/standard/content/datatype' )}</th>
         </tr>
         </thead>

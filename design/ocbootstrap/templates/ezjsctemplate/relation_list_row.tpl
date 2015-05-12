@@ -18,20 +18,26 @@
   <input type="hidden" name="{$attribute_base}_data_object_relation_list_{$attribute_id}[]" value="{$object.id}" /></td>
 
   {* Name *}
-  <td><small>{$object.name|wash()}</small></td>
+  <td>
+	{if $object|has_attribute( 'image' )}
+	  {attribute_view_gui attribute=$object|attribute( 'image' ) image_class=tiny fluid=false()}
+	{/if}
+	{$object.name|wash()} <small>({$object.class_name|wash()})</small>
+  </td>
 
-  {* Type *}
+  {* Type 
   <td><small>{$object.class_name|wash()}</small></td>
+  *}
 			 
   {* Section *}
   <td><small>{fetch( section, object, hash( section_id, $object.section_id ) ).name|wash()}</small></td>
 				
-  <td><small>{if $object.main_node_id}
+  {*<td><small>{if $object.main_node_id}
 		  {'Yes'|i18n( 'design/standard/content/datatype' )}
 	  {else}
 		  {'No'|i18n( 'design/standard/content/datatype' )}
 	  {/if}</small>
-  </td>
+  </td>*}
 			  
   {* Order. *}
   <td><input size="2" type="text" name="{$attribute_base}_priority[{$attribute_id}][]" value="{$priority}" /></td>

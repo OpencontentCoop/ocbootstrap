@@ -5,6 +5,8 @@
 
 {default content_object=$node.object}
 
+{include uri='design:parts/website_toolbar_versionview.tpl'}
+
 {if $assignment}
    {node_view_gui view=full with_children=false() versionview_mode=true() is_editable=false() is_standalone=false() content_object=$object node_name=$object.name content_node=$assignment.temp_node node=$node}
 {else}
