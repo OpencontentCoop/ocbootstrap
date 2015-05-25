@@ -103,7 +103,7 @@ class OcbToolsFunctionCollection
                 );
                 
                 // cerco i figli
-                $solr = new eZSolr();
+                $solr = new OCSolr();
                 $children = $solr->search( '', $childrenParameters );
                 if ( $children['SearchCount'] > 0 )
                 {                    

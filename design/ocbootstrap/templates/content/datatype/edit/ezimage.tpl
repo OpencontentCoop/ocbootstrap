@@ -1,6 +1,11 @@
 {default attribute_base='ContentObjectAttribute' html_class='full' placeholder=false() }
 {let attribute_content=$attribute.content}
 
+{run-once}
+{if is_set($ezie_ajax_response)|not()}
+    {include uri='design:ezie/gui.tpl' attribute=$attribute}
+{/if}
+{/run-once}
 
 <label>{'Current image'|i18n( 'design/standard/content/datatype' )}:</label>
 {if $attribute_content.original.is_valid}
@@ -20,6 +25,16 @@
     <td>{$attribute.content.original.filesize|si( byte )}</td>
     <td>
         {if $attribute_content.original.is_valid}
+
+        {* Edit button *}
+        <input type="button"
+               class="button ezieEdit ezieEditButton"
+               name="ezieEdit[{array( "ezie/prepare", $attribute.contentobject_id, $attribute.language_code, $attribute.id, $attribute.version )|implode( '/' )|ezurl( no )}]"
+               id="ezieEdit_{$attribute.id}_{$attribute.version}_{$attribute.contentobject_id}"
+               value="{'Edit'|i18n( 'design/standard/ezie' )}"
+                {if $attribute_content.original.is_valid|not} disabled="disabled"{/if}
+        />
+
         <button class="button btn" type="submit" name="CustomActionButton[{$attribute.id}_delete_image]" title="{'Remove image'|i18n( 'design/standard/content/datatype' )}"><span class="glyphicon glyphicon-trash"></span></button>
         {*else}
         <input class="button-disabled" type="submit" name="CustomActionButton[{$attribute.id}_delete_image]" value="{'Remove image'|i18n( 'design/standard/content/datatype' )}" disabled="disabled" />*}

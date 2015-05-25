@@ -1,3 +1,5 @@
++++++++++++++++++
+
 {def $not_show = array( 'ezxmltext', 'ezgmaplocation', 'eztext' )}
 <dl class="dl-horizontal">
   {foreach $object.data_map as $attribute}
