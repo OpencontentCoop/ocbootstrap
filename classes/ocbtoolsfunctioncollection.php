@@ -80,7 +80,8 @@ class OcbToolsFunctionCollection
                                                                                                          'data_type_string' => 'ezgmaplocation' ) );   
                 }                
             }
-            
+
+
             if ( count( $geoAttributes ) )
             {
                 // imposto i filtri di ricerca
@@ -103,7 +104,7 @@ class OcbToolsFunctionCollection
                 );
                 
                 // cerco i figli
-                $solr = new OCSolr();
+                $solr = new eZSolr();
                 $children = $solr->search( '', $childrenParameters );
                 if ( $children['SearchCount'] > 0 )
                 {                    
