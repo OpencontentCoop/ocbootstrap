@@ -104,10 +104,11 @@ class OcbToolsFunctionCollection
                 );
                 
                 // cerco i figli
-                $solr = new eZSolr();
+                $solr = new OCSolr();
                 $children = $solr->search( '', $childrenParameters );
                 if ( $children['SearchCount'] > 0 )
-                {                    
+                {
+
                     foreach( $children['SearchResult'] as $item )
                     {                                                
                         foreach( $geoFieldsNames as $geoFieldsName )
@@ -119,7 +120,9 @@ class OcbToolsFunctionCollection
                                 eZURI::transformURI( $href, false, 'full' );
                                 
                                 $popup = isset( $item['name'] ) ? $item['name'] : $item['name_t'];
-                                
+
+                                $objectID = $item['id'];
+
                                 $result[] = array(
                                     'lat' => floatval( $latitude ),
                                     'lon' => floatval( $longitude ),
@@ -127,7 +130,8 @@ class OcbToolsFunctionCollection
                                     'popupMsg' => $popup,
                                     'title' => $popup,
                                     'description' => "<h3><a href='{$href}'>{$popup}</a></h3>", //@todo
-                                    'urlAlias' => $href
+                                    'urlAlias' => $href,
+                                    'objectID' => $objectID
                                 );
                             }
                         }
