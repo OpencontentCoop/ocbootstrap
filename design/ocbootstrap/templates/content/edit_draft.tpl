@@ -119,6 +119,8 @@
     {/section}
 {/section}
 
+<input type="hidden" name="ContentObjectLanguageCode" value="{$edit_language}" />
+
 </form>
 {/let}
 
