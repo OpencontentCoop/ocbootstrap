@@ -75,9 +75,11 @@ class OcbToolsFunctionCollection
             {
                 if ( $classType instanceof eZContentClass )
                 {
-                    $geoAttributes = $geoAttributes + eZContentClassAttribute::fetchFilteredList( array( 'contentclass_id' => $classType->attribute( 'id' ),
-                                                                                                         'version' => $classType->attribute( 'version' ),
-                                                                                                         'data_type_string' => 'ezgmaplocation' ) );   
+                    $geoAttributes = array_merge( $geoAttributes,
+                                                 eZContentClassAttribute::fetchFilteredList( array( 'contentclass_id' => $classType->attribute( 'id' ),
+                                                                                                    'version' => $classType->attribute( 'version' ),
+                                                                                                    'data_type_string' => 'ezgmaplocation' ) )
+                                                );   
                 }                
             }
 
@@ -110,20 +112,19 @@ class OcbToolsFunctionCollection
                 {
 
                     foreach( $children['SearchResult'] as $item )
-                    {                                                
+                    {                                                                        
                         foreach( $geoFieldsNames as $geoFieldsName )
                         {                            
                             @list( $longitude, $latitude ) = explode( ',', $item['fields'][$geoFieldsName][0] );
                             if ( intval( $latitude ) > 0 && intval( $longitude ) > 0 )
                             {
                                 $href = isset( $item['main_url_alias'] ) ? $item['main_url_alias'] : $item['main_url_alias_ms'];
-                                eZURI::transformURI( $href, false, 'full' );
-                                
-                                $popup = isset( $item['name'] ) ? $item['name'] : $item['name_t'];
-
-                                $objectID = $item['id'];
-
+                                eZURI::transformURI( $href, false, 'full' );                                
+                                $popup = isset( $item['name'] ) ? $item['name'] : $item['name_t'];                                
+                                $id = isset( $item['id_si'] ) ? $item['id_si'] : $item['id'];
                                 $result[] = array(
+                                    'id' => $id,
+                                    'type' => null, //@todo
                                     'lat' => floatval( $latitude ),
                                     'lon' => floatval( $longitude ),
                                     'lng' => floatval( $longitude ),
@@ -131,7 +132,7 @@ class OcbToolsFunctionCollection
                                     'title' => $popup,
                                     'description' => "<h3><a href='{$href}'>{$popup}</a></h3>", //@todo
                                     'urlAlias' => $href,
-                                    'objectID' => $objectID
+                                    'objectID' => $id
                                 );
                             }
                         }
