@@ -16,7 +16,6 @@ Input:
          alignment=false()
          link_to_image=false()
          href=false()
-         inline_style=‘’
          target=false()
          hspace=false()
          border_size=0
