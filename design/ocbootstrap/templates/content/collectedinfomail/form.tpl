@@ -41,7 +41,7 @@
 
 <strong>{"The following information was collected"|i18n("design/ocbootstrap/collectedinfomail/form")}:</strong>
 
-<table align='center' border='0' cellpadding='0' cellspacing='0' width='100%'>
+<table width="100%" border="1" cellspacing="0" cellpadding="4">
 {foreach $collection.attributes as $attribute}
     <tr>
         <th align='left' valign='top'>{$attribute.contentclass_attribute_name|wash}</th>
