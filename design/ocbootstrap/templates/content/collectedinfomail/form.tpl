@@ -1,17 +1,53 @@
-{set-block scope=root variable=subject}{"Collected information from %1"|i18n("design/ocbootstrap/collectedinfomail/form",,array($collection.object.name|wash))}{/set-block}
+{* content_type *}
+{set-block scope=global variable=content_type}text/html{/set-block}
 
-{if and(is_set($object.data_map.recipient), $object.data_map.recipient.has_content)}
-{set-block scope=root variable=email_receiver}{$object.data_map.recipient.content}{/set-block}
+{* subject *}
+{def $siteName = ezini( 'SiteSettings', 'SiteName' )}
+{set-block scope=root variable=subject}[{$siteName}]{"Collected information from %1"|i18n("design/ocbootstrap/collectedinfomail/form",,array($collection.object.name|wash))}{/set-block}
+
+{* email_receiver *}
+{if and(is_set($node.object.data_map.email_receiver), $node.object.data_map.email_receiver.has_content)}
+    {set-block scope=global variable=email_receiver}{$node.object.data_map.email_receiver.content}{/set-block}
+{elseif and(is_set($node.object.data_map.recipient), $node.object.data_map.recipient.has_content)}
+    {set-block scope=global variable=email_receiver}{$node.object.data_map.recipient.content}{/set-block}
+{elseif and(is_set($node.object.data_map.receiver), $node.object.data_map.receiver.has_content)}
+    {set-block scope=global variable=email_receiver}{$node.object.data_map.receiver.content}{/set-block}
 {/if}
 
-{* Set this to redirect to another node
-{set-block scope=root variable=redirect_to_node_id}2{/set-block}
-*}
+{* email_cc_receivers *}
+{if and(is_set($node.object.data_map.email_cc_receivers), $node.object.data_map.email_cc_receivers.has_content)}
+    {set-block scope=root variable=email_cc_receivers}{$node.object.data_map.email_cc_receivers.content}{/set-block}
+{/if}
 
-{"The following information was collected"|i18n("design/ocbootstrap/collectedinfomail/form")}:
+{* email_bcc_receivers *}
+{if and(is_set($node.object.data_map.email_bcc_receivers), $node.object.data_map.email_bcc_receivers.has_content)}
+    {set-block scope=root variable=email_bcc_receivers}{$node.object.data_map.email_bcc_receivers.content}{/set-block}
+{/if}
 
+{* email_sender *}
+{if and(is_set($node.object.data_map.email_sender), $node.object.data_map.email_sender.has_content)}
+    {set-block scope=root variable=email_sender}{$node.object.data_map.email_sender.content}{/set-block}
+{/if}
+
+{* email_reply_to *}
+{if and(is_set($node.object.data_map.email_reply_to), $node.object.data_map.email_reply_to.has_content)}
+    {set-block scope=root variable=email_reply_to}{$node.object.data_map.email_reply_to.content}{/set-block}
+{/if}
+
+{* redirect_to_node_id *}
+{if and(is_set($node.object.data_map.redirect_to_node_id), $node.object.data_map.redirect_to_node_id.has_content)}
+    {set-block scope=root variable=redirect_to_node_id}{$node.object.data_map.redirect_to_node_id.content}{/set-block}
+{/if}
+
+<h2>{"The following information was collected"|i18n("design/ocbootstrap/collectedinfomail/form")}:</h2>
+
+<table align='center' border='0' cellpadding='0' cellspacing='0' width='100%'>
 {foreach $collection.attributes as $attribute}
-{$attribute.contentclass_attribute_name|wash}:
-{attribute_result_gui view=info attribute=$attribute}
-
+    <tr>
+        <th>{$attribute.contentclass_attribute_name|wash}</th>
+        <td>{attribute_result_gui view=info attribute=$attribute}</td>
+    </tr>
 {/foreach}
+</table>
+
+<small>{$node.name|wash()} - {$node.url_alias|ezurl(no, full)}</small>
