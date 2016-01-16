@@ -39,13 +39,13 @@
     {set-block scope=root variable=redirect_to_node_id}{$node.object.data_map.redirect_to_node_id.content}{/set-block}
 {/if}
 
-<h2>{"The following information was collected"|i18n("design/ocbootstrap/collectedinfomail/form")}:</h2>
+<strong>{"The following information was collected"|i18n("design/ocbootstrap/collectedinfomail/form")}:</strong>
 
 <table align='center' border='0' cellpadding='0' cellspacing='0' width='100%'>
 {foreach $collection.attributes as $attribute}
     <tr>
-        <th>{$attribute.contentclass_attribute_name|wash}</th>
-        <td>{attribute_result_gui view=info attribute=$attribute}</td>
+        <th align='left' valign='top'>{$attribute.contentclass_attribute_name|wash}</th>
+        <td align='left' valign='top'>{attribute_result_gui view=info attribute=$attribute}</td>
     </tr>
 {/foreach}
 </table>
