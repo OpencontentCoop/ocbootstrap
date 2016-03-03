@@ -19,6 +19,10 @@
         <source>Store draft</source>
         <translation>Entwurf speichern</translation>
     </message>
+    <message>
+        <source>Discard</source>
+        <translation>Verwerfen</translation>
+    </message>
 </context>
 <context>
     <name>design/admin/content/datatype</name>

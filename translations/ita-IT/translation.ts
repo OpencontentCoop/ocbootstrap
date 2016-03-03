@@ -19,6 +19,10 @@
         <source>Store draft</source>
         <translation>Salva bozza</translation>
     </message>
+    <message>
+        <source>Discard</source>
+        <translation>Annulla</translation>
+    </message>
 </context>
 <context>
     <name>design/admin/content/datatype</name>
