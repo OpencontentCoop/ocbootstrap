@@ -13,11 +13,11 @@
   </message>
     <message>
         <source>Store</source>
-        <translation>Salva</translation>
+        <translation>Entwurf speichern</translation>
     </message>
     <message>
         <source>Store draft</source>
-        <translation>Salva bozza</translation>
+        <translation>Entwurf speichern</translation>
     </message>
 </context>
 <context>
