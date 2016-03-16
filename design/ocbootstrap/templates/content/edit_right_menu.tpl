@@ -30,6 +30,13 @@
 </div>
 
 <div class="panel panel-info">
+    <div class="panel-heading">{"States"|i18n("design/standard/content/edit")}</div>
+    <div class="panel-body">
+        {include uri='design:content/parts/edit_states.tpl'}
+    </div>
+</div>
+
+<div class="panel panel-info">
     <div class="panel-heading">{"Versions"|i18n("design/standard/content/edit")}</div>
     <table class="table">
     <tr>
