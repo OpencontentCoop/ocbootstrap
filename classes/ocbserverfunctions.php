@@ -8,7 +8,7 @@ class ocbServerFunctions
         $objectId = $http->postVariable( 'objectId', 0 );
         $attributeId = $http->postVariable( 'attributeId', 0 );
         $version = $http->postVariable( 'version', 0 );
-        $content = $http->postVariable( 'content', 0 );
+        $content = $http->postVariable( 'content', '' );
         
         $object = eZContentObject::fetch( $objectId );
         if ( $object instanceof eZContentObject && $object->attribute( 'can_edit' ) )
