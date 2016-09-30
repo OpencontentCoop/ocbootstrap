@@ -1,42 +1,51 @@
 <?php
 
-
-$http = eZHTTPTool::instance();
-$tpl = eZTemplate::factory();
 $module = $Params['Module'];
-$parentNodeID = $Params['ParentNodeID'];
+$parentNodeID = (int)$Params['ParentNodeID'];
+$http = eZHTTPTool::instance();
 
-$message = json_encode( "error" );
+$canUpload = true;
 
-if( $module->isCurrentAction( 'Upload' ) )
-{
-    $result = array( 'errors' => array() );
-
-    // Exec multiupload handlers preUpload method
-    eZMultiuploadHandler::exec( 'preUpload', $result );
-
-    // Handle file upload only if there was no errors
-    if( empty( $result['errors'] ) )
-    {
-        // Handle file upload. All checkes are performed by eZContentUpload::handleUpload()
-        // and available in $result array
-        $upload = new eZContentUpload();
-        $upload->handleUpload( $result, 'Filedata', $parentNodeID, false );
-    }
-
-    // Exec multiupload handlers postUpload method
-    eZMultiuploadHandler::exec( 'postUpload', $result );
-
-    unset( $result['contentobject_main_node'] );
-    unset( $result['contentobject'] );
-    
-    $id = md5( (string) mt_rand() . (string) microtime() );
-    $response = array( 'id' => $id, 'result' => $result );
-    
-    $message = json_encode( $response );
+if ($parentNodeID > 0){
+    $parentNode = eZContentObjectTreeNode::fetch($parentNodeID);
+    $canUpload = $parentNode instanceof eZContentObjectTreeNode && $parentNode->canCreate();
 }
 
+$response = array();
+
+if ( $canUpload )
+{
+
+    $siteaccess = eZSiteAccess::current();
+    $options['upload_dir'] = eZSys::cacheDirectory() . '/fileupload/';
+    $options['download_via_php'] = true;
+    $options['param_name'] = "files";
+    $options['image_versions'] = array();
+    $options['max_file_size'] = $http->variable( "upload_max_file_size", null );
+
+    $uploadHandler = new UploadHandler( $options, false );
+    $data = $uploadHandler->post( false );
+    foreach( $data[$options['param_name']] as $file )
+    {
+        $filePath = $options['upload_dir'] . $file->name;
+
+        $behaviour = new ezpContentPublishingBehaviour();
+        $behaviour->isTemporary = true;
+        $behaviour->disableAsynchronousPublishing = false;
+        ezpContentPublishingBehaviour::setBehaviour( $behaviour );
+
+        $upload = new eZContentUpload();
+        $upload->handleLocalFile( $response, $filePath, $parentNodeID, false );
+    }
+
+    $file = eZClusterFileHandler::instance( $filePath );
+    if ( $file->exists() ) $file->delete();
+
+}
+else
+{
+    $response = array( 'errors' => array( 'Not Allowed' ) );
+}
 header('Content-Type: application/json');
-echo $message;
+echo json_encode( $response );
 eZExecution::cleanExit();
-?>
