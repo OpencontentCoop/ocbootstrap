@@ -1,9 +1,3 @@
-{ezscript_load( array(
-    'ezjsc::jquery',
-    'plugins/ez.js'
-))}
-
-
 <!--[if IE 8]>
 <script src="{'javascript/vendor/respond.min.js'|ezdesign(no)}"></script>
 <script src="{'javascript/vendor/rem.min.js'|ezdesign(no)}"></script>
@@ -16,7 +10,6 @@
 <![endif]-->
 
 <script src="{'javascript/IWT.min.js'|ezdesign(no)}"></script>
-
 
 {if appini('GoogleAnalytics','Account')}
 <script type="text/javascript">

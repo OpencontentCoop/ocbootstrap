@@ -34,7 +34,7 @@
 {include uri='design:page_head_script.tpl'}
 
 </head>
-<body>
+<body class="Pac">
 
     {if array( 'edit', 'browse' )|contains( $ui_context )|not()}
     {include uri='design:page_header.tpl'}

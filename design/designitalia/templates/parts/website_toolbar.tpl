@@ -1,4 +1,4 @@
-{ezscript_require(array('ezjsc::jquery', 'plugins/chosen.jquery.js'))}
+{ezscript_require(array('ezjsc::jquery', 'plugins/chosen.jquery.js', 'plugins/websitetoolbar.js'))}
 {ezcss_require(array('plugins/chosen.css'))}
 
 {def $current_node = fetch( 'content', 'node', hash( 'node_id', $current_node_id ) )

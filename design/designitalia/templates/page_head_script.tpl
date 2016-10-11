@@ -15,6 +15,11 @@
     })();
 </script>
 {/literal}
+
+{ezscript_load( array(
+    'ezjsc::jquery'
+))}
+
 <!-- include html5shim per Explorer 8 -->
 <script src="{'javascript/vendor/modernizr.js'|ezdesign(no)}"></script>
 
