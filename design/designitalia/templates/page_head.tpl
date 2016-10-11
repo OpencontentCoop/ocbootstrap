@@ -48,7 +48,6 @@
     {/foreach}
 
     <meta name="MSSmartTagsPreventParsing" content="TRUE" />
-    <meta name="generator" content="eZ Publish" />
 
 {if $canonical_link}
     {include uri="design:canonical_link.tpl"}

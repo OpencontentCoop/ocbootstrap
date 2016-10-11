@@ -1,9 +1,6 @@
 {ezscript_require(array('ezjsc::jquery', 'plugins/chosen.jquery.js'))}
-<script>{literal}
-$(document).ready(function(){    
-  $("#ezwt-create").chosen({width:'300px'});
-});
-{/literal}</script>
+{ezcss_require(array('plugins/chosen.css'))}
+
 {def $current_node = fetch( 'content', 'node', hash( 'node_id', $current_node_id ) )
      $content_object = $current_node.object
      $can_edit_languages = $content_object.can_edit_languages

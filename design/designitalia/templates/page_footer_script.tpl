@@ -1,17 +1,24 @@
-<script src={'javascript/bootstrap/tab.js'|ezdesign()}></script>
-<script src={'javascript/bootstrap/dropdown.js'|ezdesign()}></script>
-<script src={'javascript/bootstrap/collapse.js'|ezdesign()}></script>
-<script src={'javascript/bootstrap/affix.js'|ezdesign()}></script>
-<script src={'javascript/bootstrap/alert.js'|ezdesign()}></script>
-<script src={'javascript/bootstrap/button.js'|ezdesign()}></script>
-<script src={'javascript/bootstrap/carousel.js'|ezdesign()}></script>
-<script src={'javascript/bootstrap/modal.js'|ezdesign()}></script>
-<script src={'javascript/bootstrap/tooltip.js'|ezdesign()}></script>
-<script src={'javascript/bootstrap/popover.js'|ezdesign()}></script>
-<script src={'javascript/bootstrap/scrollspy.js'|ezdesign()}></script>
-<script src={'javascript/bootstrap/transition.js'|ezdesign()}></script>
+{ezscript_load( array(
+    'ezjsc::jquery',
+    'plugins/ez.js'
+))}
 
 
+<!--[if IE 8]>
+<script src="{'javascript/vendor/respond.min.js'|ezdesign(no)}"></script>
+<script src="{'javascript/vendor/rem.min.js'|ezdesign(no)}"></script>
+<script src="{'javascript/vendor/selectivizr.js'|ezdesign(no)}"></script>
+<script src="{'javascript/vendor/slice.js'|ezdesign(no)}"></script>
+<![endif]-->
+
+<!--[if lte IE 9]>
+<script src="{'javascript/vendor/polyfill.min.js'|ezdesign(no)}"></script>
+<![endif]-->
+
+<script src="{'javascript/IWT.min.js'|ezdesign(no)}"></script>
+
+
+{if appini('GoogleAnalytics','Account')}
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', "{appini('GoogleAnalytics','Account')}"]);
@@ -24,3 +31,4 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   {rdelim})();
 </script>
+{/if}
