@@ -12,14 +12,15 @@
 
 {def $tab = ''}
 {if and( ezhttp_hasvariable( 'tab', 'get' ), is_set( $view_parameters.tab )|not() )}
-    {set $_redirect = concat( $_redirect, '/(tab)/', ezhttp( 'tab', 'get' ) )}
+    {set $tab = ezhttp( 'tab', 'get' )}
+    {set $_redirect = concat( $_redirect, '/(tab)/', $tab )}
 {/if}
 
 <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-top u-padding-bottom-xxl">
 
 {*{include uri='design:parts/website_toolbar_edit.tpl'}*}
     <div class="Grid Grid--withGutter">
-        <div class="Grid-cell u-md-size8of12 u-lg-size8of12">
+        <div class="Grid-cell u-md-size3of4 u-lg-size3of4">
             <h2 class="u-text-h2">
                 <i class='icon-edit'></i>
                 <span>Modifica {$object.name|wash}</span>
@@ -27,7 +28,7 @@
             </h2>
         </div>
 
-        <div class="Grid-cell u-md-size4of12 u-lg-size4of12">
+        <div class="Grid-cell u-md-size1of4 u-lg-size1of4">
             <p class="u-layout-prose u-color-grey-90 u-text-p u-padding-r-bottom u-padding-r-top">
                 {def $language_index = 0 $from_language_index = 0 $translation_list = $content_version.translation_list}
                 {foreach $translation_list as $index => $translation} {if eq( $edit_language, $translation.language_code )} {set $language_index = $index} {/if}{/foreach}
@@ -46,29 +47,33 @@
         </div>
     </div>
 
-    {include uri="design:content/edit_validation.tpl"}
 
+    <form class="Form Form--spaced u-padding-all-xl u-background-grey-10 u-text-r-xs" enctype="multipart/form-data" method="post" action={concat("/content/edit/",$object.id,"/",$edit_version,"/",$edit_language|not|choose(concat($edit_language,"/"),''))|ezurl}>
 
-    <form class="Form Form--spaced u-padding-all-xl u-background-grey-10 u-text-r-xs u-layout-prose" enctype="multipart/form-data" method="post" action={concat("/content/edit/",$object.id,"/",$edit_version,"/",$edit_language|not|choose(concat($edit_language,"/"),''))|ezurl}>
+        {include uri="design:content/edit_validation.tpl"}
 
-      {if ezini_hasvariable( 'EditSettings', 'AdditionalTemplates', 'content.ini' )}
-        {foreach ezini( 'EditSettings', 'AdditionalTemplates', 'content.ini' ) as $additional_tpl}
-          {include uri=concat( 'design:', $additional_tpl )}
-        {/foreach}
-      {/if}
+        {if ezini_hasvariable( 'EditSettings', 'AdditionalTemplates', 'content.ini' )}
+            {foreach ezini( 'EditSettings', 'AdditionalTemplates', 'content.ini' ) as $additional_tpl}
+                {include uri=concat( 'design:', $additional_tpl )}
+            {/foreach}
+        {/if}
 
-      {include uri="design:content/edit_attribute.tpl"}
+        {include uri="design:content/edit_attribute.tpl"}
 
-      <div class="buttonblock">
-          <input class="btn btn-lg btn-success pull-right" type="submit" name="PublishButton" value="{'Store'|i18n('ocbootstrap')}" />
-          <input class="btn btn-lg btn-warning pull-right" type="submit" name="StoreButton" value="{'Store draft'|i18n('ocbootstrap')}" />
-          <input class="btn btn-lg btn-danger" type="submit" name="DiscardButton" value="{'Discard'|i18n('ocbootstrap')}" />
-          <input type="hidden" name="DiscardConfirm" value="0" />
-          <input type="hidden" name="RedirectIfDiscarded" value="{if ezhttp_hasvariable( 'RedirectIfDiscarded', 'session' )}{ezhttp( 'RedirectIfDiscarded', 'session' )}{else}{$_redirect}{/if}" />
-          <input type="hidden" name="RedirectURIAfterPublish" value="{$_redirect}" />
-      </div>
+        <div class="Grid Grid--withGutter u-padding-top-xxl">
+            <div class="Grid-cell u-size1of2">
+                <input class="Button Button--danger" type="submit" name="DiscardButton" value="{'Discard'|i18n('ocbootstrap')}"/>
+            </div>
+            <div class="Grid-cell u-size1of2 u-textRight">
+                <input class="Button Button--default" type="submit" name="PublishButton" value="{'Store'|i18n('ocbootstrap')}"/>
+            </div>
+            <input type="hidden" name="DiscardConfirm" value="0"/>
+            <input type="hidden" name="RedirectIfDiscarded" value="{if ezhttp_hasvariable( 'RedirectIfDiscarded', 'session' )}{ezhttp( 'RedirectIfDiscarded', 'session' )}{else}{$_redirect}{/if}"/>
+            <input type="hidden" name="RedirectURIAfterPublish" value="{$_redirect}"/>
+        </div>
 
     </form>
 
-{undef $_redirect}
 </div>
+
+{undef $_redirect $tab}
