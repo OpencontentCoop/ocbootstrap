@@ -29,7 +29,7 @@
         </div>
 
         <div class="Grid-cell u-md-size1of4 u-lg-size1of4">
-            <p class="u-layout-prose u-color-grey-90 u-text-p u-padding-r-bottom u-padding-r-top">
+            <p class="{*u-layout-prose*} u-color-grey-90 u-text-p u-padding-r-bottom u-padding-r-top">
                 {def $language_index = 0 $from_language_index = 0 $translation_list = $content_version.translation_list}
                 {foreach $translation_list as $index => $translation} {if eq( $edit_language, $translation.language_code )} {set $language_index = $index} {/if}{/foreach}
 
@@ -48,7 +48,7 @@
     </div>
 
 
-    <form class="Form Form--spaced u-padding-all-xl u-background-grey-10 u-text-r-xs" enctype="multipart/form-data" method="post" action={concat("/content/edit/",$object.id,"/",$edit_version,"/",$edit_language|not|choose(concat($edit_language,"/"),''))|ezurl}>
+    <form class="Form Form--spaced u-padding-all-xl {*u-layout-prose*} u-text-r-xs" enctype="multipart/form-data" method="post" action={concat("/content/edit/",$object.id,"/",$edit_version,"/",$edit_language|not|choose(concat($edit_language,"/"),''))|ezurl}>
 
         {include uri="design:content/edit_validation.tpl"}
 

@@ -1,0 +1,634 @@
+.button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #003e54;
+    font: inherit;
+    font-weight: 600;
+    padding: 0.6em 1.2em;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;
+    -moz-user-select: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    overflow: visible;
+}
+
+
+/*.button{*/
+/*@extend .btn;*/
+/*@extend .btn-default;*/
+/*}*/
+
+/*.defaultbutton{*/
+/*@extend .btn;*/
+/*@extend .btn-primary;*/
+/*}*/
+
+/*table.list{*/
+/*@extend .table;*/
+/*}*/
+
+table.table {
+    background-color: transparent;
+    border: 0 none;
+    border-collapse: collapse;
+    max-width: 100%;
+    width: 100%;
+}
+table.table thead tr:first-child td, table.table thead tr:first-child th {
+    border-top: 0 none;
+}
+.Table td:first-child, .Table th:first-child {
+    padding-left: .5em;
+}
+table.table td, table.table th {
+    border-top: 1px solid #d6dce3;
+}
+table.table th {
+    border-bottom: 2px solid #d6dce3;
+}
+table.table td, table.table th {
+    padding: .5em;
+}
+
+div.embed{
+    margin: 20px 0;
+}
+
+.block .element, .block .halfelement {
+    float: left;
+    padding-right: 10px;
+}
+
+.block .element input{display: inline-block;}
+
+
+/* eztags */
+div.tagssuggest ul li{
+    border: none;
+    clear: none;
+    color: #FFFFFF;
+    float: left;
+    font-weight: bold;
+    line-height: 20px;
+    margin: 0 6px 6px 0;
+    padding: 3px 8px;
+}
+
+div.tagssuggest ul li a{
+    line-height: 15px;
+}
+
+div.jsonSuggestResults{
+    top:33px;
+}
+
+div.tagssuggestfieldwrap {
+    float: left;
+    height: 22px;
+    margin: 0 12px 0 0;
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+    font-size: 10px;
+}
+
+div.contentstructure ul.content_tree_menu ul{
+    padding-left: 0;
+}
+
+div.tags-list p.loading, div.tags-list p.no-results{
+    margin: 0;
+}
+
+/* ezobjectrelarionlist */
+
+.ezobject-relation-search-browse{
+    margin: 10px 0;
+}
+
+.ezobject-relation-search-browse p a{
+    cursor: pointer;
+}
+
+/* ezdate ezdatetime */
+
+.form-inline.date,
+.form-inline.time{
+    display: inline;
+}
+
+.date .form-control{
+    width: 30px;
+    padding: 0 2px;
+    text-align: center;
+}
+.date .form-control.year{
+    width: 40px;
+    padding: 0 2px;
+    text-align: center;
+}
+.time .form-control{
+    width: 30px;
+    padding: 0 2px;
+    text-align: center;
+}
+.time input{
+    background: #eee;
+}
+
+.edit-row{
+    margin-bottom: 30px;
+}
+
+.yui-calcontainer{z-index: 10}
+
+.menufieldlabel{font-weight: bold}
+
+/* EZPAGE */
+/* BLOCK EDIT: START */
+
+.button-right{
+    float: right;
+}
+
+.button-left{
+    float: left;
+}
+
+
+div.block-container
+{
+    margin: 0.5em 0;
+    background: #ddd;
+}
+
+div.block-header
+{
+    padding: 0.5em;
+    border: 1px solid #D8D8D8;
+    color: #000000;
+}
+
+div.block-content
+{
+    border-left: 1px solid #D8D8D8;
+    border-right: 1px solid #D8D8D8;
+    border-bottom: 1px solid #D8D8D8;
+    padding: 0.5em;
+}
+
+em.trigger
+{
+    vertical-align: middle;
+    margin-right: 0.5em;
+    cursor: pointer;
+    display: block;
+    height: 15px;
+    width: 15px;
+    float: left;
+}
+
+em.expand
+{
+    background-image: url(../images/ezpage/expand.gif);
+}
+
+em.collapse
+{
+    background-image: url(../images/ezpage/collapse.gif);
+}
+
+div.collapsed
+{
+    display: none;
+}
+
+div.expanded
+{
+    display: block;
+}
+
+table.items
+{
+    font-size: 11px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    width: 100%;
+}
+
+table.queue
+{
+    margin-bottom: 0;
+}
+
+table.online
+{
+    margin-bottom: 0;
+}
+
+table.items td
+{
+    padding: 0.25em;
+}
+
+table.items td.time
+{
+    text-align: right;
+    padding-right: 0.75em;
+}
+
+table.queue tr
+{
+    background-color:#F4F4F4;
+}
+
+table.online tr
+{
+    background-color: #E9F1F4;
+}
+
+table.history tr
+{
+    background-color: #F4F2E9;
+}
+
+table.history td.status
+{
+    font-style: italic;
+}
+
+table.items td.handler
+{
+    cursor: move;
+}
+
+table.items tr.empty td
+{
+    padding: 0.75em;
+    text-align: center;
+}
+
+table.items tr.rotation td
+{
+    text-align: right;
+    padding-right: 0.75em;
+    vertical-align: middle;
+}
+
+table.items tr.spacer td
+{
+    height: 6px;
+}
+
+table.items img, table.items input, table.items select
+{
+    vertical-align: middle;
+}
+
+div.block-content div.legend
+{
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+}
+
+div.legend div.queue
+{
+    background-color:#F4F4F4;
+    height: 13px;
+    padding: 0 4px 0 4px;
+    display: inline;
+    border: 1px solid #D4D4D4;
+    margin-right: 0.25em;
+}
+
+div.legend div.online
+{
+    background-color: #E9F1F4;
+    height: 13px;
+    padding: 0 4px 0 4px;
+    display: inline;
+    border: 1px solid #C4D9E1;
+    margin-left: 0.5em;
+    margin-right: 0.25em;
+}
+
+div.legend div.history
+{
+    background-color: #F4F2E9;
+    height: 13px;
+    padding: 0 4px 0 4px;
+    display: inline;
+    border: 1px solid #E0DBC0;
+    margin-left: 0.5em;
+    margin-right: 0.25em;
+}
+
+div.block-container .button
+{
+    border: 1px solid #b9b7b7;
+    cursor: pointer;
+    color: #282929;
+    vertical-align: middle;
+    margin: 0.25em 0 0.25em 0;
+}
+
+th.tight, td.tight
+{
+    width:1%;
+}
+
+div.block-container .list
+{
+    max-width: 100%;
+    padding-bottom: 0;
+    vertical-align: baseline;
+    border: 1px solid #ccc;
+}
+
+div.block-container .textfield
+{
+}
+
+div.block-container div.left
+{
+    float: left;
+    clear: left;
+    width: 49%;
+}
+
+div.block-container div.right
+{
+    float: right;
+    clear: right;
+    width: 49%;
+    text-align: right;
+}
+
+div.block-container div.blockname .textfield
+{
+    margin-bottom: 0.5em;
+    width: 70%;
+}
+
+div.block-container div.blockname label
+{
+    display: inline;
+    color: #000000;
+}
+
+div.block-container div.block-parameters label
+{
+    color: #000000;
+}
+
+div.block-container div.block-parameters
+{
+}
+
+div.block-container div.block-parameters .textbox
+{
+    width: 99%;
+    overflow: auto;
+}
+
+div.block-container div.block-parameters div.source
+{
+    font-weight: bold;
+    color: #000000;
+    float: right;
+    width: 80%;
+}
+
+.float-break:after
+{
+    content: "-";
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+}
+
+.float-break
+{
+    height: 1%;
+}
+
+.hidden
+{
+    display: none;
+}
+
+.visible
+{
+    display: block;
+}
+
+.break
+{
+    clear: both;
+}
+
+/* BLOCK EDIT: END */
+
+/* ZONE LAYOUT: START */
+div.zones div.zone
+{
+    display: inline-block;
+    background: #eee none repeat scroll 0 0;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+div.zones div.zone div.zone-thumbnail, div.zones div.zone div.zone-label, div.zones div.zone div.zone-selector
+{
+    font-size: .8em;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+div#zone-map-container
+{
+    padding: 0.5em;
+    border-top: 1px solid #D8D8D8;
+    border-bottom: 1px solid #D8D8D8;
+}
+
+div#zone-map-container p
+{
+}
+
+div#zone-map-container .zone-map-type
+{
+    color: #000000;
+    font-weight: bold;
+}
+
+div#zone-map-container .zone-map-item
+{
+    float: left;
+    margin: 0.5em 1em 1em 0;
+}
+
+div#zone-map-container .zone-map-item label
+{
+    margin-bottom: 0.25em;
+    color: #000000;
+}
+
+
+/* ZONE LAYOUT: END */
+
+#zone-tabs-container .yui-navset .yui-content
+{
+    background-color: #eee;
+}
+
+#zone-tabs-container .yui-navset .yui-content, #zone-tabs-container .yui-navset .yui-navset-top .yui-content
+{
+    border-color: #A3A3A3;
+}
+
+#zone-tabs-container .yui-navset .yui-nav, #zone-tabs-container .yui-navset .yui-navset-top .yui-nav
+{
+    border-color: #A3A3A3;
+}
+
+#zone-tabs-container .yui-navset .yui-nav a, #zone-tabs-container .yui-navset .yui-navset-top .yui-nav a
+{
+    background-image: none;
+    font-size: 0.8em;
+}
+
+#zone-tabs-container .yui-navset .yui-nav .selected a, #zone-tabs-container .yui-navset .yui-nav .selected a em
+{
+    border-color: #A3A3A3;
+    background-image: none;
+    background-color: #A3A3A3;
+}
+
+#zone-tabs-container .yui-navset .yui-nav a:hover, #zone-tabs-container .yui-navset .yui-nav a:focus
+{
+    background-image: none;
+    background-color: #A3A3A3;
+    color: #FFFFFF;
+}
+
+#zone-tabs-container .yui-navset .yui-nav .selected a, #zone-tabs-container .yui-navset .yui-nav .selected a:focus, #zone-tabs-container .yui-navset .yui-nav .selected a:hover
+{
+    background-image: none;
+    background-color: #A3A3A3;
+}
+
+.block-content label{display: block}
+
+.fileupload-content .dropzoneHelp{
+    background-size: 40px 40px;
+    text-align: center;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+.fileupload-content table.table{
+    margin-bottom: 0;
+}
+.fileupload-content table.table tbody > tr > td{
+    border: none;
+}
+.fileupload-content table.table td{
+    vertical-align: middle;
+}
+
+.fileupload .dropzoneHelp.hide,
+#page .fileupload .hide{
+    display: none !important;
+}
+
+
+.edit-row{margin: 20px 0}
+.yui-calcontainer{z-index: 200;}
+.jsonSuggestResults iframe {
+    height: auto !important;
+    width: auto !important;
+}
+
+.object-left{
+    float: left;
+    margin: 0 .5em 0 0;
+}
+
+.object-right{
+    float: right;
+    margin: 0 0 0 0.5em
+}
+
+.object-center{
+    margin: 0 auto;
+}
+
+p.text-left, td.text-left, th.text-left, *.text-left
+{
+    text-align: left;
+}
+
+p.text-right, td.text-right, th.text-right, *.text-right
+{
+    text-align: right;
+}
+
+p.text-center, td.text-center, th.text-center, *.text-center
+{
+    text-align: center;
+}
+
+p.text-justify, td.text-justify, th.text-justify, *.text-justify
+{
+    text-align: justify;
+}
+
+
+/* todo: mixins openpa */
+.block-color-select.default-1 {
+    background: #b84323
+}
+
+.block-color-select.aree-tematiche {
+    background: #784c5e
+}
+
+.block-color-select.default-2 {
+    background: #00803c
+}
+
+.block-color-select.default-3 {
+    background: #006598
+}
+
+.block-color-select.default-4 {
+    background: #007780
+}
+
+.block-color-select.default-5 {
+    background: #5cb85c
+}
+
+.block-color-select.default-6 {
+    background: #f60
+}
+
+.block-color-select.default-7 {
+    background: #6ec13a
+}
+
+.block-color-select.default-8 {
+    background: #3d68b6
+}
+
+.block-color-select.default-9 {
+    background: #9b0000
+}

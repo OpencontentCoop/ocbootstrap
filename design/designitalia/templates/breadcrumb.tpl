@@ -1,5 +1,5 @@
 <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-bottom u-padding-top-s">
-    <nav aria-label="sei qui:" role="navigation">
+    <nav aria-label="{'sei qui:'|i18n('design/ocbootstrap/designitalia')}" role="navigation">
         <ul class="Breadcrumb">
             {foreach $pagedata.path_array as $path}
                 {if $path.url}
