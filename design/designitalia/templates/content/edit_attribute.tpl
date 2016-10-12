@@ -3,7 +3,7 @@ $attribute_categorys        = ezini( 'ClassAttributeSettings', 'CategoryList', '
 $attribute_default_category = ezini( 'ClassAttributeSettings', 'DefaultCategory', 'content.ini' )}
 
 <div class="Grid Grid--withGutter u-padding-top-xxl">
-    <div class="Grid-cell u-sizeFull u-sm-size8of12 u-md-size8of12 u-lg-size8of12">
+    <div class="Grid-cell u-sizeFull u-sm-size12of12 u-md-size8of12 u-lg-size8of12">
 
         <div class="Accordion fr-accordion js-fr-accordion" id="accordion-edit-attributes">
             {foreach $content_attributes_grouped_data_map as $attribute_group => $content_attributes_grouped}
@@ -87,7 +87,7 @@ $attribute_default_category = ezini( 'ClassAttributeSettings', 'DefaultCategory'
         </div>
     </div>
 
-    <div class="Grid-cell u-sizeFull u-sm-size4of12 u-md-size4of12 u-lg-size4of12">
+    <div class="Grid-cell u-sizeFull u-sm-size12of12 u-md-size4of12 u-lg-size4of12">
         {include uri="design:content/edit_right_menu.tpl"}
     </div>
 
