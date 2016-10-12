@@ -61,8 +61,9 @@
 
 {/cache-block}
 
-
+        {if is_set($module_result.node_id)|not()}<div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-top u-padding-bottom-xxl">{/if}
         {$module_result.content}
+        {if is_set($module_result.node_id)|not()}</div>{/if}
 
 {cache-block keys=array( $module_result.uri, $user_hash, $access_type.name, $extra_cache_key )}
 

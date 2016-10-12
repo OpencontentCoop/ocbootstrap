@@ -248,7 +248,7 @@
         <tr class="buttons">
           <td>
             <button class="btn btn-sm ezobject-relation-remove-button {if $attribute.content.relation_list|not()}hide{/if}" type="submit" name="CustomActionButton[{$attribute.id}_remove_objects]">
-              <span class="glyphicon glyphicon-trash"></span>
+                <span class="fa fa-trash"></span>
             </button>
           </td>
           <td></td>
@@ -298,6 +298,6 @@
 
 </fieldset>
 {undef $contentclass_attribute}
-    
+
 {/default}
 {/let}

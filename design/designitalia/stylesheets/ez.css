@@ -1,3 +1,5 @@
+.btn,
+.defaultbutton,
 .button {
     background-color: #fff;
     border: 1px solid #ccc;
@@ -19,41 +21,33 @@
     overflow: visible;
 }
 
+.btn-primary,
+.defaultbutton{
+    background-color: #65dde0;
+    border-color: #50d8dc;
+    color: #004a4d;
+}
 
-/*.button{*/
-/*@extend .btn;*/
-/*@extend .btn-default;*/
-/*}*/
-
-/*.defaultbutton{*/
-/*@extend .btn;*/
-/*@extend .btn-primary;*/
-/*}*/
-
-/*table.list{*/
-/*@extend .table;*/
-/*}*/
-
-table.table {
+table {
     background-color: transparent;
     border: 0 none;
     border-collapse: collapse;
     max-width: 100%;
     width: 100%;
 }
-table.table thead tr:first-child td, table.table thead tr:first-child th {
+table thead tr:first-child td, table thead tr:first-child th {
     border-top: 0 none;
 }
-.Table td:first-child, .Table th:first-child {
+table td:first-child, table th:first-child {
     padding-left: .5em;
 }
-table.table td, table.table th {
+table td, table th {
     border-top: 1px solid #d6dce3;
 }
-table.table th {
+table th {
     border-bottom: 2px solid #d6dce3;
 }
-table.table td, table.table th {
+table td, table th {
     padding: .5em;
 }
 
