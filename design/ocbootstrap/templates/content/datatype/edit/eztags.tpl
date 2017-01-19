@@ -1,67 +1,66 @@
-{ezcss_require( array( 'tagssuggest.css', 'jqmodal.css', 'contentstructure-tree.css' ) )}
-{ezscript_require( array( 'ezjsc::jquery', 'ezjsc::jqueryio', 'jquery-migrate-1.1.1.min.js', 'jqmodal.js', 'jquery.tagssuggest.js', 'tagssuggest-init.js' ) )}
-
-{def $has_add_access = false()}
-{def $root_tag = fetch( tags, tag, hash( tag_id, $attribute.contentclass_attribute.data_int1 ) )}
-
-{def $user_limitations = user_limitations( 'tags', 'add' )}
-{if $user_limitations['accessWord']|ne( 'no' )}
-    {if is_unset( $user_limitations['simplifiedLimitations']['Tag'] )}
-        {set $has_add_access = true()}
-    {elseif $root_tag}
-        {foreach $user_limitations['simplifiedLimitations']['Tag'] as $key => $value}
-            {if $root_tag.path_string|contains( concat( '/', $value, '/' ) )}
-                {set $has_add_access = true()}
-                {break}
-            {/if}
-        {/foreach}
-    {else}
-        {set $has_add_access = true()}
-        {set $root_tag = array()}
-        {foreach $user_limitations['simplifiedLimitations']['Tag'] as $key => $value}
-            {set $root_tag = $root_tag|append( fetch( tags, tag, hash( tag_id, $value ) ) )}
-        {/foreach}
-    {/if}
+{def $permission_array = $attribute.content.permission_array}
+{def $builder = 'Default'}
+{if $attribute.contentclass_attribute.data_text1}
+    {set $builder = $attribute.contentclass_attribute.data_text1}
 {/if}
 
-{default attribute_base='ContentObjectAttribute' html_class='full' placeholder=false()}
-<div class="tagssuggest clearfix{if $attribute.contentclass_attribute.data_int2} tagsfilter{/if}">
-    {if $placeholder}<label>{$placeholder}</label>{/if}
-    
-    <div class="tags-list tags-listed no-results">
-        <p class="loading">{'Loading'|i18n( 'extension/eztags/datatypes' )}...</p>
-        <p class="no-results"><small>{'There are no selected tags'|i18n( 'extension/eztags/datatypes' )}.</small></p>
+{default attribute_base=ContentObjectAttribute}
+<div class="eztags-wrapper">
+    <div id="eztags{$attribute.id}" class="tagssuggest"
+        data-eztags
+        data-builder="{$builder|wash}"
+        data-max-results="{ezini( 'GeneralSettings', 'MaxResults', 'eztags.ini' )}"
+        data-has-add-access="{cond( $permission_array.can_add, 'true', true(), 'false' )}"
+        data-subtree-limit="{$attribute.contentclass_attribute.data_int1}"
+        data-hide-root-tag="{$attribute.contentclass_attribute.data_int3}"
+        data-max-tags="{if $attribute.contentclass_attribute.data_int4|gt( 0 )}{$attribute.contentclass_attribute.data_int4}{else}0{/if}"
+        data-locale="{$attribute.language_code}"
+        data-icon-path="{'eng-GB'|flag_icon()|explode('src="')|extract_right(1)|implode('')|explode('eng-GB')|extract_left(1)|implode('')}"
+        >
+        <input id="ezcoa-{if ne( $attribute_base, 'ContentObjectAttribute' )}{$attribute_base}-{/if}{$attribute.contentclassattribute_id}_{$attribute.contentclass_attribute_identifier}" class="tagnames" type="hidden" name="{$attribute_base}_eztags_data_text_{$attribute.id}" value="{$attribute.content.keyword_string|wash}"  />
+        <input id="ezcoa2-{if ne( $attribute_base, 'ContentObjectAttribute' )}{$attribute_base}-{/if}{$attribute.contentclassattribute_id}_{$attribute.contentclass_attribute_identifier}" class="tagpids" type="hidden" name="{$attribute_base}_eztags_data_text2_{$attribute.id}" value="{$attribute.content.parent_string|wash}"  />
+        <input id="ezcoa3-{if ne( $attribute_base, 'ContentObjectAttribute' )}{$attribute_base}-{/if}{$attribute.contentclassattribute_id}_{$attribute.contentclass_attribute_identifier}" class="tagids" type="hidden" name="{$attribute_base}_eztags_data_text3_{$attribute.id}" value="{$attribute.content.id_string|wash}"  />
+        <input id="ezcoa4-{if ne( $attribute_base, 'ContentObjectAttribute' )}{$attribute_base}-{/if}{$attribute.contentclassattribute_id}_{$attribute.contentclass_attribute_identifier}" class="taglocales" type="hidden" name="{$attribute_base}_eztags_data_text4_{$attribute.id}" value="{$attribute.content.locale_string|wash}"  />
     </div>
-{*
-    <label>{'Suggested tags'|i18n( 'extension/eztags/datatypes' )}:</label>
-    <div class="tags-list tags-suggested no-results">
-        <p class="loading">{'Loading'|i18n( 'extension/eztags/datatypes' )}...</p>
-        <p class="no-results">{'There are no tags to suggest'|i18n( 'extension/eztags/datatypes' )}.</p>
-    </div>
-*}
 
-    {if $has_add_access}
-        <div class="tagssuggestfieldwrap input-group">
-            <input class="tagssuggestfield {$html_class}" type="text" name="suggest_{$attribute_base}_eztags_data_text_{$attribute.id}" value="" autocomplete="off" />
-            <span class="input-group-btn">            
-            <input type="button" value="+" name="AddTagButton" class="btn btn-info btn-sm button-add-tag button-disabled" disabled="disabled" />
-          </span>
-      </div>        
-    {else}
-    {/if}
-
-    <input id="ezcoa-{if ne( $attribute_base, 'ContentObjectAttribute' )}{$attribute_base}-{/if}{$attribute.contentclassattribute_id}_{$attribute.contentclass_attribute_identifier}" class="box ezcc-{$attribute.object.content_class.identifier} ezcca-{$attribute.object.content_class.identifier}_{$attribute.contentclass_attribute_identifier} tagnames" type="hidden" name="{$attribute_base}_eztags_data_text_{$attribute.id}" value="{$attribute.content.keyword_string|wash}"  />
-
-    <input id="ezcoa2-{if ne( $attribute_base, 'ContentObjectAttribute' )}{$attribute_base}-{/if}{$attribute.contentclassattribute_id}_{$attribute.contentclass_attribute_identifier}" class="box tagpids" type="hidden" name="{$attribute_base}_eztags_data_text2_{$attribute.id}" value="{$attribute.content.parent_string|wash}"  />
-
-    <input id="ezcoa3-{if ne( $attribute_base, 'ContentObjectAttribute' )}{$attribute_base}-{/if}{$attribute.contentclassattribute_id}_{$attribute.contentclass_attribute_identifier}" class="box tagids" type="hidden" name="{$attribute_base}_eztags_data_text3_{$attribute.id}" value="{$attribute.content.id_string|wash}"  />
-
-    <input type="hidden" class="eztags_subtree_limit" name="eztags_subtree_limit-{$attribute.id}" value="{$attribute.contentclass_attribute.data_int1}" />
-    <input type="hidden" class="eztags_hide_root_tag" name="eztags_hide_root_tag-{$attribute.id}" value="{$attribute.contentclass_attribute.data_int3}" />
-    <input type="hidden" class="eztags_max_tags" name="eztags_max_tags-{$attribute.id}" value="{if $attribute.contentclass_attribute.data_int4|gt( 0 )}{$attribute.contentclass_attribute.data_int4}{else}0{/if}" />
+    {include uri=concat( 'design:content/datatype/edit/view/', $builder|downcase, '.tpl' )}
 </div>
 
-{if $has_add_access}
-    {include uri='design:ezjsctemplate/modal_dialog.tpl' attribute_id=$attribute.id root_tag=$root_tag}
-{/if}
+{ezscript_require(array(
+    'ezjsc::jquery',
+    'ezjsc::jqueryio',
+    'ezjsc::jqueryUI',
+    'jqmodal.js',
+    'jstree.min.js',
+    'jquery.eztags.js',
+    'jquery.eztags.select.js',
+    'jquery.eztags.tree.js',
+    'tagsstructuremenu.js'
+))}
+{ezcss_require(array(
+    'jqmodal.css',
+    'tagssuggest.css',
+    'contentstructure-tree.css',
+    'jstree/eztags/style.css'
+))}
+<script type="text/javascript">
+{run-once}
+$.EzTags.Base.defaults.translations = {ldelim}{*
+    *}"selectedTags":"{'Selected tags'|i18n( 'extension/eztags/datatypes' )}",{*
+    *}"loading":"{'Loading'|i18n( 'extension/eztags/datatypes' )}...",{*
+    *}"noSelectedTags":"{'There are no selected tags'|i18n( 'extension/eztags/datatypes' )}",{*
+    *}"suggestedTags":"{'Suggested tags'|i18n( 'extension/eztags/datatypes' )}",{*
+    *}"noSuggestedTags":"{'There are no tags to suggest'|i18n( 'extension/eztags/datatypes' )}",{*
+    *}"addNew":"{'Add new'|i18n( 'extension/eztags/datatypes' )}",{*
+    *}"clickAddThisTag":"{'Click to add this tag'|i18n( 'extension/eztags/datatypes' )}",{*
+    *}"removeTag":"{'Remove tag'|i18n( 'extension/eztags/datatypes' )}",{*
+    *}"translateTag":"{'Translate tag'|i18n( 'extension/eztags/datatypes' )}",{*
+    *}"existingTranslations":"{'Existing translations'|i18n( 'extension/eztags/datatypes' )}",{*
+    *}"noExistingTranslations":"{'No existing translations'|i18n( 'extension/eztags/datatypes' )}",{*
+    *}"addTranslation":"{'Add translation'|i18n( 'extension/eztags/datatypes' )}",{*
+    *}"cancel":"{'Cancel'|i18n( 'extension/eztags/datatypes' )}",{*
+    *}"ok":"{'OK'|i18n( 'extension/eztags/datatypes' )}",{*
+*}{rdelim};
+{/run-once}
+</script>
 {/default}
