@@ -7,7 +7,8 @@
      $longitude = $attribute.content.longitude|explode(',')|implode('.')}
 
 {run-once}
-<script type="text/javascript" src="//maps.google.com/maps/api/js?sensor={ezini('GMapSettings', 'UseSensor', 'ezgmaplocation.ini')}"></script>
+{def $googleApiKey = cond( ezini_hasvariable('ApiSettings', 'GoogleApiKey', 'app.ini'), concat('key=',ezini('ApiSettings', 'GoogleApiKey', 'app.ini'),'&'), '')}
+<script type="text/javascript" src="//maps.google.com/maps/api/js?{$googleApiKey}sensor={ezini('GMapSettings', 'UseSensor', 'ezgmaplocation.ini')}"></script>
 <script type="text/javascript">
 {literal}
 function eZGmapLocation_MapControl( attributeId, latLongAttributeBase )
