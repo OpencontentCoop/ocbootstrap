@@ -64,7 +64,7 @@
             {attribute_view_gui attribute=$attribute image_class=large}
           </span>
           <span class="inline-form" style="display: none">
-            {attribute_edit_gui attribute=$attribute}
+            {attribute_edit_gui attribute=$attribute html_class='form-control'}
             <button class="btn btn-danger pull-right">Salva</button>
           </span>
           
