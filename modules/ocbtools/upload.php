@@ -27,7 +27,9 @@ if ( $attribute instanceof eZContentObjectAttribute && $attribute->attribute( 'o
         $upload = new eZContentUpload();
         $upload->handleLocalFile( $response, $filePath, $parentNodeID, false );
     }
-
+    if (isset($response['contentobject'])){
+        unset($response['contentobject']);
+    }
     $file = eZClusterFileHandler::instance( $filePath );
     if ( $file->exists() ) $file->delete();
 
