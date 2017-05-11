@@ -61,6 +61,10 @@
         <source>information collector</source>
         <translation>raccoglitore informazioni</translation>
     </message>
+    <message>
+        <source>General information</source>
+        <translation>Informazioni generali</translation>
+    </message>
 </context>
 <context>
     <name>design/admin/preview/article</name>
@@ -514,6 +518,10 @@
     <message>
         <source>Content in %language</source>
         <translation>Contenuto in %language</translation>
+    </message>
+    <message>
+        <source>Edit</source>
+        <translation>Modifica</translation>
     </message>
     <message>
         <source>Edit &lt;%object_name&gt; (%class_name)</source>

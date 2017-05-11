@@ -21,7 +21,7 @@
 {set $count = $count|inc()}
 {/if}
 {/foreach}
-<li class="pull-right"><a data-toggle="tab" href="#contentactions">Informazioni generali</a></li>
+<li class="pull-right"><a data-toggle="tab" href="#contentactions">***{'General information'|i18n( 'design/admin/content/edit_attribute')}</a></li>
 </ul>
 {/if}
 

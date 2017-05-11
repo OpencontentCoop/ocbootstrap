@@ -46,7 +46,7 @@
 
       <h1>
         <i class='icon-edit'></i>
-        <span>Modifica {$object.name|wash}</span>
+        <span>{"Edit"|i18n( 'design/ocbootstrap/content/edit' )} {$object.name|wash}</span>
         <small>{$class.name|wash}</small>
     </h1>
   </div>
