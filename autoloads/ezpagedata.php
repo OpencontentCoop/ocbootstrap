@@ -36,7 +36,7 @@
 
 class eZPageData
 {
-    function eZPageData()
+    function __construct()
     {
     }
 

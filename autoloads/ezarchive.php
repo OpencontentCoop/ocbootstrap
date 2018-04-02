@@ -24,7 +24,7 @@
 
 class eZArchive
 {
-    function eZArchive()
+    function __construct()
     {
     }
 
