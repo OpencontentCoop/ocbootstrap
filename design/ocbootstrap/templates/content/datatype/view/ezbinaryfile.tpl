@@ -5,12 +5,6 @@
                 'show_flip', false()
 ))}
 
-{*def $icon_size='normal'
-     $icon_title=$attribute.content.mime_type
-     $icon='no'}
-{if is_set( $show_flip )|not()}
-{def $show_flip = false()}
-{/if*}
 
 {if $attribute.has_content}
 	{if $attribute.content}
@@ -32,38 +26,6 @@
 	{/if}
 {/if}
 
-{if and( $show_flip, flip_exists( $attribute.contentobject_id ) )}
-
-    {def $pageDim = get_page_dimensions( $attribute.contentobject_id, 'small' )
-         $heigth = $pageDim[1]}
-    
-    {ezscript_require( array( 'megazine.js', 'swfaddress.js', 'swfobject.js' ) )}
-    {ezcss_require( array('flip.css') )}
-    
-    <script type="text/javascript">
-    {literal}
-    swfobject.embedSWF(
-        {/literal}{concat( 'flash/megazine/megazine.swf')|ezdesign}{literal},
-        "megazine-{/literal}{$attribute.contentobject_id}{literal}",
-        "100%",
-        "{/literal}{$heigth}{literal}",
-        "9.0.115",
-        {/literal}{concat( 'flash/swfobject/expressInstall.swf')|ezdesign}{literal}, 
-        {
-            {/literal}xmlFile : "{concat( symlink_flip_dir(),'/',$attribute.contentobject_id,'/magazine_small.xml')}"{literal},  
-            minScale : 1.0,
-            maxScale : 1.0,
-            top: "20"
-        },
-        {
-        bgcolor : "#fff", 
-        wmode : "transparent", 
-        allowFullscreen : "true" 
-        },
-        {id : "megazine-{/literal}{$attribute.contentobject_id}{literal}"}
-    );
-    {/literal}
-    </script>
-    <div id="megazine-{$attribute.contentobject_id}"></div>
-    {undef $pageDim $heigth}
+{if $show_flip}
+    {include uri=flip_template( $attribute.id, $attribute.version ) id=$attribute.id version=$attribute.version view='small'}
 {/if}
