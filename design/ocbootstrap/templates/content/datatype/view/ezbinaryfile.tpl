@@ -26,6 +26,6 @@
 	{/if}
 {/if}
 
-{if $show_flip}
+{if and($show_flip, flip_exists($attribute.id, $attribute.version))}
     {include uri=flip_template( $attribute.id, $attribute.version ) id=$attribute.id version=$attribute.version view='small'}
 {/if}
