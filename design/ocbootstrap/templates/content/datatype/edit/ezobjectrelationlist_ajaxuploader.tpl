@@ -7,7 +7,7 @@
 <div id="{concat('multiupload-', $attribute.id, '-container')}" class="pull-left">
     <span class="btn btn-success fileinput-button">
         <i class="add glyphicon glyphicon-plus"></i>
-        <i class="spinner fa a fa-circle-o-notch fa-spin" style="display: none"></i>
+        <i class="spinner glyphicon glyphicon-upload" style="display: none"></i>
         <span>Inserisci file</span>
         <!-- The file input field used as target for the file upload widget -->
         <input id="{concat('multiupload-', $attribute.id)}" type="file" name="files[]" multiple>
@@ -18,15 +18,16 @@
                                 $class_content.default_placement.node_id,
 								'auto' )}
 
-{ezscript_require( array( 'ezjsc::jquery', 'ezjsc::jqueryio', 'ezjsc::jqueryUI', 'plugins/jquery.fileupload/jquery.fileupload.js' ) )}
+{ezscript_require( array( 'ezjsc::jquery', 'ezjsc::jqueryio', 'ezjsc::jqueryUI', 'plugins/jquery.fileupload/jquery.fileupload.js', 'plugins/jquery.fileupload/jquery.iframe-transport.js' ) )}
 {ezcss_require( 'plugins/jquery.fileupload/jquery.fileupload.css' )}
 <script type="text/javascript">
 {literal}
 $(function () {
     'use strict';
     $({/literal}'#{concat('multiupload-', $attribute.id)}'{literal}).fileupload({
-        url: {/literal}{concat('ocbtools/upload/',$attribute.id, '/', $attribute.version, '/', $start_node)|ezurl()}{literal},
+        url: {/literal}{concat('ocbtools/upload/',$attribute.id, '/', $attribute.version, '/', $start_node)|ezurl()}{literal},        
         acceptFileTypes: "{/literal}{$attribute|multiupload_file_types_string_from_attribute()}{literal}",
+        //forceIframeTransport:true,
         dataType: 'json',
         submit: function (e, data) {
             $("{/literal}#{concat('multiupload-', $attribute.id, '-container')}{literal} .spinner").show();
@@ -53,6 +54,11 @@ $(function () {
                     $("{/literal}#{concat('multiupload-', $attribute.id, '-container')}{literal} .add").show();
                 });
             }
+        },
+        fail: function (e, data) {
+          alert("Error!");
+          $("{/literal}#{concat('multiupload-', $attribute.id, '-container')}{literal} .spinner").hide();
+          $("{/literal}#{concat('multiupload-', $attribute.id, '-container')}{literal} .add").show();
         }
     }).prop('disabled', !$.support.fileInput)
             .parent().addClass($.support.fileInput ? undefined : 'disabled');

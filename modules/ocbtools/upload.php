@@ -26,6 +26,7 @@ if ( $attribute instanceof eZContentObjectAttribute && $attribute->attribute( 'o
         $filePath = $options['upload_dir'] . $file->name;
         $upload = new eZContentUpload();
         $upload->handleLocalFile( $response, $filePath, $parentNodeID, false );
+        unset($response['contentobject']);
     }
 
     $file = eZClusterFileHandler::instance( $filePath );
@@ -36,6 +37,7 @@ else
 {
     $response = array( 'errors' => array( 'Not Allowed' ) );
 }
-header('Content-Type: application/json');
+//header('Content-Type: application/json'); // maledetto ie: occorre uscire con text/html
+header('Content-Type: text/html');
 echo json_encode( $response );
 eZExecution::cleanExit();

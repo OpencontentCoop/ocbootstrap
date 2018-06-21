@@ -1,5 +1,5 @@
 {* Attensione $geo_items è un array di array( id => 123, lat => 123, lng => 123, info => "<h5>Info</h5>..." ), array( ... ), ... *}
-{set_defaults( hash(  
+{set_defaults( hash(
   'id', 'map_canvas',
   'width', '100%',
   'height', '400px'
@@ -23,7 +23,7 @@ var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?
 
 
 {foreach $geo_items as $geo_item}		
-  markers[{$geo_item.id}] = {ldelim}center : new google.maps.LatLng( {$geo_item.lat},{$geo_item.lng} ),info: "{$geo_item.info|wash(javascript)}"{rdelim};		
+  markers[{$geo_item.id}] = {ldelim}center : new google.maps.LatLng( {$geo_item.lat},{$geo_item.lng} ),info: "{$geo_item.info|wash(javascript)}"{rdelim};
 {/foreach}
 
 function initialize() {ldelim}
