@@ -58,7 +58,7 @@
             <form action={"/content/search"|ezurl}>
                 <div class="input-group">
                     <input style="padding:6px" class="form-control" name="SearchText" type="text"
-                           value="{cond( ezhttp_hasvariable('SearchText','get'), ezhttp('SearchText','get'),'')}"
+                           value="{cond( ezhttp_hasvariable('SearchText','get'), ezhttp('SearchText','get')|wash(),'')}"
                            size="12"/>
                     <input type="hidden" value="Cerca" name="SearchButton"/>
                     <input type="hidden" value="{$browse.start_node}" name="SubTreeArray[]"/>
