@@ -9,6 +9,6 @@
     {/if}
 {/if}    
     {foreach $attribute.content.tags as $tag}
-        <a href={concat( '/tags/view/', $tag.url )|ezurl}><span class="label label-default"><i class="fa fa-tag"></i> {$tag.keyword|wash}</span></a>{delimiter} {/delimiter}
+        <a href={concat( '/tags/view/', $tag.url )|explode('tags/view/tags/view')|implode('tags/view')|ezurl}><span class="label label-default"><i class="fa fa-tag"></i> {$tag.keyword|wash}</span></a>{delimiter} {/delimiter}
     {/foreach}
 {/if}
