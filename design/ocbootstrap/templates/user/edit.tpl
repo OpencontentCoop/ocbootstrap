@@ -44,7 +44,11 @@
 
 <div class="buttonblock">
 <input class="button" type="submit" name="EditButton" value="{'Edit profile'|i18n('design/ocbootstrap/user/edit')}" />
-<input class="button" type="submit" name="ChangePasswordButton" value="{'Change password'|i18n('design/ocbootstrap/user/edit')}" />
+{if ezmodule( 'userpaex' )}
+  <a class="button btn btn-info" href="{concat("userpaex/password/",$userID)|ezurl(no)}">{'Change password'|i18n('design/ocbootstrap/user/edit')}</a>
+{else}
+  <input class="button" type="submit" name="ChangePasswordButton" value="{'Change password'|i18n('design/ocbootstrap/user/edit')}" />
+{/if}
 </div>
 
 </div>
