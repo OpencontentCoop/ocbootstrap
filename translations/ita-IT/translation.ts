@@ -524,6 +524,10 @@
         <translation>Modifica</translation>
     </message>
     <message>
+        <source>Create</source>
+        <translation>Crea</translation>
+    </message>
+    <message>
         <source>Edit &lt;%object_name&gt; (%class_name)</source>
         <translation>Modifica &lt;%object_name&gt; (%class_name)</translation>
     </message>
@@ -1847,6 +1851,10 @@
     <message>
         <source>Search text</source>
         <translation type="unfinished">Parole da cercare</translation>
+    </message>
+    <message>
+        <source>Languages</source>
+        <translation>Lingue</translation>
     </message>
 </context>
 <context>

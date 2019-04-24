@@ -1,3 +1,7 @@
 design/ocbootstrap/.sass-cache
 *.scssc
 app.css
+
+design/ocbootstrap4/bundle
+design/ocbootstrap4/node_modules
+design/ocbootstrap4/package-lock.json
