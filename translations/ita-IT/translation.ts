@@ -23,6 +23,62 @@
         <source>Discard</source>
         <translation>Annulla</translation>
     </message>
+    <message>
+        <source>At least</source>
+        <translation>Almeno</translation>
+    </message>
+    <message>
+        <source>characters</source>
+        <translation>caratteri</translation>
+    </message>
+    <message>
+        <source>one letter</source>
+        <translation>una lettera</translation>
+    </message>
+    <message>
+        <source>one capital letter</source>
+        <translation>una lettera maiuscola</translation>
+    </message>
+    <message>
+        <source>one number</source>
+        <translation>un numero</translation>
+    </message>
+    <message>
+        <source>mandatory</source>
+        <translation>obbligatorio</translation>
+    </message>
+    <message>
+        <source>recommended</source>
+        <translation>consigliato</translation>
+    </message>
+    <message>
+        <source>Show/hide password</source>
+        <translation>Mostra/nascondi password</translation>
+    </message>
+    <message>
+        <source>Evaluation of complexity: bad</source>
+        <translation>Valutazione della complessità: pessima</translation>
+    </message>
+    <message>
+        <source>Evaluation of complexity: very weak</source>
+        <translation>Valutazione della complessità: molto debole</translation>
+    </message>
+    <message>
+        <source>Evaluation of complexity: weak</source>
+        <translation>Valutazione della complessità: debole</translation>
+    </message>
+    <message>
+        <source>Evaluation of complexity: good</source>
+        <translation>Valutazione della complessità: buona</translation>
+    </message>
+    <message>
+        <source>Evaluation of complexity: very good</source>
+        <translation>Valutazione della complessità: molto buona</translation>
+    </message>
+    <message>
+        <source>Evaluation of complexity: excellent</source>
+        <translation>Valutazione della complessità: ottima</translation>
+    </message>
 </context>
 <context>
     <name>design/admin/content/datatype</name>
