@@ -1,0 +1,47 @@
+
+.card-children .card-columns {
+  @include media-breakpoint-only(sm) {
+    column-count: 2;
+  }
+  @include media-breakpoint-only(md) {
+    column-count: 2;
+  }
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+}
+
+.footer {
+  @include font-size(.875rem);
+  text-align: center;
+  a {
+    font-weight: 600;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+  p {
+    margin-bottom: 0;
+  }
+  @include media-breakpoint-up(sm) {
+    text-align: left;
+  }
+}
+.footer-links {
+  padding-left: 0;
+  margin-bottom: 1rem;
+
+  li {
+    display: inline-block;
+
+    + li {
+      margin-left: 1rem;
+    }
+  }
+}
