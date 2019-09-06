@@ -1,8 +1,10 @@
 {ezscript_require(array(
   "password-score/password-score.js",
   "password-score/password-score-options.js",
-  "password-score/bootstrap-strength-meter.js"
+  "password-score/bootstrap-strength-meter.js",
+  "password-score/password.js"
 ))}
+{ezcss_require(array('password-score/password.css'))}
 
 <div class="row">
 
@@ -53,7 +55,7 @@
               {if or($newPasswordNotMatch,$newPasswordNotValidate)}*{/if}
               <label>Nuova password</label>
               <input id="pwd-input" type="password" class="form-control" name="newPassword" size="11" value="{$newPassword}" />
-              <span id="pwd-text"></span>
+              {include uri='design:parts/password_meter.tpl'}
           </div>
           <div class="col-md-6">
               {if or($newPasswordNotMatch,$newPasswordNotValidate)}*{/if}
@@ -75,20 +77,27 @@
 
 </form>
 
+{literal}
 <script type="text/javascript">
-  $(document).ready(function() {ldelim}
-    $('#pwd-input').strengthMeter('text', {ldelim}
-      container: $('#pwd-text'),
-      hierarchy: {ldelim}
-        '0':  ['text-danger', 'Valutazione della complessità: pessima'],
-        '10': ['text-danger', 'Valutazione della complessità: molto debole'],
-        '20': ['text-warning', 'Valutazione della complessità: debole'],
-        '30': ['text-info', 'Valutazione della complessità: buona'],
-        '40': ['text-success', 'Valutazione della complessità: molto buona'],
-        '50': ['text-success', 'Valutazione della complessità: ottima']]
-        {rdelim}
-      {rdelim});
-    {rdelim});
+  $(document).ready(function() {
+    $('#pwd-input').password({
+      minLength:{/literal}{ezini('UserSettings', 'MinPasswordLength')}{literal},
+        message: "{/literal}{'Show/hide password'|i18n('ocbootstrap')}{literal}",
+        hierarchy: {
+            '0': ['text-danger', "{/literal}{'Evaluation of complexity: bad'|i18n('ocbootstrap')}{literal}"],
+            '10': ['text-danger', "{/literal}{'Evaluation of complexity: very weak'|i18n('ocbootstrap')}{literal}"],
+            '20': ['text-warning', "{/literal}{'Evaluation of complexity: weak'|i18n('ocbootstrap')}{literal}"],
+            '30': ['text-info', "{/literal}{'Evaluation of complexity: good'|i18n('ocbootstrap')}{literal}"],
+            '40': ['text-success', "{/literal}{'Evaluation of complexity: very good'|i18n('ocbootstrap')}{literal}"],
+            '50': ['text-success', "{/literal}{'Evaluation of complexity: excellent'|i18n('ocbootstrap')}{literal}"]
+        }
+    });
+    $('[name="confirmPassword"]').password({
+        strengthMeter:false,
+        message: "{/literal}{'Show/hide password'|i18n('ocbootstrap')}{literal}"
+    });
+  });
 </script>
+{/literal}
 
 </div>
