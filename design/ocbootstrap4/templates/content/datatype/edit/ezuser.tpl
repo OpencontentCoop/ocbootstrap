@@ -8,7 +8,7 @@
 {/if}
 
 {* Username. *}
-{if and(is_set($attribute.content.has_stored_login), $attribute.content.has_stored_login)}
+{if and( and(is_set($attribute.content.has_stored_login), $attribute.content.has_stored_login), $attribute.content.login|ne(''), $attribute.object.main_node_id|ne(''))}
     <p><input id="{$id_base}_login" autocomplete="off" type="text"
               name="{$attribute_base}_data_user_login_{$attribute.id}_stored_login" class="{$html_class}"
               value="{$attribute.content.login|wash()}" disabled="disabled"/></p>
@@ -38,6 +38,7 @@
     </p>
 {/if}
 
+<div class="{if and($attribute.object.current_version|ne(1), $attribute.content.has_stored_login, $attribute.content.login|ne(''))}hide{/if}">
 {* Password #1. *}
 <p>
     <input autocomplete="off" placeholder="{'Password'|i18n( 'design/standard/content/datatype' )}"
@@ -45,7 +46,7 @@
            class="{$html_class} ezcc-{$attribute.object.content_class.identifier} ezcca-{$attribute.object.content_class.identifier}_{$attribute.contentclass_attribute_identifier}"
            type="password" name="{$attribute_base}_data_user_password_{$attribute.id}"
            value="{if is_set($attribute.content.original_password)}{$attribute.content.original_password}{else}{if and(is_set($attribute.content.has_stored_login),$attribute.content.has_stored_login)}_ezpassword{/if}{/if}"/>
-    <span id="{$id_base}_help" style="font-size: .8em"></span>
+    {include uri='design:parts/password_meter.tpl'}
 </p>
 {* Password #2. *}
 <p><input autocomplete="off" placeholder="{'Confirm password'|i18n( 'design/standard/content/datatype' )}"
@@ -54,26 +55,37 @@
           type="password" name="{$attribute_base}_data_user_password_confirm_{$attribute.id}"
           value="{if is_set($attribute.content.original_password_confirm)}{$attribute.content.original_password_confirm}{else}{if and(is_set($attribute.content.has_stored_login),$attribute.content.has_stored_login)}_ezpassword{/if}{/if}"/>
 </p>
-
+</div>
+{if or($attribute.object.current_version|eq(1), $attribute.content.has_stored_login|not(), $attribute.content.login|eq(''))}
 {ezscript_require(array(
-  "password-score/password-score.js",
-  "password-score/password-score-options.js",
-  "password-score/bootstrap-strength-meter.js"
+    "password-score/password-score.js",
+    "password-score/password-score-options.js",
+    "password-score/bootstrap-strength-meter.js",
+    "password-score/password.js"
 ))}
+{ezcss_require(array('password-score/password.css'))}
+{literal}
 <script type="text/javascript">
-    $(document).ready(function () {ldelim}
-        $('#{$id_base}_password').strengthMeter('text', {ldelim}
-            container: $('#{$id_base}_help'),
-            hierarchy: {ldelim}
-                '0': ['text-danger', 'Valutazione della complessità: pessima'],
-                '10': ['text-danger', 'Valutazione della complessità: molto debole'],
-                '20': ['text-warning', 'Valutazione della complessità: debole'],
-                '30': ['text-info', 'Valutazione della complessità: buona'],
-                '40': ['text-success', 'Valutazione della complessità: molto buona'],
-                '50': ['text-success', 'Valutazione della complessità: ottima']
-                {rdelim}
-            {rdelim});
-        {rdelim});
+    $(document).ready(function() {
+        $('#{/literal}{$id_base}{literal}_password').password({
+            minLength:{/literal}{ezini('UserSettings', 'MinPasswordLength')}{literal},
+            message: "{/literal}{'Show/hide password'|i18n('ocbootstrap')}{literal}",
+            hierarchy: {
+                '0': ['text-danger', "{/literal}{'Evaluation of complexity: bad'|i18n('ocbootstrap')}{literal}"],
+                '10': ['text-danger', "{/literal}{'Evaluation of complexity: very weak'|i18n('ocbootstrap')}{literal}"],
+                '20': ['text-warning', "{/literal}{'Evaluation of complexity: weak'|i18n('ocbootstrap')}{literal}"],
+                '30': ['text-info', "{/literal}{'Evaluation of complexity: good'|i18n('ocbootstrap')}{literal}"],
+                '40': ['text-success', "{/literal}{'Evaluation of complexity: very good'|i18n('ocbootstrap')}{literal}"],
+                '50': ['text-success', "{/literal}{'Evaluation of complexity: excellent'|i18n('ocbootstrap')}{literal}"]
+            }
+        });
+        $('#{/literal}{$id_base}{literal}_password_confirm').password({
+            strengthMeter:false,
+            message: "{/literal}{'Show/hide password'|i18n('ocbootstrap')}{literal}"
+        });
+    });
 </script>
+{/literal}
+{/if}
 
 {/default}

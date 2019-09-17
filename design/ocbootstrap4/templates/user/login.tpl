@@ -53,3 +53,15 @@
 <div class="text-center mb-5">
     <a href={if ezmodule( 'userpaex' )}{'/userpaex/forgotpassword'|ezurl}{else}{"/user/forgotpassword"|ezurl}{/if}>{"Forgot your password?"|i18n( "design/ocbootstrap/user/login" )}</a>
 </div>
+
+{ezscript_require(array("password-score/password.js"))}
+{literal}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('[name="Password"]').password({
+            strengthMeter:false,
+            message: "{/literal}{'Show/hide password'|i18n('ocbootstrap')}{literal}",
+        });
+    });
+</script>
+{/literal}
