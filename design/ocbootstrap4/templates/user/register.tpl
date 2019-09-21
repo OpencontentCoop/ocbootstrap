@@ -36,8 +36,10 @@
                 <div class="row">
                     <div class="col-md-12">
                         {foreach $content_attributes as $attribute}
+                            {if $attribute.contentclass_attribute.category|eq('hidden')}<div style="display: none">{/if}
                             <input type="hidden" name="ContentObjectAttribute_id[]" value="{$attribute.id}"/>
                             <p>{attribute_edit_gui attribute=$attribute html_class="form-control form-control-lg" placeholder=$attribute.contentclass_attribute.name}</p>
+                            {if $attribute.contentclass_attribute.category|eq('hidden')}</div>{/if}
                         {/foreach}
                     </div>
                 </div>
