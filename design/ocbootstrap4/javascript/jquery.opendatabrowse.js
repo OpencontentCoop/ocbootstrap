@@ -20,7 +20,32 @@
                 'options': {}
             },
             initOnCreate: true,
-            useTooltip: false
+            useTooltip: false,
+            i18n:{
+                clickToClose: "Clicca per chiudere la finestra",
+                clickToOpenSearch: "Clicca per aprire il motore di ricerca",
+                search: "Cerca",
+                clickToBrowse: "Clicca per navigare nell'alberatura dei contenuti",
+                browse: "Naviga",
+                createNew: "Crea nuovo",
+                create: "Crea",
+                allContents: "Tutti i contenuti",
+                clickToBrowseParent: "Clicca per accedere al ramo superiore dell'alberatura",
+                noContents: "Nessun contenuto",
+                back: "Torna indietro",
+                goToPreviousPage: "Vai alla pagina precedente",
+                goToNextPage: "Vai alla pagina successiva",
+                clickToBrowseChildren: "Clicca per accedere agli elementi contenuti",
+                clickToPreview: "Visualizza l'anteprima contenuto",
+                preview: "Anteprima",
+                closePreview: "Chiudi anteprima",
+                addItem: "Aggiungi",
+                selectedItems: "Elementi selezionati",
+                removeFromSelection: "Rimuovi dalla selezione",
+                addToSelection: "Aggiungi alla selezione",
+                store: "Salva",
+                storeLoading: "Salvataggio in corso..."
+            }
         };
 
     function Plugin(element, options) {
@@ -152,7 +177,7 @@
             var panelHeading = $('<div class="card-header clearfix" style="padding: 5px 15px 0"></div>').appendTo(panel);
 
             if (self.settings.addCloseButton) {
-                var closeButton = $('<a class="btn btn-lg btn-link pull-right" href="#" data-toggle="tooltip" title="Clicca per chiudere la finestra"><span class="glyphicon glyphicon-remove"></span></a>');
+                var closeButton = $('<a class="btn btn-lg btn-link pull-right" href="#" data-toggle="tooltip" title="'+self.settings.i18n.clickToClose+'"><span class="glyphicon glyphicon-remove"></span></a>');
                 if (self.settings.useTooltip) closeButton.tooltip();
                 closeButton.bind('click', function (e) {
                     if (isCreate){
@@ -172,7 +197,7 @@
             }
 
             if (isTree || isCreate) {
-                var searchButton = $('<a class="btn btn-lg btn-link pull-right" href="#" data-toggle="tooltip" title="Clicca per aprire il motore di ricerca"><span class="glyphicon glyphicon-search"></span></a>');
+                var searchButton = $('<a class="btn btn-lg btn-link pull-right" href="#" data-toggle="tooltip" title="'+self.settings.i18n.clickToOpenSearch+'"><span class="glyphicon glyphicon-search"></span></a>');
                 if (self.settings.useTooltip) searchButton.tooltip();
                 searchButton.bind('click', function (e) {
                     self.resetBrowseParameters();
@@ -183,7 +208,7 @@
             }
 
             if (isSearch || isCreate){
-                var treeButton = $('<a class="btn btn-lg btn-link pull-right" href="#" data-toggle="tooltip" title="Clicca per navigare nell\'alberatura dei contenuti"><span class="glyphicon glyphicon-th-list"></span></a>');
+                var treeButton = $('<a class="btn btn-lg btn-link pull-right" href="#" data-toggle="tooltip" title="'+self.settings.i18n.clickToBrowse+'"><span class="glyphicon glyphicon-th-list"></span></a>');
                 if (self.settings.useTooltip){
                     treeButton.tooltip();
                 }
@@ -294,7 +319,7 @@
                             self.rootNode = data.content;
                         }
                         if (self.allowUpBrowse(data.content)){
-                            var back = $('<a class="browse-back" href="#" data-node_id="'+data.content.parent_node_id+'" data-toggle="tooltip" title="Clicca per accedere al ramo superiore dell\'alberatura"><span class="glyphicon glyphicon-circle-arrow-up"></span> '+itemName+'</a>').prependTo(name);
+                            var back = $('<a class="browse-back" href="#" data-node_id="'+data.content.parent_node_id+'" data-toggle="tooltip" title="'+self.settings.i18n.clickToBrowseParent+'"><span class="glyphicon glyphicon-circle-arrow-up"></span> '+itemName+'</a>').prependTo(name);
                             if (self.settings.useTooltip) back.tooltip();
                             back.bind('click', function(e){
                                 self.browseParameters.subtree = $(this).data('node_id');
@@ -310,7 +335,7 @@
                     }
                 });
             }else{
-                panelHeading.append('<h5 style="line-height: 2.5em;">Nodi di livello principale</h5>');
+                panelHeading.append('<h5 style="line-height: 2.5em;">'+self.settings.i18n.allContents+'</h5>');
             }
 
             self.showSpinner();
@@ -335,8 +360,8 @@
                         list.appendTo(panelContent);
 
                     }else{
-                        var nullContent = $('<div class="card-body">Nessun contenuto. </div>');
-                        var goBack = $('<a href="#"><small>Torna indietro</small></a>');
+                        var nullContent = $('<div class="card-body">'+self.settings.i18n.noContents+' </div>');
+                        var goBack = $('<a href="#"><small>'+self.settings.i18n.back+'</small></a>');
                         goBack.bind('click', function(e){
                             panelHeading.find('.browse-back').trigger('click');
                             e.preventDefault();
@@ -346,7 +371,7 @@
 
                     if(data.content.offset > 0){
                         var prevPaginationOffset = self.browseParameters.offset - self.browseParameters.limit;
-                        var prevButton = $('<a href="#" class="pull-left" data-toggle="tooltip" title="Vai alla pagina precedente"><span class="glyphicon glyphicon-chevron-left"></span></a>')
+                        var prevButton = $('<a href="#" class="pull-left" data-toggle="tooltip" title="'+self.settings.i18n.goToPreviousPage+'"><span class="glyphicon glyphicon-chevron-left"></span></a>')
                             .bind('click', function(e){
                                 self.browseParameters.offset = prevPaginationOffset;
                                 self.buildTreeSelect();
@@ -359,7 +384,7 @@
 
                     if(data.content.total_count > data.content.list.length + self.browseParameters.offset){
                         var nextPaginationOffset = self.browseParameters.offset + self.browseParameters.limit;
-                        var nextButton = $('<a href="#" class="pull-right" data-toggle="tooltip" title="Vai alla pagina successiva"><span class="glyphicon glyphicon-chevron-right"></span></a>')
+                        var nextButton = $('<a href="#" class="pull-right" data-toggle="tooltip" title="'+self.settings.i18n.goToNextPage+'"><span class="glyphicon glyphicon-chevron-right"></span></a>')
                             .bind('click', function(e){
                                 self.browseParameters.offset = nextPaginationOffset;
                                 self.buildTreeSelect();
@@ -382,12 +407,12 @@
             $(this.browserContainer).html('');
             var panel = $('<div class="card"></div>').appendTo($(this.browserContainer));
             var panelHeading = self.buildPanelHeader(panel, false, true, false);
-            panelHeading.append('<h5 style="line-height: 2.5em;">Cerca</h5>');
+            panelHeading.append('<h5 style="line-height: 2.5em;">'+self.settings.i18n.search+'</h5>');
 
             var inputGroup = $('<div class="input-group"></div>');
             this.searchInput = $('<input class="form-control" type="text" placeholder="" value=""/>').appendTo(inputGroup);
             var inputGroupButtonContainer = $('<div class="input-group-append"></div>');
-            var searchButton = $('<button type="button" class="btn btn-outline-primary">Cerca</button>').appendTo(inputGroupButtonContainer);
+            var searchButton = $('<button type="button" class="btn btn-outline-primary">'+self.settings.i18n.search+'</button>').appendTo(inputGroupButtonContainer);
             inputGroupButtonContainer.appendTo(inputGroup);
             inputGroup.appendTo(panel);
             this.searchInput.focus();
@@ -416,7 +441,7 @@
             $(this.browserContainer).html('');
             var panel = $('<div class="card"></div>').appendTo($(this.browserContainer));
             var panelHeading = self.buildPanelHeader(panel, false, false, true);
-            panelHeading.append('<h5 style="line-height: 2.5em;">Crea nuovo</h5>');
+            panelHeading.append('<h5 style="line-height: 2.5em;">'+self.settings.i18n.createNew+'</h5>');
 
             var params = {
                 class: classIdentifier
@@ -567,12 +592,12 @@
                             });
                             list.appendTo(panelContent);
                         }else{
-                            panelContent.html($('<div class="card-body">Nessun contenuto</div>'));
+                            panelContent.html($('<div class="card-body">'+self.settings.i18n.noContents+'</div>'));
                         }
 
                         if(self.browseParameters.offset > 0){
                             var prevPaginationOffset = self.browseParameters.offset - self.browseParameters.limit;
-                            var prevButton = $('<a href="#" class="pull-left" data-toggle="tooltip" title="Vai alla pagina precedente"><span class="glyphicon glyphicon-chevron-left"></span></a>')
+                            var prevButton = $('<a href="#" class="pull-left" data-toggle="tooltip" title="'+self.settings.i18n.goToPreviousPage+'"><span class="glyphicon glyphicon-chevron-left"></span></a>')
                                 .bind('click', function(e){                                    
                                     self.browseParameters.offset = prevPaginationOffset;
                                     var query = self.buildQuery();
@@ -585,7 +610,7 @@
                         }
 
                         if(data.nextPageQuery){                            
-                            var nextButton = $('<a href="#" class="pull-right" data-toggle="tooltip" title="Vai alla pagina successiva"><span class="glyphicon glyphicon-chevron-right"></span></a>')
+                            var nextButton = $('<a href="#" class="pull-right" data-toggle="tooltip" title="'+self.settings.i18n.goToNextPage+'"><span class="glyphicon glyphicon-chevron-right"></span></a>')
                                 .bind('click', function(e){                                    
                                     self.browseParameters.offset += self.browseParameters.limit;
                                     self.doSearch(data.nextPageQuery, panelContent, panelFooter);
@@ -611,7 +636,7 @@
         makeListItem: function(item){        
             var self = this;
 
-            var name = $('<a data-toggle="tooltip" title="Clicca per accedere agli elementi contenuti" href="#" data-node_id="'+item.node_id+'" style="display:table-cell;"> '+item.name+ ' <small>' +item.class_name + '</small></a>');
+            var name = $('<a data-toggle="tooltip" title="'+self.settings.i18n.clickToBrowseChildren+'" href="#" data-node_id="'+item.node_id+'" style="display:table-cell;"> '+item.name+ ' <small>' +item.class_name + '</small></a>');
             if (self.settings.useTooltip) name.tooltip();
             name.bind('click', function(e){
                 self.browseParameters.subtree = $(this).data('node_id');
@@ -621,14 +646,14 @@
             });
             var listItem = $('<li class="list-group-item"></li>');
             if (typeof $.fn.alpaca != 'undefined') {
-                var detail = $('<a href="#" data-object_id="' + item.contentobject_id + '" style="display:table-cell;" class="btn btn-xs btn-info pull-right" data-toggle="tooltip" title="Visualizza l\'anteprima contenuto"><small>ANTEPRIMA</small></a>');
+                var detail = $('<a href="#" data-object_id="' + item.contentobject_id + '" style="display:table-cell;" class="btn btn-xs btn-info pull-right" data-toggle="tooltip" title="'+self.settings.i18n.clickToPreview+'"><small>'+self.settings.i18n.preview+'</small></a>');
                 if (self.settings.useTooltip) detail.tooltip();
                 detail.bind('click', function (e) {
                     var objectId = $(this).data('object_id');
                     var panelContent = $(this).closest('.list-wrapper');
                     var previewContainer = $('<div class="card-body bg-light"></div>');
 
-                    var closePreviewButton = $('<a class="btn btn-xs btn-info pull-right" href="#">CHIUDI ANTEPRIMA</a>');
+                    var closePreviewButton = $('<a class="btn btn-xs btn-info pull-right" href="#">'+self.settings.i18n.closePreview+'</a>');
                     closePreviewButton.bind('click', function (e) {
                         panelContent.show();
                         previewContainer.remove();
@@ -658,7 +683,7 @@
             var input = '';
             if (self.isSelectable(item)){
                 if (!self.isInSelection(item)){
-                    input = $('<span data-toggle="tooltip" title="Aggiungi alla selezione" class="glyphicon glyphicon-unchecked pull-left" data-selection="'+item.contentobject_id+'" style="cursor:pointer;'+self.iconStyle+'"></span>');
+                    input = $('<span data-toggle="tooltip" title="'+self.settings.i18n.addToSelection+'" class="glyphicon glyphicon-unchecked pull-left" data-selection="'+item.contentobject_id+'" style="cursor:pointer;'+self.iconStyle+'"></span>');
                     input.data('item', item);
                     input.bind('click', function(e){
                         e.preventDefault();
@@ -701,14 +726,14 @@
             this.selectionContainer.html('');
             if (this.selection.length > 0){
                 var panel = $('<div class="card border-primary mt-2 mb-2"></div>').appendTo($(this.selectionContainer));
-                var panelHeading = $('<div class="card-header text-white bg-primary"><h5>Elementi selezionati</h5></div>').appendTo(panel);
+                var panelHeading = $('<div class="card-header text-white bg-primary"><h5>'+self.settings.i18n.selectedItems+'</h5></div>').appendTo(panel);
                 var panelContent = $('<div class="list-wrapper"></div>').appendTo(panel);
                 var list = $('<ul class="list-group" style="margin-bottom:0"></ul>');
                 
                 $.each(this.selection, function(){
                     var name = '<span style="display: table-cell;">' + this.name + ' <small>' +this.class_name + '</small></span>';
                     var listItem = $('<li class="list-group-item"></li>');                        
-                    var input = $('<span class="glyphicon glyphicon-remove pull-left" data-toggle="tooltip" title="Rimuovi dalla selezione" style="cursor:pointer;'+self.iconStyle+'"></span>');
+                    var input = $('<span class="glyphicon glyphicon-remove pull-left" data-toggle="tooltip" title="'+self.settings.i18n.removeFromSelection+'" style="cursor:pointer;'+self.iconStyle+'"></span>');
                     input.data('item', this);
                     input.bind('click', function(e){
                         self.removeFromSelection($(this).data('item'));

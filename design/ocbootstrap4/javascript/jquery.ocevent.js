@@ -1,283 +1,278 @@
-(function ($) {
+;(function ($, window, document, undefined) {
 
-    const ocevent = {
+    'use strict';
 
-        attributeId: null,
-        container: null,
-        fields: {
-            startDate: null,
-            endDate: null,
-            recurrence: null,
-            interval: null,
-            count: null,
-            until: null,
-        },
-        maxDate: moment().add(30, 'years'),
-        endpoint: null,
-        rule: null,
+    var pluginName = 'oceventgui',
+        defaults = {
+            endpoint: '/',
+            local: 'it',
+            maxDate: moment(2524607999000),
+            dateFormat: 'DD/MM/YYYY HH:mm'
+        };
 
-        hideAll: function () {
-            ocevent.container.find('.interval-container, .weekly-container, .monthly-container, .untiltype-container').addClass('hide');
-        },
+    function Plugin(element, options) {
+        this.settings = $.extend({}, defaults, options);
+        this.container = $(element);
+        this.fields = {
+            startDate: this.container.find('.startDate'),
+            endDate: this.container.find('.endDate'),
+            recurrence: this.container.find('.recurrence'),
+            interval: this.container.find('.interval'),
+            until: this.container.find('.until'),
+        };
 
-        onRecurrenceChange: function () {
-            ocevent.fields.recurrence.on('change', function () {
-                ocevent.showByRecurenceValue();
+        var plugin = this;
+        this.calendar = new FullCalendar.Calendar(plugin.container.find('.calendar')[0], {
+            plugins: [ 'dayGrid', 'list' ],
+            header: {
+                left: 'prev,next',
+                center: 'title',
+                right: 'today'
+                //right: 'dayGridDay,dayGridWeek,dayGridMonth'
+            },
+            height: 'parent',
+            locale: $.opendataTools.settings('locale'),
+            eventLimit: false,
+            defaultView: 'dayGridMonth',
+            windowResize: function (view) {
+                var windowWidth = $(window).width();
+                if (windowWidth < 800) {
+                    this.changeView('listWeek');
+                } else {
+                    this.changeView('dayGridMonth');
+                }
+            },
+            eventClick: function (event, element) {
+                plugin.onCalendarEventClick(event, element);
+            },
+            events: function (info, successCallback, failureCallback) {
+                var events = plugin.container.find('[data-value="events"]').val() || '[]';
+                successCallback(JSON.parse(events));
+            }
+        });
+
+        this.modal = this.container.find('.modal');
+        this.modal.find("#starts-at, #ends-at").datetimepicker({
+            locale: $.opendataTools.settings('locale')
+        });
+
+        this.init();
+    }
+
+    $.extend(Plugin.prototype, {
+        init: function () {
+            var plugin = this;
+
+            plugin.fields.startDate.datetimepicker({
+                locale: plugin.settings.locale,
+                defaultDate: plugin.fields.startDate.data('value') !== '' ? moment(plugin.fields.startDate.data('value')) : moment().set('hour', 10).set('minute', 0)
+            });
+
+            plugin.fields.endDate.datetimepicker({
+                locale: plugin.settings.locale,
+                defaultDate: plugin.fields.endDate.data('value') !== '' ? moment(plugin.fields.endDate.data('value')) : moment().set('hour', 10).set('minute', 0)
+            });
+
+            plugin.fields.until.datetimepicker({
+                locale: plugin.settings.locale,
+                format: 'L',
+                maxDate: plugin.settings.maxDate,
+                defaultDate: plugin.fields.until.data('value') !== '' ? moment(plugin.fields.until.data('value')) : moment().add(6, 'months')
+            });
+
+            plugin.fields.recurrence.on('change', function () {
+                plugin.showByRecurenceValue();
+            });
+
+            $.each(plugin.fields, function () {
+                $(this).on('change', function () {
+                    plugin.updateEvents();
+                });
+            });
+            plugin.fields.startDate.on('dp.change', function () {
+                plugin.updateEvents();
+            });
+            plugin.fields.endDate.on('dp.change', function () {
+                plugin.updateEvents();
+            });
+            plugin.fields.until.on('dp.change', function () {
+                plugin.updateEvents();
+            });
+            plugin.container.find('input[type=checkbox]').on('change', function () {
+                plugin.updateEvents();
+            });
+
+            plugin.showByRecurenceValue();
+            plugin.renderCalendar();
+            $('body').on('shown.bs.tab', function (e) {
+                plugin.calendar.render();
             });
         },
 
+        hideOptionsFields: function () {
+            this.container.find('.interval-container, .weekly-container, .monthly-container, .untiltype-container, .block-calendar-default').addClass('hide');
+        },
+
         showByRecurenceValue: function () {
-            ocevent.hideAll();
-            switch (ocevent.fields.recurrence.val()) {
+            var plugin = this;
+            plugin.hideOptionsFields();
+            switch (plugin.fields.recurrence.val()) {
                 case 'none':
                     break;
-
-                // Daily
-                case '3':
-                    ocevent.container.find('.interval-container, .untiltype-container').removeClass('hide');
+                case '3': // Daily
+                    plugin.container.find('.interval-container, .untiltype-container, .block-calendar-default').removeClass('hide');
                     break;
-
-                // Weekly
-                case '2':
-                    ocevent.container.find('.interval-container, .weekly-container, .untiltype-container').removeClass('hide');
+                case '2': // Weekly
+                    plugin.container.find('.interval-container, .weekly-container, .untiltype-container, .block-calendar-default').removeClass('hide');
                     break;
-
-                // Monthly
-                case '1':
-                    ocevent.container.find('.interval-container, .monthly-container, .untiltype-container').removeClass('hide');
+                case '1': // Monthly
+                    plugin.container.find('.interval-container, .monthly-container, .untiltype-container, .block-calendar-default').removeClass('hide');
                     break;
-                default:
-                    console.log('error');
             }
         },
 
-        update: function () {
-            switch (ocevent.fields.recurrence.val()) {
-                case 'none':
-                    ocevent.hideAll();
+        parseDateValue: function(value){
+            return moment(value, this.settings.dateFormat).toDate();
+        },
 
-                    //pattern = 'FREQ=DAILY;INTERVAL=1;COUNT=1;'
-                    ocevent.rule = new RRule({
-                        dtstart: moment(ocevent.fields.startDate.val(), 'DD/MM/YYYY HH:mm').toDate(),
+        getCurrentRule: function () {
+            var plugin = this;
+
+            var start = plugin.fields.startDate.data("DateTimePicker").date();
+            var freq = plugin.fields.recurrence.val();
+            var interval = plugin.fields.interval.val();
+            var until = plugin.fields.until.val().length > 0 ? plugin.fields.until.data("DateTimePicker").date() : plugin.settings.maxDate;
+
+            switch (freq) {
+                case 'none':
+                    plugin.hideOptionsFields();
+
+                    return new RRule({
+                        dtstart: plugin.parseDateValue(start),
                         freq: '3',
                         interval: '1',
                         count: '1'
                     });
-                    this.generateData();
-                    break;
 
-                // Daily
-                case '3':
-                    ocevent.rule = new RRule({
-                        dtstart: moment(ocevent.fields.startDate.val(), 'DD/MM/YYYY HH:mm').toDate(),
-                        freq: ocevent.fields.recurrence.val(),
-                        interval: ocevent.fields.interval.val(),
-                        until: ocevent.fields.until.val() !== '' ? moment(ocevent.fields.until.val(), 'DD/MM/YYYY').toDate() : ocevent.maxDate.toDate()
-                    });
-                    this.generateData();
-                    break;
+                case '3': // Daily
+                case '1': // Monthly
 
-                // Weekly
-                case '2':
-                    ocevent.rule = new RRule({
-                        dtstart: moment(ocevent.fields.startDate.val(), 'DD/MM/YYYY HH:mm').toDate(),
-                        freq: ocevent.fields.recurrence.val(),
-                        interval: ocevent.fields.interval.val(),
-                        until: ocevent.fields.until.val() !== '' ? moment(ocevent.fields.until.val(), 'DD/MM/YYYY').toDate() : ocevent.maxDate.toDate(),
-                        byweekday: ocevent.getWeeklyValues()
+                    return new RRule({
+                        dtstart: plugin.parseDateValue(start),
+                        freq: freq,
+                        interval: interval,
+                        until: plugin.parseDateValue(until)
                     });
-                    this.generateData();
-                    break;
 
-                // Monthly
-                case '1':
-                    ocevent.rule = new RRule({
-                        dtstart: moment(ocevent.fields.startDate.val(), 'DD/MM/YYYY HH:mm').toDate(),
-                        freq: ocevent.fields.recurrence.val(),
-                        interval: ocevent.fields.interval.val(),
-                        until: ocevent.fields.until.val() !== '' ? moment(ocevent.fields.until.val(), 'DD/MM/YYYY').toDate() : ocevent.maxDate.toDate()
+                case '2': // Weekly
+
+                    return new RRule({
+                        dtstart: plugin.parseDateValue(start),
+                        freq: freq,
+                        interval: interval,
+                        until: plugin.parseDateValue(until),
+                        byweekday: plugin.getWeeklyValues()
                     });
-                    this.generateData();
-                    break;
-                default:
-                    console.log('error');
             }
+
+            return new RRule();
         },
 
-        generateData: function () {
-
-            var input = {
-                startDateTime: moment(ocevent.fields.startDate.val(), 'DD/MM/YYYY HH:mm').format(),
-                endDateTime: moment(ocevent.fields.endDate.val(), 'DD/MM/YYYY HH:mm').format(),
-                freq: ocevent.fields.recurrence.val(),
-                interval: ocevent.fields.interval.val(),
-                until: moment(ocevent.fields.until.val(), 'DD/MM/YYYY').format(),
-                byweekday: ocevent.getWeeklyValues(),
-                timeZone: {
-                    name: 'W. Europe Standard Time',
-                    //offset: '+02:00'
-                    offset: moment(ocevent.fields.startDate.val(), 'DD/MM/YYYY HH:mm').format('Z')
-                },
-                recurrencePattern: this.rule.toString()
-            };
-
-            $('#events_input').val(JSON.stringify(input));
-            $.ajax({
-                type: "POST",
-                url: ocevent.endpoint,
-                data: input,
-                success: function (data) {
-                    $('#events_text').val(data.text);
-                    $('#events_recurrences').val(JSON.stringify(data.recurrences));
-
-                    ocevent.calendar.fullCalendar('removeEvents');
-                    ocevent.calendar.fullCalendar('addEventSource', data.recurrences);
-                    if (data.recurrences.length > 0) {
-                        ocevent.calendar.fullCalendar('gotoDate', moment(data.recurrences[0].start));
-                    }
-                }
-            });
-        },
-
-        getWeeklyValues: function () {
+        getWeeklyValues: function() {
             return this.container.find('input[type=checkbox]:checked').map(function (_, el) {
                 return $(el).val();
             }).get();
         },
 
-        bindChange: function () {
-            this.container.find("input, select").on('change', function () {
-                ocevent.update();
-            });
+        updateEvents: function () {
+            var plugin = this;
 
-            $('.ocevent-calendar').on('dp.change', function (e) {
-                ocevent.update();
-            })
-        },
-
-        initCalendar: function () {
-            var self = this;
-            var events = [];
-            if (this.$events.val() !== '') {
-                events = JSON.parse(this.$events.val());
-            }
-
-            this.calendar = this.container.find('.calendar');
-            // Calendar
-            this.calendar.fullCalendar({
-                locale: 'it',
-                defaultDate: moment(),
-                header: {
-                    left: 'title',
-                    center: '',
-                    right: 'prev,next'
+            var start = plugin.fields.startDate.data("DateTimePicker").date();
+            var end = plugin.fields.endDate.data("DateTimePicker").date();
+            var until = plugin.fields.until.data("DateTimePicker").date();
+            var inputData = {
+                startDateTime: start.format(),
+                endDateTime: end.format(),
+                freq: plugin.fields.recurrence.val(),
+                interval: plugin.fields.interval.val(),
+                until: until.format(),
+                byweekday: plugin.getWeeklyValues(),
+                timeZone: {
+                    name: 'W. Europe Standard Time',
+                    offset: start.format('Z')
                 },
-                timeFormat: 'H:mm',
-                axisFormat: 'H(:mm)',
-                aspectRatio: 1.35,
-                navLinks: true, // can click day/week names to navigate views
-                editable: true,
-                eventLimit: false, // allow "more" link when too many events
-                events: events,
-                eventClick: function (event, element) {
-                    // Display the modal and set the values to the event values.
-                    ocevent.modal.modal('show');
-                    ocevent.modal.find('#starts-at').val(moment(event.start).format('DD/MM/YYYY HH:mm'));
-                    ocevent.modal.find('#ends-at').val(moment(event.end).format('DD/MM/YYYY HH:mm'));
+                recurrencePattern: plugin.getCurrentRule().toString()
+            };
 
-                    ocevent.modal.find('#save-event').on('click', function () {
-                        event.start = moment($('#starts-at').val(), 'DD/MM/YYYY HH:mm').format();
-                        event.end = moment($('#ends-at').val(), 'DD/MM/YYYY HH:mm').format();
-                        // Update event
-                        ocevent.calendar.fullCalendar('updateEvent', event);
-                        // Clear modal inputs
-                        ocevent.modal.find('input').val('');
-                        // hide modal
-                        //modal.modal('hide');
-                        // Unbind event on button
-                        $("#save-event").unbind("click");
-                    });
-
-                    ocevent.modal.find('#delete-event').on('click', function () {
-                        ocevent.calendar.fullCalendar('removeEvents', event.id);
-                        // Unbind event on button
-                        $("#delete-event").unbind("click");
-                    });
+            $.ajax({
+                type: "POST",
+                url: plugin.settings.endpoint,
+                data: inputData,
+                success: function (data) {
+                    if (data.error){
+                        console.log(data.error);
+                    }else {
+                        plugin.container.find('[data-value="input"]').val(JSON.stringify(inputData));
+                        plugin.container.find('[data-value="text"]').val(data.text);
+                        plugin.container.find('[data-value="recurrences"]').val(JSON.stringify(data.recurrences));
+                        plugin.container.find('[data-value="events"]').val(JSON.stringify(data.recurrences));
+                        plugin.renderCalendar();
+                    }
                 },
-
-                eventAfterAllRender: function (view) {
-                    var json = JSON.stringify(ocevent.calendar.fullCalendar("clientEvents").map(function (e) {
-                        return {
-                            id: e.id,
-                            start: moment(e.start).format(),
-                            end: moment(e.end).format()
-                        };
-                    }));
-                    self.$events.val(json);
+                error: function (jqXHR) {
+                    console.log(jqXHR.statusText);
                 }
             });
-
         },
 
-        initModal: function () {
-            this.modal = this.container.find('.modal');
+        renderCalendar: function(){
+            var plugin = this;
 
-            // Bind the dates to datetimepicker.
-            this.modal.find("#starts-at, #ends-at").datetimepicker({
-                locale: 'it',
+            plugin.calendar.refetchEvents();
+            plugin.calendar.render();
+            window.dispatchEvent(new Event('resize'));
+        },
+
+        onCalendarEventClick: function(calEvent, element){
+            var plugin = this;
+            plugin.modal.modal('show');
+            plugin.modal.find('#starts-at').data("DateTimePicker").date(moment(calEvent.event.start));
+            plugin.modal.find('#ends-at').data("DateTimePicker").date(moment(calEvent.event.end));
+
+            var events = JSON.parse(plugin.container.find('[data-value="events"]').val());
+            var id = calEvent.event.id;
+
+            plugin.modal.find('#save-event').on('click', function () {
+                $.each(events, function () {
+                   if (this.id === id){
+                       this.start = $('#starts-at').data("DateTimePicker").date();
+                       this.end = $('#ends-at').data("DateTimePicker").date();
+                   }
+                });
+                plugin.container.find('[data-value="events"]').val(JSON.stringify(events));
+                plugin.renderCalendar();
+                plugin.modal.find('input').val('');
+                $("#save-event").unbind("click");
             });
-        },
 
-        init: function (options) {
-            moment().locale('it');
-
-            this.$events = $('#events');
-            this.attributeId = options.attributeId;
-            this.endpoint = options.endpoint;
-            this.container = $('#ocevent_attribute_' + this.attributeId);
-
-            if (this.container.length > 0) {
-                this.fields.startDate = this.container.find('.startDate');
-                this.fields.endDate = this.container.find('.endDate');
-                this.fields.recurrence = this.container.find('.recurrence');
-                this.fields.interval = this.container.find('.interval');
-                this.fields.until = this.container.find('.until');
-
-                // Bind datepicker to start input
-                this.fields.startDate.datetimepicker({
-                    locale: moment().local('it'),
-                    defaultDate: moment()
+            plugin.modal.find('#delete-event').on('click', function () {
+                events = events.filter(function(value){
+                    return value.id !== id;
                 });
-
-                // Bind datepicker to end input
-                this.fields.endDate.datetimepicker({
-                    locale: moment().local('it'),
-                    defaultDate: moment().add(2, 'hours')
-                });
-
-                // Bind datepicker to until input
-                this.fields.until.datetimepicker({
-                    locale: moment().local('it'),
-                    format: 'L',
-                    maxDate: ocevent.maxDate,
-                    defaultDate: moment().add(2, 'years')
-                });
-
-                // Init calendar
-                this.initCalendar();
-
-                // Init modal
-                this.initModal();
-
-                //
-                this.onRecurrenceChange();
-                this.showByRecurenceValue();
-                this.bindChange();
-            }
+                plugin.container.find('[data-value="events"]').val(JSON.stringify(events));
+                plugin.renderCalendar();
+                $("#delete-event").unbind("click");
+            });
         }
+    });
 
-    }
+    $.fn[pluginName] = function (options) {
+        return this.each(function () {
+            if (!$.data(this, 'plugin_' + pluginName)) {
+                $.data(this, 'plugin_' +
+                    pluginName, new Plugin(this, options));
+            }
+        });
+    };
 
-    $.ocevent = ocevent;
-
-}(jQuery));
+})(jQuery, window, document);
