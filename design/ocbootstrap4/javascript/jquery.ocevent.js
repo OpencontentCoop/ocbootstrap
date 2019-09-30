@@ -5,7 +5,7 @@
     var pluginName = 'oceventgui',
         defaults = {
             endpoint: '/',
-            local: 'it',
+            locale: 'it',
             maxDate: moment(2524607999000),
             dateFormat: 'DD/MM/YYYY HH:mm'
         };
@@ -31,7 +31,7 @@
                 //right: 'dayGridDay,dayGridWeek,dayGridMonth'
             },
             height: 'parent',
-            locale: $.opendataTools.settings('locale'),
+            locale: plugin.settings.locale,
             eventLimit: false,
             defaultView: 'dayGridMonth',
             windowResize: function (view) {
@@ -53,7 +53,7 @@
 
         this.modal = this.container.find('.modal');
         this.modal.find("#starts-at, #ends-at").datetimepicker({
-            locale: $.opendataTools.settings('locale')
+            locale: plugin.settings.locale
         });
 
         this.init();
