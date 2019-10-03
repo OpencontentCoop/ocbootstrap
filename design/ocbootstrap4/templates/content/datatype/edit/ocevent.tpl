@@ -8,12 +8,12 @@
       <div class="form-group row mb-0">
         <div class="col-md-6">
           <label for="StartDate_{$attribute.id}">{'Start'|i18n('ocevents/attribute')}</label>
-          <input id="StartDate_{$attribute.id}" type="text" class="form-control ocevent-calendar startDate" name="dtstart" data-value="{if and($content, $content.input.startDateTime)}{$content.input.startDateTime}{/if}" value="">
+          <input id="StartDate_{$attribute.id}" type="text" class="form-control ocevent-calendar startDate" name="dtstart" data-value="{if and(is_set($content.input.startDateTime), $content.input.startDateTime)}{$content.input.startDateTime}{/if}" value="">
         </div>
 
         <div class="col-md-6">
           <label for="EndDate_{$attribute.id}">{'End'|i18n('ocevents/attribute')}</label>
-          <input id="EndDate_{$attribute.id}" type="text" class="form-control ocevent-calendar endDate" name="dtEnd" data-value="{if and($content, $content.input.endDateTime)}{$content.input.endDateTime}{/if}" value="">
+          <input id="EndDate_{$attribute.id}" type="text" class="form-control ocevent-calendar endDate" name="dtEnd" data-value="{if and(is_set($content.input.endDateTime), $content.input.endDateTime)}{$content.input.endDateTime}{/if}" value="">
         </div>
       </div>
 
@@ -22,10 +22,10 @@
           <div class=" recurrence-container">
             <label>{'Recurrence'|i18n('ocevents/attribute')}</label>
             <select class="form-control recurrence" name="freq">
-              <option data-value="none" value="none" {if and($content, $content.input.freq|eq('none'))}selected="selected"{/if}>{'None (run once)'|i18n('ocevents/attribute')}</option>
-              <option data-value="daily" value="3" {if and($content, $content.input.freq|eq('3'))}selected="selected"{/if}>{'Daily'|i18n('ocevents/attribute')}</option>
-              <option data-value="weekly" value="2" {if and($content, $content.input.freq|eq('2'))}selected="selected"{/if}>{'Weekly'|i18n('ocevents/attribute')}</option>
-              <option data-value="monthly" value="1" {if and($content, $content.input.freq|eq('1'))}selected="selected"{/if}>{'Monthly'|i18n('ocevents/attribute')}</option>
+              <option data-value="none" value="none" {if and(is_set($content.input.freq), $content.input.freq|eq('none'))}selected="selected"{/if}>{'None (run once)'|i18n('ocevents/attribute')}</option>
+              <option data-value="daily" value="3" {if and(is_set($content.input.freq), $content.input.freq|eq('3'))}selected="selected"{/if}>{'Daily'|i18n('ocevents/attribute')}</option>
+              <option data-value="weekly" value="2" {if and(is_set($content.input.freq), $content.input.freq|eq('2'))}selected="selected"{/if}>{'Weekly'|i18n('ocevents/attribute')}</option>
+              <option data-value="monthly" value="1" {if and(is_set($content.input.freq), $content.input.freq|eq('1'))}selected="selected"{/if}>{'Monthly'|i18n('ocevents/attribute')}</option>
             </select>
           </div>
         </div>
@@ -33,7 +33,7 @@
         <div class="col-md-6">
           <div class="interval-container hide  mb-0">
             <label>{'every'|i18n('ocevents/attribute')}</label>
-            <input class="form-control interval" type="number" min="1" name="interval" value="{if and($content, $content.input.interval)}{$content.input.interval}{else}1{/if}">
+            <input class="form-control interval" type="number" min="1" name="interval" value="{if and(is_set($content.input.interval), $content.input.interval)}{$content.input.interval}{else}1{/if}">
           </div>
         </div>
       </div>
@@ -41,31 +41,31 @@
       <div class="form-group weekly-container hide mb-0">
         <label>{'Select week day'|i18n('ocevents/attribute')}</label>
         <div class="form-check form-check-inline">
-          <input id="byweekday0_{$attribute.id}" class="form-check-input" type="checkbox" name="byweekday" value="0" {if and($content, $content.input.byweekday|contains('0'))}checked="checked"{/if}>
+          <input id="byweekday0_{$attribute.id}" class="form-check-input" type="checkbox" name="byweekday" value="0" {if and(is_set($content.input.byweekday), $content.input.byweekday|contains('0'))}checked="checked"{/if}>
           <label class="form-check-label" for="byweekday0_{$attribute.id}">{'Mon'|i18n('ocevents/attribute')}</label>
         </div>
         <div class="form-check form-check-inline">
-          <input id="byweekday1_{$attribute.id}" class="form-check-input" type="checkbox" name="byweekday" value="1" {if and($content, $content.input.byweekday|contains('1'))}checked="checked"{/if}>
+          <input id="byweekday1_{$attribute.id}" class="form-check-input" type="checkbox" name="byweekday" value="1" {if and(is_set($content.input.byweekday), $content.input.byweekday|contains('1'))}checked="checked"{/if}>
           <label class="form-check-label" for="byweekday1_{$attribute.id}">{'Tue'|i18n('ocevents/attribute')}</label>
         </div>
         <div class="form-check form-check-inline">
-          <input id="byweekday2_{$attribute.id}" class="form-check-input" type="checkbox" name="byweekday" value="2" {if and($content, $content.input.byweekday|contains('2'))}checked="checked"{/if}>
+          <input id="byweekday2_{$attribute.id}" class="form-check-input" type="checkbox" name="byweekday" value="2" {if and(is_set($content.input.byweekday), $content.input.byweekday|contains('2'))}checked="checked"{/if}>
           <label class="form-check-label" for="byweekday2_{$attribute.id}">{'Wed'|i18n('ocevents/attribute')}</label>
         </div>
         <div class="form-check form-check-inline">
-          <input id="byweekday3_{$attribute.id}" class="form-check-input" type="checkbox" name="byweekday" value="3" {if and($content, $content.input.byweekday|contains('3'))}checked="checked"{/if}>
+          <input id="byweekday3_{$attribute.id}" class="form-check-input" type="checkbox" name="byweekday" value="3" {if and(is_set($content.input.byweekday), $content.input.byweekday|contains('3'))}checked="checked"{/if}>
           <label class="form-check-label" for="byweekday3_{$attribute.id}">{'Thu'|i18n('ocevents/attribute')}</label>
         </div>
         <div class="form-check form-check-inline">
-          <input id="byweekday4_{$attribute.id}" class="form-check-input" type="checkbox" name="byweekday" value="4" {if and($content, $content.input.byweekday|contains('4'))}checked="checked"{/if}>
+          <input id="byweekday4_{$attribute.id}" class="form-check-input" type="checkbox" name="byweekday" value="4" {if and(is_set($content.input.byweekday), $content.input.byweekday|contains('4'))}checked="checked"{/if}>
           <label class="form-check-label" for="byweekday4_{$attribute.id}">{'Fri'|i18n('ocevents/attribute')}</label>
         </div>
         <div class="form-check form-check-inline">
-          <input id="byweekday5_{$attribute.id}" class="form-check-input" type="checkbox" name="byweekday" value="5" {if and($content, $content.input.byweekday|contains('5'))}checked="checked"{/if}>
+          <input id="byweekday5_{$attribute.id}" class="form-check-input" type="checkbox" name="byweekday" value="5" {if and(is_set($content.input.byweekday), $content.input.byweekday|contains('5'))}checked="checked"{/if}>
           <label class="form-check-label" for="byweekday5_{$attribute.id}">{'Sat'|i18n('ocevents/attribute')}</label>
         </div>
         <div class="form-check form-check-inline">
-          <input id="byweekday6_{$attribute.id}" class="form-check-input" type="checkbox" name="byweekday" value="6" {if and($content, $content.input.byweekday|contains('6'))}checked="checked"{/if}>
+          <input id="byweekday6_{$attribute.id}" class="form-check-input" type="checkbox" name="byweekday" value="6" {if and(is_set($content.input.byweekday), $content.input.byweekday|contains('6'))}checked="checked"{/if}>
           <label class="form-check-label" for="byweekday6_{$attribute.id}">{'Sun'|i18n('ocevents/attribute')}</label>
         </div>
       </div>
@@ -76,7 +76,7 @@
         <div class="col-md-6">
           <div class="form-group">
             <label>{'End recurrence'|i18n('ocevents/attribute')}</label>
-            <input type="text" class="form-control until ocevent-calendar" name="until" data-value="{if and($content, $content.input.until)}{$content.input.until}{/if}" value="">
+            <input type="text" class="form-control until ocevent-calendar" name="until" data-value="{if and(is_set($content.input.until), $content.input.until)}{$content.input.until}{/if}" value="">
           </div>
         </div>
 

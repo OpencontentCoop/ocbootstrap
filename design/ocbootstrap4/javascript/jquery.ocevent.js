@@ -46,8 +46,12 @@
                 plugin.onCalendarEventClick(event, element);
             },
             events: function (info, successCallback, failureCallback) {
-                var events = plugin.container.find('[data-value="events"]').val() || '[]';
-                successCallback(JSON.parse(events));
+                var events = plugin.container.find('[data-value="events"]').val();                
+                if (events.length > 0 && events !== 'null'){
+                    successCallback(JSON.parse(events));
+                }else{
+                    successCallback([]);
+                }
             }
         });
 
