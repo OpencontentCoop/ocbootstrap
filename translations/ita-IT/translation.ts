@@ -3305,4 +3305,19 @@
         <translation type="unfinished"></translation>
     </message>
 </context>
+    <context>
+        <name>ocbootstrap/confirmpublish</name>
+        <message>
+            <source>Do you confirm the publication of the content?</source>
+            <translation>Confermi la pubblicazione del contenuto?</translation>
+        </message>
+        <message>
+            <source>I do not confirm</source>
+            <translation>Non confermo</translation>
+        </message>
+        <message>
+            <source>I confirm the publication</source>
+            <translation>Confermo la pubblicazione</translation>
+        </message>
+    </context>
 </TS>

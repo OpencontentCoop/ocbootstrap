@@ -1,6 +1,6 @@
 <div class="mb-3">
     <h2>
-        Confermi la pubblicazione del contenuto?
+        {'Do you confirm the publication of the content?'|i18n('ocbootstrap/confirmpublish')}
     </h2>
 
     {foreach $version.data_map as $attribute}
@@ -23,13 +23,13 @@
         <div class="col-md-6 text-left">
             <a class="btn btn-dark"
                href="{concat('gdpr/confirmpublish/0/', $version.contentobject_id, '/', $version.version, '/', $language)|ezurl('no')}">
-                Non confermo
+                {'I do not confirm'|i18n('ocbootstrap/confirmpublish')}
             </a>
         </div>
         <div class="col-md-6 text-right">
             <a class="btn btn-success"
                href="{concat('gdpr/confirmpublish/1/', $version.contentobject_id, '/', $version.version, '/', $language)|ezurl('no')}">
-                Confermo la pubblicazione
+                {'I confirm the publication'|i18n('ocbootstrap/confirmpublish')}
             </a>
         </div>
     </div>
