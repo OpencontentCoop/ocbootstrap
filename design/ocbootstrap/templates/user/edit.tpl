@@ -1,5 +1,5 @@
 <form action={concat($module.functions.edit.uri,"/",$userID)|ezurl} method="post" name="Edit">
-
+  <input type="hidden" name="ContentObjectLanguageCode" value="{ezini( 'RegionalSettings', 'ContentObjectLocale', 'site.ini')}" />
 <div class="user-edit">
 
 <div class="attribute-header">

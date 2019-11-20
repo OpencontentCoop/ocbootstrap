@@ -1,5 +1,6 @@
 <form action={concat($module.functions.edit.uri,"/",$userID)|ezurl} method="post" name="Edit">
     <h1>{"User profile"|i18n("design/ocbootstrap/user/edit")}</h1>
+    <input type="hidden" name="ContentObjectLanguageCode" value="{ezini( 'RegionalSettings', 'ContentObjectLocale', 'site.ini')}" />
 
     <div class="row mb-5">
         <div class="col">
