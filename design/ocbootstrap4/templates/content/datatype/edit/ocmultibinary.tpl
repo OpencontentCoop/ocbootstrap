@@ -1,7 +1,7 @@
 {default attribute_base=ContentObjectAttribute}
     <div id="uploader_{$attribute_base}_data_multibinaryfilename_{$attribute.id}">
 
-        <div class="clearfix upload-file-list">
+        <div class="clearfix upload-file-list" data-sorturl="{concat('ocmultibinary/sort/', $attribute.id, '/', $attribute.version, '/', $attribute.language_code  )|ezurl(no)}">
         {include uri="design:content/datatype/view/filelist.tpl" attribute=$attribute}
         </div>
 
@@ -13,12 +13,15 @@
             <div class="clearfix upload-button-container">
                 <span class="btn btn-success btn-sm fileinput-button">
                     <i class="fa fa-plus"></i>
-                    <span>{'Add file'|i18n( 'ocmultibinary' )}</span>
-                    <input class="input-upload" type="file" name="OcMultibinaryFiles[]" data-url="{concat('ocmultibinary/upload/', $attribute.id, '/', $attribute.version, '/', $attribute.language_code  )|ezurl(no)}" />
+                    <span>{'Add file'|i18n( 'extension/ocmultibinary' )}</span>
+                    <input class="input-upload" multiple type="file" name="OcMultibinaryFiles[]"
+                           data-url="{concat('ocmultibinary/upload/', $attribute.id, '/', $attribute.version, '/', $attribute.language_code  )|ezurl(no)}" />
+
+
                 </span>
             </div>
             <div class="clearfix upload-button-spinner" style="display: none">
-                <a class="btn btn-success btn-sm" href="#"><i class="fa a fa-circle-o-notch fa-spin"></i> {'Add file'|i18n( 'ocmultibinary' )}</a>
+                <a class="btn btn-success btn-sm" href="#"><i class="fa a fa-circle-o-notch fa-spin"></i> {'Add file'|i18n( 'extension/ocmultibinary' )}</a>
             </div>
         {/if}
 
