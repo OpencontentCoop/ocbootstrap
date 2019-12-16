@@ -5,7 +5,7 @@
     <name>ocbootstrap</name>
     <message>
       <source>Overview</source>
-      <translation>Loading...</translation>
+      <translation>εν συντομία</translation>
     </message>
     <message>
       <source>Read more</source>
