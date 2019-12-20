@@ -1,67 +1,32 @@
-<div class="row">
-    <div class="col-md-4 offset-md-4">
-        <h1 class="text-center title">{"Login"|i18n("design/ocbootstrap/user/login")}</h1>
+{def $login_layout = ezini('LoginTemplate', 'Layout', 'app.ini')}
+{def $login_modules = ezini('LoginTemplate', 'LoginModules', 'app.ini')}
+{def $login_modules_count = count($login_modules)}
 
-        {if $User:warning.bad_login}
-            <div class="alert alert-danger">
-                <p><strong>{"Could not login"|i18n("design/ocbootstrap/user/login")}</strong></p>
-                <p>{"A valid username and password is required to login."|i18n("design/ocbootstrap/user/login")}</p>
-            </div>
-        {/if}
+{if $login_layout|eq('column')}
 
-        {if $site_access.allowed|not}
-            <div class="alert alert-danger">
-                <p><strong>{"Access not allowed"|i18n("design/ocbootstrap/user/login")}</strong></p>
-                <p>{"You are not allowed to access %1."|i18n("design/ocbootstrap/user/login",,array($site_access.name))}</p>
+    {foreach $login_modules as $login_module}
+        <div class="row">
+            <div class="col-md-8 offset-md-2 col-lg-4 offset-lg-4">
+                {def $login_module_parts = $login_module|explode('|')}
+                {include uri=concat('design:user/login_templates/', $login_module_parts[0], '.tpl') login_module_setting=cond(is_set($login_module_parts[1]), $login_module_parts[1], $login_module_parts[0])}
+                {undef $login_module_parts}
             </div>
-        {/if}
+        </div>
+        {delimiter}
+            <hr/>
+        {/delimiter}
+    {/foreach}
 
-        <form class="validate-form" method="post" action={"/user/login/"|ezurl} name="loginform">
-            <div class="form-group">
-                <div class="controls">
-                    <input type="text" autofocus="" autocomplete="off" name="Login"
-                           placeholder="{"Username"|i18n("design/ocbootstrap/user/login","User name")}"
-                           class="form-control" data-rule-required="true" value="{$User:login|wash}">
-                </div>
+{elseif $login_layout|eq('row')}
+    {def $row_span = 12|div($login_modules_count)|ceil()}
+    <div class="row">
+        {foreach $login_modules as $login_module}
+            {def $login_module_parts = $login_module|explode('|')}
+            <div class="col-md-{$row_span} mb-4">
+                {include uri=concat('design:user/login_templates/', $login_module_parts[0], '.tpl') login_module_setting=cond(is_set($login_module_parts[1]), $login_module_parts[1], $login_module_parts[0])}
             </div>
-            <div class="form-group">
-                <div class="controls">
-                    <input type="password" autocomplete="off" name="Password"
-                           placeholder="{"Password"|i18n("design/ocbootstrap/user/login")}" class="form-control"
-                           data-rule-required="true">
-                </div>
-            </div>
-            <div class="form-group form-check">
-                <input id="remember_me" class="form-check-input" type="checkbox" tabindex="1" name="Cookie" />
-                <label class="form-check-label" for="remember_me">{"Remember me"|i18n("design/ocbootstrap/user/login")}</label>
-            </div>
-            <button class="btn btn-lg btn-primary d-block mx-auto"
-                    name="LoginButton">{"Login"|i18n("design/ocbootstrap/user/login","Button")}</button>
-
-            {if and( is_set( $User:post_data ), is_array( $User:post_data ) )}
-                {foreach $User:post_data as $key => $postData}
-                    <input name="Last_{$key|wash}" value="{$postData|wash}" type="hidden"/>
-                    <br/>
-                {/foreach}
-            {/if}
-            <input type="hidden" name="RedirectURI" value="{$User:redirect_uri|wash}"/>
-
-        </form>
+            {undef $login_module_parts}
+        {/foreach}
     </div>
-</div>
-<hr>
-<div class="text-center mb-5">
-    <a href={if ezmodule( 'userpaex' )}{'/userpaex/forgotpassword'|ezurl}{else}{"/user/forgotpassword"|ezurl}{/if}>{"Forgot your password?"|i18n( "design/ocbootstrap/user/login" )}</a>
-</div>
-
-{ezscript_require(array("password-score/password.js"))}
-{literal}
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('[name="Password"]').password({
-            strengthMeter:false,
-            message: "{/literal}{'Show/hide password'|i18n('ocbootstrap')}{literal}",
-        });
-    });
-</script>
-{/literal}
+    {undef $row_span}
+{/if}
