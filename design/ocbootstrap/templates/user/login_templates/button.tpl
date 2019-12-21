@@ -1,7 +1,7 @@
 <h1 class='text-center title'>{ezini(concat('LoginTemplate_', $login_module_setting), 'Title', 'app.ini')}</h1>
 
 {if ezini_hasvariable(concat('LoginTemplate_', $login_module_setting), 'Text', 'app.ini')}
-    <p class="text-center" style="margin-bottom: 20px">{ezini(concat('LoginTemplate_', $login_module_setting), 'Text', 'app.ini')|wash()}</p>
+    <p class="text-center" style="margin-bottom: 20px">{ezini(concat('LoginTemplate_', $login_module_setting), 'Text', 'app.ini')}</p>
 {/if}
 
 <div class="text-center">
