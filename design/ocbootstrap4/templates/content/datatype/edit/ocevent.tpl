@@ -32,7 +32,7 @@
 
         <div class="col-md-6">
           <div class="interval-container hide  mb-0">
-            <label>{'every'|i18n('ocevents/attribute')}</label>
+            <label>{'Every'|i18n('ocevents/attribute')}</label>
             <input class="form-control interval" type="number" min="1" name="interval" value="{if and(is_set($content.input.interval), $content.input.interval)}{$content.input.interval}{else}1{/if}">
           </div>
         </div>
@@ -92,22 +92,20 @@
 
   </div>
 
-  <div class="row hide">
+  <div class="row{if ezini('DebugSettings', 'DebugOutput')|eq('disabled')} hide{/if}">
     <div class="col-md-12">
       <input type="hidden" id="has_content_{$attribute.id}" value="{$attribute.has_content}">
-      <h3>Text</h3>
+      <strong>Input</strong>
+      <textarea id="events_input_{$attribute.id}" data-value="input" name="{$attribute_base}_ocevent_data_{$attribute.id}[input]" cols="50"
+                class="form-control" style="font-size: .7em">{if is_set($content.input_json)}{$content.input_json}{/if}</textarea>
 
-      <h3>Input</h3>
-      <textarea id="events_input_{$attribute.id}" data-value="input" name="{$attribute_base}_ocevent_data_{$attribute.id}[input]" rows="10" cols="50"
-                class="form-control">{if is_set($content.input_json)}{$content.input_json}{/if}</textarea>
+      <strong>Recurrences</strong>
+      <textarea id="events_recurrences_{$attribute.id}" data-value="recurrences" name="{$attribute_base}_ocevent_data_{$attribute.id}[recurrences]" cols="50"
+                class="form-control" style="font-size: .7em">{if is_set($content.recurrences_json)}{$content.recurrences_json}{/if}</textarea>
 
-      <h3>Recurrences</h3>
-      <textarea id="events_recurrences_{$attribute.id}" data-value="recurrences" name="{$attribute_base}_ocevent_data_{$attribute.id}[recurrences]" rows="10" cols="50"
-                class="form-control">{if is_set($content.recurrences_json)}{$content.recurrences_json}{/if}</textarea>
-
-      <h3>Events</h3>
-      <textarea id="events_{$attribute.id}" data-value="events" name="{$attribute_base}_ocevent_data_{$attribute.id}[events]" rows="10" cols="50"
-                class="form-control">{if is_set($content.events_json)}{$content.events_json}{/if}</textarea>
+      <strong>Events</strong>
+      <textarea id="events_{$attribute.id}" data-value="events" name="{$attribute_base}_ocevent_data_{$attribute.id}[events]" cols="50"
+                class="form-control" style="font-size: .7em">{if is_set($content.events_json)}{$content.events_json}{/if}</textarea>
     </div>
   </div>
 

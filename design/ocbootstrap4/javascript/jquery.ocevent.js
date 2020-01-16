@@ -74,7 +74,7 @@
 
             plugin.fields.endDate.datetimepicker({
                 locale: plugin.settings.locale,
-                defaultDate: plugin.fields.endDate.data('value') !== '' ? moment(plugin.fields.endDate.data('value')) : moment().set('hour', 10).set('minute', 0)
+                defaultDate: plugin.fields.endDate.data('value') !== '' ? moment(plugin.fields.endDate.data('value')) : moment().set('hour', 12).set('minute', 0)
             });
 
             plugin.fields.until.datetimepicker({
@@ -143,6 +143,7 @@
             var plugin = this;
 
             var start = plugin.fields.startDate.data("DateTimePicker").date();
+            var end = plugin.fields.endDate.data("DateTimePicker").date();
             var freq = plugin.fields.recurrence.val();
             var interval = plugin.fields.interval.val();
             var until = plugin.fields.until.val().length > 0 ? plugin.fields.until.data("DateTimePicker").date() : plugin.settings.maxDate;
@@ -153,6 +154,7 @@
 
                     return new RRule({
                         dtstart: plugin.parseDateValue(start),
+                        dtend: plugin.parseDateValue(end),
                         freq: '3',
                         interval: '1',
                         count: '1'
@@ -163,6 +165,7 @@
 
                     return new RRule({
                         dtstart: plugin.parseDateValue(start),
+                        dtend: plugin.parseDateValue(end),
                         freq: freq,
                         interval: interval,
                         until: plugin.parseDateValue(until)
@@ -172,6 +175,7 @@
 
                     return new RRule({
                         dtstart: plugin.parseDateValue(start),
+                        dtend: plugin.parseDateValue(end),
                         freq: freq,
                         interval: interval,
                         until: plugin.parseDateValue(until),
@@ -202,7 +206,6 @@
                 until: until.format(),
                 byweekday: plugin.getWeeklyValues(),
                 timeZone: {
-                    name: 'W. Europe Standard Time',
                     offset: start.format('Z')
                 },
                 recurrencePattern: plugin.getCurrentRule().toString()
@@ -224,7 +227,10 @@
                     }
                 },
                 error: function (jqXHR) {
-                    console.log(jqXHR.statusText);
+                    console.log(jqXHR.responseJSON.error);
+                    if (jqXHR.responseJSON.code === 100) {
+                        plugin.fields.endDate.data("DateTimePicker").date(new Date(moment(inputData.startDateTime).add('1', 'minutes').format()));
+                    }
                 }
             });
         },
