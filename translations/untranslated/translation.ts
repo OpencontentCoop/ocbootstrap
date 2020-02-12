@@ -546,11 +546,14 @@
       <source>You have no drafts</source>
       <translation type="unfinished"/>
     </message>
-  </context>
-  <context>
-    <name></name>
     <message>
-      <source></source>
+      <source>These are the current objects you are working on. The drafts are owned by you and can only be seen by you.
+                You can either edit the drafts or remove them if you don't need them any more.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>These are the current objects you are working on. The drafts are owned by you and can only be seen by you.
+      You can either edit the drafts or remove them if you don't need them any more.</source>
       <translation type="unfinished"/>
     </message>
   </context>
@@ -653,6 +656,36 @@
     </message>
     <message>
       <source>New draft</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>This object is already being edited by yourself and others.
+                You can either continue editing one of your drafts or you can create a new draft.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>This object is already being edited by you.
+                You can either continue editing one of your drafts or you can create a new draft.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>This object is already being edited by someone else.
+                You should either contact the person about their draft or create a new draft for your own use.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>This object is already being edited by yourself and others.
+    You can either continue editing one of your drafts or you can create a new draft.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>This object is already being edited by you.
+        You can either continue editing one of your drafts or you can create a new draft.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>This object is already being edited by someone else.
+        You should either contact the person about their draft or create a new draft for your own use.</source>
       <translation type="unfinished"/>
     </message>
   </context>
@@ -1143,6 +1176,22 @@
     </message>
     <message>
       <source>Select</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Please choose the placement for the OpenOffice.org object.
+
+                Select the placements and click the %buttonname button.
+                Using the recent and bookmark items for quick placement is also possible.
+                Click on placement names to change the browse listing.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Please choose the placement for the OpenOffice.org object.
+
+    Select the placements and click the %buttonname button.
+    Using the recent and bookmark items for quick placement is also possible.
+    Click on placement names to change the browse listing.</source>
       <translation type="unfinished"/>
     </message>
   </context>
@@ -3012,6 +3061,10 @@
       <translation type="unfinished"/>
     </message>
     <message>
+      <source>Your account was successfully created. An email will be sent to the specified address. Follow the instructions in that email to activate your account.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
       <source>Your account was successfully created.</source>
       <translation type="unfinished"/>
     </message>
@@ -3276,6 +3329,146 @@
     </message>
     <message>
       <source>I confirm the publication</source>
+      <translation type="unfinished"/>
+    </message>
+  </context>
+  <context>
+    <name>mbpaex/userpaex</name>
+    <message>
+      <source>Change password for user</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Please retype your old password.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Password didn't match, please retype your new password.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Password didn't validate, please retype your new password.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>New password must be different from the old one. Please choose another password.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Password successfully updated.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Old password</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>New password</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Retype password</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>OK</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>%siteurl your password is about to expire</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Your password is about to expire</source>
+      <translation type="unfinished"/>
+    </message>
+  </context>
+  <context>
+    <name>mbpaex/userpaex/forgotpassword</name>
+    <message>
+      <source>Click here to set your new password</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>A mail has been sent to the following email address: %1. This email contains a link you need to click so that we can confirm that the correct user is getting the new password.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>There is no registered user with that email address.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>The password has been changed successfully.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>The passwords do not match. Please, be sure to enter the same password in both fields.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>The new password is invalid, please choose new one.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Choose a new password</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Enter your desired new password in the form below.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Password</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Password Confirm</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Change password</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>The key is invalid or has been used.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Have you forgotten your password?</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>If you have forgotten your password we can generate a new one for you. All you need to do is to enter your email address and we will create a new password for you.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Email</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Generate new password</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>%siteurl forgot password</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>This link is valid until %1, after that time you should generate a new one.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>A mail has been sent to the following email address: %1. This email contains a link you need to click so
+        that we can confirm that the correct user is getting the new password.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>If you have forgotten your password we can generate a new one for you. All you need to do is to enter your
+        email address and we will create a new password for you.</source>
       <translation type="unfinished"/>
     </message>
   </context>

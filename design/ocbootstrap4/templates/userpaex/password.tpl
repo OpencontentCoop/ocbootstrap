@@ -11,28 +11,28 @@
 
     <div class="col-md-8 offset-md-2">
 
-        <h1>Cambia la password</h1>
+        <h1>{"Change password for user"|i18n("mbpaex/userpaex")}</h1>
         
         {if $message}
             {if or($oldPasswordNotValid,$newPasswordNotMatch,$newPasswordNotValidate,$newPasswordMustDiffer)}
                 {if $oldPasswordNotValid}
                     <div class="alert alert-warning">
-                        Reinserisci la vecchia password
+                        {'Please retype your old password.'|i18n('mbpaex/userpaex')}
                     </div>
                 {/if}
                 {if $newPasswordNotMatch}
                     <div class="alert alert-warning">
-                        Controlla le nuove password perché non corrispondono
+                        {"Password didn't match, please retype your new password."|i18n('mbpaex/userpaex')}
                     </div>
                 {/if}
                 {if $newPasswordNotValidate}
                     <div class="alert alert-warning">
-                        Password non valida
+                        {"Password didn't validate, please retype your new password."|i18n('mbpaex/userpaex')}
                     </div>
                 {/if}
                 {if $newPasswordMustDiffer}
                     <div class="alert alert-warning">
-                        La nuova password deve essere diversa dalla vecchia
+                        {"New password must be different from the old one. Please choose another password."|i18n('mbpaex/userpaex')}
                     </div>
                 {/if}                    
             {else}
@@ -44,20 +44,20 @@
     
 
         {if $oldPasswordNotValid}*{/if}
-        <label>Vecchia password</label>
+        <label>{"Old password"|i18n("mbpaex/userpaex")}</label>
         <input type="password" class="form-control" name="oldPassword" size="11" value="{$oldPassword}" />
 
 
       <div class="row mt-3">
           <div class="col-md-6">
               {if or($newPasswordNotMatch,$newPasswordNotValidate)}*{/if}
-              <label>Nuova password</label>
+              <label>{"New password"|i18n("mbpaex/userpaex")}</label>
               <input id="pwd-input" type="password" class="form-control" name="newPassword" size="11" value="{$newPassword}" />
               {include uri='design:parts/password_meter.tpl'}
           </div>
           <div class="col-md-6">
               {if or($newPasswordNotMatch,$newPasswordNotValidate)}*{/if}
-              <label>Ridigita la nuova password</label>
+              <label>{"Retype password"|i18n("mbpaex/userpaex")}</label>
               <input type="password" class="form-control" name="confirmPassword" size="11" value="{$confirmPassword}" />
 
           </div>
@@ -65,7 +65,7 @@
 
 
       <div class="clearfix mt-3">
-          <input class="btn btn-dark float-left" type="submit" name="CancelButton" value="Annulla" />
+          <input class="btn btn-dark float-left" type="submit" name="CancelButton" value="{'Cancel'|i18n('mbpaex/userpaex')}" />
           <input class="btn btn-primary float-right" type="submit" name="OKButton" value="{'OK'|i18n('mbpaex/userpaex')}" />
       </div>
 

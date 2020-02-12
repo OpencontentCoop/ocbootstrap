@@ -126,15 +126,15 @@
     <name>design/admin/preview/article</name>
     <message>
       <source>Comments allowed</source>
-      <translation type="unfinished"/>
+      <translation>Commenti permessi</translation>
     </message>
     <message>
       <source>Yes</source>
-      <translation type="unfinished"/>
+      <translation>Si</translation>
     </message>
     <message>
       <source>No</source>
-      <translation type="unfinished"/>
+      <translation>No</translation>
     </message>
   </context>
   <context>
@@ -174,7 +174,7 @@
     <name>design/ocbootstrap/block_item/call_to_action</name>
     <message>
       <source>Download!</source>
-      <translation type="unfinished"/>
+      <translation>Download!</translation>
     </message>
   </context>
   <context>
@@ -185,7 +185,7 @@
     </message>
     <message>
       <source>Buy</source>
-      <translation type="unfinished"/>
+      <translation>Compra</translation>
     </message>
   </context>
   <context>
@@ -243,7 +243,7 @@
     </message>
     <message>
       <source>Tag cloud</source>
-      <translation type="unfinished"/>
+      <translation>Tag cloud</translation>
     </message>
     <message>
       <source>Description</source>
@@ -337,7 +337,7 @@
     <name>design/ocbootstrap/comment/view</name>
     <message>
       <source>Avatar</source>
-      <translation type="unfinished"/>
+      <translation>Avatar</translation>
     </message>
     <message>
       <source>Edit</source>
@@ -345,7 +345,7 @@
     </message>
     <message>
       <source>Delete</source>
-      <translation type="unfinished"/>
+      <translation>Cancella</translation>
     </message>
   </context>
   <context>
@@ -546,6 +546,18 @@
       <source>You have no drafts</source>
       <translation>Non hai nessuna bozza</translation>
     </message>
+    <message>
+      <source>These are the current objects you are working on. The drafts are owned by you and can only be seen by you.
+                You can either edit the drafts or remove them if you don't need them any more.</source>
+      <translation>Questi sono gli oggetti correnti sui quali stai lavorando. Le bozze sono tue e possono essere viste solo da te.
+      Puoi sia modificare le bozze o eliminarle se non ti servono più.</translation>
+    </message>
+    <message>
+      <source>These are the current objects you are working on. The drafts are owned by you and can only be seen by you.
+      You can either edit the drafts or remove them if you don't need them any more.</source>
+      <translation>Questi sono gli oggetti correnti sui quali stai lavorando. Le bozze sono tue e possono essere viste solo da te.
+      Puoi sia modificare le bozze o eliminarle se non ti servono più.</translation>
+    </message>
   </context>
   <context>
     <name>design/ocbootstrap/content/edit</name>
@@ -647,6 +659,42 @@
     <message>
       <source>New draft</source>
       <translation>Nuova bozza</translation>
+    </message>
+    <message>
+      <source>This object is already being edited by yourself and others.
+                You can either continue editing one of your drafts or you can create a new draft.</source>
+      <translation>Quest'oggetto viene già modificato da te e da altri.
+                Puoi sia continuare a modificare una delle tue bozze o crearne una nuova.</translation>
+    </message>
+    <message>
+      <source>This object is already being edited by you.
+                You can either continue editing one of your drafts or you can create a new draft.</source>
+      <translation>Quest'oggetto viene già modificato da te.
+                Puoi sia continuare a modificare una delle tue bozze che crearne una nuova.</translation>
+    </message>
+    <message>
+      <source>This object is already being edited by someone else.
+                You should either contact the person about their draft or create a new draft for your own use.</source>
+      <translation>Quest'oggetto viene già modificato da altri.
+                Puoi sia contattare la persona a proposito delle sua bozza che crearne una nuova per te.</translation>
+    </message>
+    <message>
+      <source>This object is already being edited by yourself and others.
+    You can either continue editing one of your drafts or you can create a new draft.</source>
+      <translation>Quest'oggetto viene già modificato da te e da altri.
+    Puoi sia continuare a modificare una delle tue bozze o crearne una nuova.</translation>
+    </message>
+    <message>
+      <source>This object is already being edited by you.
+        You can either continue editing one of your drafts or you can create a new draft.</source>
+      <translation>Quest'oggetto viene già modificato da te.
+    Puoi sia continuare a modificare una delle tue bozze che crearne una nuova.</translation>
+    </message>
+    <message>
+      <source>This object is already being edited by someone else.
+        You should either contact the person about their draft or create a new draft for your own use.</source>
+      <translation>Quest'oggetto viene già modificato da altri.
+    Puoi sia contattare la persona a proposito delle sua bozza che crearne una nuova per te.</translation>
     </message>
   </context>
   <context>
@@ -1138,6 +1186,30 @@
       <source>Select</source>
       <translation>Seleziona</translation>
     </message>
+    <message>
+      <source>Please choose the placement for the OpenOffice.org object.
+
+                Select the placements and click the %buttonname button.
+                Using the recent and bookmark items for quick placement is also possible.
+                Click on placement names to change the browse listing.</source>
+      <translation>Scegli la collocazione per l'oggetto OpenOffice.org.
+
+                Seleziona la collocazione e premi il pulsante %buttonname.
+                E' possibile usare anche gli elementi recenti e i preferiti per una collocazione veloce.
+                Clicca sui nomi delle collocazioni per cambiare l'elenco da sfogliare.</translation>
+    </message>
+    <message>
+      <source>Please choose the placement for the OpenOffice.org object.
+
+    Select the placements and click the %buttonname button.
+    Using the recent and bookmark items for quick placement is also possible.
+    Click on placement names to change the browse listing.</source>
+      <translation>Scegli la collocazione per l'oggetto OpenOffice.org.
+
+    Seleziona la collocazione e premi il pulsante %buttonname.
+    E' possibile usare anche gli elementi recenti e i preferiti per una collocazione veloce.
+    Clicca sui nomi delle collocazioni per cambiare l'elenco da sfogliare.</translation>
+    </message>
   </context>
   <context>
     <name>design/ocbootstrap/ezodf/export</name>
@@ -1166,21 +1238,21 @@
     <name>design/ocbootstrap/footer/address</name>
     <message>
       <source>Get in touch</source>
-      <translation type="unfinished"/>
+      <translation>Rimani connesso</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/footer/latest_news</name>
     <message>
       <source>Latest News</source>
-      <translation type="unfinished"/>
+      <translation>Ultime notizie</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/footer/links</name>
     <message>
       <source>eZ Links</source>
-      <translation type="unfinished"/>
+      <translation>eZ Links</translation>
     </message>
   </context>
   <context>
@@ -1228,7 +1300,7 @@
     <name>design/ocbootstrap/full/call_to_action</name>
     <message>
       <source>Submit</source>
-      <translation type="unfinished"/>
+      <translation>Invia</translation>
     </message>
   </context>
   <context>
@@ -1523,7 +1595,7 @@
     <name>design/ocbootstrap/full/video</name>
     <message>
       <source>Download</source>
-      <translation type="unfinished"/>
+      <translation>Download</translation>
     </message>
   </context>
   <context>
@@ -1566,7 +1638,7 @@
     <name>design/ocbootstrap/line/file</name>
     <message>
       <source>File size:</source>
-      <translation type="unfinished"/>
+      <translation>Dimensione:</translation>
     </message>
     <message>
       <source>Modified:</source>
@@ -1574,7 +1646,7 @@
     </message>
     <message>
       <source>Download file</source>
-      <translation type="unfinished"/>
+      <translation>Scarica il file</translation>
     </message>
   </context>
   <context>
@@ -1629,7 +1701,7 @@
     </message>
     <message>
       <source>Buy</source>
-      <translation type="unfinished"/>
+      <translation>Compra</translation>
     </message>
   </context>
   <context>
@@ -1679,7 +1751,7 @@
     <name>design/ocbootstrap/menu</name>
     <message>
       <source>Navigation</source>
-      <translation type="unfinished"/>
+      <translation>Navigazione</translation>
     </message>
   </context>
   <context>
@@ -1829,7 +1901,7 @@
     </message>
     <message>
       <source>Tag cloud</source>
-      <translation type="unfinished"/>
+      <translation>Tag cloud</translation>
     </message>
     <message>
       <source>Site map</source>
@@ -3005,6 +3077,10 @@
       <translation>Utente registrato</translation>
     </message>
     <message>
+      <source>Your account was successfully created. An email will be sent to the specified address. Follow the instructions in that email to activate your account.</source>
+      <translation>Il tuo account è stato creato con successo. Un'email verrà spedita all'indirizzo specificato. Segui le istruzioni nell'email per attivare il tuo account.</translation>
+    </message>
+    <message>
       <source>Your account was successfully created.</source>
       <translation>Account creato con successo.</translation>
     </message>
@@ -3092,7 +3168,7 @@
     <name>design/ezflow/edit/frontpage</name>
     <message>
       <source>Search phrase</source>
-      <translation type="unfinished"/>
+      <translation>Termine di ricerca</translation>
     </message>
     <message>
       <source>Search</source>
@@ -3104,11 +3180,11 @@
     </message>
     <message>
       <source>Select:</source>
-      <translation type="unfinished"/>
+      <translation>Seleziona:</translation>
     </message>
     <message>
       <source>Add to block</source>
-      <translation type="unfinished"/>
+      <translation>Aggiungi al blocco</translation>
     </message>
     <message>
       <source>Edit &lt;%object_name&gt; (%class_name)</source>
@@ -3153,7 +3229,7 @@
     <name>design/standard/user</name>
     <message>
       <source>Activate account</source>
-      <translation type="unfinished"/>
+      <translation>Attiva account</translation>
     </message>
     <message>
       <source>Your email address has been confirmed. An administrator needs to approve your sign up request, before your login becomes valid.</source>
@@ -3176,73 +3252,73 @@
     <name>extension/ezstarrating/datatype</name>
     <message>
       <source>Rating: %current_rating/5</source>
-      <translation type="unfinished"/>
+      <translation>Valutazione: %current_rating/5</translation>
     </message>
     <message>
       <source>%rating_count votes cast</source>
-      <translation type="unfinished"/>
+      <translation>%rating_count valutazioni</translation>
     </message>
   </context>
   <context>
     <name>ezcomments/comment/add</name>
     <message>
       <source>reCAPTCHA API key missing.</source>
-      <translation type="unfinished"/>
+      <translation>reCAPTCHA API key mancante</translation>
     </message>
   </context>
   <context>
     <name>ezcomments/comment/add/form</name>
     <message>
       <source>Post a comment</source>
-      <translation type="unfinished"/>
+      <translation>Inserisci un commento</translation>
     </message>
     <message>
       <source>Title:</source>
-      <translation type="unfinished"/>
+      <translation>Titolo:</translation>
     </message>
     <message>
       <source>Name:</source>
-      <translation type="unfinished"/>
+      <translation>Nome:</translation>
     </message>
     <message>
       <source>Website:</source>
-      <translation type="unfinished"/>
+      <translation>Sito web:</translation>
     </message>
     <message>
       <source>Email:</source>
-      <translation type="unfinished"/>
+      <translation>Email:</translation>
     </message>
     <message>
       <source>(The email address will not be shown)</source>
-      <translation type="unfinished"/>
+      <translation>(L'indirizzo email non sarà mostrato</translation>
     </message>
     <message>
       <source>Content:</source>
-      <translation type="unfinished"/>
+      <translation>Contenuto:</translation>
     </message>
     <message>
       <source>Notify me of new comments</source>
-      <translation type="unfinished"/>
+      <translation>Notificami i nuovi commenti</translation>
     </message>
     <message>
       <source>Security text:</source>
-      <translation type="unfinished"/>
+      <translation>Testo di sicurezza:</translation>
     </message>
     <message>
       <source>Enter both words below, with or without a space.</source>
-      <translation type="unfinished"/>
+      <translation>Inserisci entrambe le parole con o senza spazi</translation>
     </message>
     <message>
       <source>The letters are not case-sensitive.</source>
-      <translation type="unfinished"/>
+      <translation>Maiuscolo o minuscolo non fa differenza</translation>
     </message>
     <message>
       <source>Can't read this?</source>
-      <translation type="unfinished"/>
+      <translation>Non riesci a leggere?</translation>
     </message>
     <message>
       <source>Try another</source>
-      <translation type="unfinished"/>
+      <translation>Prova con un altro</translation>
     </message>
     <message>
       <source>Remember me</source>
@@ -3254,7 +3330,7 @@
     </message>
     <message>
       <source>Reset form</source>
-      <translation type="unfinished"/>
+      <translation>Reset</translation>
     </message>
   </context>
   <context>
@@ -3270,6 +3346,146 @@
     <message>
       <source>I confirm the publication</source>
       <translation>Confermo la pubblicazione</translation>
+    </message>
+  </context>
+  <context>
+    <name>mbpaex/userpaex</name>
+    <message>
+      <source>Change password for user</source>
+      <translation>Cambia password</translation>
+    </message>
+    <message>
+      <source>Please retype your old password.</source>
+      <translation>Reinserisci la tua vecchia password.</translation>
+    </message>
+    <message>
+      <source>Password didn't match, please retype your new password.</source>
+      <translation>Le password non coincidono, reinserisci la tua nuova password.</translation>
+    </message>
+    <message>
+      <source>Password didn't validate, please retype your new password.</source>
+      <translation>La password non è valida</translation>
+    </message>
+    <message>
+      <source>New password must be different from the old one. Please choose another password.</source>
+      <translation>La nuova password deve essere diversa dalla vecchia</translation>
+    </message>
+    <message>
+      <source>Password successfully updated.</source>
+      <translation>Password aggiornata con successo.</translation>
+    </message>
+    <message>
+      <source>Old password</source>
+      <translation>Vecchia password</translation>
+    </message>
+    <message>
+      <source>New password</source>
+      <translation>Nuova password</translation>
+    </message>
+    <message>
+      <source>Retype password</source>
+      <translation>Ridigita la password</translation>
+    </message>
+    <message>
+      <source>OK</source>
+      <translation>OK</translation>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation>Annulla</translation>
+    </message>
+    <message>
+      <source>%siteurl your password is about to expire</source>
+      <translation>%siteurl la tua passwor sta per scadere</translation>
+    </message>
+    <message>
+      <source>Your password is about to expire</source>
+      <translation>La password sta per scadere</translation>
+    </message>
+  </context>
+  <context>
+    <name>mbpaex/userpaex/forgotpassword</name>
+    <message>
+      <source>Click here to set your new password</source>
+      <translation>Clicca qui per impostare la nuova password</translation>
+    </message>
+    <message>
+      <source>A mail has been sent to the following email address: %1. This email contains a link you need to click so that we can confirm that the correct user is getting the new password.</source>
+      <translation>Una mail è stata inviata al seguente indirizzo di posta elettronica:% 1. E' necessario cliccare sul link ivi contenuto.</translation>
+    </message>
+    <message>
+      <source>There is no registered user with that email address.</source>
+      <translation>Non ci sono utenti con questo indirizzo email</translation>
+    </message>
+    <message>
+      <source>The password has been changed successfully.</source>
+      <translation>La password è stata cambiata con successo.</translation>
+    </message>
+    <message>
+      <source>The passwords do not match. Please, be sure to enter the same password in both fields.</source>
+      <translation>Le password non corrispondono. Assicurarsi di inserire la stessa password in entrambi i campi.</translation>
+    </message>
+    <message>
+      <source>The new password is invalid, please choose new one.</source>
+      <translation>La nuova password non è valida</translation>
+    </message>
+    <message>
+      <source>Choose a new password</source>
+      <translation>Scegli una nuova password</translation>
+    </message>
+    <message>
+      <source>Enter your desired new password in the form below.</source>
+      <translation>Inserisci la tua nuova password</translation>
+    </message>
+    <message>
+      <source>Password</source>
+      <translation>Password</translation>
+    </message>
+    <message>
+      <source>Password Confirm</source>
+      <translation>Conferma la password</translation>
+    </message>
+    <message>
+      <source>Change password</source>
+      <translation>Cambia la password</translation>
+    </message>
+    <message>
+      <source>The key is invalid or has been used.</source>
+      <translation>La chiave non è valida o è stato utilizzata.</translation>
+    </message>
+    <message>
+      <source>Have you forgotten your password?</source>
+      <translation>Hai dimenticato la tua password?</translation>
+    </message>
+    <message>
+      <source>If you have forgotten your password we can generate a new one for you. All you need to do is to enter your email address and we will create a new password for you.</source>
+      <translation>Se hai dimenticato la password, tutto quello che devi fare è inserire il tuo indirizzo email e noi creeremo una nuova password per te.</translation>
+    </message>
+    <message>
+      <source>Email</source>
+      <translation>E-mail</translation>
+    </message>
+    <message>
+      <source>Generate new password</source>
+      <translation>Genera nuova password</translation>
+    </message>
+    <message>
+      <source>%siteurl forgot password</source>
+      <translation>% SITEURL password dimenticata</translation>
+    </message>
+    <message>
+      <source>This link is valid until %1, after that time you should generate a new one.</source>
+      <translation>Questo link è valida fino al 1%</translation>
+    </message>
+    <message>
+      <source>A mail has been sent to the following email address: %1. This email contains a link you need to click so
+        that we can confirm that the correct user is getting the new password.</source>
+      <translation>Una mail è stata inviata al seguente indirizzo di posta elettronica:% 1. E' necessario cliccare sul link ivi contenuto.</translation>
+    </message>
+    <message>
+      <source>If you have forgotten your password we can generate a new one for you. All you need to do is to enter your
+        email address and we will create a new password for you.</source>
+      <translation>Se hai dimenticato la password, tutto quello che devi fare è inserire il tuo indirizzo email e noi creeremo una nuova password per te.</translation>
     </message>
   </context>
 </TS>

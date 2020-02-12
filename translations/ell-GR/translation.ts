@@ -5,7 +5,7 @@
     <name>ocbootstrap</name>
     <message>
       <source>Overview</source>
-      <translation>εν συντομία</translation>
+      <translation>Σύνοψη</translation>
     </message>
     <message>
       <source>Read more</source>
@@ -13,15 +13,15 @@
     </message>
     <message>
       <source>Store</source>
-      <translation>Κατάστημα</translation>
+      <translation>Αποθήκευση</translation>
     </message>
     <message>
       <source>Store draft</source>
-      <translation>σχέδιο Κατάστημα</translation>
+      <translation>Αποθήκευση Προσχέδιου</translation>
     </message>
     <message>
       <source>Discard</source>
-      <translation>Απορρίπτω</translation>
+      <translation>Απόρριψη</translation>
     </message>
     <message>
       <source>At least</source>
@@ -107,7 +107,7 @@
     <name>design/admin/content/edit_attribute</name>
     <message>
       <source>not translatable</source>
-      <translation>δεν μεταφραζόμενη</translation>
+      <translation>δεν μεταφράζεται</translation>
     </message>
     <message>
       <source>required</source>
@@ -126,7 +126,7 @@
     <name>design/admin/preview/article</name>
     <message>
       <source>Comments allowed</source>
-      <translation>σχόλια επιτρέπονται</translation>
+      <translation>Επιτρέπονται τα σχόλια</translation>
     </message>
     <message>
       <source>Yes</source>
@@ -141,7 +141,7 @@
     <name>design/ocbootstrap/article/article_index</name>
     <message>
       <source>Article index</source>
-      <translation>Το άρθρο δείκτη</translation>
+      <translation>Δείκτης Άρθρου</translation>
     </message>
   </context>
   <context>
@@ -152,7 +152,7 @@
     </message>
     <message>
       <source>New comment</source>
-      <translation>νέο σχόλιο</translation>
+      <translation>Νέο Σχόλιο</translation>
     </message>
     <message>
       <source>%login_link_startLog in%login_link_end or %create_link_startcreate a user account%create_link_end to comment.</source>
@@ -174,7 +174,7 @@
     <name>design/ocbootstrap/block_item/call_to_action</name>
     <message>
       <source>Download!</source>
-      <translation>Κατεβάστε!</translation>
+      <translation>Κατεβάστε το!</translation>
     </message>
   </context>
   <context>
@@ -204,15 +204,15 @@
     </message>
     <message>
       <source>Mon</source>
-      <translation>Mon</translation>
+      <translation>Δευ</translation>
     </message>
     <message>
       <source>Tue</source>
-      <translation>Τρ</translation>
+      <translation>Τρι</translation>
     </message>
     <message>
       <source>Wed</source>
-      <translation>Παντρεύομαι</translation>
+      <translation>Τετ</translation>
     </message>
     <message>
       <source>Thu</source>
@@ -224,18 +224,18 @@
     </message>
     <message>
       <source>Sat</source>
-      <translation>Sat</translation>
+      <translation>Σαβ</translation>
     </message>
     <message>
       <source>Sun</source>
-      <translation>Ήλιος</translation>
+      <translation>Κυρ</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/blog/extra_info</name>
     <message>
       <source>Tags</source>
-      <translation>ετικέτες</translation>
+      <translation>Ετικέτες</translation>
     </message>
     <message>
       <source>Archive</source>
@@ -262,7 +262,7 @@
     </message>
     <message>
       <source>You have already submitted this form. The data you entered was:</source>
-      <translation>Έχετε ήδη υποβάλει αυτή τη φόρμα. Τα δεδομένα που έχετε πληκτρολογήσει:</translation>
+      <translation>Έχετε ήδη υποβάλει αυτή τη φόρμα. Τα δεδομένα που έχετε εισάγει είναι:</translation>
     </message>
     <message>
       <source>Return to site</source>
@@ -412,7 +412,7 @@
     </message>
     <message>
       <source>Search</source>
-      <translation>Ψάξιμο</translation>
+      <translation>Αναζήτηση</translation>
     </message>
     <message>
       <source>No results were found when searching for "%1"</source>
@@ -420,7 +420,7 @@
     </message>
     <message>
       <source>Search for "%1" returned %2 matches</source>
-      <translation>Αναζήτηση για «% 1» δεν επέστρεψε αγώνες% 2</translation>
+      <translation>Αναζήτηση για "%1" επέστρεψε "%2" αποτελέσματα</translation>
     </message>
     <message>
       <source>Last month</source>
@@ -431,11 +431,11 @@
     <name>design/ocbootstrap/content/browse</name>
     <message>
       <source>Browse</source>
-      <translation>Ξεφυλλίζω</translation>
+      <translation>Περιήγηση</translation>
     </message>
     <message>
       <source>To select objects, choose the appropriate radiobutton or checkbox(es), and click the "Select" button.</source>
-      <translation>Για να επιλέξετε αντικείμενα, επιλέξτε την κατάλληλη radiobutton ή κουτάκι (α), και κάντε κλικ στο κουμπί «Επιλογή».</translation>
+      <translation>Χρησιμοποιήσετε τα κουμπιά επιλογής για να επιλέξετε τα αντικείμενα που θέλετε και κάνετε κλικ στο κουμπί «Επιλογή».</translation>
     </message>
     <message>
       <source>To select an object that is a child of one of the displayed objects, click the parent object name to display a list of its children.</source>
@@ -447,15 +447,15 @@
     </message>
     <message>
       <source>Top level</source>
-      <translation>Κορυφαίο επίπεδο</translation>
+      <translation>Επιστροφή στην αρχή</translation>
     </message>
     <message>
       <source>Select</source>
-      <translation>Επιλέγω</translation>
+      <translation>Επιλογή</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Ματαίωση</translation>
+      <translation>Ακύρωση</translation>
     </message>
   </context>
   <context>
@@ -504,11 +504,11 @@
     </message>
     <message>
       <source>My drafts</source>
-      <translation>σχέδια μου</translation>
+      <translation>Τα προσχέδια μου</translation>
     </message>
     <message>
       <source>Empty draft</source>
-      <translation>Αδειάστε το σχέδιο</translation>
+      <translation>Άδειασμα του προσχέδιου</translation>
     </message>
     <message>
       <source>Name</source>
@@ -540,11 +540,22 @@
     </message>
     <message>
       <source>Remove</source>
-      <translation>Αφαιρώ</translation>
+      <translation>Αφαίρεση</translation>
     </message>
     <message>
       <source>You have no drafts</source>
-      <translation>Δεν έχετε πρόχειρα</translation>
+      <translation>Δεν έχετε προσχέδια</translation>
+    </message>
+    <message>
+      <source>These are the current objects you are working on. The drafts are owned by you and can only be seen by you.
+                You can either edit the drafts or remove them if you don't need them any more.</source>
+      <translation>Αυτά είναι τα τρέχουσα αρχεία που εργάζεστε. Τα προσχέδια ανήκουν σε εσάς και μπορείτε να τα δει μόνο εσείς.Μπορείτε να επεξεργαστείτε τα προσχέδια ή να τα αφαιρέσετε αν δεν τα χρειάζεστε πια.</translation>
+    </message>
+    <message>
+      <source>These are the current objects you are working on. The drafts are owned by you and can only be seen by you.
+      You can either edit the drafts or remove them if you don't need them any more.</source>
+      <translation>Αυτές είναι οι τρέχουσες αντικείμενα που εργάζεστε. Τα σχέδια ανήκουν σε εσάς και μπορεί να δει μόνο από εσάς.
+      Μπορείτε να επεξεργαστείτε τα σχέδια ή να τα αφαιρέσετε αν δεν τα χρειάζεστε πια.</translation>
     </message>
   </context>
   <context>
@@ -555,15 +566,15 @@
     </message>
     <message>
       <source>Store draft</source>
-      <translation>σχέδιο Κατάστημα</translation>
+      <translation>Αποθήκευση προσχεδίου</translation>
     </message>
     <message>
       <source>Discard draft</source>
-      <translation>Απόρριψη σχεδίου</translation>
+      <translation>Απόρριψη προσχεδίου</translation>
     </message>
     <message>
       <source>Translating content from %from_lang to %to_lang</source>
-      <translation>Μεταγραφική περιεχόμενο από% from_lang έως% to_lang</translation>
+      <translation>Μετάφραση περιεχομένου από% from_lang έως% to_lang</translation>
     </message>
     <message>
       <source>Content in %language</source>
@@ -583,11 +594,11 @@
     </message>
     <message>
       <source>Store the contents of the draft that is being edited and continue editing. Use this button to periodically save your work while editing.</source>
-      <translation>Αποθηκεύστε το περιεχόμενο του σχεδίου που έχει επεξεργαστεί και να συνεχίσει την επεξεργασία. Χρησιμοποιήστε αυτό το κουμπί για περιοδικά αποθηκεύσετε την εργασία σας κατά την επεξεργασία.</translation>
+      <translation>Αποθηκεύστε το περιεχόμενο του προσχέδιου που επεξεργάζεστε και να συνεχίσει την επεξεργασία. Χρησιμοποιήστε αυτό το κουμπί για αποθηκεύετε περιοδικά την εργασία σας κατά την επεξεργασία.</translation>
     </message>
     <message>
       <source>Store draft and exit</source>
-      <translation>Αποθηκεύστε το σχέδιο και την έξοδο</translation>
+      <translation>Αποθήκευση προσχέδιου και έξοδος</translation>
     </message>
     <message>
       <source>Store the draft that is being edited and exit from edit mode. Use when you need to exit your work and return later to continue.</source>
@@ -614,7 +625,7 @@
     </message>
     <message>
       <source>The object is owned by %owner.</source>
-      <translation>Το αντικείμενο ανήκει από τον ιδιοκτήτη%.</translation>
+      <translation>Το αντικείμενο ανήκει στον ιδιοκτήτη%.</translation>
     </message>
     <message>
       <source>Current drafts</source>
@@ -634,7 +645,7 @@
     </message>
     <message>
       <source>Created</source>
-      <translation>δημιουργήθηκε</translation>
+      <translation>Δημιουργήθηκε</translation>
     </message>
     <message>
       <source>Last modified</source>
@@ -646,7 +657,43 @@
     </message>
     <message>
       <source>New draft</source>
-      <translation>νέο σχέδιο</translation>
+      <translation>Νέο προσχέδιο</translation>
+    </message>
+    <message>
+      <source>This object is already being edited by yourself and others.
+                You can either continue editing one of your drafts or you can create a new draft.</source>
+      <translation>Το αρχείο αυτό έχει ήδη επεξεργαστεί.
+                Μπορείτε να συνεχίσετε να επεξεργάζεστε κάποιο προσχέδιο σας ή μπορείτε να δημιουργήσετε ένα καινούργιο προσχέδιο</translation>
+    </message>
+    <message>
+      <source>This object is already being edited by you.
+                You can either continue editing one of your drafts or you can create a new draft.</source>
+      <translation>Έχετε ήδη επεξεργαστεί αυτό το αρχείο
+                Μπορείτε να συνεχίσετε να επεξεργάζεστε κάποιο προσχέδιο σας ή μπορείτε να δημιουργήσετε ένα καινούργιο προσχέδιο</translation>
+    </message>
+    <message>
+      <source>This object is already being edited by someone else.
+                You should either contact the person about their draft or create a new draft for your own use.</source>
+      <translation>Αυτό το αρχείο έχει ήδη επεξεργαστεί από κάποιον άλλο.
+                Θα πρέπει να επικοινωνήσετε είτε με το άτομο που έχει το προσχέδιο ή να δημιουργήσετε ένα νέο προσχέδιο για δική σας χρήση.</translation>
+    </message>
+    <message>
+      <source>This object is already being edited by yourself and others.
+    You can either continue editing one of your drafts or you can create a new draft.</source>
+      <translation>Αυτό το αντικείμενο έχει ήδη επεξεργαστεί από τον εαυτό σας και τους άλλους.
+    Μπορείτε είτε να συνεχίσετε την επεξεργασία ένα από τα σχέδια σας ή μπορείτε να δημιουργήσετε ένα νέο σχέδιο.</translation>
+    </message>
+    <message>
+      <source>This object is already being edited by you.
+        You can either continue editing one of your drafts or you can create a new draft.</source>
+      <translation>Αυτό το αντικείμενο έχει ήδη επεξεργαστεί από εσάς.
+        Μπορείτε είτε να συνεχίσετε την επεξεργασία ένα από τα σχέδια σας ή μπορείτε να δημιουργήσετε ένα νέο σχέδιο.</translation>
+    </message>
+    <message>
+      <source>This object is already being edited by someone else.
+        You should either contact the person about their draft or create a new draft for your own use.</source>
+      <translation>Αυτό το αντικείμενο έχει ήδη επεξεργαστεί από κάποιον άλλο.
+        Θα πρέπει να επικοινωνήσετε είτε με το πρόσωπο για το σχέδιο τους ή να δημιουργήσετε ένα νέο σχέδιο για δική σας χρήση.</translation>
     </message>
   </context>
   <context>
@@ -669,11 +716,11 @@
     </message>
     <message>
       <source>Select the language the new translation will be based on.</source>
-      <translation>Επιλέξτε τη γλώσσα η νέα μετάφραση θα πρέπει να βασίζονται σε.</translation>
+      <translation>Επιλέξτε την γλώσσα στην οποία θα πρέπει να βασίζεται η μετάφραση.</translation>
     </message>
     <message>
       <source>Use an empty, untranslated draft</source>
-      <translation>Χρησιμοποιήστε ένα άδειο, αμετάφραστο σχέδιο</translation>
+      <translation>Χρησιμοποιήστε ένα άδειο, αμετάφραστο προσχέδιο</translation>
     </message>
     <message>
       <source>You do not have permission to create a translation in another language.</source>
@@ -685,7 +732,7 @@
     </message>
     <message>
       <source>You do not have permission to edit the object in any available languages.</source>
-      <translation>Δεν έχετε άδεια για να επεξεργαστείτε το αντικείμενο σε οποιαδήποτε διαθέσιμες γλώσσες.</translation>
+      <translation>Δεν έχετε άδεια για να επεξεργαστείτε το αντικείμενο σε οποιαδήποτε γλώσσα.</translation>
     </message>
     <message>
       <source>Edit</source>
@@ -693,42 +740,42 @@
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Ματαίωση</translation>
+      <translation>Ακύρωση</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/content/history</name>
     <message>
       <source>Version not a draft</source>
-      <translation>Έκδοση όχι ένα σχέδιο</translation>
+      <translation>Έκδοση</translation>
     </message>
     <message>
       <source>Version %1 is not available for editing anymore. Only drafts can be edited.</source>
-      <translation>Έκδοση% 1 δεν είναι διαθέσιμο για επεξεργασία πια. Μόνο τα σχέδια μπορούν να επεξεργαστούν.</translation>
+      <translation>Έκδοση% 1 δεν είναι διαθέσιμο για επεξεργασία πια. Μόνο τα προσχέδια μπορούν να επεξεργαστούν.</translation>
     </message>
     <message>
       <source>To edit this version, first create a copy of it.</source>
-      <translation>Για να επεξεργαστείτε αυτήν την έκδοση, δημιουργήστε πρώτα ένα αντίγραφό του.</translation>
+      <translation>Για να επεξεργαστείτε αυτήν την έκδοση, δημιουργήστε πρώτα ένα αντίγραφό της.</translation>
     </message>
     <message>
       <source>Version not yours</source>
-      <translation>Έκδοση όχι δικοί σας</translation>
+      <translation>Η έκδοση δεν είναι δικιά σας</translation>
     </message>
     <message>
       <source>Version %1 was not created by you. Only your own drafts can be edited.</source>
-      <translation>Έκδοση% 1 δεν δημιουργήθηκε από εσάς. Μόνο μπορείτε να επεξεργαστείτε τα δικά σας σχέδια.</translation>
+      <translation>Η έκδοση %1 δεν δημιουργήθηκε από εσάς. Μόνο τα δικά σας προσχέδια μπορείτε να επεξεργαστείτε</translation>
     </message>
     <message>
       <source>Unable to create new version</source>
-      <translation>Δεν είναι δυνατή η δημιουργία νέων έκδοση</translation>
+      <translation>Δεν είναι δυνατή η δημιουργία νέας έκδοση</translation>
     </message>
     <message>
       <source>Version history limit has been exceeded and no archived version can be removed by the system.</source>
-      <translation>έχει υπερβεί το όριο ιστορία Έκδοση και δεν αρχειοθετημένη έκδοση μπορεί να αφαιρεθεί από το σύστημα.</translation>
+      <translation>Έχετε υπερβεί το όριο του ιστορικού της έκδοσης και καμία αρχειοθετημένη έκδοση δεν μπορεί να αφαιρεθεί από το σύστημα.</translation>
     </message>
     <message>
       <source>You can either change your version history settings in content.ini, remove draft versions or edit existing drafts.</source>
-      <translation>Μπορείτε είτε να αλλάξετε τις ρυθμίσεις του ιστορικού έκδοση σας στο content.ini, σχέδιο αφαίρεση εκδόσεις ή να επεξεργαστείτε υπάρχοντα σχέδια.</translation>
+      <translation>Μπορείτε είτε να αλλάξετε τις ρυθμίσεις του ιστορικού εκδόσεων σας στο content.ini, να διαγράψετε κάποια έκδοση προσχεδίου ή να επεξεργαστείτε υπάρχοντα προσχέδια.</translation>
     </message>
     <message>
       <source>Versions for &lt;%object_name&gt; [%version_count]</source>
@@ -736,11 +783,11 @@
     </message>
     <message>
       <source>Toggle selection</source>
-      <translation>επιλογή Εναλλαγή</translation>
+      <translation>Εναλλαγή επιλογής</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation>Εκδοχή</translation>
+      <translation>Έκδοση</translation>
     </message>
     <message>
       <source>Status</source>
@@ -752,19 +799,19 @@
     </message>
     <message>
       <source>Created</source>
-      <translation>δημιουργήθηκε</translation>
+      <translation>Δημιουργήθηκε</translation>
     </message>
     <message>
       <source>Modified</source>
-      <translation>τροποποιημένο</translation>
+      <translation>Τροποποιήθηκε</translation>
     </message>
     <message>
       <source>Select version #%version_number for removal.</source>
-      <translation>Επιλέξτε έκδοση #% VERSION_NUMBER για την αφαίρεση.</translation>
+      <translation>Επιλέξτε έκδοση #% VERSION_NUMBER για διαγραφή.</translation>
     </message>
     <message>
       <source>Version #%version_number cannot be removed because it is either the published version of the object or because you do not have permission to remove it.</source>
-      <translation>Έκδοση #% VERSION_NUMBER δεν μπορεί να αφαιρεθεί, διότι είναι είτε η δημοσιευμένη έκδοση του αντικειμένου ή επειδή δεν έχετε άδεια για να το αφαιρέσετε.</translation>
+      <translation>Η Έκδοση #% VERSION_NUMBER δεν μπορεί να αφαιρεθεί, διότι είτε είναι η δημοσιευμένη έκδοση του αντικειμένου ή επειδή δεν έχετε άδεια για να το αφαιρέσετε.</translation>
     </message>
     <message>
       <source>View the contents of version #%version_number. Translation: %translation.</source>
@@ -776,15 +823,15 @@
     </message>
     <message>
       <source>Published</source>
-      <translation>Που δημοσιεύθηκε</translation>
+      <translation>Δημοσιεύθηκε</translation>
     </message>
     <message>
       <source>Pending</source>
-      <translation>εκκρεμής</translation>
+      <translation>Εκκρεμεί</translation>
     </message>
     <message>
       <source>Archived</source>
-      <translation>Αρχειοθετημένα</translation>
+      <translation>Αρχειοθετημένο</translation>
     </message>
     <message>
       <source>Rejected</source>
@@ -792,7 +839,7 @@
     </message>
     <message>
       <source>Untouched draft</source>
-      <translation>ανέγγιχτη σχέδιο</translation>
+      <translation>Ανέγγιχτο προσχέδιο</translation>
     </message>
     <message>
       <source>Create a copy of version #%version_number.</source>
@@ -812,7 +859,7 @@
     </message>
     <message>
       <source>This object does not have any versions.</source>
-      <translation>Αυτό το αντικείμενο δεν έχει κανένα εκδόσεις.</translation>
+      <translation>Αυτό το αντικείμενο δεν έχει καμία έκδοση.</translation>
     </message>
     <message>
       <source>Remove selected</source>
@@ -824,7 +871,7 @@
     </message>
     <message>
       <source>Show differences</source>
-      <translation>Εμφάνιση διαφορές</translation>
+      <translation>Εμφάνιση διαφορών</translation>
     </message>
     <message>
       <source>Back</source>
@@ -832,7 +879,7 @@
     </message>
     <message>
       <source>Published version</source>
-      <translation>Δημοσιεύθηκε έκδοση</translation>
+      <translation>Δημοσιευμένη έκδοση</translation>
     </message>
     <message>
       <source>Translations</source>
@@ -856,7 +903,7 @@
     </message>
     <message>
       <source>Inline changes</source>
-      <translation>inline αλλαγές</translation>
+      <translation>Ενσωματωμένες Αλλαγές</translation>
     </message>
     <message>
       <source>Block changes</source>
@@ -868,11 +915,11 @@
     </message>
     <message>
       <source>Back to history</source>
-      <translation>Επιστροφή στην Ιστορία</translation>
+      <translation>Επιστροφή στο Ιστορικό</translation>
     </message>
     <message>
       <source>Modified translation</source>
-      <translation>τροποποιημένο μετάφραση</translation>
+      <translation>Τροποποιημένη μετάφραση</translation>
     </message>
     <message>
       <source>There is no need to do a copies of untouched drafts.</source>
@@ -898,7 +945,7 @@
     <name>design/ocbootstrap/content/pendinglist</name>
     <message>
       <source>My pending items [%pending_count]</source>
-      <translation>εν αναμονή των στοιχείων μου [% PENDING_COUNT]</translation>
+      <translation>Αντικείμενα μου σε αναμονή [% PENDING_COUNT]</translation>
     </message>
     <message>
       <source>Name</source>
@@ -926,14 +973,14 @@
     </message>
     <message>
       <source>Your pending list is empty</source>
-      <translation>εν αναμονή Λίστα σας είναι άδεια</translation>
+      <translation>Η λίστα αναμονής είναι άδεια</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/content/search</name>
     <message>
       <source>Search</source>
-      <translation>Ψάξιμο</translation>
+      <translation>Αναζήτηση</translation>
     </message>
     <message>
       <source>The following words were excluded from the search:</source>
@@ -965,11 +1012,11 @@
     </message>
     <message>
       <source>Search for "%1" returned %2 matches</source>
-      <translation>Αναζήτηση για «% 1» δεν επέστρεψε αγώνες% 2</translation>
+      <translation>Αναζήτηση για «%1» επέστρεψε %2 αποτελέσματα</translation>
     </message>
     <message>
       <source>For more options try the %1Advanced search%2</source>
-      <translation>Για περισσότερες επιλογές δοκιμάστε το% 1Advanced ψάξετε% 2</translation>
+      <translation>Για περισσότερες επιλογές δοκιμάστε την %1 προχωρημένη αναζήτηση% 2</translation>
     </message>
   </context>
   <context>
@@ -1000,15 +1047,15 @@
     </message>
     <message>
       <source>Your name</source>
-      <translation>Το όνομα σου</translation>
+      <translation>Το όνομα σας</translation>
     </message>
     <message>
       <source>Your email address</source>
-      <translation>η ηλεκτρονική σου διεύθυνση</translation>
+      <translation>Η ηλεκτρονική σας διεύθυνση</translation>
     </message>
     <message>
       <source>Recipient's email address</source>
-      <translation>Η ηλεκτρονική διεύθυνση του αποδέκτη</translation>
+      <translation>Ηλεκτρονική διεύθυνση του παραλήπτη</translation>
     </message>
     <message>
       <source>Comment</source>
@@ -1016,11 +1063,11 @@
     </message>
     <message>
       <source>Send</source>
-      <translation>Στείλετε</translation>
+      <translation>Αποστολή</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Ματαίωση</translation>
+      <translation>Ακύρωση</translation>
     </message>
   </context>
   <context>
@@ -1035,7 +1082,7 @@
     </message>
     <message>
       <source>Discard</source>
-      <translation>Απορρίπτω</translation>
+      <translation>Απόρριψη</translation>
     </message>
   </context>
   <context>
@@ -1050,7 +1097,7 @@
     </message>
     <message>
       <source>Discard</source>
-      <translation>Απορρίπτω</translation>
+      <translation>Απόρριψη</translation>
     </message>
   </context>
   <context>
@@ -1065,7 +1112,7 @@
     </message>
     <message>
       <source>Discard</source>
-      <translation>Απορρίπτω</translation>
+      <translation>Απόρριψη</translation>
     </message>
   </context>
   <context>
@@ -1080,7 +1127,7 @@
     </message>
     <message>
       <source>Discard</source>
-      <translation>Απορρίπτω</translation>
+      <translation>Απόρριψη</translation>
     </message>
   </context>
   <context>
@@ -1101,7 +1148,7 @@
     <name>design/ocbootstrap/ezinfo/about</name>
     <message>
       <source>eZ Publish information: %version</source>
-      <translation>EZ Δημοσίευση πληροφοριών:% έκδοσης</translation>
+      <translation>eZ Δημοσίευση πληροφοριών:% έκδοσης</translation>
     </message>
     <message>
       <source>What is eZ Publish?</source>
@@ -1121,7 +1168,7 @@
     </message>
     <message>
       <source>Third-Party Software</source>
-      <translation>Τρίτων Λογισμικό</translation>
+      <translation>Λογισμικά Τρίτων</translation>
     </message>
     <message>
       <source>Extensions</source>
@@ -1136,7 +1183,31 @@
     </message>
     <message>
       <source>Select</source>
-      <translation>Επιλέγω</translation>
+      <translation>Επιλογή</translation>
+    </message>
+    <message>
+      <source>Please choose the placement for the OpenOffice.org object.
+
+                Select the placements and click the %buttonname button.
+                Using the recent and bookmark items for quick placement is also possible.
+                Click on placement names to change the browse listing.</source>
+      <translation>Παρακαλώ επιλέξτε την τοποθέτηση για το αντικείμενο OpenOffice.org.
+
+                Επιλέξτε τις τοποθετήσεις και κάντε κλικ στο κουμπί% buttonname.
+                Χρησιμοποιώντας τις πρόσφατες και σελιδοδείκτη στοιχεία για γρήγορη τοποθέτηση είναι επίσης δυνατή.
+                Κάντε κλικ στο όνομα τοποθέτησης για να αλλάξετε τη λίστα αναζήτησης.</translation>
+    </message>
+    <message>
+      <source>Please choose the placement for the OpenOffice.org object.
+
+    Select the placements and click the %buttonname button.
+    Using the recent and bookmark items for quick placement is also possible.
+    Click on placement names to change the browse listing.</source>
+      <translation>Παρακαλώ επιλέξτε την τοποθέτηση για το αντικείμενο OpenOffice.org.
+
+    Επιλέξτε τις τοποθετήσεις και κάντε κλικ στο κουμπί% buttonname.
+    Χρησιμοποιώντας τις πρόσφατες και σελιδοδείκτη στοιχεία για γρήγορη τοποθέτηση είναι επίσης δυνατή.
+    Κάντε κλικ στο όνομα τοποθέτησης για να αλλάξετε τη λίστα αναζήτησης.</translation>
     </message>
   </context>
   <context>
@@ -1242,15 +1313,15 @@
     <name>design/ocbootstrap/full/event_view_calendar</name>
     <message>
       <source>Mon</source>
-      <translation>Mon</translation>
+      <translation>Δευ</translation>
     </message>
     <message>
       <source>Tue</source>
-      <translation>Τρ</translation>
+      <translation>Τρι</translation>
     </message>
     <message>
       <source>Wed</source>
-      <translation>Παντρεύομαι</translation>
+      <translation>Τετ</translation>
     </message>
     <message>
       <source>Thu</source>
@@ -1262,11 +1333,11 @@
     </message>
     <message>
       <source>Sat</source>
-      <translation>Sat</translation>
+      <translation>Σαβ</translation>
     </message>
     <message>
       <source>Sun</source>
-      <translation>Ήλιος</translation>
+      <translation>Κυρ</translation>
     </message>
     <message>
       <source>Monday</source>
@@ -1317,7 +1388,7 @@
     </message>
     <message>
       <source>Future events</source>
-      <translation>εκδηλώσεις Μέλλον</translation>
+      <translation>Μελλοντικές Εκδηλώσεις</translation>
     </message>
   </context>
   <context>
@@ -1347,19 +1418,19 @@
     </message>
     <message>
       <source>Replies</source>
-      <translation>απαντήσεις</translation>
+      <translation>Απαντήσεις</translation>
     </message>
     <message>
       <source>Author</source>
-      <translation>Συγγραφέας</translation>
+      <translation>Συντάκτης</translation>
     </message>
     <message>
       <source>Last reply</source>
-      <translation>τελευταία απάντηση</translation>
+      <translation>Τελευταία Απάντηση</translation>
     </message>
     <message>
       <source>Pages</source>
-      <translation>σελίδες</translation>
+      <translation>Σελίδες</translation>
     </message>
   </context>
   <context>
@@ -1370,7 +1441,7 @@
     </message>
     <message>
       <source>Author</source>
-      <translation>Συγγραφέας</translation>
+      <translation>Συντάκτης</translation>
     </message>
     <message>
       <source>Topic</source>
@@ -1382,7 +1453,7 @@
     </message>
     <message>
       <source>Moderated by</source>
-      <translation>εποπτεύονται από</translation>
+      <translation>Διαχειρίζονται απο</translation>
     </message>
     <message>
       <source>Edit</source>
@@ -1413,7 +1484,7 @@
     </message>
     <message>
       <source>Author</source>
-      <translation>Συγγραφέας</translation>
+      <translation>Συντάκτης</translation>
     </message>
     <message>
       <source>Message</source>
@@ -1821,7 +1892,7 @@
     <name>design/ocbootstrap/pagelayout</name>
     <message>
       <source>Search</source>
-      <translation>Ψάξιμο</translation>
+      <translation>Αναζήτηση</translation>
     </message>
     <message>
       <source>Search text</source>
@@ -1845,7 +1916,7 @@
     </message>
     <message>
       <source>Logout</source>
-      <translation>Αποσυνδέση</translation>
+      <translation>Αποσύνδεση</translation>
     </message>
     <message>
       <source>Register</source>
@@ -2807,7 +2878,7 @@
     </message>
     <message>
       <source>Email</source>
-      <translation>ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ</translation>
+      <translation>Ηλεκτρονική Διεύθυνση</translation>
     </message>
     <message>
       <source>Name</source>
@@ -2815,11 +2886,11 @@
     </message>
     <message>
       <source>My drafts</source>
-      <translation>σχέδια μου</translation>
+      <translation>Τα προσχέδια μου</translation>
     </message>
     <message>
       <source>My orders</source>
-      <translation>Οι εντολές μου</translation>
+      <translation>Οι παραγγελίες μου</translation>
     </message>
     <message>
       <source>My notification settings</source>
@@ -2846,7 +2917,7 @@
     <name>design/ocbootstrap/user/forgotpassword</name>
     <message>
       <source>An email has been sent to the following address: %1. It contains a link you need to click so that we can confirm that the correct user has received the new password.</source>
-      <translation>Ένα μήνυμα ηλεκτρονικού ταχυδρομείου έχει αποσταλεί στην ακόλουθη διεύθυνση:% 1. Περιλαμβάνει μια σύνδεση που χρειάζεστε για να κάνετε κλικ για να μπορέσουμε να επιβεβαιώσουμε ότι ο σωστός χρήστης έχει λάβει το νέο κωδικό πρόσβασης.</translation>
+      <translation>Ένα μήνυμα ηλεκτρονικού ταχυδρομείου έχει αποσταλεί στην ακόλουθη διεύθυνση:% 1. Περιλαμβάνει μια σύνδεση που χρειάζεστε για να κάνετε κλικ, ώστε να μπορούμε να επιβεβαιώσουμε ότι η σωστή χρήστης έχει λάβει το νέο κωδικό πρόσβασης.</translation>
     </message>
     <message>
       <source>There is no registered user with that email address.</source>
@@ -2948,7 +3019,7 @@
     </message>
     <message>
       <source>New password</source>
-      <translation>Νέος κωδικός πρόσβασης</translation>
+      <translation>Νέος Κωδικός</translation>
     </message>
     <message>
       <source>Retype password</source>
@@ -3003,6 +3074,10 @@
     <message>
       <source>User registered</source>
       <translation>εγγεγραμμένος χρήστης</translation>
+    </message>
+    <message>
+      <source>Your account was successfully created. An email will be sent to the specified address. Follow the instructions in that email to activate your account.</source>
+      <translation>Ο λογαριασμός σας δημιουργήθηκε με επιτυχία. Ένα μήνυμα ηλεκτρονικού ταχυδρομείου θα αποσταλεί στη συγκεκριμένη διεύθυνση. Ακολουθήστε τις οδηγίες σε αυτό το email για να ενεργοποιήσετε το λογαριασμό σας.</translation>
     </message>
     <message>
       <source>Your account was successfully created.</source>
@@ -3096,7 +3171,7 @@
     </message>
     <message>
       <source>Search</source>
-      <translation>Ψάξιμο</translation>
+      <translation>Αναζήτηση</translation>
     </message>
     <message>
       <source>Results</source>
@@ -3270,6 +3345,146 @@
     <message>
       <source>I confirm the publication</source>
       <translation>Επιβεβαιώνω τη δημοσίευση</translation>
+    </message>
+  </context>
+  <context>
+    <name>mbpaex/userpaex</name>
+    <message>
+      <source>Change password for user</source>
+      <translation>Αλλαξε κωδικό</translation>
+    </message>
+    <message>
+      <source>Please retype your old password.</source>
+      <translation>Πληκτρολογήστε ξανά τον παλιό κωδικό πρόσβασης σας.</translation>
+    </message>
+    <message>
+      <source>Password didn't match, please retype your new password.</source>
+      <translation>Κωδικός πρόσβασης δεν ταιριάζουν, παρακαλώ πληκτρολογήστε ξανά τον νέο κωδικό πρόσβασης.</translation>
+    </message>
+    <message>
+      <source>Password didn't validate, please retype your new password.</source>
+      <translation>Κωδικός ενημερώθηκε με επιτυχία.</translation>
+    </message>
+    <message>
+      <source>New password must be different from the old one. Please choose another password.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Password successfully updated.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Old password</source>
+      <translation>ΠΑΛΙΟΣ ΚΩΔΙΚΟΣ</translation>
+    </message>
+    <message>
+      <source>New password</source>
+      <translation>Νέος Κωδικός</translation>
+    </message>
+    <message>
+      <source>Retype password</source>
+      <translation>κωδικό πρόσβασης Πληκτρολογήστε ξανά</translation>
+    </message>
+    <message>
+      <source>OK</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Cancel</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>%siteurl your password is about to expire</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Your password is about to expire</source>
+      <translation type="unfinished"/>
+    </message>
+  </context>
+  <context>
+    <name>mbpaex/userpaex/forgotpassword</name>
+    <message>
+      <source>Click here to set your new password</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>A mail has been sent to the following email address: %1. This email contains a link you need to click so that we can confirm that the correct user is getting the new password.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>There is no registered user with that email address.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>The password has been changed successfully.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>The passwords do not match. Please, be sure to enter the same password in both fields.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>The new password is invalid, please choose new one.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Choose a new password</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Enter your desired new password in the form below.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Password</source>
+      <translation>Κωδικός πρόσβασης</translation>
+    </message>
+    <message>
+      <source>Password Confirm</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Change password</source>
+      <translation>Αλλαξε κωδικό</translation>
+    </message>
+    <message>
+      <source>The key is invalid or has been used.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Have you forgotten your password?</source>
+      <translation>Ξεχάσατε τον κωδικό σας;</translation>
+    </message>
+    <message>
+      <source>If you have forgotten your password we can generate a new one for you. All you need to do is to enter your email address and we will create a new password for you.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Email</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Generate new password</source>
+      <translation>Δημιουργία νέου κωδικού πρόσβασης</translation>
+    </message>
+    <message>
+      <source>%siteurl forgot password</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>This link is valid until %1, after that time you should generate a new one.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>A mail has been sent to the following email address: %1. This email contains a link you need to click so
+        that we can confirm that the correct user is getting the new password.</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>If you have forgotten your password we can generate a new one for you. All you need to do is to enter your
+        email address and we will create a new password for you.</source>
+      <translation type="unfinished"/>
     </message>
   </context>
 </TS>
