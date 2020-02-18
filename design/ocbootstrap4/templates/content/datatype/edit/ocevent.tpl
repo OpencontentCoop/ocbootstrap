@@ -166,7 +166,7 @@
 $(document).ready(function () {ldelim}
   $('#ocevent_attribute_{$attribute.id}').oceventgui({ldelim}
       endpoint: "{'/recurrence/parse'|ezurl(no)}",
-      local: '{$moment_language}'
+      locale: '{$moment_language}'
   {rdelim});
 {rdelim});
 </script>

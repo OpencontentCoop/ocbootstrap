@@ -156,11 +156,11 @@
     </message>
     <message>
       <source>%login_link_startLog in%login_link_end or %create_link_startcreate a user account%create_link_end to comment.</source>
-      <translation>% Login_link_startLog σε% login_link_end ή% create_link_startcreate ένα λογαριασμό χρήστη% create_link_end σε σχόλιο.</translation>
+      <translation>%login_link_startLog σε%login_link_end ή %create_link_startcreate ένα λογαριασμό χρήστη %create_link_end σε σχόλιο.</translation>
     </message>
     <message>
       <source>%login_link_startLog in%login_link_end to comment.</source>
-      <translation>% Login_link_startLog στο% login_link_end να σχολιάσετε.</translation>
+      <translation>%login_link_startLog στο%login_link_end να σχολιάσετε.</translation>
     </message>
   </context>
   <context>
@@ -254,7 +254,7 @@
     <name>design/ocbootstrap/collectedinfo/form</name>
     <message>
       <source>Form %formname</source>
-      <translation>Φόρμα% FormName</translation>
+      <translation>Φόρμα %formname</translation>
     </message>
     <message>
       <source>Thank you for your feedback.</source>
@@ -273,7 +273,7 @@
     <name>design/ocbootstrap/collectedinfo/poll</name>
     <message>
       <source>Poll %pollname</source>
-      <translation>Δημοσκόπηση% pollname</translation>
+      <translation>Δημοσκόπηση %pollname</translation>
     </message>
     <message>
       <source>Results</source>
@@ -293,7 +293,7 @@
     </message>
     <message>
       <source>%count total votes</source>
-      <translation>% Καταμέτρηση συνόλου των ψήφων</translation>
+      <translation>%count voti totali</translation>
     </message>
     <message>
       <source>Back to poll</source>
@@ -304,7 +304,7 @@
     <name>design/ocbootstrap/collectedinfomail/feedback</name>
     <message>
       <source>Feedback from %1</source>
-      <translation>Η ανάδραση από% 1</translation>
+      <translation>Η ανάδραση από %1</translation>
     </message>
     <message>
       <source>The following feedback was collected</source>
@@ -315,7 +315,7 @@
     <name>design/ocbootstrap/collectedinfomail/form</name>
     <message>
       <source>Collected information from %1</source>
-      <translation>Συνολικές πληροφορίες από% 1</translation>
+      <translation>Συνολικές πληροφορίες από %1</translation>
     </message>
     <message>
       <source>The following information was collected</source>
@@ -326,7 +326,7 @@
     <name>design/ocbootstrap/colledtedinfomail</name>
     <message>
       <source>Collected information from %1</source>
-      <translation>Συνολικές πληροφορίες από% 1</translation>
+      <translation>Συνολικές πληροφορίες από %1</translation>
     </message>
     <message>
       <source>The following information was collected</source>
@@ -416,7 +416,7 @@
     </message>
     <message>
       <source>No results were found when searching for "%1"</source>
-      <translation>Δεν βρέθηκαν αποτελέσματα κατά την αναζήτηση για «% 1»</translation>
+      <translation>Δεν βρέθηκαν αποτελέσματα κατά την αναζήτηση για «%1»</translation>
     </message>
     <message>
       <source>Search for "%1" returned %2 matches</source>
@@ -574,11 +574,11 @@
     </message>
     <message>
       <source>Translating content from %from_lang to %to_lang</source>
-      <translation>Μετάφραση περιεχομένου από% from_lang έως% to_lang</translation>
+      <translation>Δεν βρέθηκαν αποτελέσματα κατά την αναζήτηση για «%1»</translation>
     </message>
     <message>
       <source>Content in %language</source>
-      <translation>Περιεχόμενο σε% γλώσσας</translation>
+      <translation>Περιεχόμενο σε %language</translation>
     </message>
     <message>
       <source>Edit</source>
@@ -586,7 +586,7 @@
     </message>
     <message>
       <source>Edit &lt;%object_name&gt; (%class_name)</source>
-      <translation>Επεξεργασία &lt;% object_name&gt; (% CLASS_NAME)</translation>
+      <translation>Επεξεργασία &lt;%object_name&gt; (%class_name)</translation>
     </message>
     <message>
       <source>Publish the contents of the draft that is being edited. The draft will become the published version of the object.</source>
@@ -617,15 +617,15 @@
     <name>design/ocbootstrap/content/edit_draft</name>
     <message>
       <source>The currently published version is %version and was published at %time.</source>
-      <translation>Η τρέχουσα δημοσιευμένη έκδοση είναι% η έκδοση και δημοσιεύθηκε στο χρόνο%.</translation>
+      <translation>Η τρέχουσα δημοσιευμένη έκδοση είναι %version και δημοσιεύθηκε στο %time.</translation>
     </message>
     <message>
       <source>The last modification was done at %modified.</source>
-      <translation>Η τελευταία τροποποίηση έγινε στο% τροποποιηθεί.</translation>
+      <translation>Η τελευταία τροποποίηση έγινε στο %modified.</translation>
     </message>
     <message>
       <source>The object is owned by %owner.</source>
-      <translation>Το αντικείμενο ανήκει στον ιδιοκτήτη%.</translation>
+      <translation>Το αντικείμενο ανήκει στον %owner.</translation>
     </message>
     <message>
       <source>Current drafts</source>
@@ -751,7 +751,7 @@
     </message>
     <message>
       <source>Version %1 is not available for editing anymore. Only drafts can be edited.</source>
-      <translation>Έκδοση% 1 δεν είναι διαθέσιμο για επεξεργασία πια. Μόνο τα προσχέδια μπορούν να επεξεργαστούν.</translation>
+      <translation>Έκδοση %1 δεν είναι διαθέσιμο για επεξεργασία πια. Μόνο τα προσχέδια μπορούν να επεξεργαστούν.</translation>
     </message>
     <message>
       <source>To edit this version, first create a copy of it.</source>
@@ -779,7 +779,7 @@
     </message>
     <message>
       <source>Versions for &lt;%object_name&gt; [%version_count]</source>
-      <translation>Εκδόσεις για &lt;% object_name&gt; [% version_count]</translation>
+      <translation>Εκδόσεις για &lt;%object_name&gt; [%version_count]</translation>
     </message>
     <message>
       <source>Toggle selection</source>
@@ -807,15 +807,15 @@
     </message>
     <message>
       <source>Select version #%version_number for removal.</source>
-      <translation>Επιλέξτε έκδοση #% VERSION_NUMBER για διαγραφή.</translation>
+      <translation>Επιλέξτε έκδοση #%version_number για διαγραφή.</translation>
     </message>
     <message>
       <source>Version #%version_number cannot be removed because it is either the published version of the object or because you do not have permission to remove it.</source>
-      <translation>Η Έκδοση #% VERSION_NUMBER δεν μπορεί να αφαιρεθεί, διότι είτε είναι η δημοσιευμένη έκδοση του αντικειμένου ή επειδή δεν έχετε άδεια για να το αφαιρέσετε.</translation>
+      <translation>Η Έκδοση #%version_number δεν μπορεί να αφαιρεθεί, διότι είτε είναι η δημοσιευμένη έκδοση του αντικειμένου ή επειδή δεν έχετε άδεια για να το αφαιρέσετε.</translation>
     </message>
     <message>
       <source>View the contents of version #%version_number. Translation: %translation.</source>
-      <translation>Δείτε τα περιεχόμενα της έκδοσης #% VERSION_NUMBER. Μετάφραση:% μετάφρασης.</translation>
+      <translation>Δείτε τα περιεχόμενα της έκδοσης #%version_number. Μετάφραση: %translation.</translation>
     </message>
     <message>
       <source>Draft</source>
@@ -843,7 +843,7 @@
     </message>
     <message>
       <source>Create a copy of version #%version_number.</source>
-      <translation>Δημιουργήστε ένα αντίγραφο της έκδοσης #% VERSION_NUMBER.</translation>
+      <translation>Δημιουργήστε ένα αντίγραφο της έκδοσης #%version_number.</translation>
     </message>
     <message>
       <source>You cannot make copies of versions because you do not have permission to edit the object.</source>
@@ -851,11 +851,11 @@
     </message>
     <message>
       <source>Edit the contents of version #%version_number.</source>
-      <translation>Επεξεργασία τα περιεχόμενα της έκδοσης #% VERSION_NUMBER.</translation>
+      <translation>Επεξεργασία τα περιεχόμενα της έκδοσης #%version_number.</translation>
     </message>
     <message>
       <source>You cannot edit the contents of version #%version_number either because it is not a draft or because you do not have permission to edit the object.</source>
-      <translation>Δεν μπορείτε να επεξεργαστείτε τα περιεχόμενα της έκδοσης #% VERSION_NUMBER είτε επειδή δεν είναι ένα σχέδιο ή επειδή δεν έχετε άδεια για να επεξεργαστείτε το αντικείμενο.</translation>
+      <translation>Δεν μπορείτε να επεξεργαστείτε τα περιεχόμενα της έκδοσης #%version_number είτε επειδή δεν είναι ένα σχέδιο ή επειδή δεν έχετε άδεια για να επεξεργαστείτε το αντικείμενο.</translation>
     </message>
     <message>
       <source>This object does not have any versions.</source>
@@ -887,7 +887,7 @@
     </message>
     <message>
       <source>New drafts [%newerDraftCount]</source>
-      <translation>Νέα σχέδια [% newerDraftCount]</translation>
+      <translation>Νέα σχέδια [%newerDraftCount]</translation>
     </message>
     <message>
       <source>This object does not have any drafts.</source>
@@ -895,7 +895,7 @@
     </message>
     <message>
       <source>Differences between versions %oldVersion and %newVersion</source>
-      <translation>Οι διαφορές μεταξύ των εκδόσεων% oldVersion και% newVersion</translation>
+      <translation>Οι διαφορές μεταξύ των εκδόσεων %oldVersion και %newVersion</translation>
     </message>
     <message>
       <source>Old version</source>
@@ -930,7 +930,7 @@
     <name>design/ocbootstrap/content/keyword</name>
     <message>
       <source>Keyword: %keyword</source>
-      <translation>Λέξη-κλειδί:% λέξεων-κλειδιών</translation>
+      <translation>Λέξη-κλειδί:%keyword</translation>
     </message>
     <message>
       <source>Link</source>
@@ -945,7 +945,7 @@
     <name>design/ocbootstrap/content/pendinglist</name>
     <message>
       <source>My pending items [%pending_count]</source>
-      <translation>Αντικείμενα μου σε αναμονή [% PENDING_COUNT]</translation>
+      <translation>Αντικείμενα μου σε αναμονή [%pending_count]</translation>
     </message>
     <message>
       <source>Name</source>
@@ -988,7 +988,7 @@
     </message>
     <message>
       <source>No results were found when searching for "%1".</source>
-      <translation>Δεν βρέθηκαν αποτελέσματα κατά την αναζήτηση για «% 1».</translation>
+      <translation>Δεν βρέθηκαν αποτελέσματα κατά την αναζήτηση για «%1».</translation>
     </message>
     <message>
       <source>Search tips</source>
@@ -1016,7 +1016,7 @@
     </message>
     <message>
       <source>For more options try the %1Advanced search%2</source>
-      <translation>Για περισσότερες επιλογές δοκιμάστε την %1 προχωρημένη αναζήτηση% 2</translation>
+      <translation>Για περισσότερες επιλογές δοκιμάστε την %1 προχωρημένη αναζήτηση%2</translation>
     </message>
   </context>
   <context>
@@ -1074,7 +1074,7 @@
     <name>design/ocbootstrap/edit/comment</name>
     <message>
       <source>Edit %1 - %2</source>
-      <translation>Επεξεργασία% 1 -% 2</translation>
+      <translation>Επεξεργασία%1 -%2</translation>
     </message>
     <message>
       <source>Send for publishing</source>
@@ -1089,7 +1089,7 @@
     <name>design/ocbootstrap/edit/file</name>
     <message>
       <source>Edit %1 - %2</source>
-      <translation>Επεξεργασία% 1 -% 2</translation>
+      <translation>Επεξεργασία%1 -%2</translation>
     </message>
     <message>
       <source>Send for publishing</source>
@@ -1104,7 +1104,7 @@
     <name>design/ocbootstrap/edit/forum_reply</name>
     <message>
       <source>Edit %1 - %2</source>
-      <translation>Επεξεργασία% 1 -% 2</translation>
+      <translation>Επεξεργασία%1 -%2</translation>
     </message>
     <message>
       <source>Send for publishing</source>
@@ -1119,7 +1119,7 @@
     <name>design/ocbootstrap/edit/forum_topic</name>
     <message>
       <source>Edit %1 - %2</source>
-      <translation>Επεξεργασία% 1 -% 2</translation>
+      <translation>Επεξεργασία%1 -%2</translation>
     </message>
     <message>
       <source>Send for publishing</source>
@@ -1148,7 +1148,7 @@
     <name>design/ocbootstrap/ezinfo/about</name>
     <message>
       <source>eZ Publish information: %version</source>
-      <translation>eZ Δημοσίευση πληροφοριών:% έκδοσης</translation>
+      <translation>eZ Δημοσίευση πληροφοριών:%version</translation>
     </message>
     <message>
       <source>What is eZ Publish?</source>
@@ -1193,7 +1193,7 @@
                 Click on placement names to change the browse listing.</source>
       <translation>Παρακαλώ επιλέξτε την τοποθέτηση για το αντικείμενο OpenOffice.org.
 
-                Επιλέξτε τις τοποθετήσεις και κάντε κλικ στο κουμπί% buttonname.
+                Επιλέξτε τις τοποθετήσεις και κάντε κλικ στο κουμπί%buttonname.
                 Χρησιμοποιώντας τις πρόσφατες και σελιδοδείκτη στοιχεία για γρήγορη τοποθέτηση είναι επίσης δυνατή.
                 Κάντε κλικ στο όνομα τοποθέτησης για να αλλάξετε τη λίστα αναζήτησης.</translation>
     </message>
@@ -1205,7 +1205,7 @@
     Click on placement names to change the browse listing.</source>
       <translation>Παρακαλώ επιλέξτε την τοποθέτηση για το αντικείμενο OpenOffice.org.
 
-    Επιλέξτε τις τοποθετήσεις και κάντε κλικ στο κουμπί% buttonname.
+    Επιλέξτε τις τοποθετήσεις και κάντε κλικ στο κουμπί%buttonname.
     Χρησιμοποιώντας τις πρόσφατες και σελιδοδείκτη στοιχεία για γρήγορη τοποθέτηση είναι επίσης δυνατή.
     Κάντε κλικ στο όνομα τοποθέτησης για να αλλάξετε τη λίστα αναζήτησης.</translation>
     </message>
@@ -1266,7 +1266,7 @@
     </message>
     <message>
       <source>%login_link_startLog in%login_link_end or %create_link_startcreate a user account%create_link_end to comment.</source>
-      <translation>% Login_link_startLog σε% login_link_end ή% create_link_startcreate ένα λογαριασμό χρήστη% create_link_end σε σχόλιο.</translation>
+      <translation>%login_link_startLog σε%login_link_end ή %create_link_startcreate ένα λογαριασμό χρήστη %create_link_end σε σχόλιο.</translation>
     </message>
     <message>
       <source>Tip a friend</source>
@@ -1410,7 +1410,7 @@
     </message>
     <message>
       <source>You need to be logged in to get access to the forums. You can do so %login_link_start%here%login_link_end%</source>
-      <translation>Θα πρέπει να συνδεθείτε για να έχετε πρόσβαση στο φόρουμ. Μπορείτε να το κάνετε% login_link_start% εδώ% login_link_end%</translation>
+      <translation>Θα πρέπει να συνδεθείτε για να έχετε πρόσβαση στο φόρουμ. Μπορείτε να το κάνετε %login_link_start% εδώ %login_link_end%</translation>
     </message>
     <message>
       <source>Topic</source>
@@ -1480,7 +1480,7 @@
     </message>
     <message>
       <source>You need to be logged in to get access to the forums. You can do so %login_link_start%here%login_link_end%</source>
-      <translation>Θα πρέπει να συνδεθείτε για να έχετε πρόσβαση στο φόρουμ. Μπορείτε να το κάνετε% login_link_start% εδώ% login_link_end%</translation>
+      <translation>Θα πρέπει να συνδεθείτε για να έχετε πρόσβαση στο φόρουμ. Μπορείτε να το κάνετε%login_link_start% εδώ %login_link_end%</translation>
     </message>
     <message>
       <source>Author</source>
@@ -1685,7 +1685,7 @@
     <name>design/ocbootstrap/line/poll</name>
     <message>
       <source>%count votes</source>
-      <translation>% Ψήφοι μετράνε</translation>
+      <translation>%Ψήφοι μετράνε</translation>
     </message>
     <message>
       <source>Vote</source>
@@ -1735,11 +1735,11 @@
     <name>design/ocbootstrap/link</name>
     <message>
       <source>%sitetitle front page</source>
-      <translation>% Μπροστά sitetitle σελίδα</translation>
+      <translation>%sitetitle Μπροστά σελίδα</translation>
     </message>
     <message>
       <source>Search %sitetitle</source>
-      <translation>Αναζήτηση% sitetitle</translation>
+      <translation>Αναζήτηση %sitetitle</translation>
     </message>
     <message>
       <source>Printable version</source>
@@ -1761,11 +1761,11 @@
     </message>
     <message>
       <source>%nodename and its %childcount children. %additionalwarning</source>
-      <translation>% NodeName και τα παιδιά% childcount της. % additionalwarning</translation>
+      <translation>%nodename και τα παιδιά %childcount της. %additionalwarning</translation>
     </message>
     <message>
       <source>%nodename %additionalwarning</source>
-      <translation>% NodeName% additionalwarning</translation>
+      <translation>%nodename %additionalwarning</translation>
     </message>
     <message>
       <source>Move to trash</source>
@@ -1777,7 +1777,7 @@
     </message>
     <message>
       <source>If %trashname is checked, removed items can be found in the trash.</source>
-      <translation>Εάν% trashname ελέγχεται, αφαιρούνται στοιχεία μπορούν να βρεθούν στα σκουπίδια.</translation>
+      <translation>Εάν %trashname ελέγχεται, αφαιρούνται στοιχεία μπορούν να βρεθούν στα σκουπίδια.</translation>
     </message>
     <message>
       <source>Confirm</source>
@@ -1800,11 +1800,11 @@
     </message>
     <message>
       <source>Notification for node &lt;%node_name&gt; already exists.</source>
-      <translation>Ειδοποίηση για τον κόμβο &lt;% node_name&gt; υπάρχει ήδη.</translation>
+      <translation>Ειδοποίηση για τον κόμβο &lt;%node_name&gt; υπάρχει ήδη.</translation>
     </message>
     <message>
       <source>Notification for node &lt;%node_name&gt; was added successfully.</source>
-      <translation>Ειδοποίηση για τον κόμβο &lt;% node_name&gt; προστέθηκε με επιτυχία.</translation>
+      <translation>Ειδοποίηση για τον κόμβο &lt;%node_name&gt; προστέθηκε με επιτυχία.</translation>
     </message>
     <message>
       <source>OK</source>
@@ -1842,7 +1842,7 @@
     <name>design/ocbootstrap/notification/handler/ezsubtree/settings/edit</name>
     <message>
       <source>My item notifications [%notification_count]</source>
-      <translation>ειδοποιήσεις για τα στοιχεία μου [% notification_count]</translation>
+      <translation>ειδοποιήσεις για τα στοιχεία μου [%notification_count]</translation>
     </message>
     <message>
       <source>Invert selection.</source>
@@ -1958,7 +1958,7 @@
     <name>design/ocbootstrap/rss/edit_export</name>
     <message>
       <source>Edit &lt;%rss_export_name&gt; [RSS Export]</source>
-      <translation>Επεξεργασία &lt;% rss_export_name&gt; [RSS Εξαγωγή]</translation>
+      <translation>Επεξεργασία &lt;%rss_export_name&gt; [RSS Εξαγωγή]</translation>
     </message>
     <message>
       <source>Invalid input</source>
@@ -2157,7 +2157,7 @@
     <name>design/ocbootstrap/rss/edit_import</name>
     <message>
       <source>Edit &lt;%rss_import_name&gt; [RSS Import]</source>
-      <translation>Επεξεργασία &lt;% rss_import_name&gt; [RSS Import]</translation>
+      <translation>Επεξεργασία &lt;%rss_import_name&gt; [RSS Import]</translation>
     </message>
     <message>
       <source>Name</source>
@@ -2272,7 +2272,7 @@
     <name>design/ocbootstrap/rss/list</name>
     <message>
       <source>RSS exports [%exports_count]</source>
-      <translation>RSS εξαγωγές [% exports_count]</translation>
+      <translation>RSS εξαγωγές [%exports_count]</translation>
     </message>
     <message>
       <source>Invert selection</source>
@@ -2320,7 +2320,7 @@
     </message>
     <message>
       <source>Edit the &lt;%name&gt; RSS export.</source>
-      <translation>Επεξεργαστείτε το &lt;% name&gt; RSS εξαγωγών.</translation>
+      <translation>Επεξεργαστείτε το &lt;%name&gt; RSS εξαγωγών.</translation>
     </message>
     <message>
       <source>The RSS export list is empty.</source>
@@ -2344,7 +2344,7 @@
     </message>
     <message>
       <source>RSS imports [%imports_count]</source>
-      <translation>RSS εισαγωγές [% imports_count]</translation>
+      <translation>RSS εισαγωγές [%imports_count]</translation>
     </message>
     <message>
       <source>Select RSS import for removal.</source>
@@ -2352,7 +2352,7 @@
     </message>
     <message>
       <source>Edit the &lt;%name&gt; RSS import.</source>
-      <translation>Επεξεργαστείτε το &lt;% name&gt; RSS εισαγωγής.</translation>
+      <translation>Επεξεργαστείτε το &lt;%name&gt; RSS εισαγωγής.</translation>
     </message>
     <message>
       <source>The RSS import list is empty.</source>
@@ -2675,7 +2675,7 @@
     <name>design/ocbootstrap/shop/orderview</name>
     <message>
       <source>Order %order_id [%order_status]</source>
-      <translation>Παραγγελία% ORDER_ID [% order_status]</translation>
+      <translation>Παραγγελία %order_id [%order_status]</translation>
     </message>
     <message>
       <source>Product items</source>
@@ -2852,7 +2852,7 @@
     </message>
     <message>
       <source>Node ID: %node_id Visibility: %visibility</source>
-      <translation>Κόμβος ID:% node_id Ορατότητα:% ορατότητα</translation>
+      <translation>Κόμβος ID:%node_id Ορατότητα: %ορατότητα</translation>
     </message>
   </context>
   <context>
@@ -2917,7 +2917,7 @@
     <name>design/ocbootstrap/user/forgotpassword</name>
     <message>
       <source>An email has been sent to the following address: %1. It contains a link you need to click so that we can confirm that the correct user has received the new password.</source>
-      <translation>Ένα μήνυμα ηλεκτρονικού ταχυδρομείου έχει αποσταλεί στην ακόλουθη διεύθυνση:% 1. Περιλαμβάνει μια σύνδεση που χρειάζεστε για να κάνετε κλικ, ώστε να μπορούμε να επιβεβαιώσουμε ότι η σωστή χρήστης έχει λάβει το νέο κωδικό πρόσβασης.</translation>
+      <translation>Ένα μήνυμα ηλεκτρονικού ταχυδρομείου έχει αποσταλεί στην ακόλουθη διεύθυνση: %1. Περιλαμβάνει μια σύνδεση που χρειάζεστε για να κάνετε κλικ, ώστε να μπορούμε να επιβεβαιώσουμε ότι η σωστή χρήστης έχει λάβει το νέο κωδικό πρόσβασης.</translation>
     </message>
     <message>
       <source>There is no registered user with that email address.</source>
@@ -2925,7 +2925,7 @@
     </message>
     <message>
       <source>Password was successfully generated and sent to: %1</source>
-      <translation>Κωδικός δημιουργήθηκε με επιτυχία και αποστέλλονται στη διεύθυνση:% 1</translation>
+      <translation>Κωδικός δημιουργήθηκε με επιτυχία και αποστέλλονται στη διεύθυνση: %1</translation>
     </message>
     <message>
       <source>The key is invalid or has been used.</source>
@@ -2968,7 +2968,7 @@
     </message>
     <message>
       <source>You are not allowed to access %1.</source>
-      <translation>Δεν επιτρέπεται η πρόσβαση% 1.</translation>
+      <translation>Δεν επιτρέπεται η πρόσβαση %1.</translation>
     </message>
     <message>
       <source>Password</source>
@@ -3035,7 +3035,7 @@
     </message>
     <message>
       <source>The new password must be at least %1 characters long, please retype your new password.</source>
-      <translation>Ο νέος κωδικός πρόσβασης πρέπει να είναι τουλάχιστον% καιρό 1 χαρακτήρες, παρακαλώ πληκτρολογήστε ξανά τον νέο κωδικό πρόσβασης.</translation>
+      <translation>Ο νέος κωδικός πρόσβασης πρέπει να είναι τουλάχιστον %καιρό 1 χαρακτήρες, παρακαλώ πληκτρολογήστε ξανά τον νέο κωδικό πρόσβασης.</translation>
     </message>
   </context>
   <context>
@@ -3099,7 +3099,7 @@
     </message>
     <message>
       <source>No %link_startFlash player%link_end avaliable!</source>
-      <translation>Δεν% link_startFlash παίκτης% LINK_END έξυπνων!</translation>
+      <translation>Δεν %link_startFlash παίκτης %link_end έξυπνων!</translation>
     </message>
     <message>
       <source>Your browser does not support html5 video.</source>
@@ -3148,7 +3148,7 @@
     </message>
     <message>
       <source>No content object state is configured. This can be done %urlstart here %urlend.</source>
-      <translation>Αριθ αντικείμενο κατάστασης περιεχόμενο έχει ρυθμιστεί. Αυτό μπορεί να γίνει% urlstart εδώ% urlend.</translation>
+      <translation>Αριθ αντικείμενο κατάστασης περιεχόμενο έχει ρυθμιστεί. Αυτό μπορεί να γίνει %urlstart εδώ %urlend.</translation>
     </message>
     <message>
       <source>Set states</source>
@@ -3187,15 +3187,15 @@
     </message>
     <message>
       <source>Edit &lt;%object_name&gt; (%class_name)</source>
-      <translation>Επεξεργασία &lt;% object_name&gt; (% CLASS_NAME)</translation>
+      <translation>Επεξεργασία &lt;%object_name&gt; (%class_name)</translation>
     </message>
     <message>
       <source>Translating content from %from_lang to %to_lang</source>
-      <translation>Μεταγραφική περιεχόμενο από% from_lang έως% to_lang</translation>
+      <translation>Μεταγραφική περιεχόμενο από %from_lang έως %to_lang</translation>
     </message>
     <message>
       <source>Content in %language</source>
-      <translation>Περιεχόμενο σε% γλώσσας</translation>
+      <translation>Περιεχόμενο σε %language</translation>
     </message>
     <message>
       <source>Send for publishing</source>
@@ -3251,11 +3251,11 @@
     <name>extension/ezstarrating/datatype</name>
     <message>
       <source>Rating: %current_rating/5</source>
-      <translation>Βαθμολογία:% current_rating / 5</translation>
+      <translation>Βαθμολογία:%current_rating/5</translation>
     </message>
     <message>
       <source>%rating_count votes cast</source>
-      <translation>% RATING_COUNT των ψήφων</translation>
+      <translation>%rating_count των ψήφων</translation>
     </message>
   </context>
   <context>
