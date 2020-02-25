@@ -610,7 +610,7 @@
     </message>
     <message>
       <source>Create</source>
-      <translation>Δημιουργώ</translation>
+      <translation>Δημιουργία</translation>
     </message>
   </context>
   <context>
@@ -1630,7 +1630,7 @@
     <name>design/ocbootstrap/line/event_calendar</name>
     <message>
       <source>Next events</source>
-      <translation>επόμενο εκδηλώσεις</translation>
+      <translation>επόμενες εκδηλώσεις</translation>
     </message>
   </context>
   <context>
@@ -3336,15 +3336,15 @@
     <name>ocbootstrap/confirmpublish</name>
     <message>
       <source>Do you confirm the publication of the content?</source>
-      <translation>Έχετε επιβεβαιώσει τη δημοσίευση του περιεχομένου;</translation>
+      <translation>Επιβεβαίωση περιεχομένου Εκδήλωσης</translation>
     </message>
     <message>
       <source>I do not confirm</source>
-      <translation>Εγώ δεν επιβεβαιώνουν</translation>
+      <translation>Αναίρεση</translation>
     </message>
     <message>
       <source>I confirm the publication</source>
-      <translation>Επιβεβαιώνω τη δημοσίευση</translation>
+      <translation>Επιβεβαίωση</translation>
     </message>
   </context>
   <context>
