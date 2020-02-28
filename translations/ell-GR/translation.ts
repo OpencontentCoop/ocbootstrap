@@ -2960,7 +2960,7 @@
     </message>
     <message>
       <source>A valid username and password is required to login.</source>
-      <translation>Ένα έγκυρο όνομα χρήστη και τον κωδικό πρόσβασης που απαιτείται για την είσοδο.</translation>
+      <translation>Απαιτείται ενα έγκυρο όνομα χρήστη και κωδικό πρόσβασης για την είσοδο.</translation>
     </message>
     <message>
       <source>Access not allowed</source>
@@ -3336,7 +3336,7 @@
     <name>ocbootstrap/confirmpublish</name>
     <message>
       <source>Do you confirm the publication of the content?</source>
-      <translation>Επιβεβαίωση περιεχομένου Εκδήλωσης</translation>
+      <translation>Επιβεβαίωση περιεχομένου.</translation>
     </message>
     <message>
       <source>I do not confirm</source>
@@ -3484,6 +3484,25 @@
     <message>
       <source>If you have forgotten your password we can generate a new one for you. All you need to do is to enter your
         email address and we will create a new password for you.</source>
+      <translation type="unfinished"/>
+    </message>
+  </context>
+  <context>
+    <name>ocbootstrap/social</name>
+    <message>
+      <source>Share</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Share on Facebook</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Share on Twitter</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <source>Share on Whatsapp</source>
       <translation type="unfinished"/>
     </message>
   </context>
