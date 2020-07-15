@@ -3,6 +3,7 @@
         {'Do you confirm the publication of the content?'|i18n('ocbootstrap/confirmpublish')}
     </h2>
 
+    {def $node = $version.temp_main_node}
     {foreach $version.data_map as $attribute}
         {if $attribute.has_content}
             <div class="row mb-3">
