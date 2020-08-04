@@ -6,10 +6,10 @@
     </label>
     <div class="survey-choices">
         {section show=$question_result}
-        <input class="form-control" id="{$prefix_attribute}_ezsurvey_answer_{$question.id}_{$attribute_id}" name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_{$attribute_id}"
+        <input class="form-control border shadow" id="{$prefix_attribute}_ezsurvey_answer_{$question.id}_{$attribute_id}" name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_{$attribute_id}"
                type="text" size="20" value="{$question_result.text|wash('xhtml')}"/>
         {section-else}
-            <input class="form-control" id="{$prefix_attribute}_ezsurvey_answer_{$question.id}_{$attribute_id}" name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_{$attribute_id}"
+            <input class="form-control border shadow" id="{$prefix_attribute}_ezsurvey_answer_{$question.id}_{$attribute_id}" name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_{$attribute_id}"
                    type="text" size="20" value="{$question.answer|wash('xhtml')}"/>
         {/section}
     </div>

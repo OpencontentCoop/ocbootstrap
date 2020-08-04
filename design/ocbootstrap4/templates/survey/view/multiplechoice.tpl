@@ -41,11 +41,12 @@
 						{if $question.extra_info.row|eq(1)}
 							<input id="{$attr_alternative}" type="text"
 								   name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_extra_info_{$attribute_id}"
-								   value="{if is_set($previous_vars.extra_answer)}{$previous_vars.extra_answer|wash()}{else}{$question_result.extra_info.value|wash()}{/if}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control d-inline-block"{/if} />
+								   value="{if is_set($previous_vars.extra_answer)}{$previous_vars.extra_answer|wash()}{else}{$question_result.extra_info.value|wash()}{/if}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control border shadow d-inline-block"{/if} />
 						{else}
-							<textarea id="{$attr_alternative}" type="text"
+							<textarea id="{$attr_alternative}"
+									  {if $question.extra_info.enable_css_style|eq(1)}class="form-control border shadow"{/if}
 									  name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_extra_info_{$attribute_id}"
-									  rows="{$question.extra_info.row}" cols="{$question.extra_info.column}"{if $question.extra_info.enable_css_style|eq(1)} class="box"{/if}/>{if is_set($previous_vars.extra_answer)}{$previous_vars.extra_answer|wash()}{else}{$question_result.extra_info.value|wash()}{/if}</textarea>
+									  rows="{$question.extra_info.row}" cols="{$question.extra_info.column}">{if is_set($previous_vars.extra_answer)}{$previous_vars.extra_answer|wash()}{else}{$question_result.extra_info.value|wash()}{/if}</textarea>
 						{/if}
 					</label>
 				</div>
@@ -72,11 +73,12 @@
 				{if $question.extra_info.row|eq(1)}
 				<input id="{$attr_alternative}" type="text"
 					   name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_extra_info_{$attribute_id}"
-					   value="{if is_set($previous_vars.extra_answer)}{$previous_vars.extra_answer|wash()}{else}{$question_result.extra_info.value|wash()}{/if}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control d-inline-block"{/if} />
+					   value="{if is_set($previous_vars.extra_answer)}{$previous_vars.extra_answer|wash()}{else}{$question_result.extra_info.value|wash()}{/if}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control border shadow d-inline-block"{/if} />
 				{else}
-				<textarea id="{$attr_alternative}" type="text"
+				<textarea id="{$attr_alternative}"
+						  {if $question.extra_info.enable_css_style|eq(1)}class="form-control border shadow"{/if}
 						  name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_extra_info_{$attribute_id}"
-						  rows="{$question.extra_info.row}" cols="{$question.extra_info.column}"{if $question.extra_info.enable_css_style|eq(1)} class="box"{/if}/>{if is_set($previous_vars.extra_answer)}{$previous_vars.extra_answer|wash()}{else}{$question_result.extra_info.value|wash()}{/if}</textarea>
+						  rows="{$question.extra_info.row}" cols="{$question.extra_info.column}">{if is_set($previous_vars.extra_answer)}{$previous_vars.extra_answer|wash()}{else}{$question_result.extra_info.value|wash()}{/if}</textarea>
 				{/if}
 			</label>
 		</div>
@@ -102,11 +104,12 @@
 						{if $question.extra_info.row|eq(1)}
 							<input id="{$attr_alternative}" type="text"
 								   name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_extra_info_{$attribute_id}"
-								   value="{if is_set($previous_vars.extra_answer)}{$previous_vars.extra_answer|wash()}{else}{$question_result.extra_info.value|wash()}{/if}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control"{/if} />
+								   value="{if is_set($previous_vars.extra_answer)}{$previous_vars.extra_answer|wash()}{else}{$question_result.extra_info.value|wash()}{/if}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control border shadow"{/if} />
 						{else}
-							<textarea id="{$attr_alternative}" type="text"
+							<textarea id="{$attr_alternative}"
+									  {if $question.extra_info.enable_css_style|eq(1)} class="form-control border shadow"{/if}
 									  name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_extra_info_{$attribute_id}"
-									  rows="{$question.extra_info.row}" cols="{$question.extra_info.column}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control"{/if}/>{if is_set($previous_vars.extra_answer)}{$previous_vars.extra_answer|wash()}{else}{$question_result.extra_info.value|wash()}{/if}</textarea>
+									  rows="{$question.extra_info.row}" cols="{$question.extra_info.column}">{if is_set($previous_vars.extra_answer)}{$previous_vars.extra_answer|wash()}{else}{$question_result.extra_info.value|wash()}{/if}</textarea>
 						{/if}
 					</label>
 				</div>
@@ -132,11 +135,12 @@
 					{if $question.extra_info.row|eq(1)}
 						<input id="{$attr_alternative}" type="text"
 							   name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_extra_info_{$attribute_id}"
-							   value="{if is_set($previous_vars.extra_answer)}{$previous_vars.extra_answer|wash()}{else}{$question_result.extra_info.value|wash()}{/if}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control"{/if} />
+							   value="{if is_set($previous_vars.extra_answer)}{$previous_vars.extra_answer|wash()}{else}{$question_result.extra_info.value|wash()}{/if}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control border shadow"{/if} />
 					{else}
-						<textarea id="{$attr_alternative}" type="text"
+						<textarea id="{$attr_alternative}"
+								  {if $question.extra_info.enable_css_style|eq(1)} class="form-control border shadow"{/if}
 								  name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_extra_info_{$attribute_id}"
-								  rows="{$question.extra_info.row}" cols="{$question.extra_info.column}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control"{/if}/>{if is_set($previous_vars.extra_answer)}{$previous_vars.extra_answer|wash()}{else}{$question_result.extra_info.value|wash()}{/if}</textarea>
+								  rows="{$question.extra_info.row}" cols="{$question.extra_info.column}">{if is_set($previous_vars.extra_answer)}{$previous_vars.extra_answer|wash()}{else}{$question_result.extra_info.value|wash()}{/if}</textarea>
 					{/if}
 				</label>
 			</div>
@@ -155,13 +159,14 @@
 			{/if}
 		</select>
 		{if $question.extra_info.row|eq(1)}
-			<input class="form-control" id="{$attr_alternative}" type="text"
+			<input class="form-control border shadow" id="{$attr_alternative}" type="text"
 				   name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_extra_info_{$attribute_id}"
-				   value="{if is_set($previous_vars.extra_answer)}{$previous_vars.extra_answer|wash()}{else}{$question_result.extra_info.value|wash()}{/if}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control"{/if} />
+				   value="{if is_set($previous_vars.extra_answer)}{$previous_vars.extra_answer|wash()}{else}{$question_result.extra_info.value|wash()}{/if}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control border shadow"{/if} />
 		{else}
-			<textarea class="form-control" id="{$attr_alternative}" type="text"
+			<textarea class="form-control border shadow" id="{$attr_alternative}"
+					  {if $question.extra_info.enable_css_style|eq(1)} class="form-control border shadow"{/if}
 					  name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_extra_info_{$attribute_id}"
-					  rows="{$question.extra_info.row}" cols="{$question.extra_info.column}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control"{/if}/>{if is_set($previous_vars.extra_answer)}{$previous_vars.extra_answer|wash()}{else}{$question_result.extra_info.value|wash()}{/if}</textarea>
+					  rows="{$question.extra_info.row}" cols="{$question.extra_info.column}">{if is_set($previous_vars.extra_answer)}{$previous_vars.extra_answer|wash()}{else}{$question_result.extra_info.value|wash()}{/if}</textarea>
 		{/if}
 	{/case}
 
@@ -196,11 +201,12 @@
 						{if $question.extra_info.row|eq(1)}
 							<input id="{$attr_alternative}" type="text"
 								   name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_extra_info_{$attribute_id}"
-								   value="{if is_set($question.extra_info.extra_answer)}{$question.extra_info.extra_answer|wash()}{else}{$question.extra_info.default_value|wash()}{/if}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control d-inline-block"{/if} />
+								   value="{if is_set($question.extra_info.extra_answer)}{$question.extra_info.extra_answer|wash()}{else}{$question.extra_info.default_value|wash()}{/if}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control border shadow d-inline-block"{/if} />
 						{else}
-							<textarea id="{$attr_alternative}" type="text"
+							<textarea id="{$attr_alternative}"
+									  {if $question.extra_info.enable_css_style|eq(1)} class="form-control border shadow"{/if}
 									  name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_extra_info_{$attribute_id}"
-									  rows="{$question.extra_info.row}" cols="{$question.extra_info.column}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control"{/if}/>{if is_set($question.extra_info.extra_answer)}{$question.extra_info.extra_answer|wash()}{else}{$question.extra_info.default_value|wash()}{/if}</textarea>
+									  rows="{$question.extra_info.row}" cols="{$question.extra_info.column}">{if is_set($question.extra_info.extra_answer)}{$question.extra_info.extra_answer|wash()}{else}{$question.extra_info.default_value|wash()}{/if}</textarea>
 						{/if}
 					</label>
 				</div>
@@ -230,11 +236,12 @@
 					{if $question.extra_info.row|eq(1)}
 						<input id="{$attr_alternative}" type="text"
 							   name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_extra_info_{$attribute_id}"
-							   value="{if is_set($question.extra_info.extra_answer)}{$question.extra_info.extra_answer|wash()}{else}{$question.extra_info.default_value|wash()}{/if}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control d-inline-block"{/if} />
+							   value="{if is_set($question.extra_info.extra_answer)}{$question.extra_info.extra_answer|wash()}{else}{$question.extra_info.default_value|wash()}{/if}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control border shadow d-inline-block"{/if} />
 					{else}
-						<textarea id="{$attr_alternative}" type="text"
+						<textarea id="{$attr_alternative}"
+								  {if $question.extra_info.enable_css_style|eq(1)} class="form-control border shadow"{/if}
 								  name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_extra_info_{$attribute_id}"
-								  rows="{$question.extra_info.row}" cols="{$question.extra_info.column}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control"{/if}/>{if is_set($question.extra_info.extra_answer)}{$question.extra_info.extra_answer|wash()}{else}{$question.extra_info.default_value|wash()}{/if}</textarea>
+								  rows="{$question.extra_info.row}" cols="{$question.extra_info.column}">{if is_set($question.extra_info.extra_answer)}{$question.extra_info.extra_answer|wash()}{else}{$question.extra_info.default_value|wash()}{/if}</textarea>
 					{/if}
 				</label>
 			</div>
@@ -259,11 +266,12 @@
 						{if $question.extra_info.row|eq(1)}
 							<input id="{$attr_alternative}" type="text"
 								   name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_extra_info_{$attribute_id}"
-								   value="{if is_set($question.extra_info.extra_answer)}{$question.extra_info.extra_answer|wash()}{else}{$question.extra_info.default_value|wash()}{/if}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control d-inline-block"{/if} />
+								   value="{if is_set($question.extra_info.extra_answer)}{$question.extra_info.extra_answer|wash()}{else}{$question.extra_info.default_value|wash()}{/if}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control border shadow d-inline-block"{/if} />
 						{else}
-							<textarea id="{$attr_alternative}" type="text"
+							<textarea id="{$attr_alternative}"
+									  {if $question.extra_info.enable_css_style|eq(1)} class="form-control border shadow"{/if}
 									  name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_extra_info_{$attribute_id}"
-									  rows="{$question.extra_info.row}" cols="{$question.extra_info.column}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control"{/if}/>{if is_set($question.extra_info.extra_answer)}{$question.extra_info.extra_answer|wash()}{else}{$question.extra_info.default_value|wash()}{/if}</textarea>
+									  rows="{$question.extra_info.row}" cols="{$question.extra_info.column}">{if is_set($question.extra_info.extra_answer)}{$question.extra_info.extra_answer|wash()}{else}{$question.extra_info.default_value|wash()}{/if}</textarea>
 						{/if}
 					</label>
 				</div>
@@ -288,11 +296,12 @@
 					{if $question.extra_info.row|eq(1)}
 						<input id="{$attr_alternative}" type="text"
 							   name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_extra_info_{$attribute_id}"
-							   value="{if is_set($question.extra_info.extra_answer)}{$question.extra_info.extra_answer|wash()}{else}{$question.extra_info.default_value|wash()}{/if}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control d-inline-block"{/if} />
+							   value="{if is_set($question.extra_info.extra_answer)}{$question.extra_info.extra_answer|wash()}{else}{$question.extra_info.default_value|wash()}{/if}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control border shadow d-inline-block"{/if} />
 					{else}
-						<textarea id="{$attr_alternative}" type="text"
+						<textarea id="{$attr_alternative}"
+								  {if $question.extra_info.enable_css_style|eq(1)} class="form-control border shadow"{/if}
 								  name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_extra_info_{$attribute_id}"
-								  rows="{$question.extra_info.row}" cols="{$question.extra_info.column}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control"{/if}/>{if is_set($question.extra_info.extra_answer)}{$question.extra_info.extra_answer|wash()}{else}{$question.extra_info.default_value|wash()}{/if}</textarea>
+								  rows="{$question.extra_info.row}" cols="{$question.extra_info.column}">{if is_set($question.extra_info.extra_answer)}{$question.extra_info.extra_answer|wash()}{else}{$question.extra_info.default_value|wash()}{/if}</textarea>
 					{/if}
 				</label>
 			</div>
@@ -300,7 +309,7 @@
     {/case}
 
     {case match=5} {* Select box *}
-        <select class="form-control" name="{$attr_name}"
+        <select class="form-control border shadow" name="{$attr_name}"
                 onclick="synchFormElements( '{$attr_id}', '{$attr_alternative}', true );">
             {section var=option loop=$options}
                 <option value="{$option.value|wash()}"{section show=$option.toggled|eq(1)} selected="selected"{/section}>{$option.label}</option>
@@ -311,13 +320,13 @@
             {/if}
         </select>
 		{if $question.extra_info.row|eq(1)}
-			<input class="form-control" id="{$attr_alternative}" type="text"
+			<input class="form-control border shadow" id="{$attr_alternative}" type="text"
 				   name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_extra_info_{$attribute_id}"
-				   value="{if is_set($question.extra_info.extra_answer)}{$question.extra_info.extra_answer|wash()}{else}{$question.extra_info.default_value|wash()}{/if}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control"{/if} />
+				   value="{if is_set($question.extra_info.extra_answer)}{$question.extra_info.extra_answer|wash()}{else}{$question.extra_info.default_value|wash()}{/if}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control border shadow"{/if} />
 		{else}
-			<textarea class="form-control" id="{$attr_alternative}" type="text"
+			<textarea class="form-control border shadow" id="{$attr_alternative}"
 					  name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_extra_info_{$attribute_id}"
-					  rows="{$question.extra_info.row}" cols="{$question.extra_info.column}"{if $question.extra_info.enable_css_style|eq(1)} class="form-control"{/if}/>{if is_set($question.extra_info.extra_answer)}{$question.extra_info.extra_answer|wash()}{else}{$question.extra_info.default_value|wash()}{/if}</textarea>
+					  rows="{$question.extra_info.row}" cols="{$question.extra_info.column}">{if is_set($question.extra_info.extra_answer)}{$question.extra_info.extra_answer|wash()}{else}{$question.extra_info.default_value|wash()}{/if}</textarea>
 		{/if}
     {/case}
 

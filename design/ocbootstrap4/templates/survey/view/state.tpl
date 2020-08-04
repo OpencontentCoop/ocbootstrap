@@ -22,7 +22,7 @@
     <label for="{$prefix_attribute}_ezsurvey_answer_{$question.id}_{$attribute_id}">
         {$question.question_number}. {$question.text|wash('xhtml')} {if $question.mandatory}<strong class="required">*</strong>{/if}
     </label>
-    <select class="form-control" name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_{$attribute_id}"
+    <select class="form-control border shadow" name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_{$attribute_id}"
             id="{$prefix_attribute}_ezsurvey_answer_{$question.id}_{$attribute_id}"
             onchange="changeState($(this).val())">
         <option value="">Select a State</option>

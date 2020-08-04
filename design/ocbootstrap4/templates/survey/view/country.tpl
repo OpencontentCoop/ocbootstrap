@@ -17,7 +17,7 @@
     </label>
 
     {def $countryList = fetch( 'content', 'country_list' )}
-    <select class="form-control" id="{$prefix_attribute}_ezsurvey_answer_{$question.id}_{$attribute_id}" name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_{$attribute_id}">
+    <select class="form-control border shadow" id="{$prefix_attribute}_ezsurvey_answer_{$question.id}_{$attribute_id}" name="{$prefix_attribute}_ezsurvey_answer_{$question.id}_{$attribute_id}">
         <option value="">Select a Country</option>
         {foreach $countryList as $country}
             <option value="{$country[$countryFormat]|wash()}"
