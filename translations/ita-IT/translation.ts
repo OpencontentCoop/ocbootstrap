@@ -3447,7 +3447,7 @@
     </message>
     <message>
       <source>Change password</source>
-      <translation>Cambia la password</translation>
+      <translation>Cambiare la password</translation>
     </message>
     <message>
       <source>The key is invalid or has been used.</source>
@@ -3486,6 +3486,25 @@
       <source>If you have forgotten your password we can generate a new one for you. All you need to do is to enter your
         email address and we will create a new password for you.</source>
       <translation>Se hai dimenticato la password, tutto quello che devi fare è inserire il tuo indirizzo email e noi creeremo una nuova password per te.</translation>
+    </message>
+  </context>
+  <context>
+    <name>ocbootstrap/social</name>
+    <message>
+      <source>Share</source>
+      <translation>Condividi</translation>
+    </message>
+    <message>
+      <source>Share on Facebook</source>
+      <translation>Condividi su Facebook</translation>
+    </message>
+    <message>
+      <source>Share on Twitter</source>
+      <translation>Condividi su Twitter</translation>
+    </message>
+    <message>
+      <source>Share on Whatsapp</source>
+      <translation>Condividi su Whatsapp</translation>
     </message>
   </context>
 </TS>
