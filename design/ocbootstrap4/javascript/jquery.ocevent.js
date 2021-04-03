@@ -211,9 +211,16 @@
                 recurrencePattern: plugin.getCurrentRule().toString()
             };
 
+            var csrfToken;
+            var tokenNode = document.getElementById('ezxform_token_js');
+            if ( tokenNode ){
+                csrfToken = tokenNode.getAttribute('title');
+            }
+
             $.ajax({
-                type: "POST",
+                type: 'POST',
                 url: plugin.settings.endpoint,
+                headers: {'X-CSRF-TOKEN': csrfToken},
                 data: inputData,
                 success: function (data) {
                     if (data.error){
