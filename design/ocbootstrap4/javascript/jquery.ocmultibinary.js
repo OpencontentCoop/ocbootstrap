@@ -14,6 +14,12 @@
                     var $spinner = $element.find('.upload-button-spinner');
                     var $fileList = $element.find('.upload-file-list');
 
+                    var csrfToken;
+                    var tokenNode = document.getElementById('ezxform_token_js');
+                    if ( tokenNode ){
+                        csrfToken = tokenNode.getAttribute('title');
+                    }
+
                     var _sort = function(el) {
                         $(el).sortable({
                             update: function( event, ui ) {
@@ -25,6 +31,7 @@
 
                                 $.ajax({
                                     url: $fileList.data('sorturl'),
+                                    headers: {'X-CSRF-TOKEN': csrfToken},
                                     dataType: "json",
                                     type: "post",
                                     cache: false,
