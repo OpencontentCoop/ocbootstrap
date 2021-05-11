@@ -1407,7 +1407,7 @@
     </message>
     <message>
       <source>Keep me updated</source>
-      <translation>Obveščaj me</translation>
+      <translation>Obveščajte me</translation>
     </message>
     <message>
       <source>You need to be logged in to get access to the forums. You can do so %login_link_start%here%login_link_end%</source>
@@ -1477,7 +1477,7 @@
     </message>
     <message>
       <source>Keep me updated</source>
-      <translation>Obveščaj me</translation>
+      <translation>Obveščajte me</translation>
     </message>
     <message>
       <source>You need to be logged in to get access to the forums. You can do so %login_link_start%here%login_link_end%</source>

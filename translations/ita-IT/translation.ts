@@ -3447,7 +3447,7 @@
     </message>
     <message>
       <source>Change password</source>
-      <translation>Cambiare la password</translation>
+      <translation>Cambia la password</translation>
     </message>
     <message>
       <source>The key is invalid or has been used.</source>

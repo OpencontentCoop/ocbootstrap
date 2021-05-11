@@ -412,7 +412,7 @@
     </message>
     <message>
       <source>Search</source>
-      <translation>Chercher</translation>
+      <translation>Rechercher</translation>
     </message>
     <message>
       <source>No results were found when searching for "%1"</source>
@@ -443,7 +443,7 @@
     </message>
     <message>
       <source>Back</source>
-      <translation>Retour</translation>
+      <translation>Dos</translation>
     </message>
     <message>
       <source>Top level</source>
@@ -646,7 +646,7 @@
     </message>
     <message>
       <source>Created</source>
-      <translation>Établi</translation>
+      <translation>Créé</translation>
     </message>
     <message>
       <source>Last modified</source>
@@ -800,7 +800,7 @@
     </message>
     <message>
       <source>Created</source>
-      <translation>Établi</translation>
+      <translation>Créé</translation>
     </message>
     <message>
       <source>Modified</source>
@@ -876,7 +876,7 @@
     </message>
     <message>
       <source>Back</source>
-      <translation>Retour</translation>
+      <translation>Dos</translation>
     </message>
     <message>
       <source>Published version</source>
@@ -935,7 +935,7 @@
     </message>
     <message>
       <source>Link</source>
-      <translation>Lien</translation>
+      <translation>Relier</translation>
     </message>
     <message>
       <source>Type</source>
@@ -981,7 +981,7 @@
     <name>design/ocbootstrap/content/search</name>
     <message>
       <source>Search</source>
-      <translation>Chercher</translation>
+      <translation>Rechercher</translation>
     </message>
     <message>
       <source>The following words were excluded from the search:</source>
@@ -1142,7 +1142,7 @@
     <name>design/ocbootstrap/embed/poll</name>
     <message>
       <source>Vote</source>
-      <translation>Voter</translation>
+      <translation>Vote</translation>
     </message>
   </context>
   <context>
@@ -1300,7 +1300,7 @@
     <name>design/ocbootstrap/full/call_to_action</name>
     <message>
       <source>Submit</source>
-      <translation>Nous faire parvenir</translation>
+      <translation>Soumettre</translation>
     </message>
   </context>
   <context>
@@ -1346,11 +1346,11 @@
     </message>
     <message>
       <source>Tuesday</source>
-      <translation>mardi</translation>
+      <translation>Mardi</translation>
     </message>
     <message>
       <source>Wednesday</source>
-      <translation>mercredi</translation>
+      <translation>Mercredi</translation>
     </message>
     <message>
       <source>Thursday</source>
@@ -1358,7 +1358,7 @@
     </message>
     <message>
       <source>Friday</source>
-      <translation>vendredi</translation>
+      <translation>Vendredi</translation>
     </message>
     <message>
       <source>Saturday</source>
@@ -1569,7 +1569,7 @@
     <name>design/ocbootstrap/full/poll</name>
     <message>
       <source>Vote</source>
-      <translation>Voter</translation>
+      <translation>Vote</translation>
     </message>
     <message>
       <source>Result</source>
@@ -1606,7 +1606,7 @@
     </message>
     <message>
       <source>Created:</source>
-      <translation>Établi:</translation>
+      <translation>Créé:</translation>
     </message>
     <message>
       <source>Modified:</source>
@@ -1690,7 +1690,7 @@
     </message>
     <message>
       <source>Vote</source>
-      <translation>Voter</translation>
+      <translation>Vote</translation>
     </message>
   </context>
   <context>
@@ -1893,7 +1893,7 @@
     <name>design/ocbootstrap/pagelayout</name>
     <message>
       <source>Search</source>
-      <translation>Chercher</translation>
+      <translation>Rechercher</translation>
     </message>
     <message>
       <source>Search text</source>
@@ -2087,7 +2087,7 @@
     </message>
     <message>
       <source>Set</source>
-      <translation>Régler</translation>
+      <translation>Ensemble</translation>
     </message>
     <message>
       <source>Click this button to load the correct values into the drop-down fields below. Use the drop-down menu on the left to select the class.</source>
@@ -2222,7 +2222,7 @@
     </message>
     <message>
       <source>Set</source>
-      <translation>Régler</translation>
+      <translation>Ensemble</translation>
     </message>
     <message>
       <source>Click this button to load the correct values into the drop-down fields below. Use the drop-down menu on the left to select the class.</source>
@@ -2388,7 +2388,7 @@
     </message>
     <message>
       <source>Basket</source>
-      <translation>Corbeille</translation>
+      <translation>Panier</translation>
     </message>
     <message>
       <source>The following items were removed from your basket because the products were changed.</source>
@@ -2428,7 +2428,7 @@
     </message>
     <message>
       <source>Discount</source>
-      <translation>Remise</translation>
+      <translation>Rabais</translation>
     </message>
     <message>
       <source>Total price ex. VAT</source>
@@ -2515,7 +2515,7 @@
     </message>
     <message>
       <source>Discount</source>
-      <translation>Remise</translation>
+      <translation>Rabais</translation>
     </message>
     <message>
       <source>Total price ex. VAT</source>
@@ -2641,7 +2641,7 @@
     </message>
     <message>
       <source>Sort</source>
-      <translation>Trier</translation>
+      <translation>Sorte</translation>
     </message>
     <message>
       <source>ID</source>
@@ -2700,7 +2700,7 @@
     </message>
     <message>
       <source>Discount</source>
-      <translation>Remise</translation>
+      <translation>Rabais</translation>
     </message>
     <message>
       <source>Total price ex. VAT</source>
@@ -2787,7 +2787,7 @@
     </message>
     <message>
       <source>Place</source>
-      <translation>Lieu</translation>
+      <translation>Endroit</translation>
     </message>
     <message>
       <source>State</source>
@@ -2795,7 +2795,7 @@
     </message>
     <message>
       <source>Country</source>
-      <translation>De campagne</translation>
+      <translation>Pays</translation>
     </message>
     <message>
       <source>Comment</source>
@@ -3067,7 +3067,7 @@
     </message>
     <message>
       <source>Back</source>
-      <translation>Retour</translation>
+      <translation>Dos</translation>
     </message>
   </context>
   <context>
@@ -3172,7 +3172,7 @@
     </message>
     <message>
       <source>Search</source>
-      <translation>Chercher</translation>
+      <translation>Rechercher</translation>
     </message>
     <message>
       <source>Results</source>
@@ -3215,7 +3215,7 @@
     <name>design/ezflow/embed/poll</name>
     <message>
       <source>Vote</source>
-      <translation>Voter</translation>
+      <translation>Vote</translation>
     </message>
   </context>
   <context>
@@ -3294,7 +3294,7 @@
     </message>
     <message>
       <source>Content:</source>
-      <translation>Teneur:</translation>
+      <translation>Contenu:</translation>
     </message>
     <message>
       <source>Notify me of new comments</source>

@@ -13,7 +13,7 @@
     </message>
     <message>
       <source>Store</source>
-      <translation>Entwurf speichern</translation>
+      <translation>Speichern</translation>
     </message>
     <message>
       <source>Store draft</source>
@@ -29,7 +29,7 @@
     </message>
     <message>
       <source>characters</source>
-      <translation>Figuren</translation>
+      <translation>Zeichen</translation>
     </message>
     <message>
       <source>one letter</source>
@@ -258,7 +258,7 @@
     </message>
     <message>
       <source>Thank you for your feedback.</source>
-      <translation>Vielen Dank für dein Feedback.</translation>
+      <translation>Danke für deine Rückmeldung.</translation>
     </message>
     <message>
       <source>You have already submitted this form. The data you entered was:</source>
@@ -384,7 +384,7 @@
     </message>
     <message>
       <source>Last year</source>
-      <translation>Vergangenes Jahr</translation>
+      <translation>Letztes Jahr</translation>
     </message>
     <message>
       <source>Display per page</source>
@@ -424,7 +424,7 @@
     </message>
     <message>
       <source>Last month</source>
-      <translation>Im vergangenen Monat</translation>
+      <translation>Letzten Monat</translation>
     </message>
   </context>
   <context>
@@ -1052,7 +1052,7 @@
     </message>
     <message>
       <source>Your email address</source>
-      <translation>Ihre E-Mail-Adresse</translation>
+      <translation>deine Emailadresse</translation>
     </message>
     <message>
       <source>Recipient's email address</source>
@@ -1169,7 +1169,7 @@
     </message>
     <message>
       <source>Third-Party Software</source>
-      <translation>Software von Drittanbietern</translation>
+      <translation>Drittanbietersoftware</translation>
     </message>
     <message>
       <source>Extensions</source>
@@ -1554,7 +1554,7 @@
     </message>
     <message>
       <source>Start date</source>
-      <translation>Startdatum</translation>
+      <translation>Anfangsdatum</translation>
     </message>
     <message>
       <source>Category</source>
@@ -1875,7 +1875,7 @@
     </message>
     <message>
       <source>Add items</source>
-      <translation>Elemente hinzufügen</translation>
+      <translation>Füge Artikel hinzu</translation>
     </message>
   </context>
   <context>
@@ -2190,7 +2190,7 @@
     </message>
     <message>
       <source>Destination path</source>
-      <translation>Zielpfad</translation>
+      <translation>Weg zum Ziel</translation>
     </message>
     <message>
       <source>Browse</source>
@@ -2476,7 +2476,7 @@
     </message>
     <message>
       <source>Checkout</source>
-      <translation>Überprüfen</translation>
+      <translation>Auschecken</translation>
     </message>
     <message>
       <source>You have no products in your basket.</source>
@@ -2787,7 +2787,7 @@
     </message>
     <message>
       <source>Place</source>
-      <translation>Ort</translation>
+      <translation>Platz</translation>
     </message>
     <message>
       <source>State</source>
@@ -2838,7 +2838,7 @@
     </message>
     <message>
       <source>Remove items</source>
-      <translation>Gegenstände entfernen</translation>
+      <translation>Teile entfernen</translation>
     </message>
     <message>
       <source>Empty wish list</source>
@@ -2907,7 +2907,7 @@
     </message>
     <message>
       <source>Change password</source>
-      <translation>Passwort ändern</translation>
+      <translation>Kennwort ändern</translation>
     </message>
     <message>
       <source>My pending items</source>
@@ -3016,7 +3016,7 @@
     </message>
     <message>
       <source>Old password</source>
-      <translation>Altes Kennwort</translation>
+      <translation>Altes Passwort</translation>
     </message>
     <message>
       <source>New password</source>
@@ -3024,7 +3024,7 @@
     </message>
     <message>
       <source>Retype password</source>
-      <translation>Passwort erneut eingeben</translation>
+      <translation>Kennwort erneut eingeben</translation>
     </message>
     <message>
       <source>OK</source>
@@ -3137,7 +3137,7 @@
     <name>design/ocbootstrap/websitetoolbar/objectstates</name>
     <message>
       <source>Object states for object</source>
-      <translation>Objektzustände für Objekt</translation>
+      <translation>Status des Objekts</translation>
     </message>
     <message>
       <source>Content object state group</source>
@@ -3153,7 +3153,7 @@
     </message>
     <message>
       <source>Set states</source>
-      <translation>Staaten setzen</translation>
+      <translation>Status einstellen</translation>
     </message>
     <message>
       <source>Apply states from the list above.</source>
@@ -3376,7 +3376,7 @@
     </message>
     <message>
       <source>Old password</source>
-      <translation>Altes Kennwort</translation>
+      <translation>Altes Passwort</translation>
     </message>
     <message>
       <source>New password</source>
@@ -3384,7 +3384,7 @@
     </message>
     <message>
       <source>Retype password</source>
-      <translation>Passwort erneut eingeben</translation>
+      <translation>Kennwort erneut eingeben</translation>
     </message>
     <message>
       <source>OK</source>
@@ -3447,7 +3447,7 @@
     </message>
     <message>
       <source>Change password</source>
-      <translation>Passwort ändern</translation>
+      <translation>Kennwort ändern</translation>
     </message>
     <message>
       <source>The key is invalid or has been used.</source>
