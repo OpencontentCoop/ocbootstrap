@@ -613,6 +613,10 @@
       <source>Create</source>
       <translation>Crea</translation>
     </message>
+    <message>
+      <source>Display only required fields</source>
+      <translation>Visualizza solo i campi obbligatori</translation>
+    </message>
   </context>
   <context>
     <name>design/ocbootstrap/content/edit_draft</name>

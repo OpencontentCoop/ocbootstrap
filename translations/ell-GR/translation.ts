@@ -612,6 +612,10 @@
       <source>Create</source>
       <translation>Δημιουργία</translation>
     </message>
+    <message>
+      <source>Display only required fields</source>
+      <translation type="unfinished"/>
+    </message>
   </context>
   <context>
     <name>design/ocbootstrap/content/edit_draft</name>
