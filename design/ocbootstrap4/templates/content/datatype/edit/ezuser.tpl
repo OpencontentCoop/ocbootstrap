@@ -9,13 +9,13 @@
 
 {* Username. *}
 {if and( and(is_set($attribute.content.has_stored_login), $attribute.content.has_stored_login), $attribute.content.login|ne(''), $attribute.object.main_node_id|ne(''))}
-    <p><input id="{$id_base}_login" autocomplete="off" type="text"
+    <p><input id="{$id_base}_login" autocomplete="new-password" type="text"
               name="{$attribute_base}_data_user_login_{$attribute.id}_stored_login" class="{$html_class}"
               value="{$attribute.content.login|wash()}" disabled="disabled"/></p>
     <input id="{$id_base}_login_hidden" type="hidden" name="{$attribute_base}_data_user_login_{$attribute.id}"
            value="{$attribute.content.login|wash()}"/>
 {else}
-    <input autocomplete="off" placeholder="{'Username'|i18n( 'design/standard/content/datatype' )}"
+    <input autocomplete="new-password" placeholder="{'Username'|i18n( 'design/standard/content/datatype' )}"
            id="{$id_base}_login"
            class="{$html_class} ezcc-{$attribute.object.content_class.identifier} ezcca-{$attribute.object.content_class.identifier}_{$attribute.contentclass_attribute_identifier}"
            type="text" name="{$attribute_base}_data_user_login_{$attribute.id}"
@@ -23,14 +23,14 @@
 {/if}
 
 {* Email. *}
-<p><input autocomplete="off" placeholder="{'Email'|i18n( 'design/standard/content/datatype' )}"
+<p><input autocomplete="new-password" placeholder="{'Email'|i18n( 'design/standard/content/datatype' )}"
           id="{$id_base}_email"
           class="{$html_class} ezcc-{$attribute.object.content_class.identifier} ezcca-{$attribute.object.content_class.identifier}_{$attribute.contentclass_attribute_identifier}"
           type="text" name="{$attribute_base}_data_user_email_{$attribute.id}"
           value="{if is_set($attribute.content.email)}{$attribute.content.email|wash( xhtml )}{/if}"/></p>
 {* Email #2. Require e-mail confirmation *}
 {if ezini( 'UserSettings', 'RequireConfirmEmail' )|eq( 'true' )}
-    <p><input autocomplete="off" placeholder="{'Confirm email'|i18n( 'design/standard/content/datatype' )}"
+    <p><input autocomplete="new-password" placeholder="{'Confirm email'|i18n( 'design/standard/content/datatype' )}"
               id="{$id_base}_email_confirm"
               class="{$html_class} ezcc-{$attribute.object.content_class.identifier} ezcca-{$attribute.object.content_class.identifier}_{$attribute.contentclass_attribute_identifier}"
               type="text" name="{$attribute_base}_data_user_email_confirm_{$attribute.id}"
@@ -41,7 +41,7 @@
 <div class="{if and($attribute.object.current_version|ne(1), $attribute.content.has_stored_login, $attribute.content.login|ne(''))}hide{/if}">
 {* Password #1. *}
 <p>
-    <input autocomplete="off" placeholder="{'Password'|i18n( 'design/standard/content/datatype' )}"
+    <input autocomplete="new-password" placeholder="{'Password'|i18n( 'design/standard/content/datatype' )}"
            id="{$id_base}_password"
            class="{$html_class} ezcc-{$attribute.object.content_class.identifier} ezcca-{$attribute.object.content_class.identifier}_{$attribute.contentclass_attribute_identifier}"
            type="password" name="{$attribute_base}_data_user_password_{$attribute.id}"
@@ -49,7 +49,7 @@
     {include uri='design:parts/password_meter.tpl'}
 </p>
 {* Password #2. *}
-<p><input autocomplete="off" placeholder="{'Confirm password'|i18n( 'design/standard/content/datatype' )}"
+<p><input autocomplete="new-password" placeholder="{'Confirm password'|i18n( 'design/standard/content/datatype' )}"
           id="{$id_base}_password_confirm"
           class="{$html_class} ezcc-{$attribute.object.content_class.identifier} ezcca-{$attribute.object.content_class.identifier}_{$attribute.contentclass_attribute_identifier}"
           type="password" name="{$attribute_base}_data_user_password_confirm_{$attribute.id}"
