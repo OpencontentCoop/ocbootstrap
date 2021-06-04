@@ -1044,7 +1044,7 @@
     </message>
     <message>
       <source>The message was not sent due to an unknown error. Please notify the site administrator about this error.</source>
-      <translation>Le message n'a pas été envoyé en raison d'une erreur inconnue. S'il vous plaît informer l'administrateur du site sur cette erreur.</translation>
+      <translation>Le message n'a pas envoyé en raison d'une erreur inconnue. S'il vous plaît informer l'administrateur du site sur cette erreur.</translation>
     </message>
     <message>
       <source>Please correct the following errors:</source>
@@ -2254,7 +2254,7 @@
     </message>
     <message>
       <source>Use this checkbox to control if the RSS feed is active or not. An inactive feed will not be automatically updated.</source>
-      <translation>Utilisez cette case pour contrôler si le flux RSS est actif ou non. Un flux inactif ne sera pas mis à jour automatiquement.</translation>
+      <translation>Utilisez cette case pour contrôler si le flux RSS est actif ou non. Un flux inactif ne sera pas actualisé automatiquement.</translation>
     </message>
     <message>
       <source>OK</source>

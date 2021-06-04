@@ -1971,7 +1971,7 @@
     </message>
     <message>
       <source>If RSS Export is Active then a valid Access URL is required.</source>
-      <translation>Če RSS Izvoz je aktiven, potem je potreben veljaven URL dostop.</translation>
+      <translation>Če RSS Export je aktiven, potem je potreben veljaven URL dostop.</translation>
     </message>
     <message>
       <source>Name</source>
@@ -3485,7 +3485,7 @@
       <source>A mail has been sent to the following email address: %1. This email contains a link you need to click so
         that we can confirm that the correct user is getting the new password.</source>
       <translation>Poštno je bila poslana na elektronski naslov:% 1. Ta e-poštni naslov vsebuje povezavo, ki jo potrebujejo za to, kliknite
-        da lahko rečemo, da je pravilna uporabnik dobiva novo geslo.</translation>
+        da bomo lahko potrdili, da je pravilen uporabnik dobili novo geslo.</translation>
     </message>
     <message>
       <source>If you have forgotten your password we can generate a new one for you. All you need to do is to enter your

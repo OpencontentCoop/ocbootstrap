@@ -2071,7 +2071,7 @@
     </message>
     <message>
       <source>Click this button to select the source node for the RSS export source. Objects of the type selected in the drop-down below published as sub items of the selected node will be included in the RSS export.</source>
-      <translation>Klicken Sie auf diese Schaltfläche, um den Quellknoten für die RSS-Export-Quelle auszuwählen. Objekte des Typs in der ausgewählten Drop-down unten veröffentlicht als Unterpunkte des ausgewählten Knotens werden in dem RSS-Export berücksichtigt werden.</translation>
+      <translation>Klicken Sie auf diese Schaltfläche, um den Quellknoten für die RSS-Export-Quelle auszuwählen. Objekte des Typs in der ausgewählten Drop-down unten veröffentlicht als Unterpunkte des ausgewählten Knotens werden in dem RSS Export einbezogen werden.</translation>
     </message>
     <message>
       <source>Subnodes</source>
