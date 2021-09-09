@@ -262,8 +262,8 @@
             plugin.modal.find('#save-event').on('click', function () {
                 $.each(events, function () {
                    if (this.id === id){
-                       this.start = $('#starts-at').data("DateTimePicker").date();
-                       this.end = $('#ends-at').data("DateTimePicker").date();
+                       this.start = moment($('#starts-at').data("DateTimePicker").date()).format('YYYY-MM-DDTHH:mm:ssZ');
+                       this.end = moment($('#ends-at').data("DateTimePicker").date()).format('YYYY-MM-DDTHH:mm:ssZ');
                    }
                 });
                 plugin.container.find('[data-value="events"]').val(JSON.stringify(events));
