@@ -65,19 +65,19 @@
     </message>
     <message>
       <source>Evaluation of complexity: weak</source>
-      <translation>Bewertung der Komplexität: schwach</translation>
+      <translation>Bewertung der Komplexität: Schwach</translation>
     </message>
     <message>
       <source>Evaluation of complexity: good</source>
-      <translation>Bewertung der Komplexität: gut</translation>
+      <translation>Bewertung der Komplexität: Gut</translation>
     </message>
     <message>
       <source>Evaluation of complexity: very good</source>
-      <translation>Bewertung der Komplexität: sehr gut</translation>
+      <translation>Bewertung der Komplexität: Sehr gut</translation>
     </message>
     <message>
       <source>Evaluation of complexity: excellent</source>
-      <translation>Bewertung der Komplexität: sehr gut</translation>
+      <translation>Bewertung der Komplexität: ausgezeichnet</translation>
     </message>
   </context>
   <context>
@@ -126,7 +126,7 @@
     <name>design/admin/preview/article</name>
     <message>
       <source>Comments allowed</source>
-      <translation>Kommentare</translation>
+      <translation>Kommentare erlaubt</translation>
     </message>
     <message>
       <source>Yes</source>
@@ -141,14 +141,14 @@
     <name>design/ocbootstrap/article/article_index</name>
     <message>
       <source>Article index</source>
-      <translation>Artikel-Index</translation>
+      <translation>Artikelindex.</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/article/comments</name>
     <message>
       <source>Comments</source>
-      <translation>Bemerkungen</translation>
+      <translation>Kommentare</translation>
     </message>
     <message>
       <source>New comment</source>
@@ -181,11 +181,11 @@
     <name>design/ocbootstrap/block_item/product</name>
     <message>
       <source>Amount</source>
-      <translation>Menge</translation>
+      <translation>Betragen</translation>
     </message>
     <message>
       <source>Buy</source>
-      <translation>Kaufen</translation>
+      <translation>Besorgen</translation>
     </message>
   </context>
   <context>
@@ -204,31 +204,31 @@
     </message>
     <message>
       <source>Mon</source>
-      <translation>Mon</translation>
+      <translation>Mo.</translation>
     </message>
     <message>
       <source>Tue</source>
-      <translation>Di</translation>
+      <translation>Di.</translation>
     </message>
     <message>
       <source>Wed</source>
-      <translation>Heiraten</translation>
+      <translation>Mi.</translation>
     </message>
     <message>
       <source>Thu</source>
-      <translation>Thu</translation>
+      <translation>Do.</translation>
     </message>
     <message>
       <source>Fri</source>
-      <translation>Fr</translation>
+      <translation>Fr.</translation>
     </message>
     <message>
       <source>Sat</source>
-      <translation>Sa</translation>
+      <translation>Sa.</translation>
     </message>
     <message>
       <source>Sun</source>
-      <translation>Sonne</translation>
+      <translation>So.</translation>
     </message>
   </context>
   <context>
@@ -243,7 +243,7 @@
     </message>
     <message>
       <source>Tag cloud</source>
-      <translation>Tag cloud</translation>
+      <translation>Schlagwortwolke</translation>
     </message>
     <message>
       <source>Description</source>
@@ -258,15 +258,15 @@
     </message>
     <message>
       <source>Thank you for your feedback.</source>
-      <translation>Danke für deine Rückmeldung.</translation>
+      <translation>Vielen Dank für dein Feedback.</translation>
     </message>
     <message>
       <source>You have already submitted this form. The data you entered was:</source>
-      <translation>Sie haben bereits dieses Formular eingereicht. Die von Ihnen eingegebenen Daten waren:</translation>
+      <translation>Sie haben dieses Formular bereits eingereicht. Die eingegebenen Daten waren:</translation>
     </message>
     <message>
       <source>Return to site</source>
-      <translation>Zurück zur Website</translation>
+      <translation>Rückkehr zur Website.</translation>
     </message>
   </context>
   <context>
@@ -281,11 +281,11 @@
     </message>
     <message>
       <source>Please log in to vote on this poll.</source>
-      <translation>Bitte melden Sie sich an dieser Umfrage zu stimmen.</translation>
+      <translation>Bitte loggen Sie sich ein, um über diese Umfrage zu stimmen.</translation>
     </message>
     <message>
       <source>You have already voted for this poll.</source>
-      <translation>Sie haben schon für diese Umfrage abgestimmt.</translation>
+      <translation>Sie haben bereits für diese Umfrage gestimmt.</translation>
     </message>
     <message>
       <source>Votes</source>
@@ -356,11 +356,11 @@
     </message>
     <message>
       <source>Search all the words</source>
-      <translation>Suche alle Wörter</translation>
+      <translation>Suchen Sie alle Wörter</translation>
     </message>
     <message>
       <source>Search the exact phrase</source>
-      <translation>Suche exakten Ausdruck</translation>
+      <translation>Suchen Sie den genauen Satz</translation>
     </message>
     <message>
       <source>Published</source>
@@ -380,7 +380,7 @@
     </message>
     <message>
       <source>Last three months</source>
-      <translation>Letzten drei Monate</translation>
+      <translation>Letzte drei Monate</translation>
     </message>
     <message>
       <source>Last year</source>
@@ -388,7 +388,7 @@
     </message>
     <message>
       <source>Display per page</source>
-      <translation>Anzeige pro Seite</translation>
+      <translation>Anzeige pro Seite.</translation>
     </message>
     <message>
       <source>5 items</source>
@@ -396,7 +396,7 @@
     </message>
     <message>
       <source>10 items</source>
-      <translation>10 Stück</translation>
+      <translation>10 Artikel</translation>
     </message>
     <message>
       <source>20 items</source>
@@ -435,11 +435,11 @@
     </message>
     <message>
       <source>To select objects, choose the appropriate radiobutton or checkbox(es), and click the "Select" button.</source>
-      <translation>Um Objekte auszuwählen, markieren Sie die zugehörigen Auswahlfelder (es), und klicken Sie auf die „Select“ -Taste.</translation>
+      <translation>Um Objekte auszuwählen, wählen Sie das entsprechende RadioButton oder das Kontrollkästchen (ES) aus, und klicken Sie auf die Schaltfläche "Select".</translation>
     </message>
     <message>
       <source>To select an object that is a child of one of the displayed objects, click the parent object name to display a list of its children.</source>
-      <translation>Um ein Objekt auszuwählen, die ein Kind von einem der angezeigten Objekte, klicken Sie auf das übergeordnete Objekt Name eine Liste seiner Kinder angezeigt werden soll.</translation>
+      <translation>Um ein Objekt auszuwählen, das ein Kind eines der angezeigten Objekte ist, klicken Sie auf den Parent-Objektnamen, um eine Liste seiner Kinder anzuzeigen.</translation>
     </message>
     <message>
       <source>Back</source>
@@ -451,7 +451,7 @@
     </message>
     <message>
       <source>Select</source>
-      <translation>Wählen</translation>
+      <translation>Auswählen</translation>
     </message>
     <message>
       <source>Cancel</source>
@@ -470,7 +470,7 @@
     </message>
     <message>
       <source>Type</source>
-      <translation>Art</translation>
+      <translation>Typ</translation>
     </message>
   </context>
   <context>
@@ -532,7 +532,7 @@
     </message>
     <message>
       <source>Last modified</source>
-      <translation>Zuletzt bearbeitet</translation>
+      <translation>Zuletzt geändert</translation>
     </message>
     <message>
       <source>Edit</source>
@@ -544,7 +544,7 @@
     </message>
     <message>
       <source>You have no drafts</source>
-      <translation>Sie haben keine Zugluft</translation>
+      <translation>Du hast keine Entwürfe</translation>
     </message>
     <message>
       <source>These are the current objects you are working on. The drafts are owned by you and can only be seen by you.
@@ -575,7 +575,7 @@
     </message>
     <message>
       <source>Translating content from %from_lang to %to_lang</source>
-      <translation>Übersetzen von Inhalten aus% from_lang auf% to_lang</translation>
+      <translation>Übersetzen von Inhalten von% from_lang nach% to_lang</translation>
     </message>
     <message>
       <source>Content in %language</source>
@@ -603,11 +603,11 @@
     </message>
     <message>
       <source>Store the draft that is being edited and exit from edit mode. Use when you need to exit your work and return later to continue.</source>
-      <translation>Speichern Sie den Entwurf, der von den Bearbeitungsmodus bearbeitet und verlassen wird. Verwenden Sie, wenn Sie Ihre Arbeit beenden müssen und später wieder fortzusetzen.</translation>
+      <translation>Speichern Sie den Entwurf, der bearbeitet wird, und den Bearbeitungsmodus aus dem Bearbeitungsmodus. Verwenden Sie, wenn Sie Ihre Arbeit beenden müssen und später zurückkehren, um fortzufahren.</translation>
     </message>
     <message>
       <source>Discard the draft that is being edited. This will also remove the translations that belong to the draft (if any).</source>
-      <translation>Entsorgen Sie den Entwurf, die bearbeitet wird. Dies entfernt auch die Übersetzungen, die zu dem Entwurf gehören (falls vorhanden).</translation>
+      <translation>Verwerfen Sie den Entwurf, der bearbeitet wird. Dies entfernen auch die Übersetzungen, die zum Entwurf gehören (falls vorhanden).</translation>
     </message>
     <message>
       <source>Create</source>
@@ -634,7 +634,7 @@
     </message>
     <message>
       <source>Current drafts</source>
-      <translation>aktuelle Entwürfe</translation>
+      <translation>Aktuelle Entwürfe</translation>
     </message>
     <message>
       <source>Version</source>
@@ -646,7 +646,7 @@
     </message>
     <message>
       <source>Owner</source>
-      <translation>Inhaber</translation>
+      <translation>Eigentümer</translation>
     </message>
     <message>
       <source>Created</source>
@@ -654,7 +654,7 @@
     </message>
     <message>
       <source>Last modified</source>
-      <translation>Zuletzt bearbeitet</translation>
+      <translation>Zuletzt geändert</translation>
     </message>
     <message>
       <source>Edit</source>
@@ -705,35 +705,35 @@
     <name>design/ocbootstrap/content/edit_languages</name>
     <message>
       <source>Existing languages</source>
-      <translation>bestehende Sprachen</translation>
+      <translation>Vorhandene Sprachen</translation>
     </message>
     <message>
       <source>Select the language you want to use when editing the object.</source>
-      <translation>Wählen Sie die Sprache, die Sie verwenden möchten, wenn Sie das Objekt bearbeiten.</translation>
+      <translation>Wählen Sie die Sprache aus, die Sie beim Bearbeiten des Objekts verwenden möchten.</translation>
     </message>
     <message>
       <source>New languages</source>
-      <translation>neue Sprachen</translation>
+      <translation>Neue Sprachen</translation>
     </message>
     <message>
       <source>Select the language you want to add to the object.</source>
-      <translation>Wählen Sie die Sprache, die Sie auf das Objekt hinzufügen möchten.</translation>
+      <translation>Wählen Sie die Sprache aus, die Sie dem Objekt hinzufügen möchten.</translation>
     </message>
     <message>
       <source>Select the language the new translation will be based on.</source>
-      <translation>Wählen Sie die Sprache der neuen Übersetzung wird sich stützen auf.</translation>
+      <translation>Wählen Sie die Sprache aus, auf der die neue Übersetzung basiert.</translation>
     </message>
     <message>
       <source>Use an empty, untranslated draft</source>
-      <translation>Verwenden Sie einen leeren, nicht übersetzten Entwurf</translation>
+      <translation>Verwenden Sie einen leeren, unübersetzten Entwurf</translation>
     </message>
     <message>
       <source>You do not have permission to create a translation in another language.</source>
-      <translation>Sie haben keine Berechtigung, eine Übersetzung in einer anderen Sprache zu erstellen.</translation>
+      <translation>Sie haben keine Erlaubnis, eine Übersetzung in einer anderen Sprache zu erstellen.</translation>
     </message>
     <message>
       <source>However, you can select one of the following languages for editing.</source>
-      <translation>Sie können jedoch eine der folgenden Sprachen wählen für die Bearbeitung.</translation>
+      <translation>Sie können jedoch eine der folgenden Sprachen zur Bearbeitung auswählen.</translation>
     </message>
     <message>
       <source>You do not have permission to edit the object in any available languages.</source>
@@ -745,7 +745,7 @@
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Stornieren</translation>
+      <translation>Abbrechen</translation>
     </message>
   </context>
   <context>
@@ -760,11 +760,11 @@
     </message>
     <message>
       <source>To edit this version, first create a copy of it.</source>
-      <translation>Um diese Version zu bearbeiten, zunächst eine Kopie davon erstellen.</translation>
+      <translation>Um diese Version zu bearbeiten, erstellen Sie zuerst eine Kopie davon.</translation>
     </message>
     <message>
       <source>Version not yours</source>
-      <translation>Version nicht verkaufen</translation>
+      <translation>Version nicht deins.</translation>
     </message>
     <message>
       <source>Version %1 was not created by you. Only your own drafts can be edited.</source>
@@ -772,15 +772,15 @@
     </message>
     <message>
       <source>Unable to create new version</source>
-      <translation>Nicht imstande, eine neue Version zu erstellen</translation>
+      <translation>Neue Version kann nicht erstellt werden</translation>
     </message>
     <message>
       <source>Version history limit has been exceeded and no archived version can be removed by the system.</source>
-      <translation>Versionsgeschichte Grenze überschritten wurde und keine archivierte Version kann vom System entfernt werden.</translation>
+      <translation>Das Versionsverlaufslimit wurde überschritten und keine archivierte Version kann vom System entfernt werden.</translation>
     </message>
     <message>
       <source>You can either change your version history settings in content.ini, remove draft versions or edit existing drafts.</source>
-      <translation>Sie können entweder Ihre Version der Geschichte Einstellungen in content.ini ändern, entfernen Entwürfe oder bearbeiten bestehende Entwürfe.</translation>
+      <translation>Sie können entweder Ihre Versionsverlaufseinstellungen in content.ini ändern, Entwurfsversionen entfernen oder vorhandene Entwürfe bearbeiten.</translation>
     </message>
     <message>
       <source>Versions for &lt;%object_name&gt; [%version_count]</source>
@@ -788,7 +788,7 @@
     </message>
     <message>
       <source>Toggle selection</source>
-      <translation>Toggle Auswahl</translation>
+      <translation>Auswahl umschalten</translation>
     </message>
     <message>
       <source>Version</source>
@@ -824,7 +824,7 @@
     </message>
     <message>
       <source>Draft</source>
-      <translation>Entwurf</translation>
+      <translation>Luftzug</translation>
     </message>
     <message>
       <source>Published</source>
@@ -832,19 +832,19 @@
     </message>
     <message>
       <source>Pending</source>
-      <translation>steht aus</translation>
+      <translation>Ausstehend</translation>
     </message>
     <message>
       <source>Archived</source>
-      <translation>archivierten</translation>
+      <translation>Archiviert</translation>
     </message>
     <message>
       <source>Rejected</source>
-      <translation>Abgelehnt</translation>
+      <translation>Hat abgelehnt</translation>
     </message>
     <message>
       <source>Untouched draft</source>
-      <translation>unberührte Entwurf</translation>
+      <translation>Unberührter Entwurf</translation>
     </message>
     <message>
       <source>Create a copy of version #%version_number.</source>
@@ -852,7 +852,7 @@
     </message>
     <message>
       <source>You cannot make copies of versions because you do not have permission to edit the object.</source>
-      <translation>Sie können keine Kopien von Versionen machen, weil Sie über die Berechtigung, das Objekt zu bearbeiten nicht haben.</translation>
+      <translation>Sie können keine Kopien von Versionen erstellen, da Sie nicht die Erlaubnis haben, das Objekt zu bearbeiten.</translation>
     </message>
     <message>
       <source>Edit the contents of version #%version_number.</source>
@@ -876,7 +876,7 @@
     </message>
     <message>
       <source>Show differences</source>
-      <translation>Zeige Unterschiede</translation>
+      <translation>Unterschiede zeigen</translation>
     </message>
     <message>
       <source>Back</source>
@@ -884,7 +884,7 @@
     </message>
     <message>
       <source>Published version</source>
-      <translation>veröffentlichte Version</translation>
+      <translation>Veröffentlichte Version.</translation>
     </message>
     <message>
       <source>Translations</source>
@@ -912,7 +912,7 @@
     </message>
     <message>
       <source>Block changes</source>
-      <translation>Block Änderungen</translation>
+      <translation>Veränderungen blockieren</translation>
     </message>
     <message>
       <source>New version</source>
@@ -920,15 +920,15 @@
     </message>
     <message>
       <source>Back to history</source>
-      <translation>Zurück zur Geschichte</translation>
+      <translation>Zurück zur Geschichte.</translation>
     </message>
     <message>
       <source>Modified translation</source>
-      <translation>modifizierte Übersetzung</translation>
+      <translation>Geänderte Übersetzung</translation>
     </message>
     <message>
       <source>There is no need to do a copies of untouched drafts.</source>
-      <translation>Es gibt keine Notwendigkeit, eine Kopie von unangetastet Entwürfen zu tun.</translation>
+      <translation>Es ist nicht notwendig, ein Kopien unberührter Entwürfe durchzuführen.</translation>
     </message>
   </context>
   <context>
@@ -943,7 +943,7 @@
     </message>
     <message>
       <source>Type</source>
-      <translation>Art</translation>
+      <translation>Typ</translation>
     </message>
   </context>
   <context>
@@ -970,7 +970,7 @@
     </message>
     <message>
       <source>Last modified</source>
-      <translation>Zuletzt bearbeitet</translation>
+      <translation>Zuletzt geändert</translation>
     </message>
     <message>
       <source>Unknown</source>
@@ -978,7 +978,7 @@
     </message>
     <message>
       <source>Your pending list is empty</source>
-      <translation>Ihre Warteliste ist leer</translation>
+      <translation>Ihre anstehende Liste ist leer</translation>
     </message>
   </context>
   <context>
@@ -989,7 +989,7 @@
     </message>
     <message>
       <source>The following words were excluded from the search:</source>
-      <translation>Die folgenden Worte wurden von der Suche ausgeschlossen:</translation>
+      <translation>Die folgenden Wörter wurden von der Suche ausgeschlossen:</translation>
     </message>
     <message>
       <source>No results were found when searching for "%1".</source>
@@ -1001,19 +1001,19 @@
     </message>
     <message>
       <source>Check spelling of keywords.</source>
-      <translation>Überprüfen Sie die Rechtschreibung der Schlüsselwörter.</translation>
+      <translation>Überprüfen Sie die Schreibweise von Keywords.</translation>
     </message>
     <message>
       <source>Try changing some keywords (eg, "car" instead of "cars").</source>
-      <translation>Versuchen Sie einige Schlüsselwörter zu ändern (zB „Auto“ statt „Autos“).</translation>
+      <translation>Versuchen Sie, einige Keywords (z. B. "Auto" anstelle von "Autos") zu ändern.</translation>
     </message>
     <message>
       <source>Try searching with less specific keywords.</source>
-      <translation>Versuchen Sie es mit allgemeineren Suchbegriffen.</translation>
+      <translation>Suche mit weniger spezifischen Keywords.</translation>
     </message>
     <message>
       <source>Reduce number of keywords to get more results.</source>
-      <translation>Reduzieren Sie die Anzahl der Suchbegriffe, um Ergebnisse zu erzielen.</translation>
+      <translation>Reduzieren Sie die Anzahl der Schlüsselwörter, um weitere Ergebnisse zu erhalten.</translation>
     </message>
     <message>
       <source>Search for "%1" returned %2 matches</source>
@@ -1036,7 +1036,7 @@
     </message>
     <message>
       <source>Click here to return to the original page.</source>
-      <translation>Klicken Sie hier, um die ursprüngliche Seite zurückzukehren.</translation>
+      <translation>Klicken Sie hier, um zur ursprünglichen Seite zurückzukehren.</translation>
     </message>
     <message>
       <source>The message was not sent.</source>
@@ -1044,7 +1044,7 @@
     </message>
     <message>
       <source>The message was not sent due to an unknown error. Please notify the site administrator about this error.</source>
-      <translation>Die Nachricht wurde nicht aufgrund eines unbekannten Fehlers nicht gesendet. Bitte kontaktieren Sie den Administrator über diesen Fehler.</translation>
+      <translation>Die Nachricht wurde aufgrund eines unbekannten Fehlers nicht gesendet. Bitte benachrichtigen Sie den Site-Administrator über diesen Fehler.</translation>
     </message>
     <message>
       <source>Please correct the following errors:</source>
@@ -1056,7 +1056,7 @@
     </message>
     <message>
       <source>Your email address</source>
-      <translation>deine Emailadresse</translation>
+      <translation>Ihre E-Mail-Adresse</translation>
     </message>
     <message>
       <source>Recipient's email address</source>
@@ -1072,7 +1072,7 @@
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Stornieren</translation>
+      <translation>Abbrechen</translation>
     </message>
   </context>
   <context>
@@ -1083,7 +1083,7 @@
     </message>
     <message>
       <source>Send for publishing</source>
-      <translation>Senden Sie für die Veröffentlichung</translation>
+      <translation>Zur Veröffentlichung senden.</translation>
     </message>
     <message>
       <source>Discard</source>
@@ -1098,7 +1098,7 @@
     </message>
     <message>
       <source>Send for publishing</source>
-      <translation>Senden Sie für die Veröffentlichung</translation>
+      <translation>Zur Veröffentlichung senden.</translation>
     </message>
     <message>
       <source>Discard</source>
@@ -1113,7 +1113,7 @@
     </message>
     <message>
       <source>Send for publishing</source>
-      <translation>Senden Sie für die Veröffentlichung</translation>
+      <translation>Zur Veröffentlichung senden.</translation>
     </message>
     <message>
       <source>Discard</source>
@@ -1128,7 +1128,7 @@
     </message>
     <message>
       <source>Send for publishing</source>
-      <translation>Senden Sie für die Veröffentlichung</translation>
+      <translation>Zur Veröffentlichung senden.</translation>
     </message>
     <message>
       <source>Discard</source>
@@ -1139,7 +1139,7 @@
     <name>design/ocbootstrap/embed/forum</name>
     <message>
       <source>Latest from</source>
-      <translation>Neueste aus</translation>
+      <translation>Neueste von</translation>
     </message>
   </context>
   <context>
@@ -1157,7 +1157,7 @@
     </message>
     <message>
       <source>What is eZ Publish?</source>
-      <translation>Was ist eZ Publish?</translation>
+      <translation>Was ist EZ Publish?</translation>
     </message>
     <message>
       <source>Licence</source>
@@ -1173,7 +1173,7 @@
     </message>
     <message>
       <source>Third-Party Software</source>
-      <translation>Drittanbietersoftware</translation>
+      <translation>Software von Drittanbietern</translation>
     </message>
     <message>
       <source>Extensions</source>
@@ -1188,7 +1188,7 @@
     </message>
     <message>
       <source>Select</source>
-      <translation>Wählen</translation>
+      <translation>Auswählen</translation>
     </message>
     <message>
       <source>Please choose the placement for the OpenOffice.org object.
@@ -1198,9 +1198,9 @@
                 Click on placement names to change the browse listing.</source>
       <translation>Bitte wählen Sie die Platzierung für das OpenOffice.org-Objekt.
 
-                Wählen Sie die Placements und klicken Sie auf die% button.
-                die jüngsten und Lesezeichen Elemente für eine schnelle Platzierung ist ebenfalls möglich.
-                Klicken Sie auf Placement-Namen, um die Sie navigieren.</translation>
+                Wählen Sie die Platzierungen aus und klicken Sie auf die Taste% ButtonName.
+                Die Verwendung der letzten und Bookmark-Elemente für die schnelle Platzierung ist ebenfalls möglich.
+                Klicken Sie auf Platzierungsnamen, um die Auflistung zu ändern.</translation>
     </message>
     <message>
       <source>Please choose the placement for the OpenOffice.org object.
@@ -1210,32 +1210,32 @@
     Click on placement names to change the browse listing.</source>
       <translation>Bitte wählen Sie die Platzierung für das OpenOffice.org-Objekt.
 
-    Wählen Sie die Placements und klicken Sie auf die% button.
-    die jüngsten und Lesezeichen Elemente für eine schnelle Platzierung ist ebenfalls möglich.
-    Klicken Sie auf Placement-Namen, um die Sie navigieren.</translation>
+    Wählen Sie die Platzierungen aus und klicken Sie auf die Taste% ButtonName.
+    Die Verwendung der letzten und Bookmark-Elemente für die schnelle Platzierung ist ebenfalls möglich.
+    Klicken Sie auf Platzierungsnamen, um die Auflistung zu ändern.</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/ezodf/export</name>
     <message>
       <source>OpenOffice.org export</source>
-      <translation>OpenOffice.org Export</translation>
+      <translation>OpenOffice.org Export.</translation>
     </message>
     <message>
       <source>Export eZ publish content to OpenOffice.org</source>
-      <translation>Export eZ publish Inhalt OpenOffice.org</translation>
+      <translation>Export EZ Publish-Inhalte auf OpenOffice.org</translation>
     </message>
     <message>
       <source>Error</source>
-      <translation>Error</translation>
+      <translation>Fehler</translation>
     </message>
     <message>
       <source>Here you can export any eZ publish content object to an OpenOffice.org Writer document format.</source>
-      <translation>Hier können Sie exportieren veröffentlichen jede eZ Content-Objekt auf ein OpenOffice.org Writer-Dokument-Format.</translation>
+      <translation>Hier können Sie jedes EZ-Publish-Inhaltsobjekt in ein OpenOffice.org-Writer-Dokumentformat exportieren.</translation>
     </message>
     <message>
       <source>Export Object</source>
-      <translation>Export Object</translation>
+      <translation>Objekt exportieren</translation>
     </message>
   </context>
   <context>
@@ -1256,14 +1256,14 @@
     <name>design/ocbootstrap/footer/links</name>
     <message>
       <source>eZ Links</source>
-      <translation>eZ Verbindungen</translation>
+      <translation>EZ-Links</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/full/article</name>
     <message>
       <source>Comments</source>
-      <translation>Bemerkungen</translation>
+      <translation>Kommentare</translation>
     </message>
     <message>
       <source>New comment</source>
@@ -1275,29 +1275,29 @@
     </message>
     <message>
       <source>Tip a friend</source>
-      <translation>Weitersagen!</translation>
+      <translation>Einen Freund tippen</translation>
     </message>
     <message>
       <source>Related content</source>
-      <translation>Verwandte Inhalte</translation>
+      <translation>Zugehöriger Inhalt</translation>
     </message>
     <message>
       <source>Location</source>
-      <translation>Ort</translation>
+      <translation>Standort</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/full/article_mainpage</name>
     <message>
       <source>Tip a friend</source>
-      <translation>Weitersagen!</translation>
+      <translation>Einen Freund tippen</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/full/article_subpage</name>
     <message>
       <source>Tip a friend</source>
-      <translation>Weitersagen!</translation>
+      <translation>Einen Freund tippen</translation>
     </message>
   </context>
   <context>
@@ -1318,11 +1318,11 @@
     <name>design/ocbootstrap/full/event_view_calendar</name>
     <message>
       <source>Mon</source>
-      <translation>Mon</translation>
+      <translation>Anzunehmen</translation>
     </message>
     <message>
       <source>Tue</source>
-      <translation>Di</translation>
+      <translation>Tue.</translation>
     </message>
     <message>
       <source>Wed</source>
@@ -1330,15 +1330,15 @@
     </message>
     <message>
       <source>Thu</source>
-      <translation>Thu</translation>
+      <translation>Thu.</translation>
     </message>
     <message>
       <source>Fri</source>
-      <translation>Fr</translation>
+      <translation>Frech</translation>
     </message>
     <message>
       <source>Sat</source>
-      <translation>Sa</translation>
+      <translation>Sat</translation>
     </message>
     <message>
       <source>Sun</source>
@@ -1382,7 +1382,7 @@
     </message>
     <message>
       <source>Show All Events..</source>
-      <translation>Alle Veranstaltungen ..</translation>
+      <translation>Alle Ereignisse zeigen ..</translation>
     </message>
   </context>
   <context>
@@ -1454,11 +1454,11 @@
     </message>
     <message>
       <source>Location</source>
-      <translation>Ort</translation>
+      <translation>Standort</translation>
     </message>
     <message>
       <source>Moderated by</source>
-      <translation>Moderation</translation>
+      <translation>Moderiert von</translation>
     </message>
     <message>
       <source>Edit</source>
@@ -1477,7 +1477,7 @@
     </message>
     <message>
       <source>New reply</source>
-      <translation>neue Antwort</translation>
+      <translation>Neue Antwort.</translation>
     </message>
     <message>
       <source>Keep me updated</source>
@@ -1493,15 +1493,15 @@
     </message>
     <message>
       <source>Message</source>
-      <translation>Botschaft</translation>
+      <translation>Nachricht</translation>
     </message>
     <message>
       <source>Location</source>
-      <translation>Ort</translation>
+      <translation>Standort</translation>
     </message>
     <message>
       <source>Moderated by</source>
-      <translation>Moderation</translation>
+      <translation>Moderiert von</translation>
     </message>
     <message>
       <source>Edit</source>
@@ -1547,18 +1547,18 @@
     </message>
     <message>
       <source>Related content</source>
-      <translation>Verwandte Inhalte</translation>
+      <translation>Zugehöriger Inhalt</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/full/multicalendar</name>
     <message>
       <source>Event</source>
-      <translation>Veranstaltung</translation>
+      <translation>Vorfall</translation>
     </message>
     <message>
       <source>Start date</source>
-      <translation>Anfangsdatum</translation>
+      <translation>Startdatum</translation>
     </message>
     <message>
       <source>Category</source>
@@ -1588,11 +1588,11 @@
     </message>
     <message>
       <source>People who bought this also bought</source>
-      <translation>Menschen, die dies gekauft haben,</translation>
+      <translation>Leute, die dies gekauft haben, kauften auch</translation>
     </message>
     <message>
       <source>Amount</source>
-      <translation>Menge</translation>
+      <translation>Betragen</translation>
     </message>
   </context>
   <context>
@@ -1635,7 +1635,7 @@
     <name>design/ocbootstrap/line/event_calendar</name>
     <message>
       <source>Next events</source>
-      <translation>nächste Veranstaltungen</translation>
+      <translation>Nächste Ereignisse</translation>
     </message>
   </context>
   <context>
@@ -1657,7 +1657,7 @@
     <name>design/ocbootstrap/line/flash</name>
     <message>
       <source>View flash</source>
-      <translation>Ansicht Flash</translation>
+      <translation>Blitz anzeigen</translation>
     </message>
   </context>
   <context>
@@ -1676,7 +1676,7 @@
     </message>
     <message>
       <source>Enter forum</source>
-      <translation>Geben Sie Forum</translation>
+      <translation>Ein Forum eingeben</translation>
     </message>
   </context>
   <context>
@@ -1701,11 +1701,11 @@
     <name>design/ocbootstrap/line/product</name>
     <message>
       <source>Amount</source>
-      <translation>Menge</translation>
+      <translation>Betragen</translation>
     </message>
     <message>
       <source>Buy</source>
-      <translation>Kaufen</translation>
+      <translation>Besorgen</translation>
     </message>
   </context>
   <context>
@@ -1726,7 +1726,7 @@
     <name>design/ocbootstrap/line/silverlight</name>
     <message>
       <source>View</source>
-      <translation>Aussicht</translation>
+      <translation>Sicht</translation>
     </message>
   </context>
   <context>
@@ -1762,7 +1762,7 @@
     <name>design/ocbootstrap/node/removeobject</name>
     <message>
       <source>Are you sure you want to remove these items?</source>
-      <translation>Sind Sie sicher, dass Sie diese Elemente entfernen?</translation>
+      <translation>Sind Sie sicher, dass Sie diese Artikel entfernen möchten?</translation>
     </message>
     <message>
       <source>%nodename and its %childcount children. %additionalwarning</source>
@@ -1778,7 +1778,7 @@
     </message>
     <message>
       <source>Note</source>
-      <translation>Hinweis</translation>
+      <translation>Notiz</translation>
     </message>
     <message>
       <source>If %trashname is checked, removed items can be found in the trash.</source>
@@ -1786,7 +1786,7 @@
     </message>
     <message>
       <source>Confirm</source>
-      <translation>Bestätigen</translation>
+      <translation>Bestätigen Sie</translation>
     </message>
     <message>
       <source>Cancel</source>
@@ -1794,14 +1794,14 @@
     </message>
     <message>
       <source>The items contain more than the maximum possible nodes for subtree removal and will not be deleted. You can remove this subtree using the ezsubtreeremove.php script.</source>
-      <translation>Die Elemente enthalten mehr als die maximal möglichen Knoten für subtree Entfernung und werden nicht gelöscht. Sie können dieses Unterbaums Skript mit dem ezsubtreeremove.php entfernen.</translation>
+      <translation>Die Elemente enthalten mehr als die maximal möglichen Knoten zum Entfernen der Untertreibung und werden nicht gelöscht. Sie können diesen Teilbaum mit dem Skript ezsubtreeremove.php entfernen.</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/notification/addingresult</name>
     <message>
       <source>Add to my notifications</source>
-      <translation>In meiner Benachrichtigungen</translation>
+      <translation>Zu meinen Benachrichtigungen hinzufügen</translation>
     </message>
     <message>
       <source>Notification for node &lt;%node_name&gt; already exists.</source>
@@ -1828,19 +1828,19 @@
     </message>
     <message>
       <source>Daily, at</source>
-      <translation>Täglich, bei</translation>
+      <translation>Täglich, um</translation>
     </message>
     <message>
       <source>Once per week, on</source>
-      <translation>Einmal pro Woche,</translation>
+      <translation>Einmal pro Woche, an</translation>
     </message>
     <message>
       <source>Once per month, on day number</source>
-      <translation>Einmal pro Monat, am Tag Nummer</translation>
+      <translation>Einmal pro Monat, an der Tagesnummer</translation>
     </message>
     <message>
       <source>If day number is larger than the number of days within the current month, the last day of the current month will be used.</source>
-      <translation>Wenn Tag Zahl größer als die Anzahl der Tage im aktuellen Monat ist, wird der letzte Tag des laufenden Monats verwendet werden.</translation>
+      <translation>Wenn die Tagesnummer größer als die Anzahl der Tage innerhalb des aktuellen Monats ist, wird der letzte Tag des laufenden Monats verwendet.</translation>
     </message>
   </context>
   <context>
@@ -1859,7 +1859,7 @@
     </message>
     <message>
       <source>Type</source>
-      <translation>Art</translation>
+      <translation>Typ</translation>
     </message>
     <message>
       <source>Section</source>
@@ -1879,7 +1879,7 @@
     </message>
     <message>
       <source>Add items</source>
-      <translation>Füge Artikel hinzu</translation>
+      <translation>Füge Sachen hinzu</translation>
     </message>
   </context>
   <context>
@@ -1905,7 +1905,7 @@
     </message>
     <message>
       <source>Tag cloud</source>
-      <translation>Tag cloud</translation>
+      <translation>Tagwolke</translation>
     </message>
     <message>
       <source>Site map</source>
@@ -1929,7 +1929,7 @@
     </message>
     <message>
       <source>Login</source>
-      <translation>Anmeldung</translation>
+      <translation>Anmelden</translation>
     </message>
     <message>
       <source>Username</source>
@@ -1952,11 +1952,11 @@
     <name>design/ocbootstrap/parts/website_toolbar</name>
     <message>
       <source>Remove node RSS/ATOM feed</source>
-      <translation>Remove Knoten RSS / ATOM-Feed</translation>
+      <translation>Node RSS / Atom-Feed entfernen</translation>
     </message>
     <message>
       <source>Create node RSS/ATOM feed</source>
-      <translation>Erstellen Sie Knoten RSS / ATOM-Feed</translation>
+      <translation>Knoten-RSS / Atom-Feed erstellen</translation>
     </message>
   </context>
   <context>
@@ -1971,7 +1971,7 @@
     </message>
     <message>
       <source>If RSS Export is Active then a valid Access URL is required.</source>
-      <translation>Wenn RSS Export Aktiv dann eine gültige Access-URL ist erforderlich.</translation>
+      <translation>Wenn RSS-Export aktiv ist, ist eine gültige Zugriffs-URL erforderlich.</translation>
     </message>
     <message>
       <source>Name</source>
@@ -1979,7 +1979,7 @@
     </message>
     <message>
       <source>Name of the RSS export. This name is used in the Administration Interface only, to distinguish the different exports from each other.</source>
-      <translation>Name des RSS Exports. Dieser Name wird in der Administrationsoberfläche verwendet wird, nur die unterschiedlichen Exporte voneinander zu unterscheiden.</translation>
+      <translation>Name des RSS-Exports. Dieser Name wird nur in der Administrationsoberfläche verwendet, um die verschiedenen Exporte voneinander zu unterscheiden.</translation>
     </message>
     <message>
       <source>Description</source>
@@ -1987,7 +1987,7 @@
     </message>
     <message>
       <source>Use the description field to write a text explaining what users can expect from the RSS export.</source>
-      <translation>Verwenden Sie das Beschreibungsfeld einen Text zu schreiben, zu erklären, was die Nutzer aus dem RSS Export erwarten können.</translation>
+      <translation>Verwenden Sie das Feld Beschreibung, um einen Text zu schreiben, der erklären, was die Benutzer vom RSS-Export erwarten können.</translation>
     </message>
     <message>
       <source>Site URL</source>
@@ -1995,7 +1995,7 @@
     </message>
     <message>
       <source>Use this field to enter the base URL of your site. It is used to produce the URLs in the export, composed by the Site URL (e.g. "http://www.example.com/index.php") and the path to the object (e.g. "/articles/my_article"). The Site URL depends on your web server and eZ Publish configuration.</source>
-      <translation>Verwenden Sie dieses Feld, um die Basis-URL Ihrer Website eingeben. Es wird verwendet, um die URLs in dem Export zu erzeugen, zusammengesetzt durch die Website URL (beispielsweise „http://www.example.com/index.php“), und der Pfad zu dem Objekt (zum Beispiel „/ articles / my_article“). Die URL der Seite hängt von Ihrem Web-Server und eZ Publish Konfiguration.</translation>
+      <translation>Verwenden Sie dieses Feld, um die Basis-URL Ihrer Site einzugeben. Es wird verwendet, um die URLs im Export herzustellen, die von der Site-URL zusammengesetzt ist (z. B. http://www.example.com/index.php) und den Pfad zum Objekt (z. B. "/ Artikeln / my_article"). Die Site-URL hängt von Ihrem Webserver und der EZ-Publish-Konfiguration ab.</translation>
     </message>
     <message>
       <source>Leave this field emty if you want system automaticaly detect the URL of your site from the URL you access feed with</source>
@@ -2011,7 +2011,7 @@
     </message>
     <message>
       <source>Click this button to select an image for the RSS export. Note that images only work with RSS version 2.0</source>
-      <translation>Klicken Sie auf diese Schaltfläche, um ein Bild für den RSS-Export auszuwählen. Beachten Sie, dass Bilder nur mit RSS-Version arbeiten 2.0</translation>
+      <translation>Klicken Sie auf diese Schaltfläche, um ein Bild für den RSS-Export auszuwählen. Beachten Sie, dass Bilder nur mit RSS-Version 2.0 funktionieren</translation>
     </message>
     <message>
       <source>Remove image</source>
@@ -2019,23 +2019,23 @@
     </message>
     <message>
       <source>Click to remove image from RSS export.</source>
-      <translation>Auf das Bild klicken von RSS Export zu entfernen.</translation>
+      <translation>Klicken Sie hier, um das Bild von RSS-Export zu entfernen.</translation>
     </message>
     <message>
       <source>RSS version</source>
-      <translation>RSS-Version</translation>
+      <translation>RSS-Version.</translation>
     </message>
     <message>
       <source>Use this drop-down menu to select the RSS version to use for the export. You must select RSS 2.0 in order to export the image selected above.</source>
-      <translation>Verwenden Sie dieses Dropdown-Menü, um die RSS-Version auszuwählen, die für den Export zu verwenden. Sie müssen RSS 2.0 auswählen, um das Bild oben, ausgewählt zu exportieren.</translation>
+      <translation>Verwenden Sie dieses Dropdown-Menü, um die RSS-Version auszuwählen, die für den Export verwendet wird. Sie müssen RSS 2.0 auswählen, um das oben ausgewählte Bild zu exportieren.</translation>
     </message>
     <message>
       <source>Number of objects</source>
-      <translation>Anzahl der Objekte</translation>
+      <translation>Anzahl der Objekte.</translation>
     </message>
     <message>
       <source>Use this drop-down to select the maximum number of objects included in the RSS feed.</source>
-      <translation>Verwenden Sie diese Dropdown-die maximale Anzahl der Objekte in den RSS-Feed enthalten auszuwählen.</translation>
+      <translation>Verwenden Sie diesen Dropdown, um die maximale Anzahl der im RSS-Feed enthaltenen Objekte auszuwählen.</translation>
     </message>
     <message>
       <source>Active</source>
@@ -2043,7 +2043,7 @@
     </message>
     <message>
       <source>Use this checkbox to control if the RSS export is active or not. An inactive export will not be automatically updated.</source>
-      <translation>Verwenden Sie dieses Kontrollkästchen, um zu steuern, wenn der RSS Export aktiv ist oder nicht. Ein inaktiver Export aktualisiert wird nicht automatisch.</translation>
+      <translation>Aktivieren Sie dieses Kontrollkästchen, um zu steuern, ob der RSS-Export aktiv ist oder nicht. Ein inaktiver Export wird nicht automatisch aktualisiert.</translation>
     </message>
     <message>
       <source>Main node only</source>
@@ -2051,15 +2051,15 @@
     </message>
     <message>
       <source>Check if you want to only feed the object from the main node.</source>
-      <translation>Überprüfen Sie, ob Sie nur wollen, von dem Hauptknoten des Objekts füttern.</translation>
+      <translation>Prüfen Sie, ob Sie das Objekt nur vom Hauptknoten zuführen möchten.</translation>
     </message>
     <message>
       <source>Access URL</source>
-      <translation>Access-URL</translation>
+      <translation>Zugriff auf URL.</translation>
     </message>
     <message>
       <source>Use this field to set the URL where the RSS export should be available. Note that "rss/feed/" will be appended to the real URL.</source>
-      <translation>Verwenden Sie dieses Feld, um die URL zu setzen, wo der RSS Export zur Verfügung stehen sollte. Beachten Sie, dass „rss / feed /“ wird auf die reale URL angehängt werden.</translation>
+      <translation>Verwenden Sie dieses Feld, um die URL einzustellen, in der der RSS-Export verfügbar ist. Beachten Sie, dass "RSS / FEED /" an die echte URL angehängt werden soll.</translation>
     </message>
     <message>
       <source>Source</source>
@@ -2067,11 +2067,11 @@
     </message>
     <message>
       <source>Source path</source>
-      <translation>Source-Pfad</translation>
+      <translation>Quellpfad</translation>
     </message>
     <message>
       <source>Click this button to select the source node for the RSS export source. Objects of the type selected in the drop-down below published as sub items of the selected node will be included in the RSS export.</source>
-      <translation>Klicken Sie auf diese Schaltfläche, um den Quellknoten für die RSS-Export-Quelle auszuwählen. Objekte des Typs in der ausgewählten Drop-down unten veröffentlicht als Unterpunkte des ausgewählten Knotens werden in dem RSS Export einbezogen werden.</translation>
+      <translation>Klicken Sie auf diese Schaltfläche, um den Quellknoten für die RSS-Exportquelle auszuwählen. Objekte des Typs, der in dem untenstehenden Abholunterschied ausgewählt wurde, der als Unterelemente des ausgewählten Knotens veröffentlicht wurde, werden in den RSS-Export enthalten.</translation>
     </message>
     <message>
       <source>Subnodes</source>
@@ -2079,7 +2079,7 @@
     </message>
     <message>
       <source>Activate this checkbox if objects from the subnodes of the source should also be fed.</source>
-      <translation>Aktivieren Sie diese Checkbox, wenn Objekte aus dem untergeordneten Knoten der Quelle auch zugeführt werden sollen.</translation>
+      <translation>Aktivieren Sie dieses Kontrollkästchen, ob Objekte aus den Subnodenten der Quelle auch gespeist werden sollen.</translation>
     </message>
     <message>
       <source>Class</source>
@@ -2087,15 +2087,15 @@
     </message>
     <message>
       <source>Use this drop-down to select the type of object that triggers the export. Click the "Set" button to load the correct attribute types for the remaining fields.</source>
-      <translation>Verwenden Sie diese Dropdown-die Art des Objekts, dass Auslöser der Export auszuwählen. Klicken Sie auf die Taste „Set“ die richtigen Attributtypen für die restlichen Felder zu laden.</translation>
+      <translation>Verwenden Sie diesen Dropdown, um die Art des Objekts auszuwählen, das den Export auslöst. Klicken Sie auf die Schaltfläche "Set", um die korrekten Attributtypen für die verbleibenden Felder zu laden.</translation>
     </message>
     <message>
       <source>Set</source>
-      <translation>einstellen</translation>
+      <translation>Satz</translation>
     </message>
     <message>
       <source>Click this button to load the correct values into the drop-down fields below. Use the drop-down menu on the left to select the class.</source>
-      <translation>Klicken Sie auf diesen Button die richtigen Werte in den Dropdown-Felder zu laden. Verwenden Sie das Drop-Down-Menü auf der linken Seite, um die Klasse auszuwählen.</translation>
+      <translation>Klicken Sie auf diese Schaltfläche, um die korrekten Werte in die untenstehenden Dropdown-Felder zu laden. Verwenden Sie das Dropdown-Menü auf der linken Seite, um die Klasse auszuwählen.</translation>
     </message>
     <message>
       <source>Title</source>
@@ -2103,7 +2103,7 @@
     </message>
     <message>
       <source>Use this drop-down to select the attribute that should be exported as the title of the RSS export entry.</source>
-      <translation>Verwenden Sie dieses Dropdown-das Attribut auszuwählen, der als Titel des RSS Export Eintrag exportiert werden sollen.</translation>
+      <translation>Verwenden Sie diesen Dropdown, um das Attribut auszuwählen, das als Titel des RSS-Exporteintrags exportiert werden soll.</translation>
     </message>
     <message>
       <source>optional</source>
@@ -2111,7 +2111,7 @@
     </message>
     <message>
       <source>Use this drop-down to select the attribute that should be exported as the description of the RSS export entry.</source>
-      <translation>Verwenden Sie dieses Dropdown-das Attribut auszuwählen, die als die Beschreibung des RSS Export Eintrag exportiert werden sollen.</translation>
+      <translation>Verwenden Sie diesen Dropdown, um das Attribut auszuwählen, das als Beschreibung des RSS-Exporteintrags exportiert werden soll.</translation>
     </message>
     <message>
       <source>Skip</source>
@@ -2123,15 +2123,15 @@
     </message>
     <message>
       <source>Use this drop-down to select the attribute that should be exported as the category of the RSS export entry.</source>
-      <translation>Verwenden Sie dieses Dropdown-das Attribut auszuwählen, die auch die Kategorie der RSS Export Eintrag exportiert werden sollen.</translation>
+      <translation>Verwenden Sie diesen Dropdown, um das Attribut auszuwählen, das als Kategorie des RSS-Exporteintrags exportiert werden soll.</translation>
     </message>
     <message>
       <source>Remove this source</source>
-      <translation>Entfernen Sie diese Quelle</translation>
+      <translation>Diese Quelle entfernen</translation>
     </message>
     <message>
       <source>Click to remove this source from the RSS export.</source>
-      <translation>Klicken Sie auf diese Quelle aus dem RSS Export zu entfernen.</translation>
+      <translation>Klicken Sie hier, um diese Quelle aus dem RSS-Export zu entfernen.</translation>
     </message>
     <message>
       <source>Add source</source>
@@ -2139,7 +2139,7 @@
     </message>
     <message>
       <source>Click to add a new source to the RSS export.</source>
-      <translation>Klicken Sie auf eine neue Quelle den RSS Export hinzuzufügen.</translation>
+      <translation>Klicken Sie auf, um den RSS-Export eine neue Quelle hinzuzufügen.</translation>
     </message>
     <message>
       <source>OK</source>
@@ -2147,15 +2147,15 @@
     </message>
     <message>
       <source>Apply the changes and return to the RSS overview.</source>
-      <translation>Übernehmen Sie die Änderungen und kehren Sie den RSS-Übersicht.</translation>
+      <translation>Wenden Sie die Änderungen an und kehren Sie zur RSS-Übersicht zurück.</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Stornieren</translation>
+      <translation>Abbrechen</translation>
     </message>
     <message>
       <source>Cancel the changes and return to the RSS overview.</source>
-      <translation>Abbrechen, um die Änderungen und Rückkehr in der RSS-Übersicht.</translation>
+      <translation>Abbrechen Sie die Änderungen und kehren Sie zur RSS-Übersicht zurück.</translation>
     </message>
   </context>
   <context>
@@ -2170,15 +2170,15 @@
     </message>
     <message>
       <source>Name of the RSS import. This name is used in the Administration Interface only, to distinguish the different imports from each other.</source>
-      <translation>Name des RSS-Imports. Dieser Name wird in der Administrationsoberfläche verwendet wird, nur die unterschiedlichen Importe voneinander zu unterscheiden.</translation>
+      <translation>Name des RSS-Imports. Dieser Name wird nur in der Administrationsoberfläche verwendet, um die verschiedenen Einfuhren voneinander zu unterscheiden.</translation>
     </message>
     <message>
       <source>Source URL</source>
-      <translation>Source URL</translation>
+      <translation>Quell-URL.</translation>
     </message>
     <message>
       <source>Use this field to enter the source URL of the RSS feed to import.</source>
-      <translation>Verwenden Sie dieses Feld, um den Quell-URL des RSS-Feeds zu importieren einzugeben.</translation>
+      <translation>Verwenden Sie dieses Feld, um die Quell-URL des RSS-Feeds zum Importieren einzugeben.</translation>
     </message>
     <message>
       <source>Update</source>
@@ -2186,15 +2186,15 @@
     </message>
     <message>
       <source>Click this button to proceed and analyze the import feed.</source>
-      <translation>Klicken Sie auf diese Schaltfläche, um fortzufahren und zu analysieren, um den Import-Feed.</translation>
+      <translation>Klicken Sie auf diese Schaltfläche, um den Import-Feed fortzufahren und analysieren zu können.</translation>
     </message>
     <message>
       <source>RSS Version</source>
-      <translation>RSS Version</translation>
+      <translation>RSS-Version.</translation>
     </message>
     <message>
       <source>Destination path</source>
-      <translation>Weg zum Ziel</translation>
+      <translation>Zielpfad</translation>
     </message>
     <message>
       <source>Browse</source>
@@ -2202,11 +2202,11 @@
     </message>
     <message>
       <source>Click this button to select the destination node where objects created by the import are located.</source>
-      <translation>Klicken Sie auf diese Schaltfläche, um den Zielknoten auszuwählen, in dem durch den Import erstellte Objekte befinden.</translation>
+      <translation>Klicken Sie auf diese Schaltfläche, um den Zielknoten auszuwählen, in dem Objekte, in denen Objekte, die vom Import erstellt wurden, ausgewählt werden.</translation>
     </message>
     <message>
       <source>Imported objects will be owned by</source>
-      <translation>Importierte Objekte werden im Besitz von</translation>
+      <translation>Importierte Objekte befinden sich im Besitz von</translation>
     </message>
     <message>
       <source>Change user</source>
@@ -2214,7 +2214,7 @@
     </message>
     <message>
       <source>Click this button to select the user who should own the objects created by the import.</source>
-      <translation>Klicken Sie auf diese Schaltfläche, um den Benutzer zu wählen, die die Objekte durch den Import erstellt besitzen sollte.</translation>
+      <translation>Klicken Sie auf diese Schaltfläche, um den Benutzer auszuwählen, der die vom Import erstellten Objekte besitzen sollte.</translation>
     </message>
     <message>
       <source>Class</source>
@@ -2222,23 +2222,23 @@
     </message>
     <message>
       <source>Use this drop-down to select the type of object the import should create. Click the "Set" button to load the attribute types for the remaining fields.</source>
-      <translation>Verwenden Sie diese Dropdown-die Art des Objekts wählen sollte der Import erstellen. Klicken Sie auf die „Set“, um die Attributtypen für die restlichen Felder zu laden.</translation>
+      <translation>Verwenden Sie diesen Dropdown, um die Art des Objekts auszuwählen, das der Import erstellen sollte. Klicken Sie auf die Schaltfläche "Set", um die Attributtypen für die verbleibenden Felder zu laden.</translation>
     </message>
     <message>
       <source>Set</source>
-      <translation>einstellen</translation>
+      <translation>Satz</translation>
     </message>
     <message>
       <source>Click this button to load the correct values into the drop-down fields below. Use the drop-down menu on the left to select the class.</source>
-      <translation>Klicken Sie auf diesen Button die richtigen Werte in den Dropdown-Felder zu laden. Verwenden Sie das Drop-Down-Menü auf der linken Seite, um die Klasse auszuwählen.</translation>
+      <translation>Klicken Sie auf diese Schaltfläche, um die korrekten Werte in die untenstehenden Dropdown-Felder zu laden. Verwenden Sie das Dropdown-Menü auf der linken Seite, um die Klasse auszuwählen.</translation>
     </message>
     <message>
       <source>Class attributes</source>
-      <translation>Klassenattribute</translation>
+      <translation>Kursattribute</translation>
     </message>
     <message>
       <source>Use this drop-down menu to select the attribute that should bet set as information from the RSS stream.</source>
-      <translation>Verwenden Sie dieses Dropdown-Menü das Attribut auszuwählen, das Set als Informationen aus dem RSS-Stream wetten sollte.</translation>
+      <translation>Verwenden Sie dieses Dropdown-Menü, um das Attribut auszuwählen, das Set als Informationen aus dem RSS-Stream einstellen soll.</translation>
     </message>
     <message>
       <source>Ignore</source>
@@ -2254,7 +2254,7 @@
     </message>
     <message>
       <source>Use this checkbox to control if the RSS feed is active or not. An inactive feed will not be automatically updated.</source>
-      <translation>Verwenden Sie dieses Kontrollkästchen, um zu steuern, wenn der RSS-Feed aktiv ist oder nicht. Ein inaktiver Feed aktualisiert wird nicht automatisch.</translation>
+      <translation>Verwenden Sie dieses Kontrollkästchen, um zu steuern, ob der RSS-Feed aktiv ist oder nicht. Ein inaktiver Feed wird nicht automatisch aktualisiert.</translation>
     </message>
     <message>
       <source>OK</source>
@@ -2262,15 +2262,15 @@
     </message>
     <message>
       <source>Apply the changes and return to the RSS overview.</source>
-      <translation>Übernehmen Sie die Änderungen und kehren Sie den RSS-Übersicht.</translation>
+      <translation>Wenden Sie die Änderungen an und kehren Sie zur RSS-Übersicht zurück.</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Stornieren</translation>
+      <translation>Abbrechen</translation>
     </message>
     <message>
       <source>Cancel the changes and return to the RSS overview.</source>
-      <translation>Abbrechen, um die Änderungen und Rückkehr in der RSS-Übersicht.</translation>
+      <translation>Abbrechen Sie die Änderungen und kehren Sie zur RSS-Übersicht zurück.</translation>
     </message>
   </context>
   <context>
@@ -2309,7 +2309,7 @@
     </message>
     <message>
       <source>Select RSS export for removal.</source>
-      <translation>Wählen RSS Export für die Entfernung.</translation>
+      <translation>Wählen Sie RSS-Export für die Entfernung aus.</translation>
     </message>
     <message>
       <source>Active</source>
@@ -2333,7 +2333,7 @@
     </message>
     <message>
       <source>Remove selected</source>
-      <translation>entfernen Sie ausgewählt</translation>
+      <translation>Ausgewählt entfernen.</translation>
     </message>
     <message>
       <source>Remove selected RSS exports.</source>
@@ -2341,7 +2341,7 @@
     </message>
     <message>
       <source>New export</source>
-      <translation>Neuer Export</translation>
+      <translation>Neuer export.</translation>
     </message>
     <message>
       <source>Create a new RSS export.</source>
@@ -2353,7 +2353,7 @@
     </message>
     <message>
       <source>Select RSS import for removal.</source>
-      <translation>Wählen Sie RSS-Import für Beseitigung.</translation>
+      <translation>Wählen Sie RSS-Import zum Entfernen aus.</translation>
     </message>
     <message>
       <source>Edit the &lt;%name&gt; RSS import.</source>
@@ -2365,11 +2365,11 @@
     </message>
     <message>
       <source>Remove selected RSS imports.</source>
-      <translation>Entfernen Sie ausgewählte RSS Importe.</translation>
+      <translation>Ausgewählte RSS-Importe entfernen.</translation>
     </message>
     <message>
       <source>New import</source>
-      <translation>Neuer Import</translation>
+      <translation>Neuer Import.</translation>
     </message>
     <message>
       <source>Create a new RSS import.</source>
@@ -2396,23 +2396,23 @@
     </message>
     <message>
       <source>The following items were removed from your basket because the products were changed.</source>
-      <translation>Die folgenden Punkte wurden aus dem Warenkorb entfernt, weil die Produkte verändert wurden.</translation>
+      <translation>Die folgenden Elemente wurden aus Ihrem Warenkorb entfernt, da die Produkte geändert wurden.</translation>
     </message>
     <message>
       <source>VAT is unknown</source>
-      <translation>Mehrwertsteuer ist unbekannt</translation>
+      <translation>MwSt. Ist unbekannt</translation>
     </message>
     <message>
       <source>VAT percentage is not yet known for some of the items being purchased.</source>
-      <translation>Mehrwertsteuersatz wird für noch nicht bekannt, dass einige der Gegenstände gekauft werden.</translation>
+      <translation>Der Mehrwertsteuerprozentsatz ist für einige der erworbenen Artikel noch nicht bekannt.</translation>
     </message>
     <message>
       <source>This probably means that some information about you is not yet available and will be obtained during checkout.</source>
-      <translation>Das bedeutet wahrscheinlich, dass einige Informationen über Sie noch nicht verfügbar und werden bei der Kasse erhältlich.</translation>
+      <translation>Dies bedeutet wahrscheinlich, dass einige Informationen über Sie noch nicht verfügbar sind und während der Kasse erhalten werden.</translation>
     </message>
     <message>
       <source>Attempted to add object without price to basket.</source>
-      <translation>Versuchte Objekt ohne Preis Warenkorb zu legen.</translation>
+      <translation>Versuchte, Objekt ohne Preis in den Korb hinzuzufügen.</translation>
     </message>
     <message>
       <source>Your payment was aborted.</source>
@@ -2420,15 +2420,15 @@
     </message>
     <message>
       <source>Count</source>
-      <translation>Anzahl</translation>
+      <translation>Zählen</translation>
     </message>
     <message>
       <source>VAT</source>
-      <translation>Mehrwertsteuer</translation>
+      <translation>MwSt</translation>
     </message>
     <message>
       <source>Price inc. VAT</source>
-      <translation>Preis inkl. Mehrwertsteuer</translation>
+      <translation>Preis inc. MwSt</translation>
     </message>
     <message>
       <source>Discount</source>
@@ -2440,7 +2440,7 @@
     </message>
     <message>
       <source>Total price inc. VAT</source>
-      <translation>Gesamtpreis inkl. Mehrwertsteuer</translation>
+      <translation>Gesamtpreis inc. MwSt</translation>
     </message>
     <message>
       <source>Unknown</source>
@@ -2456,7 +2456,7 @@
     </message>
     <message>
       <source>Selected options</source>
-      <translation>ausgewählte Optionen</translation>
+      <translation>Ausgewählte Optionen</translation>
     </message>
     <message>
       <source>Subtotal ex. VAT</source>
@@ -2464,7 +2464,7 @@
     </message>
     <message>
       <source>Subtotal inc. VAT</source>
-      <translation>Teilsumme inc. Mehrwertsteuer</translation>
+      <translation>SUBTOTAL INC. MwSt</translation>
     </message>
     <message>
       <source>Shipping</source>
@@ -2484,7 +2484,7 @@
     </message>
     <message>
       <source>You have no products in your basket.</source>
-      <translation>Sie haben keine Produkte im Warenkorb.</translation>
+      <translation>Sie haben keine Produkte in Ihrem Warenkorb.</translation>
     </message>
   </context>
   <context>
@@ -2503,19 +2503,19 @@
     </message>
     <message>
       <source>Product items</source>
-      <translation>Produkt Artikel</translation>
+      <translation>Produktteile</translation>
     </message>
     <message>
       <source>Count</source>
-      <translation>Anzahl</translation>
+      <translation>Zählen</translation>
     </message>
     <message>
       <source>VAT</source>
-      <translation>Mehrwertsteuer</translation>
+      <translation>MwSt</translation>
     </message>
     <message>
       <source>Price inc. VAT</source>
-      <translation>Preis inkl. Mehrwertsteuer</translation>
+      <translation>Preis inc. MwSt</translation>
     </message>
     <message>
       <source>Discount</source>
@@ -2523,15 +2523,15 @@
     </message>
     <message>
       <source>Total price ex. VAT</source>
-      <translation>Gesamtpreis ab. Mehrwertsteuer</translation>
+      <translation>Gesamtpreis ex. MwSt</translation>
     </message>
     <message>
       <source>Total price inc. VAT</source>
-      <translation>Gesamtpreis inkl. Mehrwertsteuer</translation>
+      <translation>Gesamtpreis inc. MwSt</translation>
     </message>
     <message>
       <source>Selected options</source>
-      <translation>ausgewählte Optionen</translation>
+      <translation>Ausgewählte Optionen</translation>
     </message>
     <message>
       <source>Order summary</source>
@@ -2539,7 +2539,7 @@
     </message>
     <message>
       <source>Subtotal of items</source>
-      <translation>Teilsumme von Artikel</translation>
+      <translation>Zwischensumme der Gegenstände.</translation>
     </message>
     <message>
       <source>Order total</source>
@@ -2547,11 +2547,11 @@
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Stornieren</translation>
+      <translation>Abbrechen</translation>
     </message>
     <message>
       <source>Confirm</source>
-      <translation>Bestätigen</translation>
+      <translation>Bestätigen Sie</translation>
     </message>
     <message>
       <source>Summary</source>
@@ -2559,11 +2559,11 @@
     </message>
     <message>
       <source>Total ex. VAT</source>
-      <translation>Insgesamt ab. Mehrwertsteuer</translation>
+      <translation>Total ex. MwSt</translation>
     </message>
     <message>
       <source>Total inc. VAT</source>
-      <translation>Gesamt inkl. Mehrwertsteuer</translation>
+      <translation>Total Inc. MwSt</translation>
     </message>
   </context>
   <context>
@@ -2586,15 +2586,15 @@
     </message>
     <message>
       <source>Total ex. VAT</source>
-      <translation>Insgesamt ab. Mehrwertsteuer</translation>
+      <translation>Total ex. MwSt</translation>
     </message>
     <message>
       <source>Total inc. VAT</source>
-      <translation>Gesamt inkl. Mehrwertsteuer</translation>
+      <translation>Total Inc. MwSt</translation>
     </message>
     <message>
       <source>Purchase list</source>
-      <translation>Einkaufsliste</translation>
+      <translation>Kaufliste</translation>
     </message>
     <message>
       <source>Product</source>
@@ -2602,7 +2602,7 @@
     </message>
     <message>
       <source>Amount</source>
-      <translation>Menge</translation>
+      <translation>Betragen</translation>
     </message>
   </context>
   <context>
@@ -2661,11 +2661,11 @@
     </message>
     <message>
       <source>Total ex. VAT</source>
-      <translation>Insgesamt ab. Mehrwertsteuer</translation>
+      <translation>Total ex. MwSt</translation>
     </message>
     <message>
       <source>Total inc. VAT</source>
-      <translation>Gesamt inkl. Mehrwertsteuer</translation>
+      <translation>Total Inc. MwSt</translation>
     </message>
     <message>
       <source>The order list is empty</source>
@@ -2684,7 +2684,7 @@
     </message>
     <message>
       <source>Product items</source>
-      <translation>Produkt Artikel</translation>
+      <translation>Produktteile</translation>
     </message>
     <message>
       <source>Product</source>
@@ -2692,15 +2692,15 @@
     </message>
     <message>
       <source>Count</source>
-      <translation>Anzahl</translation>
+      <translation>Zählen</translation>
     </message>
     <message>
       <source>VAT</source>
-      <translation>Mehrwertsteuer</translation>
+      <translation>MwSt</translation>
     </message>
     <message>
       <source>Price inc. VAT</source>
-      <translation>Preis inkl. Mehrwertsteuer</translation>
+      <translation>Preis inc. MwSt</translation>
     </message>
     <message>
       <source>Discount</source>
@@ -2712,7 +2712,7 @@
     </message>
     <message>
       <source>Total price inc. VAT</source>
-      <translation>Gesamtpreis inkl. Mehrwertsteuer</translation>
+      <translation>Gesamtpreis inc. MwSt</translation>
     </message>
     <message>
       <source>Order summary</source>
@@ -2724,7 +2724,7 @@
     </message>
     <message>
       <source>Subtotal of items</source>
-      <translation>Teilsumme von Artikel</translation>
+      <translation>Zwischensumme der Gegenstände.</translation>
     </message>
     <message>
       <source>Order total</source>
@@ -2763,7 +2763,7 @@
     </message>
     <message>
       <source>Input did not validate. All fields marked with * must be filled in.</source>
-      <translation>Eingabe nicht bestätigen. Alle mit * gekennzeichneten Felder müssen ausgefüllt werden.</translation>
+      <translation>Die Eingabe bestätigte nicht. Alle mit * gekennzeichneten Felder müssen ausgefüllt werden.</translation>
     </message>
     <message>
       <source>First name</source>
@@ -2779,7 +2779,7 @@
     </message>
     <message>
       <source>Company</source>
-      <translation>Unternehmen</translation>
+      <translation>Gesellschaft</translation>
     </message>
     <message>
       <source>Street</source>
@@ -2787,15 +2787,15 @@
     </message>
     <message>
       <source>Zip</source>
-      <translation>Postleitzahl</translation>
+      <translation>Reißverschluss</translation>
     </message>
     <message>
       <source>Place</source>
-      <translation>Platz</translation>
+      <translation>Stelle</translation>
     </message>
     <message>
       <source>State</source>
-      <translation>Zustand</translation>
+      <translation>Bundesland</translation>
     </message>
     <message>
       <source>Country</source>
@@ -2807,11 +2807,11 @@
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Stornieren</translation>
+      <translation>Abbrechen</translation>
     </message>
     <message>
       <source>Continue</source>
-      <translation>Fortsetzen</translation>
+      <translation>Weitermachen</translation>
     </message>
     <message>
       <source>All fields marked with * must be filled in.</source>
@@ -2830,11 +2830,11 @@
     </message>
     <message>
       <source>Count</source>
-      <translation>Anzahl</translation>
+      <translation>Zählen</translation>
     </message>
     <message>
       <source>Selected options</source>
-      <translation>ausgewählte Optionen</translation>
+      <translation>Ausgewählte Optionen</translation>
     </message>
     <message>
       <source>Store</source>
@@ -2853,7 +2853,7 @@
     <name>design/ocbootstrap/simplified_treemenu/show_simplified_menu</name>
     <message>
       <source>Fold/Unfold</source>
-      <translation>Falten / Entfalten</translation>
+      <translation>Falten / entfalten</translation>
     </message>
     <message>
       <source>Node ID: %node_id Visibility: %visibility</source>
@@ -2911,7 +2911,7 @@
     </message>
     <message>
       <source>Change password</source>
-      <translation>Kennwort ändern</translation>
+      <translation>Passwort ändern</translation>
     </message>
     <message>
       <source>My pending items</source>
@@ -2926,7 +2926,7 @@
     </message>
     <message>
       <source>There is no registered user with that email address.</source>
-      <translation>Es gibt keine registrierten Benutzer mit dieser E-Mail-Adresse.</translation>
+      <translation>Es gibt keinen registrierten Benutzer mit dieser E-Mail-Adresse.</translation>
     </message>
     <message>
       <source>Password was successfully generated and sent to: %1</source>
@@ -2934,7 +2934,7 @@
     </message>
     <message>
       <source>The key is invalid or has been used.</source>
-      <translation>Der Schlüssel ist ungültig oder verwendet worden ist.</translation>
+      <translation>Der Schlüssel ist ungültig oder wurde verwendet.</translation>
     </message>
     <message>
       <source>Have you forgotten your password?</source>
@@ -2942,7 +2942,7 @@
     </message>
     <message>
       <source>If you have forgotten your password, enter your email address and we will create a new password and send it to you.</source>
-      <translation>Wenn Sie Ihr Passwort vergessen haben, geben Sie Ihre E-Mail-Adresse und wir werden ein neues Passwort erstellen und senden es Ihnen.</translation>
+      <translation>Wenn Sie Ihr Passwort vergessen haben, geben Sie Ihre E-Mail-Adresse ein und wir erstellen ein neues Passwort und senden Sie es Ihnen zu.</translation>
     </message>
     <message>
       <source>Email</source>
@@ -2950,7 +2950,7 @@
     </message>
     <message>
       <source>Generate new password</source>
-      <translation>Neues Passwort generieren</translation>
+      <translation>Neues Passwort generieren.</translation>
     </message>
   </context>
   <context>
@@ -2965,7 +2965,7 @@
     </message>
     <message>
       <source>A valid username and password is required to login.</source>
-      <translation>Ein gültiger Benutzername und Passwort ist Anmeldung erforderlich.</translation>
+      <translation>Zum Anmelden ist ein gültiger Benutzername und ein Kennwort erforderlich.</translation>
     </message>
     <message>
       <source>Access not allowed</source>
@@ -2981,11 +2981,11 @@
     </message>
     <message>
       <source>Log in to the eZ Publish Administration Interface</source>
-      <translation>Melden Sie sich bei der eZ Publish Administrationsoberfläche</translation>
+      <translation>Melden Sie sich an der EZ Publish Administration Interface an</translation>
     </message>
     <message>
       <source>Remember me</source>
-      <translation>Mich erinnern</translation>
+      <translation>Merken</translation>
     </message>
     <message>
       <source>Forgot your password?</source>
@@ -3004,19 +3004,19 @@
     <name>design/ocbootstrap/user/password</name>
     <message>
       <source>Change password for user</source>
-      <translation>Kennwort ändern für Benutzer</translation>
+      <translation>Passwort ändern für Benutzer</translation>
     </message>
     <message>
       <source>Please retype your old password.</source>
-      <translation>Bitte geben Sie Ihr altes Passwort.</translation>
+      <translation>Bitte geben Sie Ihr altes Passwort erneut ein.</translation>
     </message>
     <message>
       <source>Password didn't match, please retype your new password.</source>
-      <translation>Kennwort nicht überein, bitte Ihr neues Passwort erneut eingeben.</translation>
+      <translation>Passwort stimmte nicht mit, bitte geben Sie Ihr neues Passwort erneut ein.</translation>
     </message>
     <message>
       <source>Password successfully updated.</source>
-      <translation>Kennwort erfolgreich aktualisiert.</translation>
+      <translation>Passwort erfolgreich aktualisiert.</translation>
     </message>
     <message>
       <source>Old password</source>
@@ -3028,7 +3028,7 @@
     </message>
     <message>
       <source>Retype password</source>
-      <translation>Kennwort erneut eingeben</translation>
+      <translation>Passwort erneut eingeben</translation>
     </message>
     <message>
       <source>OK</source>
@@ -3047,15 +3047,15 @@
     <name>design/ocbootstrap/user/register</name>
     <message>
       <source>Register user</source>
-      <translation>Registrieren Benutzer</translation>
+      <translation>Benutzer registrieren</translation>
     </message>
     <message>
       <source>Input did not validate</source>
-      <translation>Eingabe nicht bestätigen</translation>
+      <translation>Input hat nicht bestätigt</translation>
     </message>
     <message>
       <source>Input was stored successfully</source>
-      <translation>Eingangs wurde erfolgreich gespeichert</translation>
+      <translation>Eingabe wurde erfolgreich gespeichert</translation>
     </message>
     <message>
       <source>Register</source>
@@ -3067,7 +3067,7 @@
     </message>
     <message>
       <source>Unable to register new user</source>
-      <translation>Es kann keine neuen Benutzer registrieren</translation>
+      <translation>Neuer Benutzer kann nicht registriert werden</translation>
     </message>
     <message>
       <source>Back</source>
@@ -3082,7 +3082,7 @@
     </message>
     <message>
       <source>Your account was successfully created. An email will be sent to the specified address. Follow the instructions in that email to activate your account.</source>
-      <translation>Ihr Konto wurde erfolgreich erstellt. Eine E-Mail wird an die angegebene Adresse geschickt. Folgen Sie den Anweisungen in dieser E-Mail Ihr Konto zu aktivieren.</translation>
+      <translation>Ihr Konto wurde erfolgreich erstellt. Eine E-Mail wird an die angegebene Adresse gesendet. Befolgen Sie die Anweisungen in dieser E-Mail, um Ihr Konto zu aktivieren.</translation>
     </message>
     <message>
       <source>Your account was successfully created.</source>
@@ -3093,14 +3093,14 @@
     <name>design/ocbootstrap/view/ezbinaryfile</name>
     <message>
       <source>The file could not be found.</source>
-      <translation>Die Datei kann nicht gefunden werden.</translation>
+      <translation>Die Datei konnte nicht gefunden werden.</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/view/ezmedia</name>
     <message>
       <source>No media file is available.</source>
-      <translation>Keine Mediendatei verfügbar.</translation>
+      <translation>Es ist keine Mediendatei verfügbar.</translation>
     </message>
     <message>
       <source>No %link_startFlash player%link_end avaliable!</source>
@@ -3112,7 +3112,7 @@
     </message>
     <message>
       <source>Your browser does not support html5 audio.</source>
-      <translation>Ihr Browser unterstützt kein HTML5-Audio.</translation>
+      <translation>Ihr Browser unterstützt HTML5-Audio nicht.</translation>
     </message>
   </context>
   <context>
@@ -3165,14 +3165,14 @@
     </message>
     <message>
       <source>No state to be applied to this content object. You might need to be assigned a more permissive access policy.</source>
-      <translation>Kein Staat auf diese Inhalte Objekt angewendet werden. Möglicherweise müssen Sie eine permissive-Richtlinie zugewiesen werden.</translation>
+      <translation>Es ist kein Status auf dieses Inhaltsobjekt anzuwenden. Möglicherweise müssen Sie eine perfrissiver Zugriffspolitik zugewiesen werden.</translation>
     </message>
   </context>
   <context>
     <name>design/ezflow/edit/frontpage</name>
     <message>
       <source>Search phrase</source>
-      <translation>Suchphrase</translation>
+      <translation>Suchsatz</translation>
     </message>
     <message>
       <source>Search</source>
@@ -3184,11 +3184,11 @@
     </message>
     <message>
       <source>Select:</source>
-      <translation>Wählen:</translation>
+      <translation>Auswählen:</translation>
     </message>
     <message>
       <source>Add to block</source>
-      <translation>In dem Block</translation>
+      <translation>Zum Block hinzufügen</translation>
     </message>
     <message>
       <source>Edit &lt;%object_name&gt; (%class_name)</source>
@@ -3204,11 +3204,11 @@
     </message>
     <message>
       <source>Send for publishing</source>
-      <translation>Senden Sie für die Veröffentlichung</translation>
+      <translation>Zur Veröffentlichung senden.</translation>
     </message>
     <message>
       <source>Store draft</source>
-      <translation>Shop Entwurf</translation>
+      <translation>Entwurf bewahren</translation>
     </message>
     <message>
       <source>Discard draft</source>
@@ -3226,7 +3226,7 @@
     <name>design/standard/content/datatype</name>
     <message>
       <source>Second</source>
-      <translation>Zweite</translation>
+      <translation>Sekunde</translation>
     </message>
   </context>
   <context>
@@ -3267,7 +3267,7 @@
     <name>ezcomments/comment/add</name>
     <message>
       <source>reCAPTCHA API key missing.</source>
-      <translation>reCAPTCHA-API-Schlüssel fehlt.</translation>
+      <translation>Recaptcha-API-Schlüssel fehlt.</translation>
     </message>
   </context>
   <context>
@@ -3302,7 +3302,7 @@
     </message>
     <message>
       <source>Notify me of new comments</source>
-      <translation>Benachrichtigen Sie mich über neue Kommentare</translation>
+      <translation>Benachrichtigen Sie mich von neuen Kommentaren</translation>
     </message>
     <message>
       <source>Security text:</source>
@@ -3326,7 +3326,7 @@
     </message>
     <message>
       <source>Remember me</source>
-      <translation>Mich erinnern</translation>
+      <translation>Erinnere dich an mich</translation>
     </message>
     <message>
       <source>Add comment</source>
@@ -3334,7 +3334,7 @@
     </message>
     <message>
       <source>Reset form</source>
-      <translation>Formular leeren</translation>
+      <translation>Formular zurücksetzen</translation>
     </message>
   </context>
   <context>
@@ -3349,7 +3349,7 @@
     </message>
     <message>
       <source>I confirm the publication</source>
-      <translation>Ich bestätige die Veröffentlichung</translation>
+      <translation>Ich bestätige die Publikation</translation>
     </message>
   </context>
   <context>
@@ -3372,11 +3372,11 @@
     </message>
     <message>
       <source>New password must be different from the old one. Please choose another password.</source>
-      <translation>Neues Passwort von der alten anders sein müssen. Bitte wählen Sie ein anderes Passwort.</translation>
+      <translation>Neues Passwort muss sich von der alten unterscheiden. Bitte wählen Sie ein anderes Passwort.</translation>
     </message>
     <message>
       <source>Password successfully updated.</source>
-      <translation>Kennwort erfolgreich aktualisiert.</translation>
+      <translation>Passwort erfolgreich aktualisiert.</translation>
     </message>
     <message>
       <source>Old password</source>
@@ -3388,7 +3388,7 @@
     </message>
     <message>
       <source>Retype password</source>
-      <translation>Kennwort erneut eingeben</translation>
+      <translation>Passwort erneut eingeben</translation>
     </message>
     <message>
       <source>OK</source>
@@ -3411,7 +3411,7 @@
     <name>mbpaex/userpaex/forgotpassword</name>
     <message>
       <source>Click here to set your new password</source>
-      <translation>Klicken Sie hier Ihr neues Passwort zu setzen</translation>
+      <translation>Klicken Sie hier, um Ihr neues Passwort festzulegen</translation>
     </message>
     <message>
       <source>A mail has been sent to the following email address: %1. This email contains a link you need to click so that we can confirm that the correct user is getting the new password.</source>
@@ -3419,7 +3419,7 @@
     </message>
     <message>
       <source>There is no registered user with that email address.</source>
-      <translation>Es gibt keine registrierten Benutzer mit dieser E-Mail-Adresse.</translation>
+      <translation>Es gibt keinen registrierten Benutzer mit dieser E-Mail-Adresse.</translation>
     </message>
     <message>
       <source>The password has been changed successfully.</source>
@@ -3427,7 +3427,7 @@
     </message>
     <message>
       <source>The passwords do not match. Please, be sure to enter the same password in both fields.</source>
-      <translation>Die Passwörter stimmen nicht überein. Bitte achten Sie darauf, das gleiche Passwort in beiden Feldern eingeben.</translation>
+      <translation>Die Passwörter stimmen nicht überein. Bitte geben Sie in beiden Bereichen das gleiche Kennwort ein.</translation>
     </message>
     <message>
       <source>The new password is invalid, please choose new one.</source>
@@ -3451,7 +3451,7 @@
     </message>
     <message>
       <source>Change password</source>
-      <translation>Kennwort ändern</translation>
+      <translation>Passwort ändern</translation>
     </message>
     <message>
       <source>The key is invalid or has been used.</source>
@@ -3463,7 +3463,7 @@
     </message>
     <message>
       <source>If you have forgotten your password we can generate a new one for you. All you need to do is to enter your email address and we will create a new password for you.</source>
-      <translation>Wenn Sie Ihr Passwort vergessen haben, können wir ein Neues für Sie generieren. Alles, was Sie tun müssen, ist Ihre E-Mail-Adresse einzugeben und wir werden für Sie ein neues Passwort erstellen.</translation>
+      <translation>Wenn Sie Ihr Passwort vergessen haben, können wir einen neuen für Sie generieren. Alles, was Sie tun müssen, ist, Ihre E-Mail-Adresse einzugeben, und wir erstellen ein neues Passwort für Sie.</translation>
     </message>
     <message>
       <source>Email</source>
@@ -3471,7 +3471,7 @@
     </message>
     <message>
       <source>Generate new password</source>
-      <translation>Neues Passwort generieren</translation>
+      <translation>Neues Passwort generieren.</translation>
     </message>
     <message>
       <source>%siteurl forgot password</source>
@@ -3484,14 +3484,14 @@
     <message>
       <source>A mail has been sent to the following email address: %1. This email contains a link you need to click so
         that we can confirm that the correct user is getting the new password.</source>
-      <translation>Ein Mail wurde auf die folgende E-Mail-Adresse gesendet werden:% 1. Diese E-Mail enthält einen Link, müssen Sie so klicken
-        dass wir bestätigen, dass der richtige Benutzer das neue Passwort erhält.</translation>
+      <translation>Eine E-Mail wurde an die folgende E-Mail-Adresse gesendet:% 1. Diese E-Mail enthält einen Link, den Sie benötigen, um so zu klicken
+        dass wir bestätigen können, dass der richtige Benutzer das neue Passwort erhält.</translation>
     </message>
     <message>
       <source>If you have forgotten your password we can generate a new one for you. All you need to do is to enter your
         email address and we will create a new password for you.</source>
-      <translation>Wenn Sie Ihr Passwort vergessen haben, können wir ein Neues für Sie generieren. Alles was Sie tun müssen, ist Ihre Eingabe
-        E-Mail-Adresse und wir werden ein neues Passwort für Sie erstellen.</translation>
+      <translation>Wenn Sie Ihr Passwort vergessen haben, können wir einen neuen für Sie generieren. Alles, was Sie tun müssen, ist, Ihre einzugeben
+        E-Mail-Adresse und wir erstellen ein neues Passwort für Sie.</translation>
     </message>
   </context>
   <context>
@@ -3510,7 +3510,7 @@
     </message>
     <message>
       <source>Share on Whatsapp</source>
-      <translation>Empfehlen über WhatsApp</translation>
+      <translation>Teilen Sie auf WhatsApp.</translation>
     </message>
   </context>
 </TS>

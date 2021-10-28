@@ -13,15 +13,15 @@
     </message>
     <message>
       <source>Store</source>
-      <translation>trgovina</translation>
+      <translation>Trgovina</translation>
     </message>
     <message>
       <source>Store draft</source>
-      <translation>osnutek Store</translation>
+      <translation>Trgovina. \ T</translation>
     </message>
     <message>
       <source>Discard</source>
-      <translation>Zavrzi</translation>
+      <translation>Zavrzite</translation>
     </message>
     <message>
       <source>At least</source>
@@ -29,55 +29,55 @@
     </message>
     <message>
       <source>characters</source>
-      <translation>znaki</translation>
+      <translation>znakov</translation>
     </message>
     <message>
       <source>one letter</source>
-      <translation>ena črka</translation>
+      <translation>Ena črka</translation>
     </message>
     <message>
       <source>one capital letter</source>
-      <translation>pismo od kapitala</translation>
+      <translation>ena velika črka</translation>
     </message>
     <message>
       <source>one number</source>
-      <translation>ena številka</translation>
+      <translation>eno številko</translation>
     </message>
     <message>
       <source>mandatory</source>
-      <translation>obvezna</translation>
+      <translation>obvezno</translation>
     </message>
     <message>
       <source>recommended</source>
-      <translation>priporoča</translation>
+      <translation>priporočeno</translation>
     </message>
     <message>
       <source>Show/hide password</source>
-      <translation>Prikaži / skrij geslo</translation>
+      <translation>Prikaži / Skrij geslo</translation>
     </message>
     <message>
       <source>Evaluation of complexity: bad</source>
-      <translation>Ocena zahtevnosti: slaba</translation>
+      <translation>Ocena kompleksnosti: slabo</translation>
     </message>
     <message>
       <source>Evaluation of complexity: very weak</source>
-      <translation>Ocena zahtevnosti: zelo šibka</translation>
+      <translation>Ocena kompleksnosti: zelo šibka</translation>
     </message>
     <message>
       <source>Evaluation of complexity: weak</source>
-      <translation>Ocena zahtevnosti: šibko</translation>
+      <translation>Ocena kompleksnosti: šibka</translation>
     </message>
     <message>
       <source>Evaluation of complexity: good</source>
-      <translation>Ocena zahtevnosti: dobra</translation>
+      <translation>Ocena kompleksnosti: dobro</translation>
     </message>
     <message>
       <source>Evaluation of complexity: very good</source>
-      <translation>Ocena zahtevnosti: zelo dobra</translation>
+      <translation>Ocena kompleksnosti: zelo dobro</translation>
     </message>
     <message>
       <source>Evaluation of complexity: excellent</source>
-      <translation>Ocena zahtevnosti: odlično</translation>
+      <translation>Ocena kompleksnosti: odlična</translation>
     </message>
   </context>
   <context>
@@ -88,34 +88,34 @@
     </message>
     <message>
       <source>Month</source>
-      <translation>mesec</translation>
+      <translation>Mesec</translation>
     </message>
     <message>
       <source>Day</source>
-      <translation>dan</translation>
+      <translation>Dan</translation>
     </message>
     <message>
       <source>Hour</source>
-      <translation>ura</translation>
+      <translation>Uro</translation>
     </message>
     <message>
       <source>Minute</source>
-      <translation>minute</translation>
+      <translation>Minuto</translation>
     </message>
   </context>
   <context>
     <name>design/admin/content/edit_attribute</name>
     <message>
       <source>not translatable</source>
-      <translation>ne prevedejo</translation>
+      <translation>ni predan</translation>
     </message>
     <message>
       <source>required</source>
-      <translation>obvezna</translation>
+      <translation>Potrebno</translation>
     </message>
     <message>
       <source>information collector</source>
-      <translation>informacije zbiralec</translation>
+      <translation>Informacijski kolektor.</translation>
     </message>
     <message>
       <source>General information</source>
@@ -126,7 +126,7 @@
     <name>design/admin/preview/article</name>
     <message>
       <source>Comments allowed</source>
-      <translation>Komentarji dovoljeni</translation>
+      <translation>Dovoljeni pripombi</translation>
     </message>
     <message>
       <source>Yes</source>
@@ -141,7 +141,7 @@
     <name>design/ocbootstrap/article/article_index</name>
     <message>
       <source>Article index</source>
-      <translation>Člen indeks</translation>
+      <translation>Člen Index.</translation>
     </message>
   </context>
   <context>
@@ -152,7 +152,7 @@
     </message>
     <message>
       <source>New comment</source>
-      <translation>nov komentar</translation>
+      <translation>Nov komentar</translation>
     </message>
     <message>
       <source>%login_link_startLog in%login_link_end or %create_link_startcreate a user account%create_link_end to comment.</source>
@@ -167,7 +167,7 @@
     <name>design/ocbootstrap/block/feedback_form</name>
     <message>
       <source>Send form</source>
-      <translation>Pošlji oblika</translation>
+      <translation>Pošlji obrazec</translation>
     </message>
   </context>
   <context>
@@ -181,11 +181,11 @@
     <name>design/ocbootstrap/block_item/product</name>
     <message>
       <source>Amount</source>
-      <translation>znesek</translation>
+      <translation>Znesek</translation>
     </message>
     <message>
       <source>Buy</source>
-      <translation>Nakup</translation>
+      <translation>Kupite</translation>
     </message>
   </context>
   <context>
@@ -204,46 +204,46 @@
     </message>
     <message>
       <source>Mon</source>
-      <translation>Mon</translation>
+      <translation>Pon.</translation>
     </message>
     <message>
       <source>Tue</source>
-      <translation>tor</translation>
+      <translation>Tue.</translation>
     </message>
     <message>
       <source>Wed</source>
-      <translation>sre</translation>
+      <translation>Sreda</translation>
     </message>
     <message>
       <source>Thu</source>
-      <translation>čet</translation>
+      <translation>Čet</translation>
     </message>
     <message>
       <source>Fri</source>
-      <translation>Pet</translation>
+      <translation>Fri.</translation>
     </message>
     <message>
       <source>Sat</source>
-      <translation>Sat</translation>
+      <translation>SAT.</translation>
     </message>
     <message>
       <source>Sun</source>
-      <translation>Sun</translation>
+      <translation>Sonce.</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/blog/extra_info</name>
     <message>
       <source>Tags</source>
-      <translation>oznake</translation>
+      <translation>Tags.</translation>
     </message>
     <message>
       <source>Archive</source>
-      <translation>Arhiv</translation>
+      <translation>Arhiv.</translation>
     </message>
     <message>
       <source>Tag cloud</source>
-      <translation>Najbolj iskane vsebine</translation>
+      <translation>Tag Cloud.</translation>
     </message>
     <message>
       <source>Description</source>
@@ -262,11 +262,11 @@
     </message>
     <message>
       <source>You have already submitted this form. The data you entered was:</source>
-      <translation>Ste že poslali ta obrazec. Podatki ste vnesli bil:</translation>
+      <translation>Ta obrazec ste že predložili. Podatki, ki ste jih vnesli, so bili:</translation>
     </message>
     <message>
       <source>Return to site</source>
-      <translation>Nazaj na spletno stran</translation>
+      <translation>Vrnite se na stran</translation>
     </message>
   </context>
   <context>
@@ -281,15 +281,15 @@
     </message>
     <message>
       <source>Please log in to vote on this poll.</source>
-      <translation>Prosimo, da se prijavite na glasovanje pri tej anketi.</translation>
+      <translation>Prijavite se, če želite glasovati o tej anketi.</translation>
     </message>
     <message>
       <source>You have already voted for this poll.</source>
-      <translation>Si že glasoval za to anketo.</translation>
+      <translation>Za to anketo ste že glasovali.</translation>
     </message>
     <message>
       <source>Votes</source>
-      <translation>glasov</translation>
+      <translation>Glasov</translation>
     </message>
     <message>
       <source>%count total votes</source>
@@ -297,7 +297,7 @@
     </message>
     <message>
       <source>Back to poll</source>
-      <translation>Nazaj na anketo</translation>
+      <translation>Nazaj na pot</translation>
     </message>
   </context>
   <context>
@@ -308,7 +308,7 @@
     </message>
     <message>
       <source>The following feedback was collected</source>
-      <translation>Naslednji povratne informacije so bili zbrani</translation>
+      <translation>Zbrane so bile naslednje povratne informacije</translation>
     </message>
   </context>
   <context>
@@ -319,7 +319,7 @@
     </message>
     <message>
       <source>The following information was collected</source>
-      <translation>Naslednje informacije so zbrane</translation>
+      <translation>Zbrane so bile naslednje informacije</translation>
     </message>
   </context>
   <context>
@@ -330,14 +330,14 @@
     </message>
     <message>
       <source>The following information was collected</source>
-      <translation>Naslednje informacije so zbrane</translation>
+      <translation>Zbrane so bile naslednje informacije</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/comment/view</name>
     <message>
       <source>Avatar</source>
-      <translation>avatar</translation>
+      <translation>Avatar</translation>
     </message>
     <message>
       <source>Edit</source>
@@ -345,7 +345,7 @@
     </message>
     <message>
       <source>Delete</source>
-      <translation>Izbriši</translation>
+      <translation>Izbrišite</translation>
     </message>
   </context>
   <context>
@@ -356,15 +356,15 @@
     </message>
     <message>
       <source>Search all the words</source>
-      <translation>Išči vse besede</translation>
+      <translation>Poiščite vse besede</translation>
     </message>
     <message>
       <source>Search the exact phrase</source>
-      <translation>Iskanje po točno to besedno zvezo</translation>
+      <translation>Poiščite točen stavek</translation>
     </message>
     <message>
       <source>Published</source>
-      <translation>objavljeno</translation>
+      <translation>Objavljeno</translation>
     </message>
     <message>
       <source>Any time</source>
@@ -380,7 +380,7 @@
     </message>
     <message>
       <source>Last three months</source>
-      <translation>Zadnje tri mesece</translation>
+      <translation>Zadnjih treh mesecih</translation>
     </message>
     <message>
       <source>Last year</source>
@@ -388,27 +388,27 @@
     </message>
     <message>
       <source>Display per page</source>
-      <translation>Zaslon na stran</translation>
+      <translation>Prikaži na stran</translation>
     </message>
     <message>
       <source>5 items</source>
-      <translation>5 elementov</translation>
+      <translation>5 predmetov</translation>
     </message>
     <message>
       <source>10 items</source>
-      <translation>10 postavke</translation>
+      <translation>10 predmetov</translation>
     </message>
     <message>
       <source>20 items</source>
-      <translation>20 elementov</translation>
+      <translation>20 izdelkov</translation>
     </message>
     <message>
       <source>30 items</source>
-      <translation>30 postavke</translation>
+      <translation>30 izdelkov</translation>
     </message>
     <message>
       <source>50 items</source>
-      <translation>50 postavke</translation>
+      <translation>50 izdelkov</translation>
     </message>
     <message>
       <source>Search</source>
@@ -431,15 +431,15 @@
     <name>design/ocbootstrap/content/browse</name>
     <message>
       <source>Browse</source>
-      <translation>Prebrskaj</translation>
+      <translation>Brskaj</translation>
     </message>
     <message>
       <source>To select objects, choose the appropriate radiobutton or checkbox(es), and click the "Select" button.</source>
-      <translation>Za izbiro predmetov, izberite ustrezno RADIOBUTTON ali polje (-i), in kliknite gumb »Izberi«.</translation>
+      <translation>Če želite izbrati predmete, izberite ustrezen radiobotton ali potrditveno polje (e) in kliknite gumb »Izberi«.</translation>
     </message>
     <message>
       <source>To select an object that is a child of one of the displayed objects, click the parent object name to display a list of its children.</source>
-      <translation>Če želite izbrati predmet, ki je otrok enega izmed razstavljenih predmetov, kliknite ime matična objekta, da se prikaže seznam svojih otrok.</translation>
+      <translation>Če želite izbrati objekt, ki je otrok enega od prikazanih predmetov, kliknite ime matičnega objekta, da prikažete seznam svojih otrok.</translation>
     </message>
     <message>
       <source>Back</source>
@@ -455,22 +455,22 @@
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Preklic</translation>
+      <translation>Prekliči</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/content/browse_mode_list</name>
     <message>
       <source>Invert selection</source>
-      <translation>Obrni izbor</translation>
+      <translation>Invertno izbiro.</translation>
     </message>
     <message>
       <source>Name</source>
-      <translation>ime</translation>
+      <translation>Ime</translation>
     </message>
     <message>
       <source>Type</source>
-      <translation>Vrsta</translation>
+      <translation>Tip.</translation>
     </message>
   </context>
   <context>
@@ -481,15 +481,15 @@
     </message>
     <message>
       <source>Month</source>
-      <translation>mesec</translation>
+      <translation>Mesec</translation>
     </message>
     <message>
       <source>Day</source>
-      <translation>dan</translation>
+      <translation>Dan</translation>
     </message>
     <message>
       <source>Show calendar to select a date.</source>
-      <translation>Prikaži koledar izberite datum.</translation>
+      <translation>Pokaži koledar, da izberete datum.</translation>
     </message>
   </context>
   <context>
@@ -500,31 +500,31 @@
     </message>
     <message>
       <source>Deselect all</source>
-      <translation>Počisti vse</translation>
+      <translation>Prekliči vse</translation>
     </message>
     <message>
       <source>My drafts</source>
-      <translation>Moje osnutki</translation>
+      <translation>Moji osnutki</translation>
     </message>
     <message>
       <source>Empty draft</source>
-      <translation>prazna osnutek</translation>
+      <translation>Prazen ugrez.</translation>
     </message>
     <message>
       <source>Name</source>
-      <translation>ime</translation>
+      <translation>Ime</translation>
     </message>
     <message>
       <source>Class</source>
-      <translation>razred</translation>
+      <translation>Razred</translation>
     </message>
     <message>
       <source>Section</source>
-      <translation>Oddelek</translation>
+      <translation>Poglavje</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation>različica</translation>
+      <translation>Različica</translation>
     </message>
     <message>
       <source>Language</source>
@@ -532,7 +532,7 @@
     </message>
     <message>
       <source>Last modified</source>
-      <translation>Zadnja sprememba</translation>
+      <translation>Zadnji spremenjen</translation>
     </message>
     <message>
       <source>Edit</source>
@@ -544,19 +544,19 @@
     </message>
     <message>
       <source>You have no drafts</source>
-      <translation>Nimate osnutke</translation>
+      <translation>Nimate osnutkov</translation>
     </message>
     <message>
       <source>These are the current objects you are working on. The drafts are owned by you and can only be seen by you.
                 You can either edit the drafts or remove them if you don't need them any more.</source>
-      <translation>To so trenutne predmeti, ki jih delajo na. Osnutke so v lasti vas in je mogoče videti samo vi.
-                Lahko uredite osnutke ali jih odstranite, če jih ne potrebujete več.</translation>
+      <translation>To so trenutni predmeti, na katerih delate. Osnutki so v lasti vas in jih lahko vidimo le vi.
+                Osnutke lahko uredite ali jih odstranite, če jih ne potrebujete več.</translation>
     </message>
     <message>
       <source>These are the current objects you are working on. The drafts are owned by you and can only be seen by you.
       You can either edit the drafts or remove them if you don't need them any more.</source>
-      <translation>To so trenutne predmeti, ki jih delajo na. Osnutke so v lasti vas in je mogoče videti samo vi.
-      Lahko uredite osnutke ali jih odstranite, če jih ne potrebujete več.</translation>
+      <translation>To so trenutni predmeti, na katerih delate. Osnutki so v lasti vas in jih lahko vidimo le vi.
+      Osnutke lahko uredite ali jih odstranite, če jih ne potrebujete več.</translation>
     </message>
   </context>
   <context>
@@ -567,15 +567,15 @@
     </message>
     <message>
       <source>Store draft</source>
-      <translation>osnutek Store</translation>
+      <translation>Trgovina. \ T</translation>
     </message>
     <message>
       <source>Discard draft</source>
-      <translation>Zavrzite osnutek</translation>
+      <translation>Zavrzite</translation>
     </message>
     <message>
       <source>Translating content from %from_lang to %to_lang</source>
-      <translation>Prenos vsebine iz% from_lang do% to_lang</translation>
+      <translation>Prevajanje vsebin od% od_lang do% to_lang</translation>
     </message>
     <message>
       <source>Content in %language</source>
@@ -591,27 +591,27 @@
     </message>
     <message>
       <source>Publish the contents of the draft that is being edited. The draft will become the published version of the object.</source>
-      <translation>Objavi vsebino osnutka, ki je urejeno. Osnutek bo objavljena različica objekta.</translation>
+      <translation>Objavite vsebino osnutka, ki se ureja. Osnutek bo postal objavljena različica predmeta.</translation>
     </message>
     <message>
       <source>Store the contents of the draft that is being edited and continue editing. Use this button to periodically save your work while editing.</source>
-      <translation>Shranite vsebino osnutka, ki je uredil in nadaljevati z urejanjem. S tem gumbom občasno shranite svoje delo med urejanjem.</translation>
+      <translation>Shranite vsebino osnutka, ki se ureja in nadaljuje z urejanjem. Uporabite ta gumb, da obredite svoje delo med urejanjem.</translation>
     </message>
     <message>
       <source>Store draft and exit</source>
-      <translation>Trgovina osnutek in izstop</translation>
+      <translation>Trgovijte osnutek in izhod</translation>
     </message>
     <message>
       <source>Store the draft that is being edited and exit from edit mode. Use when you need to exit your work and return later to continue.</source>
-      <translation>Shranite osnutek, ki je urejena in izhod iz načinu urejanja. Uporabite, ko morate zapustiti svoje delo in kasneje za nadaljevanje.</translation>
+      <translation>Shranite osnutek, ki se ureja in izstopi iz načina urejanja. Uporabite, ko morate zapustiti svoje delo in se vrniti kasneje, da nadaljujete.</translation>
     </message>
     <message>
       <source>Discard the draft that is being edited. This will also remove the translations that belong to the draft (if any).</source>
-      <translation>Zavreči osnutek, ki je urejen. To bo tudi odstranite prevodov, ki sodijo v osnutku (če obstaja).</translation>
+      <translation>Zavrzite osnutek, ki se ureja. To bo tudi odstranilo prevode, ki pripadajo osnutku (če obstajajo).</translation>
     </message>
     <message>
       <source>Create</source>
-      <translation>ustvarjanje</translation>
+      <translation>Ustvarite</translation>
     </message>
     <message>
       <source>Display only required fields</source>
@@ -634,15 +634,15 @@
     </message>
     <message>
       <source>Current drafts</source>
-      <translation>trenutne osnutki</translation>
+      <translation>Trenutni osnutki</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation>različica</translation>
+      <translation>Različica</translation>
     </message>
     <message>
       <source>Name</source>
-      <translation>ime</translation>
+      <translation>Ime</translation>
     </message>
     <message>
       <source>Owner</source>
@@ -654,7 +654,7 @@
     </message>
     <message>
       <source>Last modified</source>
-      <translation>Zadnja sprememba</translation>
+      <translation>Zadnji spremenjen</translation>
     </message>
     <message>
       <source>Edit</source>
@@ -662,50 +662,50 @@
     </message>
     <message>
       <source>New draft</source>
-      <translation>Novi osnutek</translation>
+      <translation>Nov osnutek</translation>
     </message>
     <message>
       <source>This object is already being edited by yourself and others.
                 You can either continue editing one of your drafts or you can create a new draft.</source>
-      <translation>Ta cilj se že ureja sebi in drugim.
-                Lahko bodisi nadaljevati urejanje enega od svojih osnutkov ali pa ustvarite nov osnutek.</translation>
+      <translation>Ta predmet je že urejen sam in drugi.
+                Lahko nadaljujete z urejanjem enega od vaših osnutkov ali pa ustvarite nov osnutek.</translation>
     </message>
     <message>
       <source>This object is already being edited by you.
                 You can either continue editing one of your drafts or you can create a new draft.</source>
-      <translation>Ta cilj se že ureja vas.
-                Lahko bodisi nadaljevati urejanje enega od svojih osnutkov ali pa ustvarite nov osnutek.</translation>
+      <translation>Ta predmet si že urejal.
+                Lahko nadaljujete z urejanjem enega od vaših osnutkov ali pa ustvarite nov osnutek.</translation>
     </message>
     <message>
       <source>This object is already being edited by someone else.
                 You should either contact the person about their draft or create a new draft for your own use.</source>
-      <translation>Ta objekt je že uredil nekdo drug.
-                Morate bodisi obrnite na osebo, o svojem osnutku ali ustvarite nov osnutek za lastno uporabo.</translation>
+      <translation>Ta predmet je že urejen nekdo drug.
+                Morate stopiti v stik z osebo o svojem osnutku ali ustvariti nov osnutek za svojo lastno uporabo.</translation>
     </message>
     <message>
       <source>This object is already being edited by yourself and others.
     You can either continue editing one of your drafts or you can create a new draft.</source>
-      <translation>Ta cilj se že ureja sebi in drugim.
-    Lahko bodisi nadaljevati urejanje enega od svojih osnutkov ali pa ustvarite nov osnutek.</translation>
+      <translation>Ta predmet je že urejen sam in drugi.
+    Lahko nadaljujete z urejanjem enega od vaših osnutkov ali pa ustvarite nov osnutek.</translation>
     </message>
     <message>
       <source>This object is already being edited by you.
         You can either continue editing one of your drafts or you can create a new draft.</source>
-      <translation>Ta cilj se že ureja vas.
-        Lahko bodisi nadaljevati urejanje enega od svojih osnutkov ali pa ustvarite nov osnutek.</translation>
+      <translation>Ta predmet si že urejal.
+        Lahko nadaljujete z urejanjem enega od vaših osnutkov ali pa ustvarite nov osnutek.</translation>
     </message>
     <message>
       <source>This object is already being edited by someone else.
         You should either contact the person about their draft or create a new draft for your own use.</source>
-      <translation>Ta objekt je že uredil nekdo drug.
-        Morate bodisi obrnite na osebo, o svojem osnutku ali ustvarite nov osnutek za lastno uporabo.</translation>
+      <translation>Ta predmet je že urejen nekdo drug.
+        Morate stopiti v stik z osebo o svojem osnutku ali ustvariti nov osnutek za svojo lastno uporabo.</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/content/edit_languages</name>
     <message>
       <source>Existing languages</source>
-      <translation>obstoječe jeziki</translation>
+      <translation>Obstoječe jezike</translation>
     </message>
     <message>
       <source>Select the language you want to use when editing the object.</source>
@@ -717,27 +717,27 @@
     </message>
     <message>
       <source>Select the language you want to add to the object.</source>
-      <translation>Izberite jezik, ki ga želite dodati v objekt.</translation>
+      <translation>Izberite jezik, ki ga želite dodati na predmet.</translation>
     </message>
     <message>
       <source>Select the language the new translation will be based on.</source>
-      <translation>Izberite jezik nov prevod bo na osnovi.</translation>
+      <translation>Izberite jezik, na katerem bo nov prevod.</translation>
     </message>
     <message>
       <source>Use an empty, untranslated draft</source>
-      <translation>Uporabite prazen, neprevedeno osnutek</translation>
+      <translation>Uporabite prazen, unranslated osnutek</translation>
     </message>
     <message>
       <source>You do not have permission to create a translation in another language.</source>
-      <translation>Nimate dovoljenja za ustvarjanje prevod v drug jezik.</translation>
+      <translation>Nimate dovoljenja za ustvarjanje prevoda v drugem jeziku.</translation>
     </message>
     <message>
       <source>However, you can select one of the following languages for editing.</source>
-      <translation>Vendar pa lahko izberete eno od naslednjih jezikov za urejanje.</translation>
+      <translation>Vendar pa lahko izberete enega od naslednjih jezikov za urejanje.</translation>
     </message>
     <message>
       <source>You do not have permission to edit the object in any available languages.</source>
-      <translation>Nimate dovoljenja za urejanje predmet v vseh jezikih.</translation>
+      <translation>Nimate dovoljenja za urejanje predmeta v vseh razpoložljivih jezikih.</translation>
     </message>
     <message>
       <source>Edit</source>
@@ -745,7 +745,7 @@
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Preklic</translation>
+      <translation>Prekliči</translation>
     </message>
   </context>
   <context>
@@ -760,11 +760,11 @@
     </message>
     <message>
       <source>To edit this version, first create a copy of it.</source>
-      <translation>Če želite urediti to različico, najprej ustvariti kopijo.</translation>
+      <translation>Če želite urediti to različico, najprej ustvarite kopijo.</translation>
     </message>
     <message>
       <source>Version not yours</source>
-      <translation>Različica ni tvoje</translation>
+      <translation>Različica ni tvoja</translation>
     </message>
     <message>
       <source>Version %1 was not created by you. Only your own drafts can be edited.</source>
@@ -776,11 +776,11 @@
     </message>
     <message>
       <source>Version history limit has been exceeded and no archived version can be removed by the system.</source>
-      <translation>Različica meja zgodovina je bila presežena in ne arhivirana različica se lahko odstrani s sistemom.</translation>
+      <translation>Omejitev zgodovine različic je bila presežena in ne more odstraniti arhivirane različice.</translation>
     </message>
     <message>
       <source>You can either change your version history settings in content.ini, remove draft versions or edit existing drafts.</source>
-      <translation>Lahko bodisi spremeniti nastavitve različica zgodovine v content.ini, odstrani osnutkov ali urejanje obstoječih osnutkov.</translation>
+      <translation>Nastavitve zgodovine različic lahko spremenite v vsebini.ini, odstranite osnutke različic ali uredite obstoječe osnutke.</translation>
     </message>
     <message>
       <source>Versions for &lt;%object_name&gt; [%version_count]</source>
@@ -788,11 +788,11 @@
     </message>
     <message>
       <source>Toggle selection</source>
-      <translation>izbor Toggle</translation>
+      <translation>Preklop izbire</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation>različica</translation>
+      <translation>Različica</translation>
     </message>
     <message>
       <source>Status</source>
@@ -800,7 +800,7 @@
     </message>
     <message>
       <source>Creator</source>
-      <translation>ustvarjalec</translation>
+      <translation>Ustvarjalec</translation>
     </message>
     <message>
       <source>Created</source>
@@ -828,7 +828,7 @@
     </message>
     <message>
       <source>Published</source>
-      <translation>objavljeno</translation>
+      <translation>Objavljeno</translation>
     </message>
     <message>
       <source>Pending</source>
@@ -836,15 +836,15 @@
     </message>
     <message>
       <source>Archived</source>
-      <translation>Arhiviran</translation>
+      <translation>Arcy.</translation>
     </message>
     <message>
       <source>Rejected</source>
-      <translation>Zavrnjeno</translation>
+      <translation>Zavrnjena</translation>
     </message>
     <message>
       <source>Untouched draft</source>
-      <translation>nedotaknjena osnutek</translation>
+      <translation>Nedotaknjen osnutek</translation>
     </message>
     <message>
       <source>Create a copy of version #%version_number.</source>
@@ -852,7 +852,7 @@
     </message>
     <message>
       <source>You cannot make copies of versions because you do not have permission to edit the object.</source>
-      <translation>Ne moreš narediti kopije različic, ker nimate dovoljenja za urejanje predmeta.</translation>
+      <translation>Ne morete narediti kopij različic, ker nimate dovoljenja za urejanje predmeta.</translation>
     </message>
     <message>
       <source>Edit the contents of version #%version_number.</source>
@@ -864,7 +864,7 @@
     </message>
     <message>
       <source>This object does not have any versions.</source>
-      <translation>Ta predmet nima različice.</translation>
+      <translation>Ta objekt nima nobenih različic.</translation>
     </message>
     <message>
       <source>Remove selected</source>
@@ -872,11 +872,11 @@
     </message>
     <message>
       <source>Remove the selected versions from the object.</source>
-      <translation>Odstrani izbrane različice iz objekta.</translation>
+      <translation>Odstranite izbrane različice iz predmeta.</translation>
     </message>
     <message>
       <source>Show differences</source>
-      <translation>prikaži razlike</translation>
+      <translation>Pokaži razlike</translation>
     </message>
     <message>
       <source>Back</source>
@@ -884,7 +884,7 @@
     </message>
     <message>
       <source>Published version</source>
-      <translation>objavljena različica</translation>
+      <translation>Objavljena različica</translation>
     </message>
     <message>
       <source>Translations</source>
@@ -896,7 +896,7 @@
     </message>
     <message>
       <source>This object does not have any drafts.</source>
-      <translation>Ta predmet nima prepiha.</translation>
+      <translation>Ta objekt nima osnutkov.</translation>
     </message>
     <message>
       <source>Differences between versions %oldVersion and %newVersion</source>
@@ -904,7 +904,7 @@
     </message>
     <message>
       <source>Old version</source>
-      <translation>starejšo verzijo</translation>
+      <translation>Stara različica</translation>
     </message>
     <message>
       <source>Inline changes</source>
@@ -912,7 +912,7 @@
     </message>
     <message>
       <source>Block changes</source>
-      <translation>Blokiranje sprememb</translation>
+      <translation>Blok spremembe</translation>
     </message>
     <message>
       <source>New version</source>
@@ -920,7 +920,7 @@
     </message>
     <message>
       <source>Back to history</source>
-      <translation>Nazaj v zgodovini</translation>
+      <translation>Nazaj v zgodovino</translation>
     </message>
     <message>
       <source>Modified translation</source>
@@ -928,7 +928,7 @@
     </message>
     <message>
       <source>There is no need to do a copies of untouched drafts.</source>
-      <translation>Ni treba narediti kopije nedotaknjenih osnutkov.</translation>
+      <translation>Ni potrebe po kopijah nedotaknjenih osnutkov.</translation>
     </message>
   </context>
   <context>
@@ -939,11 +939,11 @@
     </message>
     <message>
       <source>Link</source>
-      <translation>Link</translation>
+      <translation>Povezava</translation>
     </message>
     <message>
       <source>Type</source>
-      <translation>Vrsta</translation>
+      <translation>Tip.</translation>
     </message>
   </context>
   <context>
@@ -954,31 +954,31 @@
     </message>
     <message>
       <source>Name</source>
-      <translation>ime</translation>
+      <translation>Ime</translation>
     </message>
     <message>
       <source>Class</source>
-      <translation>razred</translation>
+      <translation>Razred</translation>
     </message>
     <message>
       <source>Section</source>
-      <translation>Oddelek</translation>
+      <translation>Poglavje</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation>različica</translation>
+      <translation>Različica</translation>
     </message>
     <message>
       <source>Last modified</source>
-      <translation>Zadnja sprememba</translation>
+      <translation>Zadnji spremenjen</translation>
     </message>
     <message>
       <source>Unknown</source>
-      <translation>Neznan</translation>
+      <translation>Neznano</translation>
     </message>
     <message>
       <source>Your pending list is empty</source>
-      <translation>Vaš seznam teku je prazna</translation>
+      <translation>Vaš čakalni seznam je prazen</translation>
     </message>
   </context>
   <context>
@@ -989,7 +989,7 @@
     </message>
     <message>
       <source>The following words were excluded from the search:</source>
-      <translation>Naslednje besede so bile izključene iz iskanja:</translation>
+      <translation>Iz iskanja so bile izključene naslednje besede:</translation>
     </message>
     <message>
       <source>No results were found when searching for "%1".</source>
@@ -997,23 +997,23 @@
     </message>
     <message>
       <source>Search tips</source>
-      <translation>Nasveti za iskanje</translation>
+      <translation>Iskanje nasvetov</translation>
     </message>
     <message>
       <source>Check spelling of keywords.</source>
-      <translation>Preveri črkovanje besede.</translation>
+      <translation>Preverite črkovanje ključnih besed.</translation>
     </message>
     <message>
       <source>Try changing some keywords (eg, "car" instead of "cars").</source>
-      <translation>Poskusite spremeniti nekatere ključne besede (na primer, "avto" namesto "avtomobili").</translation>
+      <translation>Poskusite spremeniti nekatere ključne besede (npr. "Avto" namesto "avtomobilov").</translation>
     </message>
     <message>
       <source>Try searching with less specific keywords.</source>
-      <translation>Poskusite iskati z manj določene ključne besede.</translation>
+      <translation>Poskusite iskati z manj specifičnimi ključnimi besedami.</translation>
     </message>
     <message>
       <source>Reduce number of keywords to get more results.</source>
-      <translation>Zmanjšajte število ključnih besed, da bi dobili več rezultatov.</translation>
+      <translation>Zmanjšajte število ključnih besed, da dobite več rezultatov.</translation>
     </message>
     <message>
       <source>Search for "%1" returned %2 matches</source>
@@ -1044,7 +1044,7 @@
     </message>
     <message>
       <source>The message was not sent due to an unknown error. Please notify the site administrator about this error.</source>
-      <translation>Sporočilo ni bilo poslano zaradi neznane napake. Obvestite strani administratorja o tej napaki.</translation>
+      <translation>Sporočilo ni bilo poslano zaradi neznane napake. O tej napaki obvestite skrbnika spletnega mesta.</translation>
     </message>
     <message>
       <source>Please correct the following errors:</source>
@@ -1060,11 +1060,11 @@
     </message>
     <message>
       <source>Recipient's email address</source>
-      <translation>Prejemnikov email naslov</translation>
+      <translation>E-poštni naslov prejemnika</translation>
     </message>
     <message>
       <source>Comment</source>
-      <translation>komentar</translation>
+      <translation>Komentar</translation>
     </message>
     <message>
       <source>Send</source>
@@ -1072,7 +1072,7 @@
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Preklic</translation>
+      <translation>Prekliči</translation>
     </message>
   </context>
   <context>
@@ -1087,7 +1087,7 @@
     </message>
     <message>
       <source>Discard</source>
-      <translation>Zavrzi</translation>
+      <translation>Zavrzite</translation>
     </message>
   </context>
   <context>
@@ -1102,7 +1102,7 @@
     </message>
     <message>
       <source>Discard</source>
-      <translation>Zavrzi</translation>
+      <translation>Zavrzite</translation>
     </message>
   </context>
   <context>
@@ -1117,7 +1117,7 @@
     </message>
     <message>
       <source>Discard</source>
-      <translation>Zavrzi</translation>
+      <translation>Zavrzite</translation>
     </message>
   </context>
   <context>
@@ -1132,21 +1132,21 @@
     </message>
     <message>
       <source>Discard</source>
-      <translation>Zavrzi</translation>
+      <translation>Zavrzite</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/embed/forum</name>
     <message>
       <source>Latest from</source>
-      <translation>Najnovejše iz</translation>
+      <translation>Najnovejši od</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/embed/poll</name>
     <message>
       <source>Vote</source>
-      <translation>glasovanje</translation>
+      <translation>Glasuj</translation>
     </message>
   </context>
   <context>
@@ -1157,34 +1157,34 @@
     </message>
     <message>
       <source>What is eZ Publish?</source>
-      <translation>Kaj je EZ objaviti?</translation>
+      <translation>Kaj je EZ objavljen?</translation>
     </message>
     <message>
       <source>Licence</source>
-      <translation>licenca</translation>
+      <translation>Licenca</translation>
     </message>
     <message>
       <source>Contributors</source>
-      <translation>Avtorji</translation>
+      <translation>Aktuatorji</translation>
     </message>
     <message>
       <source>Copyright Notice</source>
-      <translation>obvestilo o avtorskih pravicah</translation>
+      <translation>Obvestilo o avtorskih pravicah.</translation>
     </message>
     <message>
       <source>Third-Party Software</source>
-      <translation>Tretjih oseb Programska oprema</translation>
+      <translation>Programska oprema tretjih oseb</translation>
     </message>
     <message>
       <source>Extensions</source>
-      <translation>razširitve</translation>
+      <translation>Razširitve</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/ezodf/browse_place</name>
     <message>
       <source>Choose document placement</source>
-      <translation>Izberite postavitev dokumenta</translation>
+      <translation>Izberite umestitev dokumenta</translation>
     </message>
     <message>
       <source>Select</source>
@@ -1196,11 +1196,11 @@
                 Select the placements and click the %buttonname button.
                 Using the recent and bookmark items for quick placement is also possible.
                 Click on placement names to change the browse listing.</source>
-      <translation>Izberite postavitev za OpenOffice.org objekta.
+      <translation>Izberite umestitev za objekt OpenOffice.org.
 
-                Izberite umestitve in kliknite gumb% BUTTONNAME.
-                Z nedavno in zaznamke za predmete za hitro namestitev, je tudi možno.
-                Kliknite na imena umestitve spremeniti brskanje seznam.</translation>
+                Izberite umestitve in kliknite gumb Ime gumbov.
+                Možno je tudi uporaba nedavnih in zaznamkov za hitro namestitev.
+                Kliknite na imena umestitve, da spremenite seznam brskanja.</translation>
     </message>
     <message>
       <source>Please choose the placement for the OpenOffice.org object.
@@ -1208,22 +1208,22 @@
     Select the placements and click the %buttonname button.
     Using the recent and bookmark items for quick placement is also possible.
     Click on placement names to change the browse listing.</source>
-      <translation>Izberite postavitev za OpenOffice.org objekta.
+      <translation>Izberite umestitev za objekt OpenOffice.org.
 
-    Izberite umestitve in kliknite gumb% BUTTONNAME.
-    Z nedavno in zaznamke za predmete za hitro namestitev, je tudi možno.
-    Kliknite na imena umestitve spremeniti brskanje seznam.</translation>
+    Izberite umestitve in kliknite gumb Ime gumbov.
+    Možno je tudi uporaba nedavnih in zaznamkov za hitro namestitev.
+    Kliknite na imena umestitve, da spremenite seznam brskanja.</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/ezodf/export</name>
     <message>
       <source>OpenOffice.org export</source>
-      <translation>OpenOffice.org izvoz</translation>
+      <translation>OpenOffice.org Export.</translation>
     </message>
     <message>
       <source>Export eZ publish content to OpenOffice.org</source>
-      <translation>Izvoz EZ objavljajo vsebine na OpenOffice.org</translation>
+      <translation>Izvoz EZ objavi vsebino na OpenOffice.org</translation>
     </message>
     <message>
       <source>Error</source>
@@ -1231,18 +1231,18 @@
     </message>
     <message>
       <source>Here you can export any eZ publish content object to an OpenOffice.org Writer document format.</source>
-      <translation>Tu lahko izvozite koli EZ objavi predmet vsebine na OpenOffice.org formatu Writer dokumenta.</translation>
+      <translation>Tukaj lahko izvažate vse EZ Object Content Object na format dokumenta OpenOffice.org.</translation>
     </message>
     <message>
       <source>Export Object</source>
-      <translation>izvoz Predmet</translation>
+      <translation>Izvozni predmet</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/footer/address</name>
     <message>
       <source>Get in touch</source>
-      <translation>Priti v stik</translation>
+      <translation>Stopite v stik</translation>
     </message>
   </context>
   <context>
@@ -1267,7 +1267,7 @@
     </message>
     <message>
       <source>New comment</source>
-      <translation>nov komentar</translation>
+      <translation>Nov komentar</translation>
     </message>
     <message>
       <source>%login_link_startLog in%login_link_end or %create_link_startcreate a user account%create_link_end to comment.</source>
@@ -1279,11 +1279,11 @@
     </message>
     <message>
       <source>Related content</source>
-      <translation>Povezane vsebine</translation>
+      <translation>Sorodna vsebina</translation>
     </message>
     <message>
       <source>Location</source>
-      <translation>Kraj</translation>
+      <translation>Lokacija</translation>
     </message>
   </context>
   <context>
@@ -1304,7 +1304,7 @@
     <name>design/ocbootstrap/full/call_to_action</name>
     <message>
       <source>Submit</source>
-      <translation>predloži</translation>
+      <translation>Pošlji</translation>
     </message>
   </context>
   <context>
@@ -1318,63 +1318,63 @@
     <name>design/ocbootstrap/full/event_view_calendar</name>
     <message>
       <source>Mon</source>
-      <translation>Mon</translation>
+      <translation>Pon.</translation>
     </message>
     <message>
       <source>Tue</source>
-      <translation>tor</translation>
+      <translation>Tue.</translation>
     </message>
     <message>
       <source>Wed</source>
-      <translation>sre</translation>
+      <translation>Sreda</translation>
     </message>
     <message>
       <source>Thu</source>
-      <translation>čet</translation>
+      <translation>Čet</translation>
     </message>
     <message>
       <source>Fri</source>
-      <translation>Pet</translation>
+      <translation>Fri.</translation>
     </message>
     <message>
       <source>Sat</source>
-      <translation>Sat</translation>
+      <translation>SAT.</translation>
     </message>
     <message>
       <source>Sun</source>
-      <translation>Sun</translation>
+      <translation>Sonce.</translation>
     </message>
     <message>
       <source>Monday</source>
-      <translation>ponedeljek</translation>
+      <translation>Ponedeljek</translation>
     </message>
     <message>
       <source>Tuesday</source>
-      <translation>torek</translation>
+      <translation>Torek</translation>
     </message>
     <message>
       <source>Wednesday</source>
-      <translation>sreda</translation>
+      <translation>Sreda</translation>
     </message>
     <message>
       <source>Thursday</source>
-      <translation>četrtek</translation>
+      <translation>Četrtek</translation>
     </message>
     <message>
       <source>Friday</source>
-      <translation>petek</translation>
+      <translation>Petek</translation>
     </message>
     <message>
       <source>Saturday</source>
-      <translation>sobota</translation>
+      <translation>Sobota</translation>
     </message>
     <message>
       <source>Sunday</source>
-      <translation>nedelja</translation>
+      <translation>Nedelja</translation>
     </message>
     <message>
       <source>Today</source>
-      <translation>danes</translation>
+      <translation>Danes</translation>
     </message>
     <message>
       <source>Category</source>
@@ -1382,25 +1382,25 @@
     </message>
     <message>
       <source>Show All Events..</source>
-      <translation>Prikaži vse dogodke ..</translation>
+      <translation>Pokaži vse dogodke.</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/full/event_view_program</name>
     <message>
       <source>Past events</source>
-      <translation>Pretekli dogodki</translation>
+      <translation>Preteklih dogodkov</translation>
     </message>
     <message>
       <source>Future events</source>
-      <translation>prihodnji dogodki</translation>
+      <translation>Prihodnjih dogodkov</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/full/feedback_form</name>
     <message>
       <source>Send form</source>
-      <translation>Pošlji oblika</translation>
+      <translation>Pošlji obrazec</translation>
     </message>
   </context>
   <context>
@@ -1419,11 +1419,11 @@
     </message>
     <message>
       <source>Topic</source>
-      <translation>tema</translation>
+      <translation>Tema</translation>
     </message>
     <message>
       <source>Replies</source>
-      <translation>odgovori</translation>
+      <translation>Odgovori</translation>
     </message>
     <message>
       <source>Author</source>
@@ -1435,14 +1435,14 @@
     </message>
     <message>
       <source>Pages</source>
-      <translation>strani</translation>
+      <translation>Strani</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/full/forum_reply</name>
     <message>
       <source>Message preview</source>
-      <translation>predogled sporočilo</translation>
+      <translation>Predogled sporočil</translation>
     </message>
     <message>
       <source>Author</source>
@@ -1450,15 +1450,15 @@
     </message>
     <message>
       <source>Topic</source>
-      <translation>tema</translation>
+      <translation>Tema</translation>
     </message>
     <message>
       <source>Location</source>
-      <translation>Kraj</translation>
+      <translation>Lokacija</translation>
     </message>
     <message>
       <source>Moderated by</source>
-      <translation>Moderator</translation>
+      <translation>Moderirano</translation>
     </message>
     <message>
       <source>Edit</source>
@@ -1477,7 +1477,7 @@
     </message>
     <message>
       <source>New reply</source>
-      <translation>nov odgovor</translation>
+      <translation>Nov odgovor</translation>
     </message>
     <message>
       <source>Keep me updated</source>
@@ -1493,15 +1493,15 @@
     </message>
     <message>
       <source>Message</source>
-      <translation>sporočilo</translation>
+      <translation>Sporočilo</translation>
     </message>
     <message>
       <source>Location</source>
-      <translation>Kraj</translation>
+      <translation>Lokacija</translation>
     </message>
     <message>
       <source>Moderated by</source>
-      <translation>Moderator</translation>
+      <translation>Moderirano</translation>
     </message>
     <message>
       <source>Edit</source>
@@ -1513,7 +1513,7 @@
     </message>
     <message>
       <source>Remove this item.</source>
-      <translation>Odstrani izdelek.</translation>
+      <translation>Odstranite ta element.</translation>
     </message>
   </context>
   <context>
@@ -1524,7 +1524,7 @@
     </message>
     <message>
       <source>Posts</source>
-      <translation>Prispevkov</translation>
+      <translation>Objave</translation>
     </message>
     <message>
       <source>Last reply</source>
@@ -1532,29 +1532,29 @@
     </message>
     <message>
       <source>Forum</source>
-      <translation>Forum</translation>
+      <translation>Forum.</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/full/image</name>
     <message>
       <source>Previous image</source>
-      <translation>Prejšnja slika</translation>
+      <translation>Prejšnja slika.</translation>
     </message>
     <message>
       <source>Next image</source>
-      <translation>Naslednja slika</translation>
+      <translation>Naslednjo sliko</translation>
     </message>
     <message>
       <source>Related content</source>
-      <translation>Povezane vsebine</translation>
+      <translation>Sorodna vsebina</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/full/multicalendar</name>
     <message>
       <source>Event</source>
-      <translation>dogodek</translation>
+      <translation>Dogodek</translation>
     </message>
     <message>
       <source>Start date</source>
@@ -1573,11 +1573,11 @@
     <name>design/ocbootstrap/full/poll</name>
     <message>
       <source>Vote</source>
-      <translation>glasovanje</translation>
+      <translation>Glasuj</translation>
     </message>
     <message>
       <source>Result</source>
-      <translation>rezultat</translation>
+      <translation>Rezultat.</translation>
     </message>
   </context>
   <context>
@@ -1588,11 +1588,11 @@
     </message>
     <message>
       <source>People who bought this also bought</source>
-      <translation>Ljudje, ki so kupili to tudi kupil</translation>
+      <translation>Osebe, ki so kupile to, so kupile tudi</translation>
     </message>
     <message>
       <source>Amount</source>
-      <translation>znesek</translation>
+      <translation>Znesek</translation>
     </message>
   </context>
   <context>
@@ -1621,7 +1621,7 @@
     <name>design/ocbootstrap/line/blog_post</name>
     <message>
       <source>Tags:</source>
-      <translation>Tags:</translation>
+      <translation>Oznake:</translation>
     </message>
   </context>
   <context>
@@ -1650,14 +1650,14 @@
     </message>
     <message>
       <source>Download file</source>
-      <translation>Prenos datotek</translation>
+      <translation>Prenesite datoteko</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/line/flash</name>
     <message>
       <source>View flash</source>
-      <translation>Poglej bliskavico</translation>
+      <translation>Poglej Flash.</translation>
     </message>
   </context>
   <context>
@@ -1676,7 +1676,7 @@
     </message>
     <message>
       <source>Enter forum</source>
-      <translation>Vnesite forum</translation>
+      <translation>Vnesite forum.</translation>
     </message>
   </context>
   <context>
@@ -1694,46 +1694,46 @@
     </message>
     <message>
       <source>Vote</source>
-      <translation>glasovanje</translation>
+      <translation>Glasuj</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/line/product</name>
     <message>
       <source>Amount</source>
-      <translation>znesek</translation>
+      <translation>Znesek</translation>
     </message>
     <message>
       <source>Buy</source>
-      <translation>Nakup</translation>
+      <translation>Kupite</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/line/quicktime</name>
     <message>
       <source>View movie</source>
-      <translation>Ogled filma</translation>
+      <translation>Oglejte si film</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/line/real_video</name>
     <message>
       <source>View movie</source>
-      <translation>Ogled filma</translation>
+      <translation>Oglejte si film</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/line/silverlight</name>
     <message>
       <source>View</source>
-      <translation>Poglej</translation>
+      <translation>Pogled</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/line/windows_media</name>
     <message>
       <source>View movie</source>
-      <translation>Ogled filma</translation>
+      <translation>Oglejte si film</translation>
     </message>
   </context>
   <context>
@@ -1748,7 +1748,7 @@
     </message>
     <message>
       <source>Printable version</source>
-      <translation>različica za tisk</translation>
+      <translation>Različica za tiskanje</translation>
     </message>
   </context>
   <context>
@@ -1790,18 +1790,18 @@
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Preklic</translation>
+      <translation>Prekliči</translation>
     </message>
     <message>
       <source>The items contain more than the maximum possible nodes for subtree removal and will not be deleted. You can remove this subtree using the ezsubtreeremove.php script.</source>
-      <translation>Postavke vsebujejo več kot najvišjih možnih vozlišča za odstranitev poddrevo in ne bodo izbrisani. Lahko odstranite to poddrevo s pomočjo skript ezsubtreeremove.php.</translation>
+      <translation>Postavke vsebujejo več kot največje možne vozlišča za odstranjevanje subtra in ne bodo izbrisane. Ta poddera lahko odstranite z uporabo skripta EZSubtreeremove.php.</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/notification/addingresult</name>
     <message>
       <source>Add to my notifications</source>
-      <translation>Dodaj k mojim obvestila</translation>
+      <translation>Dodaj na moja obvestila</translation>
     </message>
     <message>
       <source>Notification for node &lt;%node_name&gt; already exists.</source>
@@ -1820,15 +1820,15 @@
     <name>design/ocbootstrap/notification/handler/ezgeneraldigest/settings/edit</name>
     <message>
       <source>Receive all messages combined in one digest</source>
-      <translation>Prejemanje vsa sporočila združena v enem prebavo</translation>
+      <translation>Prejmite vsa sporočila v kombinaciji z enim digestom</translation>
     </message>
     <message>
       <source>Receive digests</source>
-      <translation>prejemanje izvlečke</translation>
+      <translation>Prejemanje digestov</translation>
     </message>
     <message>
       <source>Daily, at</source>
-      <translation>Dnevno, na</translation>
+      <translation>Daily, At</translation>
     </message>
     <message>
       <source>Once per week, on</source>
@@ -1836,11 +1836,11 @@
     </message>
     <message>
       <source>Once per month, on day number</source>
-      <translation>Enkrat na mesec, na dan več</translation>
+      <translation>Enkrat na mesec, na dan</translation>
     </message>
     <message>
       <source>If day number is larger than the number of days within the current month, the last day of the current month will be used.</source>
-      <translation>Če je dan število večje od števila dni v tekočem mesecu, se uporabijo bo zadnji dan v tekočem mesecu.</translation>
+      <translation>Če je dnevna številka večja od števila dni v tekočem mesecu, se bo uporabil zadnji dan tekočega meseca.</translation>
     </message>
   </context>
   <context>
@@ -1851,27 +1851,27 @@
     </message>
     <message>
       <source>Invert selection.</source>
-      <translation>Obrni izbor.</translation>
+      <translation>Inverten izbor.</translation>
     </message>
     <message>
       <source>Name</source>
-      <translation>ime</translation>
+      <translation>Ime</translation>
     </message>
     <message>
       <source>Type</source>
-      <translation>Vrsta</translation>
+      <translation>Tip.</translation>
     </message>
     <message>
       <source>Section</source>
-      <translation>Oddelek</translation>
+      <translation>Poglavje</translation>
     </message>
     <message>
       <source>Unknown</source>
-      <translation>Neznan</translation>
+      <translation>Neznano</translation>
     </message>
     <message>
       <source>You have not subscribed to receive notifications about any items.</source>
-      <translation>Niste naročeni na prejemanje obvestil o kakršnih koli predmetov.</translation>
+      <translation>Niste naročili, da boste prejeli obvestila o vseh postavkah.</translation>
     </message>
     <message>
       <source>Remove selected</source>
@@ -1879,18 +1879,18 @@
     </message>
     <message>
       <source>Add items</source>
-      <translation>Dodajanje elementov</translation>
+      <translation>Dodajte elemente</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/notification/settings</name>
     <message>
       <source>Notification settings</source>
-      <translation>nastavitve obvestil</translation>
+      <translation>Nastavitve obveščanja</translation>
     </message>
     <message>
       <source>Apply changes</source>
-      <translation>Uporabi spremembe</translation>
+      <translation>Uporabite spremembe</translation>
     </message>
   </context>
   <context>
@@ -1905,11 +1905,11 @@
     </message>
     <message>
       <source>Tag cloud</source>
-      <translation>Najbolj iskane vsebine</translation>
+      <translation>Tag Cloud.</translation>
     </message>
     <message>
       <source>Site map</source>
-      <translation>zemljevid strani</translation>
+      <translation>Zemljevid strani</translation>
     </message>
     <message>
       <source>Shopping basket</source>
@@ -1925,7 +1925,7 @@
     </message>
     <message>
       <source>Register</source>
-      <translation>Registracija</translation>
+      <translation>Registriraj se</translation>
     </message>
     <message>
       <source>Login</source>
@@ -1937,7 +1937,7 @@
     </message>
     <message>
       <source>Password</source>
-      <translation>geslo</translation>
+      <translation>Geslo</translation>
     </message>
     <message>
       <source>Forgot your password?</source>
@@ -1945,18 +1945,18 @@
     </message>
     <message>
       <source>Languages</source>
-      <translation>jeziki</translation>
+      <translation>Jeziki</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/parts/website_toolbar</name>
     <message>
       <source>Remove node RSS/ATOM feed</source>
-      <translation>Odstrani vozlišče RSS / Atom feed</translation>
+      <translation>Odstranite robom RSS / Atom Feed</translation>
     </message>
     <message>
       <source>Create node RSS/ATOM feed</source>
-      <translation>Ustvari vozlišče vir RSS / Atom</translation>
+      <translation>Ustvarite nože RSS / Atom Feed</translation>
     </message>
   </context>
   <context>
@@ -1971,15 +1971,15 @@
     </message>
     <message>
       <source>If RSS Export is Active then a valid Access URL is required.</source>
-      <translation>Če RSS Export je aktiven, potem je potreben veljaven URL dostop.</translation>
+      <translation>Če je izvoz RSS aktiven, je potreben veljavni URL za dostop.</translation>
     </message>
     <message>
       <source>Name</source>
-      <translation>ime</translation>
+      <translation>Ime</translation>
     </message>
     <message>
       <source>Name of the RSS export. This name is used in the Administration Interface only, to distinguish the different exports from each other.</source>
-      <translation>Ime RSS izvoza. To ime se uporablja v vmesniku za upravljanje samo za razlikovanje različnih izvoz iz med seboj.</translation>
+      <translation>Ime izvoza RSS. To ime se uporablja samo v skrbniški vmesnik, za razlikovanje različnih izvoza drug od drugega.</translation>
     </message>
     <message>
       <source>Description</source>
@@ -1987,19 +1987,19 @@
     </message>
     <message>
       <source>Use the description field to write a text explaining what users can expect from the RSS export.</source>
-      <translation>Uporabite polje opis, da napišete besedilo, ki pojasnjuje, kaj lahko uporabniki pričakujejo od RSS izvoza.</translation>
+      <translation>Uporabite polje Opis, da napišete besedilo, ki pojasnjuje, kaj lahko uporabniki pričakujejo od izvoza RSS.</translation>
     </message>
     <message>
       <source>Site URL</source>
-      <translation>URL spletnega mesta</translation>
+      <translation>URL</translation>
     </message>
     <message>
       <source>Use this field to enter the base URL of your site. It is used to produce the URLs in the export, composed by the Site URL (e.g. "http://www.example.com/index.php") and the path to the object (e.g. "/articles/my_article"). The Site URL depends on your web server and eZ Publish configuration.</source>
-      <translation>Uporabite to polje za vstop v osnovno URL vaše spletne strani. To se uporablja za izdelavo URL-jev v izvoz, ki ga je URL strani, ki jih sestavljajo (na primer »http://www.example.com/index.php") in pot do predmeta (na primer "/ članki / my_article"). URL spletnega mesta je odvisna od spletnega strežnika in EZ Objavi konfiguracijo.</translation>
+      <translation>Uporabite to polje za vstop v osnovni URL vašega spletnega mesta. Uporablja se za proizvodnjo URL-jev v izvozu, ki jo sestavljajo URL lokacije (npr. Http://www.example.com/index.php ") in pot do predmeta (npr." / Članki / my_article "). URL spletnega mesta je odvisen od vašega spletnega strežnika in EZ objavi konfiguracijo.</translation>
     </message>
     <message>
       <source>Leave this field emty if you want system automaticaly detect the URL of your site from the URL you access feed with</source>
-      <translation>Pustite to polje emty če želite sistem avtomatsko zazna URL vaše spletne strani iz URL dostop krme z</translation>
+      <translation>Pustite to polje Emty, če želite sistem avtomatičen zaznati URL vašega spletnega mesta iz URL-ja, ki dostopate</translation>
     </message>
     <message>
       <source>Image</source>
@@ -2007,27 +2007,27 @@
     </message>
     <message>
       <source>Browse</source>
-      <translation>Prebrskaj</translation>
+      <translation>Brskaj</translation>
     </message>
     <message>
       <source>Click this button to select an image for the RSS export. Note that images only work with RSS version 2.0</source>
-      <translation>Kliknite ta gumb, da izberete sliko za RSS izvoz. Upoštevajte, da slik deluje le z RSS 2.0</translation>
+      <translation>Kliknite ta gumb, da izberete sliko za izvoz RSS. Upoštevajte, da slike delujejo samo z RSS različico 2.0</translation>
     </message>
     <message>
       <source>Remove image</source>
-      <translation>Odstrani sliko</translation>
+      <translation>Odstranite sliko</translation>
     </message>
     <message>
       <source>Click to remove image from RSS export.</source>
-      <translation>Kliknite za odstranitev slike iz RSS izvoza.</translation>
+      <translation>Kliknite, če želite odstraniti sliko iz izvoza RSS.</translation>
     </message>
     <message>
       <source>RSS version</source>
-      <translation>RSS različica</translation>
+      <translation>RSS različica.</translation>
     </message>
     <message>
       <source>Use this drop-down menu to select the RSS version to use for the export. You must select RSS 2.0 in order to export the image selected above.</source>
-      <translation>Uporabite ta spustnem meniju izberite različico RSS uporabiti za izvoz. Izbrati morate RSS 2.0, da bi se izvoz sliko zgoraj izbrano.</translation>
+      <translation>Uporabite ta spustni meni, da izberete različico RSS, ki jo želite uporabiti za izvoz. Izbrati morate RSS 2.0, da bi izvozili zgoraj navedeno sliko.</translation>
     </message>
     <message>
       <source>Number of objects</source>
@@ -2035,67 +2035,67 @@
     </message>
     <message>
       <source>Use this drop-down to select the maximum number of objects included in the RSS feed.</source>
-      <translation>Uporabite ta spustnem meniju izberite maksimalno število predmetov, vključenih v RSS.</translation>
+      <translation>Uporabite to spustno, da izberete največje število predmetov, vključenih v vir RSS.</translation>
     </message>
     <message>
       <source>Active</source>
-      <translation>Aktivno</translation>
+      <translation>Aktivna</translation>
     </message>
     <message>
       <source>Use this checkbox to control if the RSS export is active or not. An inactive export will not be automatically updated.</source>
-      <translation>Uporabite to polje za nadzor, če je RSS izvoz aktivni ali ne. Neaktivni izvoz ne bo samodejno posodobi.</translation>
+      <translation>Uporabite to potrditveno polje za nadzor, če je izvoz RSS aktiven ali ne. Neaktivni izvoz se ne bo samodejno posodabljal.</translation>
     </message>
     <message>
       <source>Main node only</source>
-      <translation>Edina glavna vozlišča</translation>
+      <translation>Samo glavno vozlišče.</translation>
     </message>
     <message>
       <source>Check if you want to only feed the object from the main node.</source>
-      <translation>Preverite, če želite, da samo krmo predmet iz glavnega vozlišča.</translation>
+      <translation>Preverite, ali želite, da nastavite objekt iz glavnega vozlišča.</translation>
     </message>
     <message>
       <source>Access URL</source>
-      <translation>URL dostop</translation>
+      <translation>Dostop URL.</translation>
     </message>
     <message>
       <source>Use this field to set the URL where the RSS export should be available. Note that "rss/feed/" will be appended to the real URL.</source>
-      <translation>Uporabite to polje za nastavitev URL, kjer bi morala RSS izvoz bodo na voljo. Upoštevajte, da "rss / feed /" bo priložen k realnemu URL.</translation>
+      <translation>To polje uporabite za nastavitev URL-ja, kjer bi moral biti izvoz RSS na voljo. Upoštevajte, da bo "RSS / Feed /" priložen pravemu URL-ju.</translation>
     </message>
     <message>
       <source>Source</source>
-      <translation>vir</translation>
+      <translation>Vir.</translation>
     </message>
     <message>
       <source>Source path</source>
-      <translation>vir pot</translation>
+      <translation>Vir Path.</translation>
     </message>
     <message>
       <source>Click this button to select the source node for the RSS export source. Objects of the type selected in the drop-down below published as sub items of the selected node will be included in the RSS export.</source>
-      <translation>Kliknite ta gumb za izbiro izvorno vozlišče za RSS izvoza vira. Predmeti izbrane vrste v spustnem spodaj objavljeni, saj bo pod postavke izbranega vozlišča vključeni v RSS izvoz.</translation>
+      <translation>Kliknite ta gumb, da izberete izvorno vozlišče za izvozni vir RSS. Objekti tipa, izbranega v spustnem spodnjem delu, objavljenem, kot je podrobno izbrano vozlišče, bodo vključeni v izvoz RSS.</translation>
     </message>
     <message>
       <source>Subnodes</source>
-      <translation>podrejenih vozlišč</translation>
+      <translation>Podnote</translation>
     </message>
     <message>
       <source>Activate this checkbox if objects from the subnodes of the source should also be fed.</source>
-      <translation>Aktivirajte to možnost, če bi morali predmeti iz podrejenih vozlišč iz vira, ki ga hranijo tudi.</translation>
+      <translation>Aktivirajte to potrditveno polje, če je treba nahraniti tudi predmete iz podnok vira.</translation>
     </message>
     <message>
       <source>Class</source>
-      <translation>razred</translation>
+      <translation>Razred</translation>
     </message>
     <message>
       <source>Use this drop-down to select the type of object that triggers the export. Click the "Set" button to load the correct attribute types for the remaining fields.</source>
-      <translation>Uporabite ta spustnem meniju izberite vrsto predmeta, ki sproži izvoza. Kliknite na gumb »Set" naložiti ustrezne vrste atributov za preostalih področjih.</translation>
+      <translation>Uporabite to spustno, da izberete vrsto predmeta, ki sproži izvoz. Kliknite gumb »Set«, da naložite pravilne vrste atributov za preostala polja.</translation>
     </message>
     <message>
       <source>Set</source>
-      <translation>Set</translation>
+      <translation>Set.</translation>
     </message>
     <message>
       <source>Click this button to load the correct values into the drop-down fields below. Use the drop-down menu on the left to select the class.</source>
-      <translation>Kliknite ta gumb za nalaganje pravilne vrednosti v spustnem spodnja polja. Uporabite spustni meni na levi izberite razred.</translation>
+      <translation>Kliknite ta gumb, da naložite pravilne vrednosti v podpustno polja spodaj. Uporabite spustni meni na levi, da izberete razred.</translation>
     </message>
     <message>
       <source>Title</source>
@@ -2103,7 +2103,7 @@
     </message>
     <message>
       <source>Use this drop-down to select the attribute that should be exported as the title of the RSS export entry.</source>
-      <translation>Uporabite ta spustnem meniju izberite atribut, ki naj bi jo izvozili kot naslov vstopa na RSS izvoza.</translation>
+      <translation>Uporabite to spustno, da izberete atribut, ki ga je treba izvoziti kot naslov izvoza RSS.</translation>
     </message>
     <message>
       <source>optional</source>
@@ -2111,11 +2111,11 @@
     </message>
     <message>
       <source>Use this drop-down to select the attribute that should be exported as the description of the RSS export entry.</source>
-      <translation>Uporabite ta spustnem meniju izberite atribut, ki naj bi jo izvozili kot opisa blaga oziroma RSS izvoza.</translation>
+      <translation>Uporabite to spustno, da izberete atribut, ki ga je treba izvoziti kot opis izvoza RSS.</translation>
     </message>
     <message>
       <source>Skip</source>
-      <translation>Preskoči</translation>
+      <translation>Skip.</translation>
     </message>
     <message>
       <source>Category</source>
@@ -2123,23 +2123,23 @@
     </message>
     <message>
       <source>Use this drop-down to select the attribute that should be exported as the category of the RSS export entry.</source>
-      <translation>Uporabite ta spustnem meniju izberite atribut, ki naj bi jo izvozili kot kategorijo vstopa na RSS izvoza.</translation>
+      <translation>Uporabite to spustno, da izberete atribut, ki ga je treba izvoziti kot kategorija izvoza RSS.</translation>
     </message>
     <message>
       <source>Remove this source</source>
-      <translation>Odstrani ta vir</translation>
+      <translation>Odstranite ta vir</translation>
     </message>
     <message>
       <source>Click to remove this source from the RSS export.</source>
-      <translation>Kliknite za odstranitev tega vira iz RSS izvoz.</translation>
+      <translation>Kliknite, da odstranite ta vir iz izvoza RSS.</translation>
     </message>
     <message>
       <source>Add source</source>
-      <translation>vir Dodaj</translation>
+      <translation>Dodaj vir.</translation>
     </message>
     <message>
       <source>Click to add a new source to the RSS export.</source>
-      <translation>Kliknite za dodajanje novega vira na RSS izvoz.</translation>
+      <translation>Kliknite, če želite dodati nov vir izvoza RSS.</translation>
     </message>
     <message>
       <source>OK</source>
@@ -2147,15 +2147,15 @@
     </message>
     <message>
       <source>Apply the changes and return to the RSS overview.</source>
-      <translation>Uporabi spremembe in se vrniti na pregled RSS.</translation>
+      <translation>Nanesite spremembe in vrnitev na RSS pregled.</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Preklic</translation>
+      <translation>Prekliči</translation>
     </message>
     <message>
       <source>Cancel the changes and return to the RSS overview.</source>
-      <translation>Prekliči spremembe in se vrniti na pregled RSS.</translation>
+      <translation>Prekličite spremembe in se vrnite na pregled RSS.</translation>
     </message>
   </context>
   <context>
@@ -2166,19 +2166,19 @@
     </message>
     <message>
       <source>Name</source>
-      <translation>ime</translation>
+      <translation>Ime</translation>
     </message>
     <message>
       <source>Name of the RSS import. This name is used in the Administration Interface only, to distinguish the different imports from each other.</source>
-      <translation>Ime RSS uvoza. To ime se uporablja v vmesniku za upravljanje samo za razlikovanje različnih uvoz iz med seboj.</translation>
+      <translation>Ime uvoza RSS. To ime se uporablja samo v skrbniški vmesnik, za razlikovanje različnih uvozov drug od drugega.</translation>
     </message>
     <message>
       <source>Source URL</source>
-      <translation>vir URL</translation>
+      <translation>Vir URL.</translation>
     </message>
     <message>
       <source>Use this field to enter the source URL of the RSS feed to import.</source>
-      <translation>Uporabite to polje za vnos URL vira RSS na uvoz.</translation>
+      <translation>To polje uporabite za vnos vira URL-ja RSS vira na uvoz.</translation>
     </message>
     <message>
       <source>Update</source>
@@ -2186,59 +2186,59 @@
     </message>
     <message>
       <source>Click this button to proceed and analyze the import feed.</source>
-      <translation>Kliknite ta gumb za nadaljevanje in analizirati uvoz krme.</translation>
+      <translation>Kliknite ta gumb, da nadaljujete in analizirate uvozno krmo.</translation>
     </message>
     <message>
       <source>RSS Version</source>
-      <translation>RSS različica</translation>
+      <translation>RSS različica.</translation>
     </message>
     <message>
       <source>Destination path</source>
-      <translation>destinacija pot</translation>
+      <translation>Ciljna pot</translation>
     </message>
     <message>
       <source>Browse</source>
-      <translation>Prebrskaj</translation>
+      <translation>Brskaj</translation>
     </message>
     <message>
       <source>Click this button to select the destination node where objects created by the import are located.</source>
-      <translation>Kliknite ta gumb, da izberete ciljno vozlišče, kjer se nahajajo predmeti, ki jih je uvoz ustvaril.</translation>
+      <translation>Kliknite ta gumb, da izberete ciljno vozlišče, kjer se nahajajo predmete, ki jih je ustvaril uvoz.</translation>
     </message>
     <message>
       <source>Imported objects will be owned by</source>
-      <translation>Uvožene predmeti bodo lasti</translation>
+      <translation>Uvoženi predmeti bodo v lasti</translation>
     </message>
     <message>
       <source>Change user</source>
-      <translation>uporabnik sprememba</translation>
+      <translation>Spremenite uporabnika</translation>
     </message>
     <message>
       <source>Click this button to select the user who should own the objects created by the import.</source>
-      <translation>Kliknite ta gumb za izbiro uporabnika, ki bi bilo v lasti predmete, ki jih je uvoz ustvarili.</translation>
+      <translation>Kliknite ta gumb, da izberete uporabnika, ki bi moral imeti predmete, ki jih je ustvaril uvoz.</translation>
     </message>
     <message>
       <source>Class</source>
-      <translation>razred</translation>
+      <translation>Razred</translation>
     </message>
     <message>
       <source>Use this drop-down to select the type of object the import should create. Click the "Set" button to load the attribute types for the remaining fields.</source>
-      <translation>Uporabite ta spustnem meniju izberite vrsto predmeta uvoz je treba ustvariti. Kliknite na gumb »Set" naložiti vrste atributov za preostalih področjih.</translation>
+      <translation>Uporabite to spustno, da izberete vrsto predmeta, ki ga mora uvoz ustvariti. Kliknite gumb "Set", da naložite vrste atributov za preostala polja.</translation>
     </message>
     <message>
       <source>Set</source>
-      <translation>Set</translation>
+      <translation>Set.</translation>
     </message>
     <message>
       <source>Click this button to load the correct values into the drop-down fields below. Use the drop-down menu on the left to select the class.</source>
-      <translation>Kliknite ta gumb za nalaganje pravilne vrednosti v spustnem spodnja polja. Uporabite spustni meni na levi izberite razred.</translation>
+      <translation>Kliknite ta gumb, da naložite pravilne vrednosti v podpustno polja spodaj. Uporabite spustni meni na levi, da izberete razred.</translation>
     </message>
     <message>
       <source>Class attributes</source>
-      <translation>atributi razreda</translation>
+      <translation>Atributi razreda</translation>
     </message>
     <message>
       <source>Use this drop-down menu to select the attribute that should bet set as information from the RSS stream.</source>
-      <translation>Uporabite ta spustnem meniju izberite atribut, da je treba staviti komplet za podatke iz RSS tok.</translation>
+      <translation>Uporabite ta spustni meni, da izberete atribut, ki bi moral staviti kot informacije iz toka RSS.</translation>
     </message>
     <message>
       <source>Ignore</source>
@@ -2246,15 +2246,15 @@
     </message>
     <message>
       <source>Object attributes</source>
-      <translation>Object atributi</translation>
+      <translation>Atributi objekta</translation>
     </message>
     <message>
       <source>Active</source>
-      <translation>Aktivno</translation>
+      <translation>Aktivna</translation>
     </message>
     <message>
       <source>Use this checkbox to control if the RSS feed is active or not. An inactive feed will not be automatically updated.</source>
-      <translation>Uporabite to polje za nadzor, če je RSS aktivni ali ne. Neaktivni krma ne bo samodejno posodobi.</translation>
+      <translation>Uporabite to potrditveno polje za nadzor, če je vir RSS aktiven ali ne. Neaktivna krma se ne bo samodejno posodabljala.</translation>
     </message>
     <message>
       <source>OK</source>
@@ -2262,15 +2262,15 @@
     </message>
     <message>
       <source>Apply the changes and return to the RSS overview.</source>
-      <translation>Uporabi spremembe in se vrniti na pregled RSS.</translation>
+      <translation>Nanesite spremembe in vrnitev na RSS pregled.</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Preklic</translation>
+      <translation>Prekliči</translation>
     </message>
     <message>
       <source>Cancel the changes and return to the RSS overview.</source>
-      <translation>Prekliči spremembe in se vrniti na pregled RSS.</translation>
+      <translation>Prekličite spremembe in se vrnite na pregled RSS.</translation>
     </message>
   </context>
   <context>
@@ -2281,19 +2281,19 @@
     </message>
     <message>
       <source>Invert selection</source>
-      <translation>Obrni izbor</translation>
+      <translation>Invertno izbiro.</translation>
     </message>
     <message>
       <source>Invert selection.</source>
-      <translation>Obrni izbor.</translation>
+      <translation>Inverten izbor.</translation>
     </message>
     <message>
       <source>Name</source>
-      <translation>ime</translation>
+      <translation>Ime</translation>
     </message>
     <message>
       <source>Version</source>
-      <translation>različica</translation>
+      <translation>Različica</translation>
     </message>
     <message>
       <source>Status</source>
@@ -2301,7 +2301,7 @@
     </message>
     <message>
       <source>Modifier</source>
-      <translation>Spreminjevalec</translation>
+      <translation>Modifikator.</translation>
     </message>
     <message>
       <source>Modified</source>
@@ -2309,15 +2309,15 @@
     </message>
     <message>
       <source>Select RSS export for removal.</source>
-      <translation>Izberite RSS izvoz za odstranitev.</translation>
+      <translation>Izberite Izvoz RSS za odstranitev.</translation>
     </message>
     <message>
       <source>Active</source>
-      <translation>Aktivno</translation>
+      <translation>Aktivna</translation>
     </message>
     <message>
       <source>Inactive</source>
-      <translation>neaktivni</translation>
+      <translation>Neaktivno</translation>
     </message>
     <message>
       <source>Edit</source>
@@ -2329,7 +2329,7 @@
     </message>
     <message>
       <source>The RSS export list is empty.</source>
-      <translation>Seznam RSS izvoz je prazna.</translation>
+      <translation>Izvozni seznam RSS je prazen.</translation>
     </message>
     <message>
       <source>Remove selected</source>
@@ -2337,15 +2337,15 @@
     </message>
     <message>
       <source>Remove selected RSS exports.</source>
-      <translation>Odstrani izbrane RSS izvoza.</translation>
+      <translation>Odstrani izbrani izvoz RSS.</translation>
     </message>
     <message>
       <source>New export</source>
-      <translation>Nova izvoz</translation>
+      <translation>Nov izvoz</translation>
     </message>
     <message>
       <source>Create a new RSS export.</source>
-      <translation>Ustvari nov RSS izvoz.</translation>
+      <translation>Ustvarite nov izvoz RSS.</translation>
     </message>
     <message>
       <source>RSS imports [%imports_count]</source>
@@ -2353,7 +2353,7 @@
     </message>
     <message>
       <source>Select RSS import for removal.</source>
-      <translation>Izberite RSS uvoz za odstranitev.</translation>
+      <translation>Izberite Uvoz RSS za odstranjevanje.</translation>
     </message>
     <message>
       <source>Edit the &lt;%name&gt; RSS import.</source>
@@ -2361,19 +2361,19 @@
     </message>
     <message>
       <source>The RSS import list is empty.</source>
-      <translation>Seznam RSS uvoz je prazna.</translation>
+      <translation>Uvozni seznam RSS je prazen.</translation>
     </message>
     <message>
       <source>Remove selected RSS imports.</source>
-      <translation>Odstrani izbrane RSS uvoza.</translation>
+      <translation>Odstrani izbrani Uvoz RSS.</translation>
     </message>
     <message>
       <source>New import</source>
-      <translation>nov uvoz</translation>
+      <translation>Nov uvoz</translation>
     </message>
     <message>
       <source>Create a new RSS import.</source>
-      <translation>Ustvari nov RSS uvoz.</translation>
+      <translation>Ustvarite nov uvoz RSS.</translation>
     </message>
   </context>
   <context>
@@ -2388,7 +2388,7 @@
     </message>
     <message>
       <source>Confirm order</source>
-      <translation>da za potrditev</translation>
+      <translation>Potrdite vrstni red</translation>
     </message>
     <message>
       <source>Basket</source>
@@ -2396,7 +2396,7 @@
     </message>
     <message>
       <source>The following items were removed from your basket because the products were changed.</source>
-      <translation>Naslednji elementi so bili odstranjeni iz košarice, ker so spremenili izdelki.</translation>
+      <translation>Iz vaše košarice so bile odstranjene naslednje elemente, ker so bili izdelki spremenjeni.</translation>
     </message>
     <message>
       <source>VAT is unknown</source>
@@ -2404,15 +2404,15 @@
     </message>
     <message>
       <source>VAT percentage is not yet known for some of the items being purchased.</source>
-      <translation>Odstotek DDV še ni znano, za nekatere elemente, ki se jih kupuje.</translation>
+      <translation>Odstotek DDV še ni znan po nekaterih odmerjenih postavkah.</translation>
     </message>
     <message>
       <source>This probably means that some information about you is not yet available and will be obtained during checkout.</source>
-      <translation>To verjetno pomeni, da so nekatere informacije o vas še ni na voljo in bodo pridobljena v blagajni.</translation>
+      <translation>To verjetno pomeni, da nekatere informacije o vas še niso na voljo in bodo pridobljene med nakupom.</translation>
     </message>
     <message>
       <source>Attempted to add object without price to basket.</source>
-      <translation>Poskus, da dodate predmet, ne da bi cene za košarico.</translation>
+      <translation>Poskušal dodati objekt brez cene v koš.</translation>
     </message>
     <message>
       <source>Your payment was aborted.</source>
@@ -2420,31 +2420,31 @@
     </message>
     <message>
       <source>Count</source>
-      <translation>Count</translation>
+      <translation>Count.</translation>
     </message>
     <message>
       <source>VAT</source>
-      <translation>DDV</translation>
+      <translation>DD.</translation>
     </message>
     <message>
       <source>Price inc. VAT</source>
-      <translation>Cena inc. DDV</translation>
+      <translation>Cena Inc. DD.</translation>
     </message>
     <message>
       <source>Discount</source>
-      <translation>popust</translation>
+      <translation>Popust</translation>
     </message>
     <message>
       <source>Total price ex. VAT</source>
-      <translation>Skupna cena ex. DDV</translation>
+      <translation>Skupna cena Ex. DD.</translation>
     </message>
     <message>
       <source>Total price inc. VAT</source>
-      <translation>Skupna cena inc. DDV</translation>
+      <translation>Skupna cena Inc. DD.</translation>
     </message>
     <message>
       <source>Unknown</source>
-      <translation>Neznan</translation>
+      <translation>Neznano</translation>
     </message>
     <message>
       <source>Update</source>
@@ -2456,15 +2456,15 @@
     </message>
     <message>
       <source>Selected options</source>
-      <translation>izbrane možnosti</translation>
+      <translation>Izbrane možnosti</translation>
     </message>
     <message>
       <source>Subtotal ex. VAT</source>
-      <translation>Vmesni seštevek ex. DDV</translation>
+      <translation>Subtotal ex. DD.</translation>
     </message>
     <message>
       <source>Subtotal inc. VAT</source>
-      <translation>Vmesni seštevek inc. DDV</translation>
+      <translation>SUBTOTAL INC. DD.</translation>
     </message>
     <message>
       <source>Shipping</source>
@@ -2472,7 +2472,7 @@
     </message>
     <message>
       <source>Order total</source>
-      <translation>skupno naročilo</translation>
+      <translation>SKUPNO NAROČILO</translation>
     </message>
     <message>
       <source>Continue shopping</source>
@@ -2484,7 +2484,7 @@
     </message>
     <message>
       <source>You have no products in your basket.</source>
-      <translation>Nimate izdelkov v vaši košarici.</translation>
+      <translation>V košarici nimate izdelkov.</translation>
     </message>
   </context>
   <context>
@@ -2499,39 +2499,39 @@
     </message>
     <message>
       <source>Confirm order</source>
-      <translation>da za potrditev</translation>
+      <translation>Potrdite vrstni red</translation>
     </message>
     <message>
       <source>Product items</source>
-      <translation>predmeti izdelka</translation>
+      <translation>Elementi izdelka</translation>
     </message>
     <message>
       <source>Count</source>
-      <translation>Count</translation>
+      <translation>Count.</translation>
     </message>
     <message>
       <source>VAT</source>
-      <translation>DDV</translation>
+      <translation>DD.</translation>
     </message>
     <message>
       <source>Price inc. VAT</source>
-      <translation>Cena inc. DDV</translation>
+      <translation>Cena Inc. DD.</translation>
     </message>
     <message>
       <source>Discount</source>
-      <translation>popust</translation>
+      <translation>Popust</translation>
     </message>
     <message>
       <source>Total price ex. VAT</source>
-      <translation>Skupna cena ex. DDV</translation>
+      <translation>Skupna cena Ex. DD.</translation>
     </message>
     <message>
       <source>Total price inc. VAT</source>
-      <translation>Skupna cena inc. DDV</translation>
+      <translation>Skupna cena Inc. DD.</translation>
     </message>
     <message>
       <source>Selected options</source>
-      <translation>izbrane možnosti</translation>
+      <translation>Izbrane možnosti</translation>
     </message>
     <message>
       <source>Order summary</source>
@@ -2539,15 +2539,15 @@
     </message>
     <message>
       <source>Subtotal of items</source>
-      <translation>Vmesni seštevek postavk</translation>
+      <translation>Podtego elementov</translation>
     </message>
     <message>
       <source>Order total</source>
-      <translation>skupno naročilo</translation>
+      <translation>SKUPNO NAROČILO</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Preklic</translation>
+      <translation>Prekliči</translation>
     </message>
     <message>
       <source>Confirm</source>
@@ -2559,11 +2559,11 @@
     </message>
     <message>
       <source>Total ex. VAT</source>
-      <translation>Skupaj ex. DDV</translation>
+      <translation>Skupaj ex. DD.</translation>
     </message>
     <message>
       <source>Total inc. VAT</source>
-      <translation>Skupaj inc. DDV</translation>
+      <translation>Skupaj Inc. DD.</translation>
     </message>
   </context>
   <context>
@@ -2574,23 +2574,23 @@
     </message>
     <message>
       <source>Order list</source>
-      <translation>Seznam red</translation>
+      <translation>Seznam naročil</translation>
     </message>
     <message>
       <source>ID</source>
-      <translation>ID</translation>
+      <translation>Id</translation>
     </message>
     <message>
       <source>Date</source>
-      <translation>Datum</translation>
+      <translation>Datum.</translation>
     </message>
     <message>
       <source>Total ex. VAT</source>
-      <translation>Skupaj ex. DDV</translation>
+      <translation>Skupaj ex. DD.</translation>
     </message>
     <message>
       <source>Total inc. VAT</source>
-      <translation>Skupaj inc. DDV</translation>
+      <translation>Skupaj Inc. DD.</translation>
     </message>
     <message>
       <source>Purchase list</source>
@@ -2602,26 +2602,26 @@
     </message>
     <message>
       <source>Amount</source>
-      <translation>znesek</translation>
+      <translation>Znesek</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/shop/orderlist</name>
     <message>
       <source>Order list</source>
-      <translation>Seznam red</translation>
+      <translation>Seznam naročil</translation>
     </message>
     <message>
       <source>Sort result by</source>
-      <translation>Razvrsti povzroči s</translation>
+      <translation>Razvrsti rezultat</translation>
     </message>
     <message>
       <source>Order time</source>
-      <translation>čas za naročilo</translation>
+      <translation>Čas naročila</translation>
     </message>
     <message>
       <source>User name</source>
-      <translation>uporabniško ime</translation>
+      <translation>Uporabniško ime</translation>
     </message>
     <message>
       <source>Order ID</source>
@@ -2629,7 +2629,7 @@
     </message>
     <message>
       <source>Ascending</source>
-      <translation>naraščajoče</translation>
+      <translation>Naraščajoče</translation>
     </message>
     <message>
       <source>Sort ascending</source>
@@ -2637,11 +2637,11 @@
     </message>
     <message>
       <source>Descending</source>
-      <translation>Padajoče</translation>
+      <translation>Spust</translation>
     </message>
     <message>
       <source>Sort descending</source>
-      <translation>Razvrsti padajoče</translation>
+      <translation>Razvrsti spust</translation>
     </message>
     <message>
       <source>Sort</source>
@@ -2649,31 +2649,31 @@
     </message>
     <message>
       <source>ID</source>
-      <translation>ID</translation>
+      <translation>Id</translation>
     </message>
     <message>
       <source>Date</source>
-      <translation>Datum</translation>
+      <translation>Datum.</translation>
     </message>
     <message>
       <source>Customer</source>
-      <translation>stranka</translation>
+      <translation>Stranka</translation>
     </message>
     <message>
       <source>Total ex. VAT</source>
-      <translation>Skupaj ex. DDV</translation>
+      <translation>Skupaj ex. DD.</translation>
     </message>
     <message>
       <source>Total inc. VAT</source>
-      <translation>Skupaj inc. DDV</translation>
+      <translation>Skupaj Inc. DD.</translation>
     </message>
     <message>
       <source>The order list is empty</source>
-      <translation>Seznam nalog je prazna</translation>
+      <translation>Seznam naročil je prazen</translation>
     </message>
     <message>
       <source>Archive</source>
-      <translation>Arhiv</translation>
+      <translation>Arhiv.</translation>
     </message>
   </context>
   <context>
@@ -2684,7 +2684,7 @@
     </message>
     <message>
       <source>Product items</source>
-      <translation>predmeti izdelka</translation>
+      <translation>Elementi izdelka</translation>
     </message>
     <message>
       <source>Product</source>
@@ -2692,27 +2692,27 @@
     </message>
     <message>
       <source>Count</source>
-      <translation>Count</translation>
+      <translation>Count.</translation>
     </message>
     <message>
       <source>VAT</source>
-      <translation>DDV</translation>
+      <translation>DD.</translation>
     </message>
     <message>
       <source>Price inc. VAT</source>
-      <translation>Cena inc. DDV</translation>
+      <translation>Cena Inc. DD.</translation>
     </message>
     <message>
       <source>Discount</source>
-      <translation>popust</translation>
+      <translation>Popust</translation>
     </message>
     <message>
       <source>Total price ex. VAT</source>
-      <translation>Skupna cena ex. DDV</translation>
+      <translation>Skupna cena Ex. DD.</translation>
     </message>
     <message>
       <source>Total price inc. VAT</source>
-      <translation>Skupna cena inc. DDV</translation>
+      <translation>Skupna cena Inc. DD.</translation>
     </message>
     <message>
       <source>Order summary</source>
@@ -2724,11 +2724,11 @@
     </message>
     <message>
       <source>Subtotal of items</source>
-      <translation>Vmesni seštevek postavk</translation>
+      <translation>Podtego elementov</translation>
     </message>
     <message>
       <source>Order total</source>
-      <translation>skupno naročilo</translation>
+      <translation>SKUPNO NAROČILO</translation>
     </message>
     <message>
       <source>Order history</source>
@@ -2736,7 +2736,7 @@
     </message>
     <message>
       <source>Date</source>
-      <translation>Datum</translation>
+      <translation>Datum.</translation>
     </message>
     <message>
       <source>Order status</source>
@@ -2755,15 +2755,15 @@
     </message>
     <message>
       <source>Confirm order</source>
-      <translation>da za potrditev</translation>
+      <translation>Potrdite vrstni red</translation>
     </message>
     <message>
       <source>Your account information</source>
-      <translation>Podatki o računu</translation>
+      <translation>Informacije o vašem računu</translation>
     </message>
     <message>
       <source>Input did not validate. All fields marked with * must be filled in.</source>
-      <translation>Vhod ni potrdil. Vsa polja, označena z * morajo biti izpolnjena.</translation>
+      <translation>Vhod ni potrdil. Vsa polja, označena z *, je treba izpolniti.</translation>
     </message>
     <message>
       <source>First name</source>
@@ -2783,15 +2783,15 @@
     </message>
     <message>
       <source>Street</source>
-      <translation>Street</translation>
+      <translation>Street.</translation>
     </message>
     <message>
       <source>Zip</source>
-      <translation>Zip</translation>
+      <translation>Zip.</translation>
     </message>
     <message>
       <source>Place</source>
-      <translation>kraj</translation>
+      <translation>Kraj</translation>
     </message>
     <message>
       <source>State</source>
@@ -2803,19 +2803,19 @@
     </message>
     <message>
       <source>Comment</source>
-      <translation>komentar</translation>
+      <translation>Komentar</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Preklic</translation>
+      <translation>Prekliči</translation>
     </message>
     <message>
       <source>Continue</source>
-      <translation>Naprej</translation>
+      <translation>Nadaljujte</translation>
     </message>
     <message>
       <source>All fields marked with * must be filled in.</source>
-      <translation>Vsa polja, označena z * morajo biti izpolnjena.</translation>
+      <translation>Vsa polja, označena z *, je treba izpolniti.</translation>
     </message>
   </context>
   <context>
@@ -2830,19 +2830,19 @@
     </message>
     <message>
       <source>Count</source>
-      <translation>Count</translation>
+      <translation>Count.</translation>
     </message>
     <message>
       <source>Selected options</source>
-      <translation>izbrane možnosti</translation>
+      <translation>Izbrane možnosti</translation>
     </message>
     <message>
       <source>Store</source>
-      <translation>trgovina</translation>
+      <translation>Trgovina</translation>
     </message>
     <message>
       <source>Remove items</source>
-      <translation>Odstrani postavke</translation>
+      <translation>Odstranite elemente</translation>
     </message>
     <message>
       <source>Empty wish list</source>
@@ -2853,7 +2853,7 @@
     <name>design/ocbootstrap/simplified_treemenu/show_simplified_menu</name>
     <message>
       <source>Fold/Unfold</source>
-      <translation>Zložite / razpletati</translation>
+      <translation>Zložite / odvijte</translation>
     </message>
     <message>
       <source>Node ID: %node_id Visibility: %visibility</source>
@@ -2887,19 +2887,19 @@
     </message>
     <message>
       <source>Name</source>
-      <translation>ime</translation>
+      <translation>Ime</translation>
     </message>
     <message>
       <source>My drafts</source>
-      <translation>Moje osnutki</translation>
+      <translation>Moji osnutki</translation>
     </message>
     <message>
       <source>My orders</source>
-      <translation>Moja naročila</translation>
+      <translation>Moje naročila</translation>
     </message>
     <message>
       <source>My notification settings</source>
-      <translation>Moje nastavitve obvestil</translation>
+      <translation>Moje nastavitve obvestila</translation>
     </message>
     <message>
       <source>My wish list</source>
@@ -2915,7 +2915,7 @@
     </message>
     <message>
       <source>My pending items</source>
-      <translation>Moje teku postavke</translation>
+      <translation>Moje čakalne postavke</translation>
     </message>
   </context>
   <context>
@@ -2926,7 +2926,7 @@
     </message>
     <message>
       <source>There is no registered user with that email address.</source>
-      <translation>Ni registriran uporabnik s tem e-poštnim naslovom.</translation>
+      <translation>Ni registriranega uporabnika s tem e-poštnim naslovom.</translation>
     </message>
     <message>
       <source>Password was successfully generated and sent to: %1</source>
@@ -2934,15 +2934,15 @@
     </message>
     <message>
       <source>The key is invalid or has been used.</source>
-      <translation>Ključ ni veljaven ali pa je bil uporabljen.</translation>
+      <translation>Ključ je neveljaven ali je bil uporabljen.</translation>
     </message>
     <message>
       <source>Have you forgotten your password?</source>
-      <translation>Ali ste pozabili geslo?</translation>
+      <translation>Ste pozabili geslo?</translation>
     </message>
     <message>
       <source>If you have forgotten your password, enter your email address and we will create a new password and send it to you.</source>
-      <translation>Če ste pozabili geslo, vnesite svoj e-naslov in bomo ustvarili novo geslo in ga poslati na vas.</translation>
+      <translation>Če ste pozabili geslo, vnesite svoj e-poštni naslov in ustvarili bomo novo geslo in ga poslali.</translation>
     </message>
     <message>
       <source>Email</source>
@@ -2950,7 +2950,7 @@
     </message>
     <message>
       <source>Generate new password</source>
-      <translation>Ustvari novo geslo</translation>
+      <translation>Ustvarite novo geslo</translation>
     </message>
   </context>
   <context>
@@ -2961,11 +2961,11 @@
     </message>
     <message>
       <source>Could not login</source>
-      <translation>Ne morem prijava</translation>
+      <translation>Ni bilo mogoče prijaviti</translation>
     </message>
     <message>
       <source>A valid username and password is required to login.</source>
-      <translation>Veljavno uporabniško ime in geslo, ki je potrebna za prijavo.</translation>
+      <translation>Za prijavo je potrebno veljavno uporabniško ime in geslo.</translation>
     </message>
     <message>
       <source>Access not allowed</source>
@@ -2977,11 +2977,11 @@
     </message>
     <message>
       <source>Password</source>
-      <translation>geslo</translation>
+      <translation>Geslo</translation>
     </message>
     <message>
       <source>Log in to the eZ Publish Administration Interface</source>
-      <translation>Prijavite se v ez Objavi Administration vmesnik</translation>
+      <translation>Prijavite se v Administrativni vmesnik EZ</translation>
     </message>
     <message>
       <source>Remember me</source>
@@ -2997,7 +2997,7 @@
     </message>
     <message>
       <source>Sign up</source>
-      <translation>Prijava</translation>
+      <translation>Prijavite se</translation>
     </message>
   </context>
   <context>
@@ -3008,15 +3008,15 @@
     </message>
     <message>
       <source>Please retype your old password.</source>
-      <translation>Znova vnesite staro geslo.</translation>
+      <translation>Ponovno vnesite svoje staro geslo.</translation>
     </message>
     <message>
       <source>Password didn't match, please retype your new password.</source>
-      <translation>Geslo se ne ujema, se znova vnesite novo geslo.</translation>
+      <translation>Geslo se ni ujemalo, znova vnesite svoje novo geslo.</translation>
     </message>
     <message>
       <source>Password successfully updated.</source>
-      <translation>Geslo uspešno posodobljen.</translation>
+      <translation>Geslo je uspešno posodobljeno.</translation>
     </message>
     <message>
       <source>Old password</source>
@@ -3036,7 +3036,7 @@
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Preklic</translation>
+      <translation>Prekliči</translation>
     </message>
     <message>
       <source>The new password must be at least %1 characters long, please retype your new password.</source>
@@ -3047,7 +3047,7 @@
     <name>design/ocbootstrap/user/register</name>
     <message>
       <source>Register user</source>
-      <translation>Registracija uporabnika</translation>
+      <translation>Registrirajte uporabnika</translation>
     </message>
     <message>
       <source>Input did not validate</source>
@@ -3059,11 +3059,11 @@
     </message>
     <message>
       <source>Register</source>
-      <translation>Registracija</translation>
+      <translation>Registriraj se</translation>
     </message>
     <message>
       <source>Discard</source>
-      <translation>Zavrzi</translation>
+      <translation>Zavrzite</translation>
     </message>
     <message>
       <source>Unable to register new user</source>
@@ -3078,11 +3078,11 @@
     <name>design/ocbootstrap/user/success</name>
     <message>
       <source>User registered</source>
-      <translation>uporabnik registriran</translation>
+      <translation>Prijava uporabnika</translation>
     </message>
     <message>
       <source>Your account was successfully created. An email will be sent to the specified address. Follow the instructions in that email to activate your account.</source>
-      <translation>Vaš račun je bil uspešno ustvarjen. V sporočilu, ki bo poslano na določen naslov. Sledite navodilom v sporočilu, da aktivirate svoj račun.</translation>
+      <translation>Vaš račun je bil uspešno ustvarjen. E-pošta bo poslana na določen naslov. Sledite navodilom v tem e-poštnem sporočilu, da aktivirate svoj račun.</translation>
     </message>
     <message>
       <source>Your account was successfully created.</source>
@@ -3093,14 +3093,14 @@
     <name>design/ocbootstrap/view/ezbinaryfile</name>
     <message>
       <source>The file could not be found.</source>
-      <translation>Datoteke ni mogoče najti.</translation>
+      <translation>Datoteke ni bilo mogoče najti.</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/view/ezmedia</name>
     <message>
       <source>No media file is available.</source>
-      <translation>Ne mediji datoteka je na voljo.</translation>
+      <translation>Nobena medijska datoteka ni na voljo.</translation>
     </message>
     <message>
       <source>No %link_startFlash player%link_end avaliable!</source>
@@ -3108,7 +3108,7 @@
     </message>
     <message>
       <source>Your browser does not support html5 video.</source>
-      <translation>Vaš brskalnik ne podpira HTML5 videa.</translation>
+      <translation>Vaš brskalnik ne podpira videoposnetka HTML5.</translation>
     </message>
     <message>
       <source>Your browser does not support html5 audio.</source>
@@ -3134,22 +3134,22 @@
     <name>design/ocbootstrap/view/sitemap</name>
     <message>
       <source>Site map</source>
-      <translation>zemljevid strani</translation>
+      <translation>Zemljevid strani</translation>
     </message>
   </context>
   <context>
     <name>design/ocbootstrap/websitetoolbar/objectstates</name>
     <message>
       <source>Object states for object</source>
-      <translation>Predmet navaja za objekt</translation>
+      <translation>Objekt stanja za predmet</translation>
     </message>
     <message>
       <source>Content object state group</source>
-      <translation>Vsebina objekta stanje skupina</translation>
+      <translation>Skupina Država vsebine</translation>
     </message>
     <message>
       <source>Available states</source>
-      <translation>Možna stanja</translation>
+      <translation>Na voljo stanja</translation>
     </message>
     <message>
       <source>No content object state is configured. This can be done %urlstart here %urlend.</source>
@@ -3157,15 +3157,15 @@
     </message>
     <message>
       <source>Set states</source>
-      <translation>Set države</translation>
+      <translation>Nastavite države</translation>
     </message>
     <message>
       <source>Apply states from the list above.</source>
-      <translation>Uporabi države s seznama zgoraj.</translation>
+      <translation>Uporabite države s seznama zgoraj.</translation>
     </message>
     <message>
       <source>No state to be applied to this content object. You might need to be assigned a more permissive access policy.</source>
-      <translation>Ne država, ki se uporablja za ta objekt vsebine. Morda boste morali dodeliti bolj popustljiv politiko dostopa.</translation>
+      <translation>Nobena država se ne uporablja za ta predmet vsebine. Morda boste morali biti dodeljeni bolj permisivni politiki dostopa.</translation>
     </message>
   </context>
   <context>
@@ -3208,25 +3208,25 @@
     </message>
     <message>
       <source>Store draft</source>
-      <translation>osnutek Store</translation>
+      <translation>Trgovina. \ T</translation>
     </message>
     <message>
       <source>Discard draft</source>
-      <translation>Zavrzite osnutek</translation>
+      <translation>Zavrzite</translation>
     </message>
   </context>
   <context>
     <name>design/ezflow/embed/poll</name>
     <message>
       <source>Vote</source>
-      <translation>glasovanje</translation>
+      <translation>Glasuj</translation>
     </message>
   </context>
   <context>
     <name>design/standard/content/datatype</name>
     <message>
       <source>Second</source>
-      <translation>drugi</translation>
+      <translation>Drugič</translation>
     </message>
   </context>
   <context>
@@ -3237,11 +3237,11 @@
     </message>
     <message>
       <source>Your email address has been confirmed. An administrator needs to approve your sign up request, before your login becomes valid.</source>
-      <translation>Vaš e-poštni naslov je potrjen. Skrbnik mora odobriti vaš prijavite zahtevo, preden postane vaša prijava veljavna.</translation>
+      <translation>Vaš e-poštni naslov je bil potrjen. Skrbnik mora odobriti zahtevo za prijavo, preden vaš prijava postane veljavna.</translation>
     </message>
     <message>
       <source>Your account is now activated.</source>
-      <translation>Vaš račun je sedaj aktiviran.</translation>
+      <translation>Vaš račun je zdaj aktiviran.</translation>
     </message>
     <message>
       <source>Your account is already active.</source>
@@ -3249,7 +3249,7 @@
     </message>
     <message>
       <source>Sorry, the key submitted was not a valid key. Account was not activated.</source>
-      <translation>Žal, ključ, ni bil veljaven ključ. Račun ni bil aktiviran.</translation>
+      <translation>Oprostite, predloženi ključ ni bil veljaven ključ. Račun ni bil aktiviran.</translation>
     </message>
   </context>
   <context>
@@ -3267,14 +3267,14 @@
     <name>ezcomments/comment/add</name>
     <message>
       <source>reCAPTCHA API key missing.</source>
-      <translation>reCAPTCHA API ključ manjka.</translation>
+      <translation>Ključ ReCAPTCHA API manjka.</translation>
     </message>
   </context>
   <context>
     <name>ezcomments/comment/add/form</name>
     <message>
       <source>Post a comment</source>
-      <translation>Objavi komentar</translation>
+      <translation>Objavite komentar</translation>
     </message>
     <message>
       <source>Title:</source>
@@ -3298,7 +3298,7 @@
     </message>
     <message>
       <source>Content:</source>
-      <translation>vsebina:</translation>
+      <translation>Vsebina:</translation>
     </message>
     <message>
       <source>Notify me of new comments</source>
@@ -3306,23 +3306,23 @@
     </message>
     <message>
       <source>Security text:</source>
-      <translation>Varnost besedilo:</translation>
+      <translation>Varnostna besedila:</translation>
     </message>
     <message>
       <source>Enter both words below, with or without a space.</source>
-      <translation>Vpiši obe besedi spodaj, z ali brez prostora.</translation>
+      <translation>Vnesite obe besedi spodaj, z ali brez prostora.</translation>
     </message>
     <message>
       <source>The letters are not case-sensitive.</source>
-      <translation>Črke niso velike in male črke.</translation>
+      <translation>Črke niso občutljive na velike in male črke.</translation>
     </message>
     <message>
       <source>Can't read this?</source>
-      <translation>Ne morem brati?</translation>
+      <translation>Tega ne more prebrati?</translation>
     </message>
     <message>
       <source>Try another</source>
-      <translation>poskusite drugo</translation>
+      <translation>Poskusite drugo</translation>
     </message>
     <message>
       <source>Remember me</source>
@@ -3341,11 +3341,11 @@
     <name>ocbootstrap/confirmpublish</name>
     <message>
       <source>Do you confirm the publication of the content?</source>
-      <translation>Ali boste potrdili objavo vsebine?</translation>
+      <translation>Ali potrjujete objavo vsebine?</translation>
     </message>
     <message>
       <source>I do not confirm</source>
-      <translation>Jaz ne potrjujejo</translation>
+      <translation>Ne potrjujem</translation>
     </message>
     <message>
       <source>I confirm the publication</source>
@@ -3360,23 +3360,23 @@
     </message>
     <message>
       <source>Please retype your old password.</source>
-      <translation>Znova vnesite staro geslo.</translation>
+      <translation>Ponovno vnesite svoje staro geslo.</translation>
     </message>
     <message>
       <source>Password didn't match, please retype your new password.</source>
-      <translation>Geslo se ne ujema, se znova vnesite novo geslo.</translation>
+      <translation>Geslo se ni ujemalo, znova vnesite svoje novo geslo.</translation>
     </message>
     <message>
       <source>Password didn't validate, please retype your new password.</source>
-      <translation>Geslo ni potrdil, prosim znova vnesite novo geslo.</translation>
+      <translation>Geslo niso potrdili, znova vnesite svoje novo geslo.</translation>
     </message>
     <message>
       <source>New password must be different from the old one. Please choose another password.</source>
-      <translation>Novo geslo mora biti drugačna od stare. Izberite drugo geslo.</translation>
+      <translation>Novo geslo mora biti drugačno od starega. Izberite drugo geslo.</translation>
     </message>
     <message>
       <source>Password successfully updated.</source>
-      <translation>Geslo uspešno posodobljen.</translation>
+      <translation>Geslo je uspešno posodobljeno.</translation>
     </message>
     <message>
       <source>Old password</source>
@@ -3396,7 +3396,7 @@
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Preklic</translation>
+      <translation>Prekliči</translation>
     </message>
     <message>
       <source>%siteurl your password is about to expire</source>
@@ -3404,7 +3404,7 @@
     </message>
     <message>
       <source>Your password is about to expire</source>
-      <translation>Vaše geslo je kmalu potekla</translation>
+      <translation>Vaše geslo bo poteklo</translation>
     </message>
   </context>
   <context>
@@ -3419,7 +3419,7 @@
     </message>
     <message>
       <source>There is no registered user with that email address.</source>
-      <translation>Ni registriran uporabnik s tem e-poštnim naslovom.</translation>
+      <translation>Ni registriranega uporabnika s tem e-poštnim naslovom.</translation>
     </message>
     <message>
       <source>The password has been changed successfully.</source>
@@ -3427,11 +3427,11 @@
     </message>
     <message>
       <source>The passwords do not match. Please, be sure to enter the same password in both fields.</source>
-      <translation>Gesla se ne ujemata. Prosim, ne pozabite vnesti isto geslo na obeh področjih.</translation>
+      <translation>Gesla se ne ujemajo. Prosimo, da vnesete isto geslo na obe poljih.</translation>
     </message>
     <message>
       <source>The new password is invalid, please choose new one.</source>
-      <translation>Novo geslo je neveljavno, izberite novo.</translation>
+      <translation>Novo geslo ni veljavno, izberite novo.</translation>
     </message>
     <message>
       <source>Choose a new password</source>
@@ -3439,15 +3439,15 @@
     </message>
     <message>
       <source>Enter your desired new password in the form below.</source>
-      <translation>Vnesite želeno novo geslo v spodnji obrazec.</translation>
+      <translation>V spodnjem obrazcu vnesite želeno novo geslo.</translation>
     </message>
     <message>
       <source>Password</source>
-      <translation>geslo</translation>
+      <translation>Geslo</translation>
     </message>
     <message>
       <source>Password Confirm</source>
-      <translation>geslo Potrdi</translation>
+      <translation>Geslo potrdi</translation>
     </message>
     <message>
       <source>Change password</source>
@@ -3455,15 +3455,15 @@
     </message>
     <message>
       <source>The key is invalid or has been used.</source>
-      <translation>Ključ ni veljaven ali pa je bil uporabljen.</translation>
+      <translation>Ključ je neveljaven ali je bil uporabljen.</translation>
     </message>
     <message>
       <source>Have you forgotten your password?</source>
-      <translation>Ali ste pozabili geslo?</translation>
+      <translation>Ste pozabili geslo?</translation>
     </message>
     <message>
       <source>If you have forgotten your password we can generate a new one for you. All you need to do is to enter your email address and we will create a new password for you.</source>
-      <translation>Če ste pozabili geslo, lahko ustvari novo za vas. Vse, kar morate storiti je, da vnesete svoj e-naslov in bomo ustvarili novo geslo za vas.</translation>
+      <translation>Če ste pozabili geslo, lahko ustvarimo novo za vas. Vse kar morate storiti je, da vnesete svoj e-poštni naslov in za vas bomo ustvarili novo geslo.</translation>
     </message>
     <message>
       <source>Email</source>
@@ -3471,11 +3471,11 @@
     </message>
     <message>
       <source>Generate new password</source>
-      <translation>Ustvari novo geslo</translation>
+      <translation>Ustvarite novo geslo</translation>
     </message>
     <message>
       <source>%siteurl forgot password</source>
-      <translation>% SITEURL Pozabil geslo</translation>
+      <translation>% Siteurl Pozabljeno geslo</translation>
     </message>
     <message>
       <source>This link is valid until %1, after that time you should generate a new one.</source>
@@ -3484,14 +3484,14 @@
     <message>
       <source>A mail has been sent to the following email address: %1. This email contains a link you need to click so
         that we can confirm that the correct user is getting the new password.</source>
-      <translation>Poštno je bila poslana na elektronski naslov:% 1. Ta e-poštni naslov vsebuje povezavo, ki jo potrebujejo za to, kliknite
-        da bomo lahko potrdili, da je pravilen uporabnik dobili novo geslo.</translation>
+      <translation>Pošta je bila poslana na naslednji e-poštni naslov:% 1. Ta e-poštni naslov vsebuje povezavo, ki jo potrebujete za tako
+        Da lahko potrdimo, da je pravi uporabnik dobil novo geslo.</translation>
     </message>
     <message>
       <source>If you have forgotten your password we can generate a new one for you. All you need to do is to enter your
         email address and we will create a new password for you.</source>
-      <translation>Če ste pozabili geslo, lahko ustvari novo za vas. Vse, kar morate storiti je, da vnesete vaš
-        elektronski naslov in bomo ustvarili novo geslo za vas.</translation>
+      <translation>Če ste pozabili geslo, lahko ustvarimo novo za vas. Vse kar morate storiti je, da vnesete svoje
+        E-poštni naslov in za vas bomo ustvarili novo geslo.</translation>
     </message>
   </context>
   <context>
@@ -3510,7 +3510,7 @@
     </message>
     <message>
       <source>Share on Whatsapp</source>
-      <translation>Delite na WhatsApp</translation>
+      <translation>Delite na WhatsApp.</translation>
     </message>
   </context>
 </TS>

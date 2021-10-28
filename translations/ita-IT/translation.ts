@@ -3404,14 +3404,14 @@
     </message>
     <message>
       <source>Your password is about to expire</source>
-      <translation>La password sta per scadere</translation>
+      <translation>La tua password sta per scadere</translation>
     </message>
   </context>
   <context>
     <name>mbpaex/userpaex/forgotpassword</name>
     <message>
       <source>Click here to set your new password</source>
-      <translation>Clicca qui per impostare la nuova password</translation>
+      <translation>Clicca qui per impostare la tua nuova password</translation>
     </message>
     <message>
       <source>A mail has been sent to the following email address: %1. This email contains a link you need to click so that we can confirm that the correct user is getting the new password.</source>
