@@ -1477,7 +1477,7 @@
     </message>
     <message>
       <source>New reply</source>
-      <translation>Neue Antwort.</translation>
+      <translation>Neue Antwort</translation>
     </message>
     <message>
       <source>Keep me updated</source>
@@ -2957,7 +2957,7 @@
     <name>design/ocbootstrap/user/login</name>
     <message>
       <source>Login</source>
-      <translation>Anmeldung</translation>
+      <translation>Anmelden</translation>
     </message>
     <message>
       <source>Could not login</source>
