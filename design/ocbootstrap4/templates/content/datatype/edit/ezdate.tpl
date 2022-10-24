@@ -52,7 +52,7 @@
                    name="{$attribute_base}_date_year_{$attribute.id}"
                    size="5"
                    value="{section show=$attribute.content.is_valid}{$attribute.content.year}{/section}"/>
-            <i class="fa fa-calendar ml-2"
+            <i class="fa fa-calendar ml-2 ms-2"
                id="{$attribute_base}_date_cal_{$attribute.id}"
                onclick="showDatePicker( '{$attribute_base}', '{$attribute.id}', 'date' );" style="cursor: pointer;"></i>
         </div>

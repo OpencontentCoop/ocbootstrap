@@ -10,7 +10,7 @@
     <div id="map-{$attribute.id}" style="width: 100%; height: 300px; margin-top: 2px;"></div>
 
     <div class="clearfix">
-        <button class="float-right button btn btn-sm btn-danger ml-3" name="Reset" style="display: none">Annulla modifiche</button>
+        <button class="float-right button btn btn-sm btn-danger ml-3 ms-3" name="Reset" style="display: none">Annulla modifiche</button>
         <button class="float-right button btn btn-sm btn-info" name="MyLocation">Rileva posizione</button>
     </div>
     <div class="row">
