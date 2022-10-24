@@ -4,7 +4,7 @@
      ezini( 'ObjectRelationsMultiupload', 'ClassAttributeIdentifiers', 'ocoperatorscollection.ini' )|contains( $attribute.contentclass_attribute_identifier )     
 )}
 
-<div id="{concat('multiupload-', $attribute.id, '-container')}" class="float-left ml-2">
+<div id="{concat('multiupload-', $attribute.id, '-container')}" class="float-left ml-2 ms-2">
     <span class="btn btn-sm btn-success fileinput-button">
         <i class="spinner fa a fa-circle-o-notch fa-spin" style="display: none"></i>
         <span>Inserisci file</span>

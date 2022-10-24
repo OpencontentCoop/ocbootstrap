@@ -58,7 +58,7 @@
 
           <div class="clearfix">
               <input class="btn btn-lg btn-success float-right" type="submit" name="PublishButton" value="{'Store'|i18n('ocbootstrap')}" />
-              <input class="btn btn-lg btn-warning float-right mr-3" type="submit" name="StoreButton" value="{'Store draft'|i18n('ocbootstrap')}" />
+              <input class="btn btn-lg btn-warning float-right mr-3 me-3" type="submit" name="StoreButton" value="{'Store draft'|i18n('ocbootstrap')}" />
               <input class="btn btn-lg btn-dark" type="submit" name="DiscardButton" value="{'Discard'|i18n('ocbootstrap')}" />
               <input type="hidden" name="DiscardConfirm" value="0" />
               <input type="hidden" name="RedirectIfDiscarded" value="{if ezhttp_hasvariable( 'RedirectIfDiscarded', 'session' )}{ezhttp( 'RedirectIfDiscarded', 'session' )}{else}{$_redirect}{/if}" />

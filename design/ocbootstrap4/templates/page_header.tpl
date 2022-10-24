@@ -31,7 +31,7 @@
         </ul>
 
         {* search form *}
-        <form class="form-inline my-2 my-lg-0 mr-2" action="{'/content/search'|ezurl( 'no' )}" method="get">
+        <form class="form-inline my-2 my-lg-0 mr-2 me-2" action="{'/content/search'|ezurl( 'no' )}" method="get">
             <div class="input-group">
                 <input id="site-wide-search-field" class="form-control" name="SearchText" type="text" placeholder="{'Search'|i18n('design/ocbootstrap/pagelayout')}" aria-label="{'Search'|i18n('design/ocbootstrap/pagelayout')}">
                 <div class="input-group-append">
@@ -71,7 +71,7 @@
             {/if}
             {/foreach}
 
-            <ul class="navbar-nav mr-2">
+            <ul class="navbar-nav mr-2 me-2">
                 <li class="nav-item active">
                     <a class="nav-link" id="dropdown-language" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-globe"></i> <span class="d-inline d-md-none">{'Languages'|i18n('design/ocbootstrap/pagelayout')}</span>

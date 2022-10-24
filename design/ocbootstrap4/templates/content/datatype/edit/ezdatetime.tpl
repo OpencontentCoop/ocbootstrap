@@ -57,7 +57,7 @@
                        type="text" name="{$attribute_base}_datetime_second_{$attribute.id}" size="3"
                        value="{if $attribute.content.is_valid}{$attribute.content.second}{/if}"/>
             {/if}
-            <i class="fa fa-calendar ml-2"
+            <i class="fa fa-calendar ml-2 ms-2"
                id="{$attribute_base}_datetime_cal_{$attribute.id}"
                onclick="showDatePicker( '{$attribute_base}', '{$attribute.id}', 'datetime' );"
                style="cursor: pointer;"></i>
