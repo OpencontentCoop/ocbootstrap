@@ -40,7 +40,7 @@
             {if is_set( $redirect_uri )}
                 <input class="text" type="hidden" name="RedirectURI" value="{$redirect_uri}" />
             {/if}
-            <button type="button" type="submit" class="btn btn-link go-back" name="BackButton">
+            <button type="submit" class="btn btn-link go-back" name="BackButton">
                 {display_icon('it-arrow-left', 'svg', 'icon icon-sm mr-2 me-2')}
                 {'Back'|i18n( 'design/ocbootstrap/content/history' )}
             </button>
@@ -316,7 +316,7 @@
 
         <div class="clearfix">
             <form class="float-right" name="versionsback" action={concat( '/content/history/', $object.id, '/' )|ezurl} method="post">
-                <button type="button" type="submit" class="btn btn-link go-back" name="BackButton">
+                <button type="submit" class="btn btn-link go-back" name="BackButton">
                     {display_icon('it-arrow-left', 'svg', 'icon icon-sm mr-2 me-2')}
                     {'Back'|i18n( 'design/ocbootstrap/content/history' )}
                 </button>
