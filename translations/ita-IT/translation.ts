@@ -3475,16 +3475,16 @@
     </message>
     <message>
       <source>%siteurl forgot password</source>
-      <translation>% SITEURL password dimenticata</translation>
+      <translation>%siteurl password dimenticata</translation>
     </message>
     <message>
       <source>This link is valid until %1, after that time you should generate a new one.</source>
-      <translation>Questo link è valida fino al 1%</translation>
+      <translation>Questo link è valida fino al %1</translation>
     </message>
     <message>
       <source>A mail has been sent to the following email address: %1. This email contains a link you need to click so
         that we can confirm that the correct user is getting the new password.</source>
-      <translation>Una mail è stata inviata al seguente indirizzo di posta elettronica:% 1. E' necessario cliccare sul link ivi contenuto.</translation>
+      <translation>Una mail è stata inviata al seguente indirizzo di posta elettronica: %1. E' necessario cliccare sul link ivi contenuto.</translation>
     </message>
     <message>
       <source>If you have forgotten your password we can generate a new one for you. All you need to do is to enter your
