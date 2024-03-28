@@ -110,14 +110,14 @@
   </div>
 
   <div class="block-calendar-default block-calendar-big my-3">
-      <div class="calendar"></div>
+    <div class="calendar"></div>
   </div>
 
   <div class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header" style="display: block">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button type="button" class="close" data-dismiss="modal" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <h3 class="modal-title">{'Modify event'|i18n('ocevents/attribute')}</h3>
         </div>
         <div class="modal-body">
@@ -132,10 +132,10 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger pull-left" data-dismiss="modal" id="delete-event"><i
+          <button type="button" class="btn btn-danger pull-left" data-bs-dismiss="modal" data-dismiss="modal" id="delete-event"><i
               class="fa fa-trash"></i> {'Delete'|i18n('ocevents/attribute')}
           </button>
-          <button type="button" class="btn btn-success" data-dismiss="modal" id="save-event"><i
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal" data-dismiss="modal" id="save-event"><i
               class="fa fa-save"></i> {'Store'|i18n('ocevents/attribute')}
           </button>
         </div>
