@@ -28,7 +28,11 @@
                 {/if}
                 {if $newPasswordNotValidate}
                     <div class="alert alert-warning">
-                        {"Password didn't validate, please retype your new password."|i18n('mbpaex/userpaex')}
+                        {if and(is_set($newPasswordValidationMessage), $newPasswordValidationMessage|ne(''))}
+                            {$newPasswordValidationMessage}
+                        {else}
+                            {"Password didn't validate, please retype your new password."|i18n('mbpaex/userpaex')}
+                        {/if}
                     </div>
                 {/if}
                 {if $newPasswordMustDiffer}

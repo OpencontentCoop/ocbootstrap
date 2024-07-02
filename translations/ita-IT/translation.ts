@@ -3423,7 +3423,7 @@
     </message>
     <message>
       <source>The password has been changed successfully.</source>
-      <translation>La password è stata cambiata con successo.</translation>
+      <translation>La password è stata modificata con successo.</translation>
     </message>
     <message>
       <source>The passwords do not match. Please, be sure to enter the same password in both fields.</source>
@@ -3484,7 +3484,7 @@
     <message>
       <source>A mail has been sent to the following email address: %1. This email contains a link you need to click so
         that we can confirm that the correct user is getting the new password.</source>
-      <translation>Una mail è stata inviata al seguente indirizzo di posta elettronica: %1. E' necessario cliccare sul link ivi contenuto.</translation>
+      <translation>Una mail è stata inviata al seguente indirizzo di posta elettronica:% 1. E' necessario cliccare sul link ivi contenuto.</translation>
     </message>
     <message>
       <source>If you have forgotten your password we can generate a new one for you. All you need to do is to enter your
@@ -3509,6 +3509,13 @@
     <message>
       <source>Share on Whatsapp</source>
       <translation>Condividi su Whatsapp</translation>
+    </message>
+  </context>
+  <context>
+    <name>mbpaex/validation</name>
+    <message>
+      <source>This password has previously appeared in a data breach and should never be used. If you've ever used it anywhere before, change it!</source>
+      <translation>La password è apparsa in passato in un database di violazione dei dati e non deve mai essere utilizzata. Se l'avete già usata da qualche parte prima, cambiatela!</translation>
     </message>
   </context>
 </TS>

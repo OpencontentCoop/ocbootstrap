@@ -3513,4 +3513,11 @@
       <translation>Teilen Sie auf WhatsApp.</translation>
     </message>
   </context>
+  <context>
+    <name>mbpaex/validation</name>
+    <message>
+      <source>This password has previously appeared in a data breach and should never be used. If you've ever used it anywhere before, change it!</source>
+      <translation>Dieses Passwort ist bereits bei einem Datendiebstahl aufgetaucht und sollte nie wieder verwendet werden. Wenn Sie es schon einmal irgendwo verwendet haben, ändern Sie es!</translation>
+    </message>
+  </context>
 </TS>
