@@ -21,7 +21,7 @@
     </message>
     <message>
       <source>Discard</source>
-      <translation>Undo</translation>
+      <translation>Cancel</translation>
     </message>
     <message>
       <source>At least</source>
@@ -342,23 +342,23 @@
     </message>
     <message>
       <source>5 items</source>
-      <translation>5 elements</translation>
+      <translation>5 items</translation>
     </message>
     <message>
       <source>10 items</source>
-      <translation>10 elements</translation>
+      <translation>10 items</translation>
     </message>
     <message>
       <source>20 items</source>
-      <translation>20 elements</translation>
+      <translation>20 items</translation>
     </message>
     <message>
       <source>30 items</source>
-      <translation>30 elements</translation>
+      <translation>30 items</translation>
     </message>
     <message>
       <source>50 items</source>
-      <translation>50 elements</translation>
+      <translation>50 items</translation>
     </message>
     <message>
       <source>Search</source>
@@ -370,7 +370,7 @@
     </message>
     <message>
       <source>Search for "%1" returned %2 matches</source>
-      <translation>Search for "%1" yielded %2 results</translation>
+      <translation>Your search for "%1" returned %2 results</translation>
     </message>
     <message>
       <source>Last month</source>
@@ -405,7 +405,7 @@
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Undo</translation>
+      <translation>Cancel</translation>
     </message>
   </context>
   <context>
@@ -695,7 +695,7 @@
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Undo</translation>
+      <translation>Cancel</translation>
     </message>
   </context>
   <context>
@@ -943,7 +943,7 @@
     </message>
     <message>
       <source>No results were found when searching for "%1".</source>
-      <translation>No result matched the search for "%1".</translation>
+      <translation>No results found for "%1".</translation>
     </message>
     <message>
       <source>Search tips</source>
@@ -951,7 +951,7 @@
     </message>
     <message>
       <source>Check spelling of keywords.</source>
-      <translation>Check the spelling of keywords.</translation>
+      <translation>Check keyword spelling.</translation>
     </message>
     <message>
       <source>Try changing some keywords (eg, "car" instead of "cars").</source>
@@ -967,7 +967,7 @@
     </message>
     <message>
       <source>Search for "%1" returned %2 matches</source>
-      <translation>Search for "%1" yielded %2 results</translation>
+      <translation>Your search for "%1" returned %2 results</translation>
     </message>
     <message>
       <source>For more options try the %1Advanced search%2</source>
@@ -1006,11 +1006,11 @@
     </message>
     <message>
       <source>Your email address</source>
-      <translation>Your e-mail address</translation>
+      <translation>Your email address</translation>
     </message>
     <message>
       <source>Recipient's email address</source>
-      <translation>E-mail address container</translation>
+      <translation>Email address container</translation>
     </message>
     <message>
       <source>Comment</source>
@@ -1018,11 +1018,11 @@
     </message>
     <message>
       <source>Send</source>
-      <translation>Submit</translation>
+      <translation>Send</translation>
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Undo</translation>
+      <translation>Cancel</translation>
     </message>
   </context>
   <context>
@@ -1037,7 +1037,7 @@
     </message>
     <message>
       <source>Discard</source>
-      <translation>Undo</translation>
+      <translation>Cancel</translation>
     </message>
   </context>
   <context>
@@ -1052,7 +1052,7 @@
     </message>
     <message>
       <source>Discard</source>
-      <translation>Undo</translation>
+      <translation>Cancel</translation>
     </message>
   </context>
   <context>
@@ -1067,7 +1067,7 @@
     </message>
     <message>
       <source>Discard</source>
-      <translation>Undo</translation>
+      <translation>Cancel</translation>
     </message>
   </context>
   <context>
@@ -1082,7 +1082,7 @@
     </message>
     <message>
       <source>Discard</source>
-      <translation>Undo</translation>
+      <translation>Cancel</translation>
     </message>
   </context>
   <context>
@@ -1254,7 +1254,7 @@
     <name>design/ocbootstrap/full/call_to_action</name>
     <message>
       <source>Submit</source>
-      <translation>Submit</translation>
+      <translation>Send</translation>
     </message>
   </context>
   <context>
@@ -1618,7 +1618,7 @@
     </message>
     <message>
       <source>Number of posts</source>
-      <translation>Number of submissions</translation>
+      <translation>Number of posts</translation>
     </message>
     <message>
       <source>Last reply</source>
@@ -1740,7 +1740,7 @@
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Undo</translation>
+      <translation>Cancel</translation>
     </message>
     <message>
       <source>The items contain more than the maximum possible nodes for subtree removal and will not be deleted. You can remove this subtree using the ezsubtreeremove.php script.</source>
@@ -1875,7 +1875,7 @@
     </message>
     <message>
       <source>Register</source>
-      <translation>Sign up</translation>
+      <translation>Register</translation>
     </message>
     <message>
       <source>Login</source>
@@ -1891,7 +1891,7 @@
     </message>
     <message>
       <source>Forgot your password?</source>
-      <translation>Forgotten your password?</translation>
+      <translation>Forget your password?</translation>
     </message>
     <message>
       <source>Languages</source>
@@ -2013,7 +2013,7 @@
     </message>
     <message>
       <source>Source</source>
-      <translation>Origin</translation>
+      <translation>Source</translation>
     </message>
     <message>
       <source>Source path</source>
@@ -2021,7 +2021,7 @@
     </message>
     <message>
       <source>Click this button to select the source node for the RSS export source. Objects of the type selected in the drop-down below published as sub items of the selected node will be included in the RSS export.</source>
-      <translation>Press this button to select the source node of the RSS export. Objects of the selected type in the drop-down menu published as sub-elements of the selected node will be included in the RSS export.</translation>
+      <translation>Press this button to select the source node of the RSS export. Objects of the selected type in the drop-down menu published as sub-items of the selected node will be included in the RSS export.</translation>
     </message>
     <message>
       <source>Subnodes</source>
@@ -2101,7 +2101,7 @@
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Undo</translation>
+      <translation>Cancel</translation>
     </message>
     <message>
       <source>Cancel the changes and return to the RSS overview.</source>
@@ -2216,7 +2216,7 @@
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Undo</translation>
+      <translation>Cancel</translation>
     </message>
     <message>
       <source>Cancel the changes and return to the RSS overview.</source>
@@ -2497,7 +2497,7 @@
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Undo</translation>
+      <translation>Cancel</translation>
     </message>
     <message>
       <source>Confirm</source>
@@ -2725,7 +2725,7 @@
     </message>
     <message>
       <source>Email</source>
-      <translation>E-mail address</translation>
+      <translation>Email</translation>
     </message>
     <message>
       <source>Company</source>
@@ -2741,11 +2741,11 @@
     </message>
     <message>
       <source>Place</source>
-      <translation>Location</translation>
+      <translation>City</translation>
     </message>
     <message>
       <source>State</source>
-      <translation>Status</translation>
+      <translation>State</translation>
     </message>
     <message>
       <source>Country</source>
@@ -2757,7 +2757,7 @@
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Undo</translation>
+      <translation>Cancel</translation>
     </message>
     <message>
       <source>Continue</source>
@@ -2833,7 +2833,7 @@
     </message>
     <message>
       <source>Email</source>
-      <translation>E-mail address</translation>
+      <translation>Email</translation>
     </message>
     <message>
       <source>Name</source>
@@ -2888,15 +2888,15 @@
     </message>
     <message>
       <source>Have you forgotten your password?</source>
-      <translation>Forgotten your password?</translation>
+      <translation>Forget your password?</translation>
     </message>
     <message>
       <source>If you have forgotten your password, enter your email address and we will create a new password and send it to you.</source>
-      <translation>If you have forgotten your password, enter your e-mail address and we will create a new password and send it to you.</translation>
+      <translation>If you have forgotten your password, enter your email address and we will create a new password and send it to you.</translation>
     </message>
     <message>
       <source>Email</source>
-      <translation>E-mail address</translation>
+      <translation>Email</translation>
     </message>
     <message>
       <source>Generate new password</source>
@@ -2939,7 +2939,7 @@
     </message>
     <message>
       <source>Forgot your password?</source>
-      <translation>Forgotten your password?</translation>
+      <translation>Forget your password?</translation>
     </message>
     <message>
       <source>Username</source>
@@ -2986,7 +2986,7 @@
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Undo</translation>
+      <translation>Cancel</translation>
     </message>
     <message>
       <source>The new password must be at least %1 characters long, please retype your new password.</source>
@@ -3009,11 +3009,11 @@
     </message>
     <message>
       <source>Register</source>
-      <translation>Sign up</translation>
+      <translation>Register</translation>
     </message>
     <message>
       <source>Discard</source>
-      <translation>Undo</translation>
+      <translation>Cancel</translation>
     </message>
     <message>
       <source>Unable to register new user</source>
@@ -3028,7 +3028,7 @@
     <name>design/ocbootstrap/user/success</name>
     <message>
       <source>User registered</source>
-      <translation>Registered user</translation>
+      <translation>User registered</translation>
     </message>
     <message>
       <source>Your account was successfully created. An email will be sent to the specified address. Follow the instructions in that email to activate your account.</source>
@@ -3115,7 +3115,7 @@
     </message>
     <message>
       <source>No state to be applied to this content object. You might need to be assigned a more permissive access policy.</source>
-      <translation>No status to apply to this content object. You need wider permissions.</translation>
+      <translation>No status to apply to this content object. You need more extensive permissions.</translation>
     </message>
   </context>
   <context>
@@ -3202,7 +3202,7 @@
     </message>
     <message>
       <source>Name:</source>
-      <translation>First name:</translation>
+      <translation>Name:</translation>
     </message>
     <message>
       <source>Website:</source>
@@ -3316,7 +3316,7 @@
     </message>
     <message>
       <source>Cancel</source>
-      <translation>Undo</translation>
+      <translation>Cancel</translation>
     </message>
     <message>
       <source>%siteurl your password is about to expire</source>
@@ -3379,11 +3379,11 @@
     </message>
     <message>
       <source>Have you forgotten your password?</source>
-      <translation>Forgotten your password?</translation>
+      <translation>Forgot your password?</translation>
     </message>
     <message>
       <source>If you have forgotten your password we can generate a new one for you. All you need to do is to enter your email address and we will create a new password for you.</source>
-      <translation>If you have forgotten your password, all you have to do is enter your e-mail address and we will create a new password for you.</translation>
+      <translation>If you have forgotten your password, all you have to do is enter your email address and we will create a new password for you.</translation>
     </message>
     <message>
       <source>Email</source>
