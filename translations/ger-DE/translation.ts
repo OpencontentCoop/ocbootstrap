@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE TS>
-<TS version="2.0">
+<TS version="2.1" language="de">
   <context>
     <name>ocbootstrap</name>
     <message>
@@ -81,60 +81,10 @@
     </message>
   </context>
   <context>
-    <name>design/admin/content/datatype</name>
-    <message>
-      <source>Year</source>
-      <translation>Jahr</translation>
-    </message>
-    <message>
-      <source>Month</source>
-      <translation>Monat</translation>
-    </message>
-    <message>
-      <source>Day</source>
-      <translation>Tag</translation>
-    </message>
-    <message>
-      <source>Hour</source>
-      <translation>Stunde</translation>
-    </message>
-    <message>
-      <source>Minute</source>
-      <translation>Minute</translation>
-    </message>
-  </context>
-  <context>
     <name>design/admin/content/edit_attribute</name>
-    <message>
-      <source>not translatable</source>
-      <translation>nicht übersetzbar</translation>
-    </message>
-    <message>
-      <source>required</source>
-      <translation>erforderlich</translation>
-    </message>
-    <message>
-      <source>information collector</source>
-      <translation>Informationssammler</translation>
-    </message>
     <message>
       <source>General information</source>
       <translation>Allgemeine Informationen</translation>
-    </message>
-  </context>
-  <context>
-    <name>design/admin/preview/article</name>
-    <message>
-      <source>Comments allowed</source>
-      <translation>Kommentare erlaubt</translation>
-    </message>
-    <message>
-      <source>Yes</source>
-      <translation>Ja</translation>
-    </message>
-    <message>
-      <source>No</source>
-      <translation>Nein</translation>
     </message>
   </context>
   <context>
@@ -622,7 +572,7 @@
     <name>design/ocbootstrap/content/edit_draft</name>
     <message>
       <source>The currently published version is %version and was published at %time.</source>
-      <translation type="unfinished"/>
+      <translation></translation>
     </message>
     <message>
       <source>The last modification was done at %modified.</source>
@@ -756,7 +706,7 @@
     </message>
     <message>
       <source>Version %1 is not available for editing anymore. Only drafts can be edited.</source>
-      <translation type="unfinished"/>
+      <translation></translation>
     </message>
     <message>
       <source>To edit this version, first create a copy of it.</source>
@@ -768,7 +718,7 @@
     </message>
     <message>
       <source>Version %1 was not created by you. Only your own drafts can be edited.</source>
-      <translation type="unfinished"/>
+      <translation></translation>
     </message>
     <message>
       <source>Unable to create new version</source>
@@ -1271,7 +1221,7 @@
     </message>
     <message>
       <source>%login_link_startLog in%login_link_end or %create_link_startcreate a user account%create_link_end to comment.</source>
-      <translation type="unfinished"/>
+      <translation></translation>
     </message>
     <message>
       <source>Tip a friend</source>
@@ -1415,7 +1365,7 @@
     </message>
     <message>
       <source>You need to be logged in to get access to the forums. You can do so %login_link_start%here%login_link_end%</source>
-      <translation type="unfinished"/>
+      <translation></translation>
     </message>
     <message>
       <source>Topic</source>
@@ -1485,7 +1435,7 @@
     </message>
     <message>
       <source>You need to be logged in to get access to the forums. You can do so %login_link_start%here%login_link_end%</source>
-      <translation type="unfinished"/>
+      <translation></translation>
     </message>
     <message>
       <source>Author</source>
@@ -1690,7 +1640,7 @@
     <name>design/ocbootstrap/line/poll</name>
     <message>
       <source>%count votes</source>
-      <translation type="unfinished"/>
+      <translation></translation>
     </message>
     <message>
       <source>Vote</source>
@@ -1740,11 +1690,11 @@
     <name>design/ocbootstrap/link</name>
     <message>
       <source>%sitetitle front page</source>
-      <translation type="unfinished"/>
+      <translation></translation>
     </message>
     <message>
       <source>Search %sitetitle</source>
-      <translation type="unfinished"/>
+      <translation></translation>
     </message>
     <message>
       <source>Printable version</source>
@@ -1766,11 +1716,11 @@
     </message>
     <message>
       <source>%nodename and its %childcount children. %additionalwarning</source>
-      <translation type="unfinished"/>
+      <translation></translation>
     </message>
     <message>
       <source>%nodename %additionalwarning</source>
-      <translation type="unfinished"/>
+      <translation></translation>
     </message>
     <message>
       <source>Move to trash</source>
@@ -2162,7 +2112,7 @@
     <name>design/ocbootstrap/rss/edit_import</name>
     <message>
       <source>Edit &lt;%rss_import_name&gt; [RSS Import]</source>
-      <translation type="unfinished"/>
+      <translation></translation>
     </message>
     <message>
       <source>Name</source>
@@ -3220,36 +3170,6 @@
     <message>
       <source>Vote</source>
       <translation>Abstimmung</translation>
-    </message>
-  </context>
-  <context>
-    <name>design/standard/content/datatype</name>
-    <message>
-      <source>Second</source>
-      <translation>Sekunde</translation>
-    </message>
-  </context>
-  <context>
-    <name>design/standard/user</name>
-    <message>
-      <source>Activate account</source>
-      <translation>Account aktivieren</translation>
-    </message>
-    <message>
-      <source>Your email address has been confirmed. An administrator needs to approve your sign up request, before your login becomes valid.</source>
-      <translation>Ihre E-Mail-Adresse wurde bestätigt. Ein Administrator muss Ihren Registrierungsantrag genehmigen, bevor Ihr Login gültig wird.</translation>
-    </message>
-    <message>
-      <source>Your account is now activated.</source>
-      <translation>Ihr Konto ist nun aktiviert.</translation>
-    </message>
-    <message>
-      <source>Your account is already active.</source>
-      <translation>Ihr Konto ist bereits aktiviert.</translation>
-    </message>
-    <message>
-      <source>Sorry, the key submitted was not a valid key. Account was not activated.</source>
-      <translation>Leider war der eingereichte Schlüssel kein gültiger Schlüssel. Das Konto wurde nicht aktiviert.</translation>
     </message>
   </context>
   <context>
