@@ -128,6 +128,49 @@
                         });
                     };
 
+                    // blueimp fires the "add" callback once PER FILE, even when several
+                    // files are selected together in the OS file picker (verified: a
+                    // 2-file selection triggers two separate "add" calls, each with a
+                    // single-file data.files). Without queuing, each call would pop its
+                    // own conflict box synchronously and immediately replace the previous
+                    // one, so the editor would only ever see the last file's box. Instead,
+                    // queue every conflicting file found during the same call stack and
+                    // flush once (setTimeout 0), showing a single box listing all of them.
+                    var pendingConflicts = []; // [{data: <blueimp data>, names: [...]}]
+                    var flushTimer = null;
+
+                    var _flushPendingConflicts = function () {
+                        flushTimer = null;
+                        var toProcess = pendingConflicts;
+                        pendingConflicts = [];
+                        if (toProcess.length === 0) {
+                            return;
+                        }
+
+                        var allNames = [];
+                        $.each(toProcess, function (i, item) {
+                            allNames = allNames.concat(item.names);
+                        });
+
+                        _showConflictBox(allNames, function (choices) {
+                            $.each(toProcess, function (i, item) {
+                                var itemChoices = {};
+                                $.each(item.names, function (j, name) {
+                                    itemChoices[name] = choices[name];
+                                });
+                                item.data.formData = function (form) {
+                                    return form.serializeArray().concat([{
+                                        name: 'OcMultibinaryReplaceChoice',
+                                        value: JSON.stringify(itemChoices)
+                                    }]);
+                                };
+                                item.data.submit();
+                            });
+                        }, function () {
+                            // Editor cancelled: none of the queued files are uploaded.
+                        });
+                    };
+
                     $element.find('.input-upload').fileupload({
                         dropZone: $element,
                         formData: function (form) {
@@ -145,29 +188,22 @@
                             }
 
                             var existingNames = _existingFilenames();
-                            var conflicts = [];
+                            var conflictingNames = [];
                             $.each(data.files, function (i, file) {
                                 if ($.inArray(file.name, existingNames) !== -1) {
-                                    conflicts.push(file.name);
+                                    conflictingNames.push(file.name);
                                 }
                             });
 
-                            if (conflicts.length === 0) {
+                            if (conflictingNames.length === 0) {
                                 data.submit();
                                 return;
                             }
 
-                            _showConflictBox(conflicts, function (choices) {
-                                data.formData = function (form) {
-                                    return form.serializeArray().concat([{
-                                        name: 'OcMultibinaryReplaceChoice',
-                                        value: JSON.stringify(choices)
-                                    }]);
-                                };
-                                data.submit();
-                            }, function () {
-                                // Editor cancelled: this batch is not uploaded.
-                            });
+                            pendingConflicts.push({data: data, names: conflictingNames});
+                            if (flushTimer === null) {
+                                flushTimer = setTimeout(_flushPendingConflicts, 0);
+                            }
                         },
                         submit: function (e, data) {
                             $buttonContainer.hide();
