@@ -87,13 +87,30 @@
                                 $(document.importNode($conflictRowTemplate[0].content, true)).find('.upload-conflict-row') :
                                 $($conflictRowTemplate.html());
 
+                            var groupName = 'upload-conflict-choice-' + index;
+                            var $replaceInput = $row.find('.upload-conflict-row-replace');
+                            var $keepInput = $row.find('.upload-conflict-row-keep');
+                            var replaceId = groupName + '-replace';
+                            var keepId = groupName + '-keep';
+
+                            $replaceInput.attr({name: groupName, id: replaceId});
+                            $replaceInput.closest('.form-check').find('label').attr('for', replaceId);
+                            $keepInput.attr({name: groupName, id: keepId});
+                            $keepInput.closest('.form-check').find('label').attr('for', keepId);
+
                             $row.find('.upload-conflict-row-name').text(name);
-                            $row.find('input[type=radio]').attr('name', 'upload-conflict-choice-' + index);
                             $row.data('filename', name);
                             $conflictList.append($row);
                         });
 
                         $conflictBox.show();
+                        // Bring the box into view and move focus to it: the editor may be
+                        // scrolled elsewhere in a long edit form when the upload completes.
+                        var conflictBoxEl = $conflictBox.get(0);
+                        if (conflictBoxEl && conflictBoxEl.scrollIntoView) {
+                            conflictBoxEl.scrollIntoView({behavior: 'smooth', block: 'center'});
+                        }
+                        $conflictBox.focus();
 
                         $conflictBox.find('.upload-conflict-box-confirm').off('click').on('click', function () {
                             var choices = {};
