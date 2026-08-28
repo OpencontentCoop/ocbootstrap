@@ -55,38 +55,50 @@
                     // Add sort feature to list
                     _sort($fileList.find('.list tbody'));
 
-                    // Names of the files already attached to this field, used to detect
-                    // a name conflict before a new upload starts. Kept decoded (human
-                    // readable) since eZMultiBinaryFile stores original_filename urlencoded.
-                    var _existingFilenames = function () {
-                        var names = [];
+                    // Files already attached to this field (name + exact byte size), used to
+                    // detect conflicts before a new upload starts. Names are kept decoded
+                    // (human readable) since eZMultiBinaryFile stores original_filename
+                    // urlencoded; size comes from data-filesize (raw bytes, see
+                    // eZBinaryFile::fileSize() / filelist_decorated.tpl).
+                    var _existingFiles = function () {
+                        var files = [];
                         $fileList.find('.list tbody tr .sort[data-filename]').each(function () {
                             var raw = $(this).data('filename');
                             if (raw === undefined || raw === null || raw === '') {
                                 return;
                             }
+                            var name;
                             try {
                                 // original_filename is stored with PHP's urlencode(), which
                                 // encodes spaces as "+" rather than "%20": decode that first.
-                                names.push(decodeURIComponent(String(raw).replace(/\+/g, ' ')));
+                                name = decodeURIComponent(String(raw).replace(/\+/g, ' '));
                             } catch (e) {
-                                names.push(String(raw));
+                                name = String(raw);
                             }
+                            var rawSize = $(this).data('filesize');
+                            var size = (rawSize !== undefined && rawSize !== null && rawSize !== '') ?
+                                parseInt(rawSize, 10) : null;
+                            if (size !== null && isNaN(size)) {
+                                size = null;
+                            }
+                            files.push({name: name, size: size});
                         });
-                        return names;
+                        return files;
                     };
 
-                    // Shows the conflict box for the given file names and asks the editor,
-                    // per file, whether to replace the existing attachment or keep both.
-                    // Calls onConfirm(choices) with choices = {filename: true|false} (true = replace)
-                    // or onCancel() if the editor cancels the whole batch.
-                    var _showConflictBox = function (conflictingNames, onConfirm, onCancel) {
+                    // Shows the conflict box for the given conflicts (each {name, reason},
+                    // reason one of 'name'/'size'/'both') and asks the editor, per row, to
+                    // resolve it. Calls onConfirm(resolved) with resolved = conflicts each
+                    // extended with {replace: bool}, or onCancel() if the whole batch is
+                    // cancelled.
+                    var _showConflictBox = function (conflicts, onConfirm, onCancel) {
                         $conflictList.empty();
 
-                        $.each(conflictingNames, function (index, name) {
-                            var $row = $conflictRowTemplate.length && $conflictRowTemplate[0].content ?
-                                $(document.importNode($conflictRowTemplate[0].content, true)).find('.upload-conflict-row') :
-                                $($conflictRowTemplate.html());
+                        $.each(conflicts, function (index, conflict) {
+                            var $template = $conflictRowTemplate.filter('[data-reason="' + conflict.reason + '"]');
+                            var $row = $template.length && $template[0].content ?
+                                $(document.importNode($template[0].content, true)).find('.upload-conflict-row') :
+                                $($template.html());
 
                             var groupName = 'upload-conflict-choice-' + index;
                             var $replaceInput = $row.find('.upload-conflict-row-replace');
@@ -99,8 +111,8 @@
                             $keepInput.attr({name: groupName, id: keepId});
                             $keepInput.closest('.form-check').find('label').attr('for', keepId);
 
-                            $row.find('.upload-conflict-row-name').text(name);
-                            $row.data('filename', name);
+                            $row.find('.upload-conflict-row-name').text(conflict.name);
+                            $row.data('conflictIndex', index);
                             $conflictList.append($row);
                         });
 
@@ -117,13 +129,16 @@
                         $conflictAnchor.focus();
 
                         $conflictBox.find('.upload-conflict-box-confirm').off('click').on('click', function () {
-                            var choices = {};
-                            $conflictList.find('.upload-conflict-row').each(function () {
-                                var name = $(this).data('filename');
-                                choices[name] = $(this).find('.upload-conflict-row-replace').is(':checked');
+                            var resolved = $.map(conflicts, function (conflict, index) {
+                                var $row = $conflictList.find('.upload-conflict-row').filter(function () {
+                                    return $(this).data('conflictIndex') === index;
+                                });
+                                return $.extend({}, conflict, {
+                                    replace: $row.find('.upload-conflict-row-replace').is(':checked')
+                                });
                             });
                             $conflictBox.hide();
-                            onConfirm(choices);
+                            onConfirm(resolved);
                         });
 
                         $conflictBox.find('.upload-conflict-box-cancel').off('click').on('click', function () {
@@ -140,7 +155,7 @@
                     // one, so the editor would only ever see the last file's box. Instead,
                     // queue every conflicting file found during the same call stack and
                     // flush once (setTimeout 0), showing a single box listing all of them.
-                    var pendingConflicts = []; // [{data: <blueimp data>, names: [...]}]
+                    var pendingConflicts = []; // [{data: <blueimp data>, conflicts: [{name, reason}]}]
                     var flushTimer = null;
 
                     var _flushPendingConflicts = function () {
@@ -151,23 +166,44 @@
                             return;
                         }
 
-                        var allNames = [];
-                        $.each(toProcess, function (i, item) {
-                            allNames = allNames.concat(item.names);
+                        var allConflicts = [];
+                        $.each(toProcess, function (itemIndex, item) {
+                            $.each(item.conflicts, function (j, c) {
+                                allConflicts.push({itemIndex: itemIndex, name: c.name, reason: c.reason});
+                            });
                         });
 
-                        _showConflictBox(allNames, function (choices) {
-                            $.each(toProcess, function (i, item) {
-                                var itemChoices = {};
-                                $.each(item.names, function (j, name) {
-                                    itemChoices[name] = choices[name];
+                        _showConflictBox(allConflicts, function (resolved) {
+                            $.each(toProcess, function (itemIndex, item) {
+                                var itemResolved = $.grep(resolved, function (r) {
+                                    return r.itemIndex === itemIndex;
                                 });
-                                item.data.formData = function (form) {
-                                    return form.serializeArray().concat([{
-                                        name: 'OcMultibinaryReplaceChoice',
-                                        value: JSON.stringify(itemChoices)
-                                    }]);
-                                };
+
+                                // A "size"-only conflict can never be merged into the existing
+                                // file (the server only matches by name): if every conflict
+                                // for this file is a size-only match and the editor chose not
+                                // to upload it, skip this file entirely rather than sending it.
+                                var shouldSkip = itemResolved.length > 0 && $.grep(itemResolved, function (r) {
+                                    return !(r.reason === 'size' && !r.replace);
+                                }).length === 0;
+                                if (shouldSkip) {
+                                    return;
+                                }
+
+                                var serverChoices = {};
+                                $.each(itemResolved, function (k, r) {
+                                    if (r.reason === 'name' || r.reason === 'both') {
+                                        serverChoices[r.name] = r.replace;
+                                    }
+                                });
+                                if (!$.isEmptyObject(serverChoices)) {
+                                    item.data.formData = function (form) {
+                                        return form.serializeArray().concat([{
+                                            name: 'OcMultibinaryReplaceChoice',
+                                            value: JSON.stringify(serverChoices)
+                                        }]);
+                                    };
+                                }
                                 item.data.submit();
                             });
                         }, function () {
@@ -191,20 +227,30 @@
                                 return;
                             }
 
-                            var existingNames = _existingFilenames();
-                            var conflictingNames = [];
+                            var existingFiles = _existingFiles();
+                            var conflicts = [];
                             $.each(data.files, function (i, file) {
-                                if ($.inArray(file.name, existingNames) !== -1) {
-                                    conflictingNames.push(file.name);
+                                var nameMatch = false, sizeMatch = false;
+                                $.each(existingFiles, function (j, existing) {
+                                    if (existing.name === file.name) {
+                                        nameMatch = true;
+                                    }
+                                    if (existing.size !== null && existing.size === file.size) {
+                                        sizeMatch = true;
+                                    }
+                                });
+                                var reason = nameMatch && sizeMatch ? 'both' : (nameMatch ? 'name' : (sizeMatch ? 'size' : null));
+                                if (reason) {
+                                    conflicts.push({name: file.name, reason: reason});
                                 }
                             });
 
-                            if (conflictingNames.length === 0) {
+                            if (conflicts.length === 0) {
                                 data.submit();
                                 return;
                             }
 
-                            pendingConflicts.push({data: data, names: conflictingNames});
+                            pendingConflicts.push({data: data, conflicts: conflicts});
                             if (flushTimer === null) {
                                 flushTimer = setTimeout(_flushPendingConflicts, 0);
                             }
