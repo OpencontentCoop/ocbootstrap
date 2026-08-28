@@ -13,6 +13,9 @@
                     var $buttonContainer = $element.find('.upload-button-container');
                     var $spinner = $element.find('.upload-button-spinner');
                     var $fileList = $element.find('.upload-file-list');
+                    var $conflictBox = $element.find('.upload-conflict-box');
+                    var $conflictList = $conflictBox.find('.upload-conflict-box-list');
+                    var $conflictRowTemplate = $element.find('.upload-conflict-row-template');
 
                     var csrfToken;
                     var tokenNode = document.getElementById('ezxform_token_js');
@@ -51,6 +54,63 @@
                     // Add sort feature to list
                     _sort($fileList.find('.list tbody'));
 
+                    // Names of the files already attached to this field, used to detect
+                    // a name conflict before a new upload starts. Kept decoded (human
+                    // readable) since eZMultiBinaryFile stores original_filename urlencoded.
+                    var _existingFilenames = function () {
+                        var names = [];
+                        $fileList.find('.list tbody tr .sort[data-filename]').each(function () {
+                            var raw = $(this).data('filename');
+                            if (raw === undefined || raw === null || raw === '') {
+                                return;
+                            }
+                            try {
+                                // original_filename is stored with PHP's urlencode(), which
+                                // encodes spaces as "+" rather than "%20": decode that first.
+                                names.push(decodeURIComponent(String(raw).replace(/\+/g, ' ')));
+                            } catch (e) {
+                                names.push(String(raw));
+                            }
+                        });
+                        return names;
+                    };
+
+                    // Shows the conflict box for the given file names and asks the editor,
+                    // per file, whether to replace the existing attachment or keep both.
+                    // Calls onConfirm(choices) with choices = {filename: true|false} (true = replace)
+                    // or onCancel() if the editor cancels the whole batch.
+                    var _showConflictBox = function (conflictingNames, onConfirm, onCancel) {
+                        $conflictList.empty();
+
+                        $.each(conflictingNames, function (index, name) {
+                            var $row = $conflictRowTemplate.length && $conflictRowTemplate[0].content ?
+                                $(document.importNode($conflictRowTemplate[0].content, true)).find('.upload-conflict-row') :
+                                $($conflictRowTemplate.html());
+
+                            $row.find('.upload-conflict-row-name').text(name);
+                            $row.find('input[type=radio]').attr('name', 'upload-conflict-choice-' + index);
+                            $row.data('filename', name);
+                            $conflictList.append($row);
+                        });
+
+                        $conflictBox.show();
+
+                        $conflictBox.find('.upload-conflict-box-confirm').off('click').on('click', function () {
+                            var choices = {};
+                            $conflictList.find('.upload-conflict-row').each(function () {
+                                var name = $(this).data('filename');
+                                choices[name] = $(this).find('.upload-conflict-row-replace').is(':checked');
+                            });
+                            $conflictBox.hide();
+                            onConfirm(choices);
+                        });
+
+                        $conflictBox.find('.upload-conflict-box-cancel').off('click').on('click', function () {
+                            $conflictBox.hide();
+                            onCancel();
+                        });
+                    };
+
                     $element.find('.input-upload').fileupload({
                         dropZone: $element,
                         formData: function (form) {
@@ -58,6 +118,40 @@
                         },
                         dataType: 'json',
                         autoUpload: true,
+                        add: function (e, data) {
+                            // Conflict box markup is only rendered when
+                            // NameConflictSettings.EnableUploadConflictCheck is enabled
+                            // (ocmultibinary.ini): if absent, keep the historical behaviour.
+                            if ($conflictBox.length === 0) {
+                                data.submit();
+                                return;
+                            }
+
+                            var existingNames = _existingFilenames();
+                            var conflicts = [];
+                            $.each(data.files, function (i, file) {
+                                if ($.inArray(file.name, existingNames) !== -1) {
+                                    conflicts.push(file.name);
+                                }
+                            });
+
+                            if (conflicts.length === 0) {
+                                data.submit();
+                                return;
+                            }
+
+                            _showConflictBox(conflicts, function (choices) {
+                                data.formData = function (form) {
+                                    return form.serializeArray().concat([{
+                                        name: 'OcMultibinaryReplaceChoice',
+                                        value: JSON.stringify(choices)
+                                    }]);
+                                };
+                                data.submit();
+                            }, function () {
+                                // Editor cancelled: this batch is not uploaded.
+                            });
+                        },
                         submit: function (e, data) {
                             $buttonContainer.hide();
                             $spinner.show();
