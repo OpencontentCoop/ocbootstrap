@@ -14,6 +14,7 @@
                     var $spinner = $element.find('.upload-button-spinner');
                     var $fileList = $element.find('.upload-file-list');
                     var $conflictBox = $element.find('.upload-conflict-box');
+                    var $conflictAnchor = $element.find('.upload-conflict-anchor');
                     var $conflictList = $conflictBox.find('.upload-conflict-box-list');
                     var $conflictRowTemplate = $element.find('.upload-conflict-row-template');
 
@@ -106,11 +107,14 @@
                         $conflictBox.show();
                         // Bring the box into view and move focus to it: the editor may be
                         // scrolled elsewhere in a long edit form when the upload completes.
-                        var conflictBoxEl = $conflictBox.get(0);
-                        if (conflictBoxEl && conflictBoxEl.scrollIntoView) {
-                            conflictBoxEl.scrollIntoView({behavior: 'smooth', block: 'center'});
+                        // Focus targets a dedicated wrapper (not the alert itself) so the
+                        // browser's default focus outline never lands on the alert, which
+                        // has no matching focus style of its own in this admin theme.
+                        var conflictAnchorEl = $conflictAnchor.get(0);
+                        if (conflictAnchorEl && conflictAnchorEl.scrollIntoView) {
+                            conflictAnchorEl.scrollIntoView({behavior: 'smooth', block: 'center'});
                         }
-                        $conflictBox.focus();
+                        $conflictAnchor.focus();
 
                         $conflictBox.find('.upload-conflict-box-confirm').off('click').on('click', function () {
                             var choices = {};
