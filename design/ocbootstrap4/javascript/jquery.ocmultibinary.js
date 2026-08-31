@@ -13,6 +13,7 @@
                     var $buttonContainer = $element.find('.upload-button-container');
                     var $spinner = $element.find('.upload-button-spinner');
                     var $fileList = $element.find('.upload-file-list');
+                    var $fileSearch = $element.find('.upload-file-search');
                     var $conflictBox = $element.find('.upload-conflict-box');
                     var $conflictAnchor = $element.find('.upload-conflict-anchor');
                     var $conflictList = $conflictBox.find('.upload-conflict-box-list');
@@ -54,6 +55,54 @@
 
                     // Add sort feature to list
                     _sort($fileList.find('.list tbody'));
+
+                    // Filters the attachment rows by file name or display name. While a search
+                    // term is active, dragging to reorder is disabled: the row indexes used to
+                    // persist the new order would otherwise include hidden (filtered-out) rows,
+                    // desyncing the saved order from what the editor actually sees.
+                    var _matchesFileSearch = function ($row, term) {
+                        if (!term) {
+                            return true;
+                        }
+                        var fileNameCell = $row.find('td').eq(1).text();
+                        var displayNameValue = $row.find('td').eq(2).find('input').val() || '';
+                        var haystack = (fileNameCell + ' ' + displayNameValue).toLowerCase();
+                        return haystack.indexOf(term) !== -1;
+                    };
+
+                    var _applyFileSearch = function () {
+                        if ($fileSearch.length === 0) {
+                            return;
+                        }
+                        var term = $.trim($fileSearch.val()).toLowerCase();
+                        var $tbody = $fileList.find('.list tbody');
+                        var $emptyRow = $tbody.find('.upload-search-empty');
+                        var visibleCount = 0;
+                        $tbody.find('tr').not($emptyRow).each(function () {
+                            var $row = $(this);
+                            var matches = _matchesFileSearch($row, term);
+                            $row.toggle(matches);
+                            if (matches) {
+                                visibleCount++;
+                            }
+                        });
+                        $emptyRow.toggle(!!term && visibleCount === 0);
+                        if ($tbody.hasClass('ui-sortable')) {
+                            $tbody.sortable(term ? 'disable' : 'enable');
+                        }
+                        // Reflect the disabled drag handle visually too: grey out, normal
+                        // cursor, and ignore pointer interaction entirely while search is active.
+                        $tbody.find('.fa-arrows').toggleClass('text-muted', !!term).css({
+                            cursor: term ? 'default' : 'grab',
+                            pointerEvents: term ? 'none' : ''
+                        });
+                        // "Delete all files" always deletes the whole list, not just the
+                        // filtered rows - disable it while a search is active to avoid an
+                        // editor deleting more than what they see filtered on screen.
+                        $fileList.find('.upload-delete-all-btn').prop('disabled', !!term);
+                    };
+
+                    $fileSearch.on('input', _applyFileSearch);
 
                     // Files already attached to this field (name + exact byte size), used to
                     // detect conflicts before a new upload starts. Names are kept decoded
@@ -155,23 +204,28 @@
                     // one, so the editor would only ever see the last file's box. Instead,
                     // queue every conflicting file found during the same call stack and
                     // flush once (setTimeout 0), showing a single box listing all of them.
+                    //
+                    // If the editor triggers a second conflicting batch while the box for a
+                    // previous batch is still open (waiting for a decision), that second
+                    // batch is queued in `queuedBatches` rather than shown immediately: the
+                    // box only ever displays one batch at a time, and moves to the next
+                    // queued one once the current batch is confirmed or cancelled. Without
+                    // this, the second batch would silently overwrite the box's content,
+                    // and the first batch's files would never be submitted nor cancelled.
                     var pendingConflicts = []; // [{data: <blueimp data>, conflicts: [{name, reason}]}]
                     var flushTimer = null;
+                    var boxOpen = false;
+                    var queuedBatches = []; // array of "toProcess" arrays, shown in order
 
-                    var _flushPendingConflicts = function () {
-                        flushTimer = null;
-                        var toProcess = pendingConflicts;
-                        pendingConflicts = [];
-                        if (toProcess.length === 0) {
-                            return;
-                        }
-
+                    var _showBatch = function (toProcess) {
                         var allConflicts = [];
                         $.each(toProcess, function (itemIndex, item) {
                             $.each(item.conflicts, function (j, c) {
                                 allConflicts.push({itemIndex: itemIndex, name: c.name, reason: c.reason});
                             });
                         });
+
+                        boxOpen = true;
 
                         _showConflictBox(allConflicts, function (resolved) {
                             $.each(toProcess, function (itemIndex, item) {
@@ -206,9 +260,36 @@
                                 }
                                 item.data.submit();
                             });
+
+                            boxOpen = false;
+                            _showNextQueuedBatchIfAny();
                         }, function () {
-                            // Editor cancelled: none of the queued files are uploaded.
+                            // Editor cancelled: none of the files in this batch are uploaded.
+                            boxOpen = false;
+                            _showNextQueuedBatchIfAny();
                         });
+                    };
+
+                    var _showNextQueuedBatchIfAny = function () {
+                        if (queuedBatches.length > 0) {
+                            _showBatch(queuedBatches.shift());
+                        }
+                    };
+
+                    var _flushPendingConflicts = function () {
+                        flushTimer = null;
+                        var toProcess = pendingConflicts;
+                        pendingConflicts = [];
+                        if (toProcess.length === 0) {
+                            return;
+                        }
+
+                        if (boxOpen) {
+                            queuedBatches.push(toProcess);
+                            return;
+                        }
+
+                        _showBatch(toProcess);
                     };
 
                     $element.find('.input-upload').fileupload({
@@ -271,6 +352,10 @@
 
                                 // Add sort feature to list
                                 _sort($fileList.find('.list tbody'));
+                                // Clear any active search term: an uploaded file could be
+                                // filtered out of view by it, looking like the upload was lost.
+                                $fileSearch.val('');
+                                _applyFileSearch();
                             }
                             $buttonContainer.show();
                             $spinner.hide();
