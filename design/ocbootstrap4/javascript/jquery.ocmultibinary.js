@@ -27,6 +27,19 @@
 
                     var _sort = function(el) {
                         $(el).sortable({
+                            axis: 'y',
+                            // The dragged row is taken out of the table's normal flow
+                            // (position: absolute), so without an explicit background it
+                            // renders see-through and the row(s) underneath show through it
+                            // while dragging.
+                            start: function(event, ui) {
+                                ui.item.css('background-color', '#fff');
+                                ui.item.children('td').css('background-color', '#fff');
+                            },
+                            stop: function(event, ui) {
+                                ui.item.css('background-color', '');
+                                ui.item.children('td').css('background-color', '');
+                            },
                             update: function( event, ui ) {
                                 var files = [];
                                 $(this).children().each(function(index) {
@@ -108,11 +121,15 @@
                     // detect conflicts before a new upload starts. Names are kept decoded
                     // (human readable) since eZMultiBinaryFile stores original_filename
                     // urlencoded; size comes from data-filesize (raw bytes, see
-                    // eZBinaryFile::fileSize() / filelist_decorated.tpl).
+                    // eZBinaryFile::fileSize() / filelist_decorated.tpl). Read from
+                    // data-original-filename, NOT data-filename: the latter is now the physical
+                    // (server-generated, unique) file identity used for sort persistence, which
+                    // stays the same even when two attachments share the same original name
+                    // (the "keep both" choice on a name conflict).
                     var _existingFiles = function () {
                         var files = [];
-                        $fileList.find('.list tbody tr .sort[data-filename]').each(function () {
-                            var raw = $(this).data('filename');
+                        $fileList.find('.list tbody tr .sort[data-original-filename]').each(function () {
+                            var raw = $(this).data('originalFilename');
                             if (raw === undefined || raw === null || raw === '') {
                                 return;
                             }
@@ -135,7 +152,25 @@
                         return files;
                     };
 
-                    // Shows the conflict box for the given conflicts (each {name, reason},
+                    // Human-readable file size for display only (e.g. "11,05 kB"), decimal
+                    // comma to match the format already used server-side by the |si(byte)
+                    // template filter in filelist_decorated.tpl.
+                    var _formatFileSize = function (bytes) {
+                        if (bytes === null || bytes === undefined || isNaN(bytes)) {
+                            return '';
+                        }
+                        var units = ['B', 'kB', 'MB', 'GB', 'TB'];
+                        var unitIndex = 0;
+                        var size = bytes;
+                        while (size >= 1000 && unitIndex < units.length - 1) {
+                            size = size / 1000;
+                            unitIndex++;
+                        }
+                        var formatted = unitIndex === 0 ? String(size) : size.toFixed(2).replace('.', ',');
+                        return formatted + ' ' + units[unitIndex];
+                    };
+
+                    // Shows the conflict box for the given conflicts (each {name, reason, size},
                     // reason one of 'name'/'size'/'both') and asks the editor, per row, to
                     // resolve it. Calls onConfirm(resolved) with resolved = conflicts each
                     // extended with {replace: bool}, or onCancel() if the whole batch is
@@ -160,7 +195,8 @@
                             $keepInput.attr({name: groupName, id: keepId});
                             $keepInput.closest('.form-check').find('label').attr('for', keepId);
 
-                            $row.find('.upload-conflict-row-name').text(conflict.name);
+                            var sizeText = _formatFileSize(conflict.size);
+                            $row.find('.upload-conflict-row-name').text(sizeText ? (conflict.name + ' - ' + sizeText) : conflict.name);
                             $row.data('conflictIndex', index);
                             $conflictList.append($row);
                         });
@@ -212,7 +248,7 @@
                     // queued one once the current batch is confirmed or cancelled. Without
                     // this, the second batch would silently overwrite the box's content,
                     // and the first batch's files would never be submitted nor cancelled.
-                    var pendingConflicts = []; // [{data: <blueimp data>, conflicts: [{name, reason}]}]
+                    var pendingConflicts = []; // [{data: <blueimp data>, conflicts: [{name, reason, size}]}]
                     var flushTimer = null;
                     var boxOpen = false;
                     var queuedBatches = []; // array of "toProcess" arrays, shown in order
@@ -221,7 +257,7 @@
                         var allConflicts = [];
                         $.each(toProcess, function (itemIndex, item) {
                             $.each(item.conflicts, function (j, c) {
-                                allConflicts.push({itemIndex: itemIndex, name: c.name, reason: c.reason});
+                                allConflicts.push({itemIndex: itemIndex, name: c.name, reason: c.reason, size: c.size});
                             });
                         });
 
@@ -322,7 +358,7 @@
                                 });
                                 var reason = nameMatch && sizeMatch ? 'both' : (nameMatch ? 'name' : (sizeMatch ? 'size' : null));
                                 if (reason) {
-                                    conflicts.push({name: file.name, reason: reason});
+                                    conflicts.push({name: file.name, reason: reason, size: file.size});
                                 }
                             });
 
