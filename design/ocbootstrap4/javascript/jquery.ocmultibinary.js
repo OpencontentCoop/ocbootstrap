@@ -28,6 +28,7 @@
                     var _sort = function(el) {
                         $(el).sortable({
                             axis: 'y',
+                            handle: '.sort-handle',
                             // The dragged row is taken out of the table's normal flow
                             // (position: absolute), so without an explicit background it
                             // renders see-through and the row(s) underneath show through it
