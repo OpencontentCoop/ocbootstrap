@@ -1,3 +1,4 @@
+{default attribute_base=ContentObjectAttribute}
 <table class="table list table-condensed" cellpadding="0" cellspacing="0">
     <thead>
     <tr>
@@ -27,8 +28,8 @@
                     {$file.original_filename|wash( xhtml )}&nbsp;({$file.filesize|si( byte )})
                 </td>
                 <td>
-                    <input type="hidden" value="{$key}" name="{$attribute_base}_sort_{$attribute.id}[{$file.original_filename|wash( xhtml )}]" class="sort" data-filename="{$file.original_filename|wash( xhtml )}" />
-                    <i class="fa fa-arrows pull-right"></i>
+                    <input type="hidden" value="{$key}" name="{$attribute_base}_sort_{$attribute.id}[{$file.filename|wash( xhtml )}]" class="sort" data-filename="{$file.filename|wash( xhtml )}" data-original-filename="{$file.original_filename|wash( xhtml )}" data-filesize="{$file.filesize}" />
+                    <i class="fa fa-arrows sort-handle pull-right" style="cursor: grab;"></i>
                 </td>
 
             </tr>
@@ -42,3 +43,4 @@
     {/if}
     </tbody>
 </table>
+{/default}
